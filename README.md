@@ -34,8 +34,8 @@ Si encuentras errores o quieres aportar material adicional:
 
 ## 📬 Contacto
 - ✉️ Correo: igarridour@gmail.com  
-- 🔗 LinkedIn: [linkedin.com/in/ignacio](https://www.linkedin.com/in/ignaciogarridourra/)  
-- 💻 GitHub: [@tu-usuario](https://github.com/igarridourra)
+- 🔗 LinkedIn: [linkedin.com/in/ignaciogarridourra](https://www.linkedin.com/in/ignaciogarridourra/)  
+- 💻 GitHub: [@igarridourra](https://github.com/igarridourra)
 
 ---
 
