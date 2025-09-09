@@ -1,0 +1,165 @@
+\documentclass[11pt,addpoints]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\parindent = 0cm % Sangría distancia
+\usepackage{enumitem}
+\setlist{itemsep=0.6em} % aire entre ítems, ayuda a cortes limpios
+
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,latexsym,cancel}
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\norm}[1]{\LVert#1\RVert}
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[lmargin=2cm,rmargin=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{FACULTAD DE INGENIERÍA\\DEPTO DE INGENIERÍA INDUSTRIAL \\ MACROECONOMÍA (580323)}
+\fancyhead[R]{\includegraphics[scale=0.13]{escudoudec.jpg}} % <-- Reemplace 'escudoudec' por la ruta de su logo si corresponde
+\fancyfoot{\thepage}
+\fancyfoot[R]{Semestre 2025-2}
+\fancyfoot[L]{CMP/IGU}
+
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+% Paquete para manejar URLs largas
+\usepackage{url}
+% Paquete para enlaces interactivos y bien formateados
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+\begin{document}
+
+\vspace*{0.05cm} % Espacio antes del título
+
+\begin{center}
+{\Large \bfseries Ayudantía 1 - Macroeconomia\\[0.5cm]}
+\end{center}
+
+\textbf{Profesor:} Cristian Mardones, Ph.D. \quad
+\textbf{Ayudante:} Ignacio Garrido U.
+
+\bigskip
+
+A continuación se presenta el \textbf{Listado 1} con ejercicios de Cuentas Nacionales, PIB, deflactor, IPC e inflación.
+
+\begin{enumerate}
+\item Señale las diferencias entre \textbf{PIB} y el \textbf{Ingreso Disponible} ($Y_d$).
+
+\item Diga por qué no se contabiliza dentro del PIB a la compra y venta de \textit{insumos}.
+
+\item Considere la producción de un cierto país en donde se muestran sus respectivos bienes y precios de ellos en la tabla adjunta. Los bienes de los sectores \textbf{A y B} son vendidos a los hogares, los bienes del sector \textbf{C} son adquiridos por el gobierno, los bienes del sector \textbf{D} son exportados, mientras que los bienes del sector \textbf{E y F} son utilizados para fabricar los bienes A, B, C y D.
+\begin{center}
+\begin{tabular}{lcccccccccccc}
+\hline
+ & $P_A$ & $Q_A$ & $P_B$ & $Q_B$ & $P_C$ & $Q_C$ & $P_D$ & $Q_D$ & $P_E$ & $Q_E$ & $P_F$ & $Q_F$  \\
+\hline
+2020 & \$500 & 100 & \$10 & 2000 & \$100 & 80 & \$10 & 600 & \$100 & 700 & \$20 & 1000 \\
+2021 & \$540 & 120 & \$9 & 1800 & \$120 & 90 & \$15 & 500 & \$80 & 900 & \$30 & 1100 \\
+\hline
+\end{tabular}
+
+\end{center}
+
+\begin{enumerate}
+\item[(a)] Determine el \textit{PIB nominal} y \textit{real} para cada año.
+\item[(b)] Calcule la \textit{tasa de crecimiento} del PIB real usando los precios del año 2020 como base.
+\item[(c)] Calcule el \textit{deflactor del PIB}.
+\item[(d)] Calcule el \textit{Índice de Precios al Consumidor (IPC)} para cada período considerando como canasta básica los bienes A y B.
+\item[(e)] Con lo anterior, calcule la \textit{inflación} por método de deflactor y por método del IPC.
+\end{enumerate}
+
+
+\item (\textit{Certamen 2015}) Explique si en una economía cerrada (sin exportaciones ni importaciones), en la cual las demandas por bienes y servicios finales son inelásticas al precio, el \textbf{costo de vida} medido por el \textit{IPC} o por el \textit{deflactor del PIB} deberían ser iguales.
+
+
+\item (\textit{Certamen 2013}) En el país de los jóvenes se consumen solo cuatro artículos (Ron, cocacola, educación y PlayStation). En el año 2010 una familia representativa consumía 3 unidades de ron, 3 unidades de cocacola, 2 unidades de educación y 1 unidad de PlayStation. Los precios (en \$) durante los últimos años son:
+
+\begin{center}
+\begin{tabular}{lcccc}
+\hline
+ & 2010 & 2011 & 2012 & 2013 \\
+\hline
+Ron & 400 & 350 & 450 & 500 \\
+Cocacola & 1000 & 1100 & 1100 & 1150 \\
+Educación & 600 & 800 & 1000 & 1020 \\
+PlayStation & 800 & 1200 & 1200 & 1300 \\
+\hline
+\end{tabular}
+\end{center}
+\medskip
+\noindent % quita sangría y mantiene continuidad
+Calcule el \textbf{IPC} de cada año (base 2010 = 100). Luego calcule la \textbf{inflación} en 2011, 2012 y 2013.
+
+
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!!
+
+\item (\textit{Certamen 2013}) Los datos siguientes corresponden a información de cuentas nacionales (en miles):
+\begin{center}
+PIB = 60{,}000,\quad Inversión Bruta = 12{,}000,\quad Inversión Neta = 9{,}000,\quad\\
+Consumo = 33{,}000,\quad Gasto del Gobierno = 14{,}500,\quad Superávit Fiscal = 500.
+\end{center}
+Calcule el \textbf{Producto Interno Neto}, las \textbf{Exportaciones Netas}, los \textbf{impuestos menos transferencias}, el \textbf{ingreso personal disponible} y el \textbf{ahorro}.
+\end{enumerate}
+
+
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!!
+
+\centering
+\begin{frame}{\textbf{Reflexionemos (Noticia Emol)}}
+\vspace*{5mm} % <-- espacio extra entre el título y el contenido
+
+\centering
+\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{1Ayudantia/noticia1.PNG}
+\medskip
+
+{\small
+PIB de Chile creció un 2,3\% anual 
+\href{https://www.emol.com/noticias/Economia/2025/05/19/1166723/crecimiento-primer-trimestre.html}{(Emol, Mayo 2025)}.
+}
+\end{frame}
+
+
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!!
+\begin{frame}{Resumen Noticia: Actualidad Económica (Primer Trimestre 2025)}
+PIB de Chile creció un \textbf{2,3 \%} anual, superando la expectativa de 2 \%.  Este aumento fue explicado mayormente por el impulso de:
+\begin{itemize}
+  \item Exportaciones (+10,7 \%) e importaciones (+9,0 \%) con impacto neto positivo en el PIB.
+  \item Mayor consumo de los hogares (+1,8 \%), especialmente bienes durables (tecnología).
+  \item Gasto del gobierno (+3,1 \%), liderado por inversión en salud.
+  \item Actividades que destacaron: comercio, manufactura, servicios personales y agro-silvícola.  
+\end{itemize}
+\medskip
+\end{frame}
+
+\begin{frame}
+
+
+\medskip
+\textbf{Preguntas para discutir:}
+\begin{enumerate}
+  \item ¿Qué componente (exportaciones, consumo, gasto público) explicaría mejor el crecimiento real? ¿Por qué?
+  \item Según nuestros conceptos, ¿pierde valor o gana relevancia el PIB nominal frente al real en este escenario?
+  \item ¿El costo de vida de los hogares cambió de forma similar a lo que indica el deflactor del PIB?
+  \item Si hay aumento en consumo de durables, ¿qué efectos tendría en la inversión en el largo plazo?
+  \item ¿Qué vulnerabilidades identificas ante un crecimiento tan dependiente de las exportaciones?
+\end{enumerate}
+\end{frame}
+% --- Fin de inserción ---
+
+\end{document}

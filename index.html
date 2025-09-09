@@ -1,44 +1,238 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Materiales de Descarga</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> Macroeconomía 2025-2 | Material y Videos Complementarios</title>
+  <meta name="description" content="Repositorio de libre acceso con listados, PPTs, pautas y videos asincrónicos. Enlaces a las clases de YouTube del Prof. Cristian Mardones, Ph.D." />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background: #f9f9f9;
-      color: #333;
+    :root{
+      --bg:#f7f8fa; --card:#ffffff; --ink:#1f2937; --muted:#6b7280;
+      --brand:#0a66c2; --brand-600:#0b5aaa; --radius:16px; --shadow:0 8px 24px rgba(31,41,55,.08);
     }
-    h1 { color: #0056b3; }
-    ul { list-style-type: none; padding: 0; }
-    li { margin: 10px 0; }
-    a {
-      text-decoration: none;
-      color: white;
-      background: #007acc;
-      padding: 8px 12px;
-      border-radius: 5px;
-    }
-    a:hover { background: #005f99; }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; color:var(--ink); background:var(--bg)}
+    header{position:sticky; top:0; z-index:10; background:linear-gradient(180deg,#fff,rgba(255,255,255,.85)); backdrop-filter:blur(6px); border-bottom:1px solid #eef2f7}
+    .container{max-width:1050px; margin:0 auto; padding:24px}
+    .hero{display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap}
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit}
+    .brand-badge{width:40px; height:40px; border-radius:10px; background:var(--brand); display:grid; place-items:center; color:#fff; font-weight:700; box-shadow:var(--shadow)}
+    .brand h1{font-size:20px; margin:0}
+    .tagline{font-size:14px; color:var(--muted); margin:0}
+    .info{display:flex; gap:12px; align-items:center; flex-wrap:wrap; color:var(--muted); font-size:13px}
+    .pill{background:#eef6ff; color:#0b5aaa; padding:6px 10px; border-radius:999px; border:1px solid #dbeafe}
+    .tabs{margin-top:18px; background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow); border:1px solid #eef2f7}
+    .tab-nav{display:flex; gap:6px; padding:10px; border-bottom:1px solid #eef2f7; flex-wrap:wrap}
+    .tab-nav a{text-decoration:none; color:var(--muted); padding:8px 12px; border-radius:10px; border:1px solid transparent; display:flex; align-items:center; gap:8px; font-weight:600}
+    .tab-nav a.active{color:#0b5aaa; background:#eef6ff; border-color:#dbeafe}
+    .tab-panel{display:none; padding:18px}
+    .tab-panel.active{display:block}
+    .lead{font-size:15px; color:var(--ink); line-height:1.6; margin:6px 0 14px; background:#fbfdff; border:1px solid #e6f0fb; padding:14px; border-radius:12px}
+    .grid{display:grid; gap:14px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))}
+    .card{background:var(--card); border:1px solid #eef2f7; border-radius:14px; padding:14px; box-shadow:var(--shadow)}
+    .card h3{margin:0 0 4px; font-size:16px}
+    .card p{margin:0; color:var(--muted); font-size:14px}
+    .btns{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+    .btn{appearance:none; border:none; cursor:pointer; text-decoration:none; color:#fff; background:var(--brand); padding:8px 12px; border-radius:10px; font-weight:600; display:inline-flex; gap:8px; align-items:center; border:1px solid #0a65c24d}
+    .btn:hover{background:var(--brand-600)}
+    .btn.alt{background:#111827; border-color:#111827}
+    .btn.ghost{background:#fff; color:var(--brand); border:1px solid #dbeafe}
+    .btn.ghost:hover{background:#f5f9ff}
+    .yt-row{display:flex; gap:12px; align-items:flex-start; padding:12px; background:#f9fbff; border:1px solid #e7effb; border-radius:12px}
+    .yt-logo{width:28px; height:20px; flex:0 0 auto}
+    .yt-title{margin:0; font-size:15px}
+    .yt-meta{margin:2px 0 0; color:var(--muted); font-size:13px}
+    .yt-actions{margin-top:8px}
+    .yt-actions .btn{padding:6px 10px; font-size:14px}
+    footer{margin-top:28px; color:var(--muted); font-size:13px; border-top:1px solid #eef2f7; background:#fff}
+    .tip{font-size:13px; color:var(--muted); margin-top:10px}
+    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:.9em; padding:.1em .4em; border:1px solid #e5e7eb; border-bottom-width:2px; border-radius:6px; background:#fff}
+    @media (max-width:480px){.hero{justify-content:center; text-align:center}.info{justify-content:center}}
   </style>
 </head>
 <body>
-  <h1>📂 Descarga de Materiales</h1>
-  <p>Aquí puedes descargar los archivos PDF y LaTeX:</p>
-  <ul>
-    <li>
-      📘 <b>Documento 1:</b> 
-      <a href="archivos/documento1.pdf" download>PDF</a> | 
-      <a href="archivos/documento1.tex" download>LaTeX</a>
-    </li>
-    <li>
-      📘 <b>Documento 2:</b> 
-      <a href="archivos/documento2.pdf" download>PDF</a> | 
-      <a href="archivos/documento2.tex" download>LaTeX</a>
-    </li>
-  </ul>
+  <header>
+    <div class="container hero">
+      <a class="brand" href="#top" aria-label="Inicio">
+        <div class="brand-badge">RM</div>
+        <div>
+          <h1>Curso de Macroeconomía 2025-2</h1>
+          <p class="tagline">Repositorio libre con listados, PPTs, pautas y videos</p>
+        </div>
+      </a>
+      <div class="info">
+        <span class="pill">Libre acceso</span>
+        <span class="pill">Actualizado según calendario</span>
+        <span class="pill">Material asincrónico</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section aria-label="Presentación">
+      <p class="lead">
+        Este sitio es un <strong>repositorio de libre acceso</strong> donde iré publicando
+        <strong>listados</strong> (enunciados), <strong>presentaciones</strong> (PPT/PDF),
+        <strong>pautas</strong> (soluciones) y <strong>videos</strong> de apoyo.
+        Cuando existan <em>topones</em> o dificultades de horario, aquí encontrarás
+        el <strong>material asincrónico</strong> para que no te quedes atrás.
+      </p>
+    </section>
+
+    <div class="tabs" id="tabs">
+      <nav class="tab-nav" role="tablist" aria-label="Contenido">
+        <a href="#tab-materiales" class="active" role="tab" aria-selected="true">📂 Materiales</a>
+        <a href="#tab-videos" role="tab" aria-selected="false">▶️ Videos YouTube (Prof. Cristian Mardones, Ph.D.)</a>
+      </nav>
+
+      <!-- MATERIALES -->
+      <section id="tab-materiales" class="tab-panel active" role="tabpanel">
+        <div class="grid">
+          <article class="card">
+            <h3>Ayudantía 1 — Listado</h3>
+            <p>Enunciado disponible en PDF y fuente LaTeX.</p>
+            <div class="btns">
+              <a class="btn" href="archivos/1Ayudantia1Listado.pdf" download>PDF</a>
+              <a class="btn ghost" href="archivos/1Ayudantia1Listado.tex" download>LaTeX</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Ayudantía 1 — Presentación</h3>
+            <p>Diapositivas usadas en clase (PDF). Fuente LaTeX incluida.</p>
+            <div class="btns">
+              <a class="btn" href="archivos/1Ayudantia1PPT.pdf" download>PDF</a>
+              <a class="btn ghost" href="archivos/1Ayudantia1PPT.tex" download>LaTeX</a>
+            </div>
+          </article>
+
+          <!-- Si luego agregas pautas o más ayudantías, duplica bloques y cambia rutas -->
+        </div>
+
+        <p class="tip">Para publicar cambios en GitHub Pages: <span class="kbd">git add .</span> → <span class="kbd">git commit -m "actualiza materiales"</span> → <span class="kbd">git push</span>.</p>
+      </section>
+
+      <!-- VIDEOS -->
+      <section id="tab-videos" class="tab-panel" role="tabpanel">
+        <p class="lead">
+          En esta pestaña encontrarás las clases del profesor <strong>Cristian Mardones, Ph.D.</strong>.
+          Cada enlace abre YouTube en una pestaña nueva.
+        </p>
+
+        <div class="grid" aria-label="Clases 1 a 14">
+          <!-- Logo YouTube en SVG + botón -->
+          <article class="yt-row card">
+            <svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
+            <div><h3 class="yt-title">Clase 1 (Macroeconomía)</h3><p class="yt-meta">YouTube • Profesor Cristian Mardones, Ph.D.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/w8SBNSQ9FNk" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+          </article>
+
+          <article class="yt-row card"><svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
+            <div><h3 class="yt-title">Clase 2</h3><p class="yt-meta">YouTube • Profesor Cristian Mardones, Ph.D.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/NRGvORQWdBc" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+          </article>
+
+          <article class="yt-row card"><svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
+            <div><h3 class="yt-title">Clase 3</h3><p class="yt-meta">YouTube • Profesor Cristian Mardones, Ph.D.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/YhhIkRo9ouw" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+          </article>
+
+          <article class="yt-row card"><svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
+            <div><h3 class="yt-title">Clase 4</h3><p class="yt-meta">YouTube • Profesor Cristian Mardones, Ph.D.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/lBQlUwgatm4" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+          </article>
+
+          <article class="yt-row card"><svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
+            <div><h3 class="yt-title">Clase 5</h3><p class="yt-meta">YouTube • Profesor Cristian Mardones, Ph.D.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/zM14rcVNt6E" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+          </article>
+
+          <article class="yt-row card"><svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
+            <div><h3 class="yt-title">Clase 6</h3><p class="yt-meta">YouTube • Profesor Cristian Mardones, Ph.D.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/5S03zkASm5k" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+          </article>
+
+          <article class="yt-row card"><svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
+            <div><h3 class="yt-title">Clase 7</h3><p class="yt-meta">YouTube • Profesor Cristian Mardones, Ph.D.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/Y2qvMsElFwc" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+          </article>
+
+          <article class="yt-row card"><svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
+            <div><h3 class="yt-title">Clase 8</h3><p class="yt-meta">YouTube • Profesor Cristian Mardones, Ph.D.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/ibIxByAH7Oc" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+          </article>
+
+          <article class="yt-row card"><svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
+            <div><h3 class="yt-title">Clase 9</h3><p class="yt-meta">YouTube • Profesor Cristian Mardones, Ph.D.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/-jSxPlKx8AA" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+          </article>
+
+          <article class="yt-row card"><svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
+            <div><h3 class="yt-title">Clase 10</h3><p class="yt-meta">YouTube • Profesor Cristian Mardones, Ph.D.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/YsjvxnVhLqg" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+          </article>
+
+          <article class="yt-row card"><svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
+            <div><h3 class="yt-title">Clase 11</h3><p class="yt-meta">YouTube • Profesor Cristian Mardones, Ph.D.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/53JN2yiI7X0" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+          </article>
+
+          <article class="yt-row card"><svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
+            <div><h3 class="yt-title">Clase 12</h3><p class="yt-meta">YouTube • Profesor Cristian Mardones, Ph.D.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/Ypp0-X1wQv0" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+          </article>
+
+          <article class="yt-row card"><svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
+            <div><h3 class="yt-title">Clase 13</h3><p class="yt-meta">YouTube • Profesor Cristian Mardones, Ph.D.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/6_YTqEuW0fQ" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+          </article>
+
+          <article class="yt-row card"><svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
+            <div><h3 class="yt-title">Clase 14</h3><p class="yt-meta">YouTube • Profesor Cristian Mardones, Ph.D.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/9qPow5yXGAA" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+          </article>
+        </div>
+
+        <h3 style="margin-top:18px">Ejercicios adicionales</h3>
+        <div class="grid">
+          <article class="yt-row card">
+            <svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
+            <div><h3 class="yt-title">Ejercicio adicional 1</h3><p class="yt-meta">YouTube • Profesor Cristian Mardones, Ph.D.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/EVMWeb6xb3Y" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+          </article>
+
+          <article class="yt-row card">
+            <svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
+            <div><h3 class="yt-title">Ejercicio adicional 2</h3><p class="yt-meta">YouTube • Profesor Cristian Mardones, Ph.D.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/WiJdjfDr9eg" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <section class="tip" aria-label="Notas operativas">
+      <strong>Nota:</strong> Si alguna semana hay tope de horario, publicaré aquí el material asincrónico (PDF, pauta y video) con instrucciones claras.
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="y"></span> Repositorio de Materiales — Sitio estático en GitHub Pages. Últimos cambios visibles tras <span class="kbd">git push</span> a la rama publicada.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const navLinks = document.querySelectorAll('.tab-nav a');
+    const panels = document.querySelectorAll('.tab-panel');
+    function activate(hash){
+      const id = hash?.replace('#','') || 'tab-materiales';
+      navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+      panels.forEach(p => p.classList.toggle('active', p.id === id));
+      history.replaceState(null, '', '#' + id);
+    }
+    navLinks.forEach(a => a.addEventListener('click', e => { e.preventDefault(); activate(a.getAttribute('href')); }));
+    window.addEventListener('load', () => activate(location.hash));
+  </script>
 </body>
 </html>
-<!-- Rebuild GitHub Pages -->
-
