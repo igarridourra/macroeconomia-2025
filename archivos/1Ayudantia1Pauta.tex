@@ -1,0 +1,149 @@
+\documentclass[11pt,addpoints]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\parindent=0cm
+\setlist{itemsep=0.6em}
+
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,latexsym,cancel}
+\providecommand{\abs}[1]{\lvert#1\rvert}
+\providecommand{\norm}[1]{\LVert#1\RVert}
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[lmargin=2cm,rmargin=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{FACULTAD DE INGENIERÍA\\DEPTO DE INGENIERÍA INDUSTRIAL \\ \textbf{MACROECONOMÍA (580323)}}
+\fancyhead[R]{\includegraphics[scale=0.13]{escudoudec.jpg}}
+\fancyfoot{\thepage}
+\fancyfoot[R]{Semestre 2025-2}
+\fancyfoot[L]{\textbf{PAUTA} — CMP/IGU}
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=cyan}
+\vspace*{0.05cm} % Espacio antes del título
+\begin{document}
+\begin{center}
+{\Large \bfseries Pauta — Ayudantía 1}\\[0.4cm]
+\end{center}
+
+\textbf{Profesor:} Cristian Mardones, Ph.D. \quad
+\textbf{Ayudante:} Ignacio Garrido U.
+
+\bigskip
+
+\begin{enumerate}
+\item \textbf{PIB vs. Ingreso Disponible ($Y_d$).}\\
+\emph{PIB} (Producto Interno Bruto): valor monetario de los \emph{bienes y servicios finales} producidos dentro del territorio en un período. Identidad por el lado del gasto:
+\[
+Y \equiv C + I + G + NX.
+\]
+\emph{Ingreso Disponible} de los hogares: ingreso tras \textbf{impuestos} netos de \textbf{transferencias} y, si aplica, renta neta del exterior:
+\[
+Y_d = Y + \text{RNBD} + \text{TR} - T \quad (\text{en cerrado y sin RNBD: } Y_d \approx Y + \text{TR} - T).
+\]
+Además, para hogares: \(\; Y_d = C + S\). El PIB mide producción agregada; \(Y_d\) mide recursos efectivos de los hogares para consumir/ahorrar.
+
+\item \textbf{Por qué \textit{insumos} no entran al PIB.}\\
+Los insumos intermedios ya están incorporados en el precio de los bienes finales (método de \emph{valor agregado}). Incluirlos produciría \textbf{doble contabilización}. Por eso el PIB suma sólo producción \emph{final} (o suma de valores agregados).
+
+\item \textbf{Tabla A–F (A,B,C,D finales; E,F intermedios).}\\
+\emph{Datos:} 
+Año 2020: \(A:500\cdot100\), \(B:10\cdot2000\), \(C:100\cdot80\), \(D:10\cdot600\).\\
+Año 2021: \(A:540\cdot120\), \(B:9\cdot1800\), \(C:120\cdot90\), \(D:15\cdot500\).
+
+\textbf{(a) PIB nominal y real (base 2020).}
+\[
+\begin{aligned}
+\text{PIB}^{N}_{2020} &= 500\cdot100 + 10\cdot2000 + 100\cdot80 + 10\cdot600 = \boxed{84{,}000},\\
+\text{PIB}^{N}_{2021} &= 540\cdot120 + 9\cdot1800 + 120\cdot90 + 15\cdot500 = \boxed{99{,}300},\\[4pt]
+\text{PIB}^{R}_{2020}(\text{p.2020}) &= \boxed{84{,}000},\\
+\text{PIB}^{R}_{2021}(\text{p.2020}) &= 500\cdot120 + 10\cdot1800 + 100\cdot90 + 10\cdot500 = \boxed{92{,}000}.
+\end{aligned}
+\]
+
+\textbf{(b) Tasa de crecimiento del PIB real (base 2020).}
+\[
+g_{2021}=\frac{92{,}000}{84{,}000}-1=\boxed{9.5238\%}.
+\]
+
+\textbf{(c) Deflactor del PIB.}
+\[
+\text{Deflactor}_{2020}=\boxed{100\%},\qquad 
+\text{Deflactor}_{2021}=\frac{99{,}300}{92{,}000}\cdot100=\boxed{107.9348\%}.
+\]
+
+\textbf{(d) IPC (canasta A,B con cantidades 2020).}\\
+Costo base \(=500\cdot100+10\cdot2000=70{,}000\). Costo 2021 \(=540\cdot100+9\cdot2000=72{,}000\).
+\[
+\text{IPC}_{2020}=\boxed{100\%},\qquad \text{IPC}_{2021}=\frac{72{,}000}{70{,}000}\cdot100=\boxed{102.8571\%}.
+\]
+
+\textbf{(e) Inflación por deflactor vs. por IPC.}
+\[
+\pi^{\text{defl}}_{2021}=\frac{107.9348}{100}-1=\boxed{7.9348\%},\qquad
+\pi^{\text{IPC}}_{2021}=\frac{102.8571}{100}-1=\boxed{2.8571\%}.
+\]
+
+
+
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!!
+
+\item \textbf{(Certamen 2015) IPC vs. Deflactor en economía cerrada con demandas inelásticas.}\\
+No tienen por qué ser iguales. El \textbf{deflactor} pondera con cantidades \emph{corrientes} toda la producción final; el \textbf{IPC} usa una \emph{canasta fija} de consumo de hogares. Aun con demandas inelásticas, las ponderaciones (canasta) difieren y el IPC no incluye bienes no consumidos por hogares (p.ej., inversión pública). Coincidirían sólo bajo supuestos fuertes (mismas ponderaciones y variaciones proporcionales de precios).
+
+\item \textbf{(Certamen 2013) IPC base 2010=100 e inflación.}\\
+Canasta (2010): \(3\) Ron, \(3\) Cocacola, \(2\) Educación, \(1\) PlayStation.\\
+Costos: 
+\[
+\begin{aligned}
+C_{2010}&=3\cdot400+3\cdot1000+2\cdot600+1\cdot800=6{,}200,\\
+C_{2011}&=3\cdot350+3\cdot1100+2\cdot800+1\cdot1200=7{,}150,\\
+C_{2012}&=3\cdot450+3\cdot1100+2\cdot1000+1\cdot1200=7{,}850,\\
+C_{2013}&=3\cdot500+3\cdot1150+2\cdot1020+1\cdot1300=8{,}290.
+\end{aligned}
+\]
+Índice (base 2010=100): 
+\[
+\text{IPC}_{2011}=\boxed{115.3226\%},\quad \text{IPC}_{2012}=\boxed{126.6129\%},\quad \text{IPC}_{2013}=\boxed{133.7097\%}.
+\]
+Inflación:
+\[
+\pi_{2011}=15.3226\%,\quad 
+\pi_{2012}=\frac{126.6129}{115.3226}-1=\;9.7902\%,\quad 
+\pi_{2013}=\frac{133.7097}{126.6129}-1=\;5.6051\%.
+\]
+
+\item \textbf{(Certamen 2013) Cuentas nacionales (en miles).}\\
+Datos: \(Y=60{,}000\), \(I^B=12{,}000\), \(I^N=9{,}000\), \(C=33{,}000\), \(G=14{,}500\), superávit fiscal \(=500\).
+
+\textbf{Depreciación: } \(\delta=I^B-I^N=\boxed{3{,}000}\).\quad
+\textbf{PIN: } \(Y-\delta=60{,}000-3{,}000=\boxed{57{,}000}\).
+
+\textbf{Exportaciones Netas: }
+\[
+NX=Y-C-I^B-G=60{,}000-33{,}000-12{,}000-14{,}500=\boxed{500}.
+\]
+
+\textbf{Impuestos netos de transferencias: } 
+\[
+(T-\text{TR})=G+\text{superávit}=14{,}500+500=\boxed{15{,}000}.
+\]
+
+\textbf{Ahorro nacional: } \(S=I^B+NX=12{,}000+500=\boxed{12{,}500}\).\\
+\textbf{Ahorro público: } superávit \(=\boxed{500}\). \quad
+\textbf{Ahorro privado: } \(S-S_{\text{pub}}=12{,}500-500=\boxed{12{,}000}\).
+
+\textbf{Ingreso disponible: } \(Y_d=C+S_{\text{priv}}=33{,}000+12{,}000=\boxed{45{,}000}\).
+\end{enumerate}
+
+\end{document}
