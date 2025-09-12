@@ -1,0 +1,138 @@
+\documentclass[11pt,addpoints]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{multirow, booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[lmargin=2cm,rmargin=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=cyan}
+\parindent=0cm
+\setlist{itemsep=0.6em}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{FACULTAD DE INGENIERÍA\\DEPTO DE INGENIERÍA INDUSTRIAL \\ MACROECONOMÍA (580323)}
+\fancyhead[R]{\includegraphics[scale=0.13]{escudoudec.jpg}}
+\fancyfoot{\thepage}
+\fancyfoot[R]{Semestre 2025-2}
+\fancyfoot[L]{CMP/IGU}
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\begin{document}
+\vspace*{0.05cm} % Espacio antes del título
+
+\begin{center}
+{\Large \bfseries Ayudantía 2 - \textbf{PAUTA} \\[0.5cm]}
+\end{center}
+
+\textbf{Profesor:} Cristian Mardones, Ph.D. \quad
+\textbf{Ayudante:} Ignacio Garrido U.
+
+\bigskip
+\begin{enumerate}
+
+\item \textbf{Sol.:}
+\begin{align*}
+\text{PIB nominal} &= \sum (\text{precio actual}\times \text{cantidad actual})\\
+\text{2017: } & 100\cdot100 + 200\cdot50 = 20{,}000\\
+\text{2018: } & 200\cdot150 + 300\cdot100 = 60{,}000\\
+\text{2019: } & 300\cdot200 + 400\cdot150 = 120{,}000
+\end{align*}
+\[
+\text{PIB real (base 2017)}=\sum (\text{precio 2017}\times \text{cantidad actual})
+\]
+\begin{align*}
+\text{2017: } & 100\cdot100 + 200\cdot50 = 20{,}000\\
+\text{2018: } & 100\cdot150 + 200\cdot100 = 35{,}000\\
+\text{2019: } & 100\cdot200 + 200\cdot150 = 50{,}000
+\end{align*}
+\[
+\text{Deflactor del PIB} = \frac{\text{PIB nominal}}{\text{PIB real}}\times 100
+\]
+\begin{align*}
+2017:&\; (20{,}000/20{,}000)\times 100 = 100\%\\
+2018:&\; (60{,}000/35{,}000)\times 100 = 171{,}42\%\\
+2019:&\; (120{,}000/50{,}000)\times 100 = 240\%
+\end{align*}
+\textbf{IPC (base 2017):} \; IPC$_{2017}=100\%$, \; IPC$_{2018}=150\%$, \; IPC$_{2019}=300\%$.\\
+\textbf{Inflación (vía IPC):}\; 2018: $150\%-100\%=50\%$;\; 2019: $300\%-150\%=150\%$.
+
+\bigskip
+
+\item \textbf{Sol.:}\\
+Población activa $=$ Ocupados $+$ Desempleados $=45{,}000+5{,}000=50{,}000$.\\
+Tasa de desempleo $=(\text{Desempleados}/\text{Población activa})\times 100=(5{,}000/45{,}000)\times 100=11{,}11\%$.\\
+Trabajadores desanimados (no buscan empleo activamente): $10{,}000$.
+
+\bigskip
+
+\item \textbf{Sol.:}\\
+Gasto base $=\sum p_0 q_0= 4\cdot10+12\cdot25+6\cdot5+25\cdot10=620$.\\
+Proporciones: Pizza $40/620=6{,}45\%$;\; Coca-cola $300/620=48{,}39\%$;\; Camisetas $30/620=4{,}84\%$;\; Muebles $250/620=40{,}32\%$.\\
+IPC $=0{,}0645\cdot(8/4)\cdot100+0{,}4839\cdot(36/12)\cdot100+0{,}0484\cdot(10/6)\cdot100+0{,}4032\cdot(30/25)\cdot100=214$.
+
+\bigskip
+
+\item \textbf{Sol.:}\\
+Valor agregado: Pan $50-0=50$; Queso $35-0=35$; Pizza $200-50-35=115$. \; $\Rightarrow$ \textbf{PIB} $=50+35+115=200$.\\
+Gasto (bien final): sólo \textit{pizza} $=200$.\\
+Ingresos: Pan $15+(\,50-15\,)=50$; Queso $20+(\,35-20\,)=35$; Pizza $75+(\,200-75-35-50\,)=115$. \; \textbf{PIB} $=200$.
+
+\bigskip
+\newpage
+\vspace*{0.03cm} % Espacio antes del título
+
+\item \textbf{Sol.:}\\
+Finales: sólo \textit{automotriz} $\Rightarrow$ \textbf{PIB} $=210$.\\
+Valor agregado: Siderúrgica $100-0=100$;\; Automotriz $210-100=110$.\; \textbf{PIB} $=210$.\\
+Ingreso: Siderúrgica $80+20=100$;\; Automotriz $70+40=110$.\; \textbf{PIB} $=210$.
+
+\bigskip
+
+\item \textbf{Sol.:}\\
+\textit{Vía deflactor:}\; $2003:\,(106{,}0/104{,}1)\cdot100-100=1{,}83\%$;\; $2004:\,(108{,}3/106{,}0)\cdot100-100=2{,}17\%$.\\
+\textit{Vía IPC (diferencia de puntos):}\; $2003:\,184{,}0-179{,}9=4{,}1$ p.p.;\; $2004:\,188{,}9-184{,}0=4{,}9$ p.p.
+
+\bigskip
+
+\item \textbf{Sol.:}\\
+(a) En el año base no hay variación de precios, por lo que nominal=real.\\
+(b) PIB nominal 2003 $=10\cdot200+15\cdot250+25\cdot100=8{,}250$.\\
+PIB nominal 2004 $=12\cdot220+18\cdot250+30\cdot120=10{,}740$.\\
+PIB real (base 2003): 2003 $=8{,}250$; 2004 $=10\cdot220+15\cdot250+25\cdot120=8{,}950$.\\
+Deflactor: 2003 $=100\%$;\; 2004 $=(10{,}740/8{,}950)\cdot100=120\%$ $\Rightarrow$ \textit{inflación} $=20\%$.\\
+(c) Participaciones (año base): $2{,}000/8{,}250=24{,}24\%$; $3{,}750/8{,}250=45{,}45\%$; $2{,}500/8{,}250=30{,}31\%$.\\
+IPC 2003 $=100\%$;\; IPC 2004 $=120\%$.\; (Diferencias por canasta fija vs. variable).\\
+(d) El deflactor capta \textit{toda} la producción; el IPC sólo la canasta de consumo.
+
+\bigskip
+
+\item \textbf{Sol.:}\\
+Activa $=120{,}000{,}000+10{,}000{,}000=130{,}000{,}000$.\\
+Tasa de actividad $=(130/190)\cdot100=68{,}42\%$.\\
+Desempleo oficial $=(10/130)\cdot100=7{,}69\%$.\\
+Si desanimados se consideran desempleados: $\frac{(10+15)}{(120+10+15)}\cdot100=\frac{25}{145}\cdot100=17{,}24\%$.
+
+\bigskip
+
+
+
+\item \textbf{Sol.:}\\
+PIB nominal: $t=0:\,4\cdot2+10\cdot2+15\cdot3=73$;\; $t=1:\,101$;\; $t=2:\,82$.\\
+PIB real (base 0): $t=0:\,73$;\; $t=1:\,4\cdot5+10\cdot1+15\cdot3=75$;\; $t=2:\,4\cdot4+10\cdot1+15\cdot2=56$.\\
+Deflactor: $t=0:\,100$;\; $t=1:\,(101/75)\cdot100\approx 135$;\; $t=2:\,(82/56)\cdot100\approx 146$.\\
+Paasche: $t=0:\,100$;\; $t=1:\,\approx 135$;\; $t=2:\,\approx 146$.\\
+Laspeyres: $t=0:\,100$;\; $t=1:\,\approx 129$;\; $t=2:\,\approx 149$.\\
+Fisher: $PF=\sqrt{P_P\cdot P_L}$ $\Rightarrow$ $t=0:\,100$;\; $t=1:\,132$;\; $t=2:\,148$.\\
+Comparación: Fisher $\approx$ deflactor; subestima en $t=1$ (132 vs. 135) y sobrestima en $t=2$ (148 vs. 146).
+
+\end{enumerate}
+
+\end{document}

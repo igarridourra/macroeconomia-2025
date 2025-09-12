@@ -1,0 +1,308 @@
+
+\documentclass[11pt,addpoints]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[lmargin=2cm,rmargin=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=cyan}
+\parindent=0cm
+\setlist{itemsep=0.6em}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{FACULTAD DE INGENIERÍA\\DEPTO DE INGENIERÍA INDUSTRIAL \\ MACROECONOMÍA (580323)}
+\fancyhead[R]{\includegraphics[scale=0.13]{escudoudec.jpg}}
+\fancyfoot{\thepage}
+\fancyfoot[R]{Semestre 2025-2}
+\fancyfoot[L]{CMP/IGU}
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\begin{document}
+\vspace*{0.05cm} % Espacio antes del título
+
+
+\begin{center}
+{\Large \bfseries Ayudantía 2 - Macroeconomía \\[0.5cm]}
+\end{center}
+\textbf{Profesor:} Cristian Mardones, Ph.D. \quad \textbf{Ayudante:} Ignacio Garrido U.
+\bigskip
+
+A continuación se presenta el \textbf{Listado 2} con ejercicios de \textit{PIB, Contabilidad Nacional e IPC}, con \textbf{la finalidad de que repasen dichos puntos}.
+
+\begin{enumerate}
+
+\item Suponga una economía donde solo se producen \emph{lápices} y \emph{cuadernos}.\\
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+\multirow{2}{*}{\textbf{Año}} & \multicolumn{2}{c}{\textbf{Lápices}} & \multicolumn{2}{c}{\textbf{Cuadernos}}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & Precio & Cantidad & Precio & Cantidad\\
+\midrule
+2017 & 100 & 100 & 200 & 50\\
+2018 & 200 & 150 & 300 & 100\\
+2019 & 300 & 200 & 400 & 150\\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{enumerate}[label=(\alph*)]
+\item Calcule el \textbf{PIB nominal} 2017–2019.
+\item Calcule el \textbf{PIB real} (base 2017).
+\item Calcule el \textbf{deflactor del PIB}.
+\item Calcule el \textbf{IPC} (base 2017) con canasta \{lápices, cuadernos\}.
+\item Calcule la \textbf{inflación} (2017–2019) por deflactor e IPC.
+\end{enumerate}
+
+\item  En Valdivia hay 100.000 habitantes. De ellos, 25.000 son demasiado mayores para trabajar
+y 15.000 son demasiado jóvenes. De los 60.000 restantes, 10.000 no se encuentran trabajando ni
+buscando empleo, 45.000 tienen empleo y los 5.000 restantes se encuentran buscando empleo
+pero siguen sin trabajo.
+\begin{enumerate}[label=(\alph*)]
+\item Calcule la \textbf{población activa}.
+\item Calcule la \textbf{tasa de desempleo}.
+\item Identifique los trabajadores “\textbf{desanimados/NINI}”.
+\end{enumerate}
+
+\item En el país de los jóvenes se consumen 4 artículos. Considere año base 2013.
+\begin{center}
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{\textbf{2013 (base)}} & \multicolumn{2}{c}{\textbf{2019}}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+\textbf{Artículo} & Precio & Cantidad & Precio & Cantidad\\
+\midrule
+Pizza & \$4 & 10 & \$8 & 12\\
+Coca-cola & \$12 & 25 & \$36 & 15\\
+Camisetas & \$6 & 5 & \$10 & 15\\
+Muebles & \$25 & 10 & \$30 & 12\\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{enumerate}[label=(\alph*)]
+\item Calcule el \textbf{gasto total} del año base.
+\item Calcule la \textbf{proporción del gasto} de cada producto en el año base.
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!!
+\item Construya el \textbf{IPC} (Laspeyres) y reporte \% variaciones.
+\end{enumerate}
+
+\item Considere la siguiente economía que produce tres productos (pan, queso y pizza) y cada
+producto lo produce una empresa distinta. Las empresas de pan y queso producen todas las
+materias primas necesarias para hacer pan y queso comprado a las otras dos empresas para hacer
+las pizzas. Las tres empresas emplean a trabajadores para producir sus bienes y el beneficio de la
+empresa es la diferencia entre el valor de venta de los bienes y la suma de los costes laborales y
+de materias primas. La siguiente tabla resume la actividad de las tres empresas en el supuesto de
+que todo el pan y el queso producido se venden a la empresa de pizza como materias primas de
+su producción.
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+ & \textbf{Empresa de pan} & \textbf{Empresa de queso} & \textbf{Empresa de pizza}\\
+\midrule
+Coste de materias primas & 0 & 0 & 50 (pan), 35 (queso)\\
+Salarios & 15 & 20 & 75\\
+Valor de la producción & 50 & 35 & 200\\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{enumerate}[label=(\alph*)]
+\item Calcule el \textbf{PIB} por \emph{valor agregado}.
+\item Calcule el \textbf{PIB} por \emph{gasto en bienes finales}.
+\item Calcule el \textbf{PIB} por \emph{ingresos de factores}.
+\end{enumerate}
+
+\item Suponga una economía formada por dos empresas. Durante un año se realizan las siguientes
+actividades:
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+ & \textbf{Siderúrgica} & \textbf{Automotriz}\\
+\midrule
+Ingresos por ventas & U\$S 100 & U\$S 210\\
+Gastos: salarios & U\$S 80 & U\$S 70\\
+Compra de acero & -- & U\$S 100\\
+Beneficios & U\$S 20 & U\$S 40\\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{enumerate}[label=(\alph*)]
+\item Utilizando el enfoque de la “producción de bienes finales”, ¿cuál es el \textbf{PIB}?
+\item ¿Cuál es el valor agregado en cada fase de la producción? Utilizando el enfoque del valor
+agregado ¿Cuál es el \textbf{PIB}?
+\item ¿cuáles son los salarios y los beneficios totales generados por esta actividad? Utilizando
+el enfoque de la renta, ¿Cuál es el \textbf{PIB}?
+\end{enumerate}
+
+\item La siguiente tabla contiene dos índices de precio de los años 2002, 2003 y 2004: el deflactor
+del PIB y el IPC. Para cada uno de los índices, calcule la tasa de inflación de los períodos
+considerados.
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+\textbf{Año} & \textbf{Deflactor del PIB} & \textbf{IPC}\\
+\midrule
+2002 & 104,1 & 179,9\\
+2003 & 106,0 & 184,0\\
+2004 & 108,3 & 188,9\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!!
+
+
+\item Considere una economía simple con sólo tres bienes. 
+\\
+\begin{center}
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{\textbf{2003}} & \multicolumn{2}{c}{\textbf{2004}}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+\textbf{Bien} & Precio & Cantidad & Precio & Cantidad\\
+\midrule
+1 & \$10 & 200 & \$12 & 220\\
+2 & \$15 & 250 & \$18 & 250\\
+3 & \$25 & 100 & \$30 & 120\\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{enumerate}[label=(\alph*)]
+\item ¿Por qué el \textbf{PIB nominal} es igual al \textbf{PIB real} en el \textbf{año base}?
+\item Suponga ahora que los precios en el \textbf{2004} aumentan y las cantidades también cambian.
+Calcule el valor del \textbf{PIB nominal} y del \textbf{PIB real} usando el \textbf{2003} como \textbf{año base}. 
+¿Cuál es la \textbf{inflación} medida por el \textbf{deflactor del PIB}?
+\item Construya un \textbf{índice de precios al consumidor (IPC)} usando como \textbf{ponderadores} 
+las \textbf{participaciones} de cada artículo en el \textbf{consumo total} y calcule la \textbf{tasa de inflación} a través del \textbf{IPC}. 
+¿Por qué difiere de la \textbf{tasa de inflación} medida por el \textbf{deflactor del PIB}?
+\item ¿Qué dice su respuesta respecto de la importancia de usar \textbf{deflactores de precios} 
+en la \textbf{medición del crecimiento} de un país?
+\end{enumerate}
+
+
+\item Suponga que en Estados Unidos hay en un determinado mes 190.000.000 de personas en
+edad
+activa, de las cuales solo 120.000.000 tienen empleo. Del resto, 10.000.000 están buscando
+trabajo,
+15.000.000 han renunciado a buscarlo y 45.000.000 no quieren trabajar.
+\begin{enumerate}[label=(\alph*)]
+\item Calcule la \textbf{población activa}.
+\item Calcule la \textbf{tasa de actividad}.
+\item Calcule la \textbf{tasa de desempleo} oficial.
+\item Recalcule la \textbf{tasa de desempleo} si los desanimados se consideran desempleados.
+\end{enumerate}
+
+\item Con la siguiente tabla, considere periodo base $0$:
+\begin{center}
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{2}{c}{\textbf{Bienes de capital}} & \multicolumn{2}{c}{\textbf{Consumo básico}} & \multicolumn{2}{c}{\textbf{Consumo de lujo}}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+\textbf{Periodo} & Precio & Cantidad & Precio & Cantidad & Precio & Cantidad\\
+\midrule
+0 & 30 & 500 & 20 & 250 & 25 & 100\\
+1 & 50 & 600 & 30 & 250 & 40 & 300\\
+2 & 60 & 650 & 40 & 350 & 35 & 400\\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{enumerate}[label=(\alph*)]
+\item Calcule \textbf{PIB a precios corrientes} ($t=0,1,2$).
+\item Calcule \textbf{PIB a precios constantes} (base $0$).
+\item Calcule \textbf{deflactor del PIB}.
+\item Construya \textbf{IPC} con ponderaciones: 70\% básicos, 30\% lujo.
+\end{enumerate}
+
+
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!!
+
+\item Precios y cantidades de tres productos por períodos $t=0,1,2$:
+\begin{center}
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{lcccccc}
+\toprule
+$t$ & $P_A$ & $Q_A$ & $P_B$ & $Q_B$ & $P_C$ & $Q_C$\\
+\midrule
+0 & 4 & 2 & 10 & 2 & 15 & 3\\
+1 & 6 & 5 & 11 & 1 & 20 & 3\\
+2 & 5 & 4 & 12 & 1 & 25 & 2\\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{enumerate}[label=(\alph*)]
+\item Calcule \textbf{PIB corriente} ($t=0,1,2$).
+\item Calcule \textbf{PIB constante} (base $t=0$).
+\item Calcule \textbf{deflactor del PIB}.
+\item Calcule \textbf{índices de precios} de \textit{Paasche}, \textit{Laspeyres} y \textit{Fisher}.
+\item Compare \textbf{Fisher} vs \textbf{deflactor del PIB}.
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!!
+
+\centering
+\begin{frame}{\textbf{Reflexionemos (Noticia Emol / El Mercurio EyN)}}
+\vspace*{5mm} % <-- espacio extra entre el título y el contenido
+
+\centering
+\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{2Ayudantia/noticia2.PNG}
+\medskip
+
+{\small
+IPC de julio: Mercado ve alta inflación como "transitoria", pero podría volver a pausar los recortes de tasa \href{https://www.emol.com/noticias/Economia/2025/08/08/1174511/mercado-ipc-julio.html}{(Emol, Agosto 2025)}.
+}
+\end{frame}
+
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!!
+\begin{frame}{Resumen Noticia - IPC Julio 2025}
+El \textbf{IPC de julio 2025} sorprendió con un alza de \textbf{0,9 \%}, superando las expectativas del mercado. 
+La inflación anual subió de 4,1 \% a \textbf{4,3 \%}, alejándose de la meta del Banco Central (3 \%).  
+
+\medskip
+Principales factores que explican el resultado:
+\begin{itemize}
+  \item Alzas en tarifas eléctricas, vivienda y servicios básicos.
+  \item Incrementos en alimentos y bebidas no alcohólicas.
+  \item Caídas en seguros y servicios financieros que moderaron el alza.
+  \item La Unidad de Fomento (UF) subió cerca de \$350, encareciendo arriendos y créditos hipotecarios.
+  \item Autoridades y economistas señalan que el alza sería \textbf{transitoria}, aunque genera dudas sobre el curso de la política monetaria.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Preguntas para discutir}
+\begin{enumerate}
+  \item El alza del IPC encareció la UF en julio. ¿Qué efectos concretos puede tener esto en el \textbf{consumo e inversión de los hogares}? \textit{Hint: Relacionar con renta disponible y decisiones de gasto.}
+
+  \item Si la inflación anual subió a 4,3 \%, ¿cómo se conecta este dato con la medición del \textbf{PIB real} respecto al nominal? \textit{Hint: Diferencia entre PIB nominal, PIB real y deflactor.}
+
+  \item En el modelo \textbf{OA–DA}, ¿qué tipo de shock representa este aumento de precios en electricidad y alimentos? \textit{Hint: Revisar oferta agregada de corto plazo y shocks de costos.}
+
+  \item ¿De qué manera el IPC impacta la \textbf{renta disponible} y las decisiones de gasto de los hogares? \textit{Hint: Conexión entre inflación, salarios reales y consumo privado.}
+
+  \item El Banco Central podría pausar la baja de tasas. ¿Qué vínculo existe entre esta decisión y la \textbf{demanda agregada}? \textit{Hint: Política monetaria y su efecto sobre inversión y gasto agregado.}
+\end{enumerate}
+\end{frame}
+% --- Fin de inserción ---
+
+
+\end{document}
