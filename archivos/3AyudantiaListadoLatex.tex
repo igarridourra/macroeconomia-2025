@@ -1,0 +1,202 @@
+\documentclass[11pt,addpoints]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[lmargin=2cm,rmargin=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb} % <-- por fórmulas
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=cyan}
+\parindent=0cm
+\setlist{itemsep=0.6em}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{FACULTAD DE INGENIERÍA\\DEPTO DE INGENIERÍA INDUSTRIAL \\ MACROECONOMÍA (580323)}
+\fancyhead[R]{\includegraphics[scale=0.13]{escudoudec.jpg}}
+\fancyfoot{\thepage}
+\fancyfoot[R]{Semestre 2025-2}
+\fancyfoot[L]{CMP/IGU}
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+
+
+
+\begin{document}
+\vspace*{0.05cm}
+
+\begin{center}
+{\Large \bfseries Ayudantía 3 - Macroeconomía\\[0.5cm]}
+\textbf{Profesor:} Cristian Mardones, Ph.D. \quad \textbf{Ayudante:} Ignacio Garrido U.
+\end{center}
+
+
+
+
+A continuación se presenta el \textbf{Listado 3} con ejercicios de \textit{Inflación, Desempleo, PIB per cápita, Tasa de Interés, OA--DA, Curva de Phillips, Relación Salario--Desempleo y Shocks de Oferta}, junto con un análisis aplicado a una \textbf{noticia económica reciente}.
+
+\begin{enumerate}
+
+% --- INFLACIÓN ---
+\item \textbf{Inflación}\\
+El Índice de Precios al Consumidor (IPC) en Chile fue 0,0\% en agosto 2025, acumulando 2,9\% en lo que va del año y 4,0\% a 12 meses.
+\begin{enumerate}[label=(\alph*)]
+\item Explique por qué la inflación anual puede mantenerse en 4,0\% pese a un mes con variación 0,0\%.
+\item Suponga que los próximos tres meses registran: septiembre 0,3\%, octubre 0,2\% y noviembre 0,1\%. Estime la inflación anual a noviembre si en 2024 esos meses sumaron 1,0\%. ¿Baja o sube?
+\end{enumerate}
+
+\item \textbf{Inflación núcleo vs. total}\\
+Se sabe que el IPC subyacente en 2025 se mantiene por encima del total.
+\begin{enumerate}[label=(\alph*)]
+\item Explique por qué el Banco Central mira más la inflación subyacente que la total.
+\item Grafique (boceto) la trayectoria de inflación total vs. subyacente en 2025 y comente qué indica sobre la persistencia inflacionaria.
+\end{enumerate}
+
+% --- DESEMPLEO ---
+\item \textbf{Desempleo: cálculo simple}\\
+En la Región del Biobío se registran: 1.200.000 personas en edad de trabajar; 850.000 en la fuerza laboral, de los cuales 780.000 ocupados y 70.000 desocupados.
+\begin{enumerate}[label=(\alph*)]
+\item Calcule la tasa de participación laboral.
+\item Calcule la tasa de desempleo.
+\item Explique si estas cifras son coherentes con un desempleo nacional de 8,7\% en julio 2025.
+\end{enumerate}
+
+\item \textbf{Holguras laborales}\\
+Además de los desocupados, el INE estima que un 6\% de los ocupados está subempleado (quiere trabajar más horas).
+\begin{enumerate}[label=(\alph*)]
+\item Calcule la tasa de subutilización laboral (desocupados + subempleados sobre fuerza laboral).
+\item Explique por qué este indicador puede dar una visión más real que la tasa de desempleo.
+\end{enumerate}
+
+% --- PIB per cápita ---
+\item \textbf{PIB per cápita}\\
+Según el Banco Mundial, el PIB per cápita de Chile en 2024 fue US\$ 16.710. En 2019 era US\$ 15.300.
+\begin{enumerate}[label=(\alph*)]
+\item Calcule el crecimiento porcentual en dólares entre 2019 y 2024.
+\item Explique por qué un aumento en dólares no necesariamente refleja un mayor bienestar real en Chile.
+\end{enumerate}
+
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!!
+% --- TASA DE INTERÉS ---
+\item \textbf{Tasa de política monetaria}\\
+Considere una regla de Taylor simplificada:
+\[
+i_t = r^{\ast} + \pi_t + 0{,}5(\pi_t - \pi^{\ast}) + 0{,}5(y_t - y^{\ast})
+\]
+con $r^{\ast}=1{,}5\%$, $\pi_t=4{,}0\%$, $\pi^{\ast}=3{,}0\%$, $y_t - y^{\ast}=-0{,}5\%$.
+\begin{enumerate}[label=(\alph*)]
+\item Calcule $i_t$.
+\item Compare con la TPM efectiva de 4,75\% en septiembre 2025 y discuta si la política es contractiva o laxa respecto de la regla.
+\end{enumerate}
+
+% --- OA-DA ---
+\item \textbf{Modelo OA--DA: choque de demanda}\\
+Suponga que la TPM se mantiene elevada durante 2025.
+\begin{enumerate}[label=(\alph*)]
+\item Represente en un gráfico OA--DA el efecto sobre la Demanda Agregada en el corto plazo.
+\item Explique qué sucede con el nivel de producción y precios.
+\end{enumerate}
+
+\item \textbf{Modelo OA--DA: choque de oferta}\\
+En julio 2025, las remuneraciones nominales crecieron 6,4\% interanual, superando la productividad.
+\begin{enumerate}[label=(\alph*)]
+\item Explique qué efecto tiene sobre la OA de corto plazo.
+\item Represente en un gráfico OA--DA el nuevo equilibrio.
+\end{enumerate}
+
+% --- PHILLIPS ---
+\item \textbf{Curva de Phillips con expectativas}\\
+Considere $\pi_t = \pi_t^e - \gamma(u_t - u_n) + \nu_t$ con $\pi_t^e=3{,}5\%$, $u_t=8{,}7\%$, $u_n=8{,}0\%$, $\gamma=0{,}5$, $\nu_t=0{,}3\%$.
+\begin{enumerate}[label=(\alph*)]
+\item Calcule la inflación $\pi_t$.
+\item Interprete qué significa que $\gamma$ sea bajo (curva más plana).
+\end{enumerate}
+
+% --- SALARIO-DESEMPLEO ---
+\item \textbf{Relación salario--desempleo (WS--PS)}\\
+Suponga que el salario mínimo en Chile aumenta 8\% mientras la productividad crece 2\%.
+\begin{enumerate}[label=(\alph*)]
+\item Explique cómo se desplaza la curva WS.
+\item Muestre en un gráfico WS--PS cómo cambia el desempleo de equilibrio.
+\end{enumerate}
+
+% --- SHOCKS DE OFERTA ---
+\item \textbf{Shocks de oferta en Chile}\\
+En 2022 el alza de la energía elevó el IPC por sobre 12\%.
+\begin{enumerate}[label=(\alph*)]
+\item Explique por qué este episodio se clasifica como shock de oferta.
+\item Compare con la situación de 2025, donde la inflación baja pero persisten presiones de salarios.
+\end{enumerate}
+
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!!
+
+
+% --- NOTICIA (versión "frame" para article) ---
+
+\centering
+\begin{frame}{\textbf{Reflexionemos (Noticia Emol / El Mercurio EyN)}}
+\vspace*{5mm} % <-- espacio extra entre el título y el contenido
+
+\centering
+\includegraphics[width=\textwidth,height=0.75\textheight,keepaspectratio]{3Ayudantia/noticia3.PNG}
+\medskip
+{\small
+Banco Central mantiene la tasa de interés y apunta al riesgo ``de una mayor persistencia de la inflación''  
+\href{https://www.emol.com/noticias/Economia/2025/09/09/1177398/banco-central-tasa-interes.html}{(Emol, 09 de septiembre de 2025)}.
+}
+\end{frame}
+
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!!
+
+\begin{frame}{Resumen de la noticia}
+
+El 09 de septiembre de 2025, el \textbf{Banco Central de Chile} decidió mantener la Tasa de Política Monetaria (TPM) en \textbf{4,75\%}, luego de haber hecho un primer recorte en julio.  
+La decisión responde a que, aunque la inflación total sigue bajando, la \textbf{inflación subyacente} continúa elevada, lo que refleja riesgos de persistencia inflacionaria.  
+El \textbf{IMACEC} mostró un crecimiento moderado (+1,0\% en julio), mientras que el desempleo alcanzó un \textbf{8,7\%}, con lenta creación de empleo pero salarios creciendo con fuerza.  
+En este contexto, el BCCh priorizó la \textbf{convergencia de la inflación a la meta de 3\%}, optando por cautela antes de continuar los recortes de tasa.
+\end{frame}
+\vspace*{0.2cm} %No borrar!!
+\vspace*{0.2cm} %No borrar!!
+
+\begin{frame}{Preguntas de discusión}
+\begin{enumerate}[label=(\alph*),leftmargin=*]
+  \item \textbf{Decisión de la TPM:}  
+  ¿Por qué el Banco Central mantuvo la tasa en 4,75\% en lugar de seguir bajándola?  
+
+  \item \textbf{Impacto en la economía real:}  
+  ¿Cómo afecta una TPM alta al consumo, la inversión y el empleo (modelo OA--DA)?  
+
+  \item \textbf{Desempleo y política monetaria:}  
+  ¿Qué relación puede existir entre las tasas elevadas y la lenta creación de empleo?  
+
+  \item \textbf{Salarios e inflación:}  
+  ¿Qué implicancias tiene el fuerte aumento de salarios sobre la inflación y la competitividad?  
+
+  \item \textbf{Próximos pasos:}  
+  ¿Qué condiciones deberían cumplirse para que el Banco Central retome los recortes de tasa sin poner en riesgo la meta de inflación?
+\end{enumerate}
+\end{frame}
+\vspace*{0.2cm} %No borrar!!
+
+\begin{frame}{Conexiones con contenidos de Macroeconomía}
+\begin{itemize}
+  \item \textbf{Política monetaria e inflación:} Mantener la TPM alta muestra el uso de la tasa de interés como instrumento para anclar expectativas y acercar la inflación a la meta (3\%).  
+
+  \item \textbf{Desempleo y mercado laboral:} El desempleo en 8,7\% permite analizar brechas de producto, desempleo natural vs. coyuntural y la relación de la Curva de Phillips.  
+
+  \item \textbf{OA--DA:} Una TPM restrictiva desplaza la DA a la izquierda: menor PIB en el corto plazo, inflación más controlada en el mediano plazo.  
+
+  \item \textbf{Shocks de oferta:} El alza de salarios sin productividad adicional actúa como un shock de costos, desplazando la OA de corto plazo hacia arriba.
+\end{itemize}
+\end{frame}
+% --- Fin de sección NOTICIA ---
+\end{document}

@@ -1,0 +1,1030 @@
+\documentclass[11pt,addpoints]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[lmargin=2cm,rmargin=2cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb}
+% ---- NUEVO: Gráficos ----
+\usepackage{tikz}
+\usepackage{float}        % para [H]
+\usepackage{subcaption}   % subfiguras
+\usepackage{caption}      % (opcional) para ajustar espaciados
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,intersections,calc,backgrounds}
+
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,intersections,calc}
+
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,intersections,decorations.pathmorphing}
+
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=cyan}
+\parindent=0cm
+\setlist{itemsep=0.9em}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{FACULTAD DE INGENIERÍA\\DEPTO DE INGENIERÍA INDUSTRIAL \\ MACROECONOMÍA (580323)}
+\fancyhead[R]{\includegraphics[scale=0.13]{escudoudec.jpg}}
+\fancyfoot{\thepage}
+\fancyfoot[R]{Semestre 2025-2}
+\fancyfoot[L]{CMP/IGU}
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\begin{document}
+\vspace*{0.01cm}
+
+\begin{center}
+{\Large \bfseries Pauta Ayudantía 4 (Extra Certamen 1) - Macroeconomía \\[0.6cm]}
+\textbf{Profesor:} Cristian Mardones, Ph.D. \quad \textbf{Ayudante:} Ignacio Garrido U.
+\end{center}
+
+\section*{\textbf{Ejercicios de Certámenes Anteriores (2024, 2023, 2022, 2021) — Pauta}}
+
+% ========================= 2024 - P1 =========================
+\subsection*{(Certamen 1, 2024) \quad Pregunta 1 (1,5 puntos)}
+\textbf{Enunciado.} Curva de Phillips con expectativas:
+\[
+\pi_t = \pi_{t-1} + \big(0{,}05 - 1{,}25\,u_t\big).
+\]
+
+\textbf{Pauta / Solución.}
+
+\begin{enumerate}[label=\alph*)]
+\item \textbf{Expectativas racionales.} No. La forma \(\pi_t = \pi_{t-1} + \cdots\) implica expectativas \emph{adaptativas} (\(\pi_t^{e}=\pi_{t-1}\)), no racionales. Bajo expectativas racionales, \(\pi_t^{e}\) sería la esperanza matemática condicional, no necesariamente \(\pi_{t-1}\).
+
+\item \textbf{Tasa natural de desempleo.} En equilibrio de inflación constante (\(\pi_t=\pi_{t-1}\)) se cumple:
+\[
+0 = 0{,}05 - 1{,}25\,u^n \quad \Rightarrow \quad u^n = \frac{0{,}05}{1{,}25} = 0{,}04 = \boxed{4\%}.
+\]
+\end{enumerate}
+
+
+% ========================= 2024 - P2 =========================
+\subsection*{(Certamen 1, 2024) \quad Pregunta 2 (1,5 puntos)}
+\textbf{Enunciado.} OA: \(P_{t+1}=P_t\,[1+\lambda(Y-Y^*)]\). Analice y \emph{grafique} el ajuste ante una \textbf{fuerte caída de importaciones}.
+
+\textbf{Pauta / Solución (idea económica y secuencia temporal).}
+\begin{itemize}
+\item \textbf{Impacto inicial (t=0).} Una caída exógena de importaciones (\(M\downarrow\)) eleva \(XN=X-M\) y, por identidad, desplaza la \textbf{DA} a la \emph{derecha}. Resultado de corto plazo: \(Y_0>Y^*\) y \(P_0\) comienza a subir.
+\item \textbf{Dinámica (t=1,2,\dots).} Con \(Y>Y^*\), la ecuación de OA implica \(P_{t+1}>P_t\). El alza de \(P\) reduce saldos reales y \emph{modera} DA; simultáneamente, la OA \emph{desliza} la economía hacia \(Y^*\).
+\item \textbf{Mediano plazo.} Se retorna a \(\boxed{Y=Y^*}\) con un \(\boxed{P}\) \textbf{más alto}. La velocidad depende de \(\lambda\) (rigideces nominales).
+
+\end{itemize}
+
+\textbf{Gráfico sugerido.} Dos paneles OA--DA: (i) choque DA\(\uparrow\) (de \(DA_0\) a \(DA_1\)), (ii) senda temporal \(P_t\) al alza con \(Y_t\to Y^*\).
+
+\newpage
+\vspace*{0.1cm}
+\textbf{En terminos graficos:}
+
+\textbf{OA: } \(P_{t+1}=P_t[1+\lambda(Y-Y^*)]\). \textbf{Choque:} fuerte caída de importaciones (\(M\downarrow\)).
+
+\textbf{Idea económica.} \(DA\) se desplaza \(\rightarrow\) por \(XN\uparrow\). En el corto plazo \(Y>Y^*\) y \(P\) sube; luego la dinámica de \(P\) (vía \(\lambda\)) va llevando \(Y\) a \(Y^*\) con \(P\) más alto.
+
+\begin{figure}[h!]
+\centering
+% --- capas para evitar superposición ---
+\begin{tikzpicture}[>=Latex, x=1cm, y=1cm, scale=1.0]
+  \pgfdeclarelayer{bg}
+  \pgfdeclarelayer{fg}
+  \pgfsetlayers{bg,main,fg}
+
+  % ======== Parámetros (puedes ajustarlos) ========
+  \def\a{4.2}   % AD0:  P = a - b*Y
+  \def\b{0.35}  % pendiente de AD (se usa como -\b)
+  \def\ap{4.6}  % AD1:  P = ap - b*Y
+  \def\c{0.8}   % OA0:  P = c + d*Y
+  \def\d{0.25}  % pendiente de OA0
+  \def\ystar{4} % LRAS en x = Y*
+
+  % ======== Marco y ejes (dejo margen inferior para la leyenda) ========
+  \clip (-0.2,-0.7) rectangle (8.2,5.3);
+  \draw[->] (0,0) -- (8,0) node[below right] {$Y$};
+  \draw[->] (0,0) -- (0,5) node[above left] {$P$};
+
+  % ======== Definición de caminos (para intersecciones limpias) ========
+  % LRAS
+  \path[name path=LRAS] (\ystar,0) -- (\ystar,5);
+  % AD0 y AD1
+  \path[name path=ADzero] (0,\a) -- (8,{\a - \b*8});
+  \path[name path=ADone]  (0,\ap) -- (8,{\ap - \b*8});
+  % OA0
+  \path[name path=OAzero] (0,\c) -- (8,{\c + \d*8});
+
+  % ======== Intersecciones ========
+  \path [name intersections={of=ADzero and OAzero, by=E0}];  % inicial CP
+  \path [name intersections={of=ADone  and OAzero, by=Ecp}]; % CP post-shock
+  \path [name intersections={of=ADone  and LRAS,   by=Elr}]; % MP/LR
+
+  % ======== Coordenadas auxiliares (proyecciones limpias) ========
+  \coordinate (Y0)  at (E0  |- 0,0);
+  \coordinate (Y1)  at (Ecp |- 0,0);
+  \coordinate (Yst) at (\ystar,0);
+  \coordinate (P0)  at (E0  -| 0,0);
+  \coordinate (P1)  at (Ecp -| 0,0);
+  \coordinate (Plr) at (Elr -| 0,0);
+
+  % ======== Fondo: proyecciones punteadas (debajo de las curvas) ========
+  \begin{pgfonlayer}{bg}
+    \draw[densely dotted] (E0)  -- (Y0);
+    \draw[densely dotted] (Ecp) -- (Y1);
+    \draw[densely dotted] (Elr) -- (Yst);
+    \draw[densely dotted] (E0)  -- (P0);
+    \draw[densely dotted] (Ecp) -- (P1);
+    \draw[densely dotted] (Elr) -- (Plr);
+  \end{pgfonlayer}
+
+  % ======== Curvas (capa principal) ========
+  % LRAS
+  \draw[very thick] (\ystar,0.2) -- (\ystar,5) node[pos=0.98, right] {$LRAS:\,Y^*$};
+  % AD0 y AD1
+  \draw[thick]          (0,\a)  -- (8,{\a  - \b*8});
+  \draw[thick,dashed]   (0,\ap) -- (8,{\ap - \b*8});
+  % OA0
+  \draw[thick]          (0,\c)  -- (8,{\c  + \d*8});
+
+  % rótulos de curvas con leves corrimientos para no encimar
+  \node[anchor=west,fill=white,inner sep=1pt] at (6.5, {(\a  - \b*6.5)}) {$AD_0$};
+  \node[anchor=west,fill=white,inner sep=1pt] at (7.0, {(\ap - \b*7.0)+0.12}) {$AD_1$};
+  \node[anchor=west,fill=white,inner sep=1pt] at (2.0, {(\c  + \d*2.0)+0.14}) {$OA_0$};
+
+  % ======== Puntos y etiquetas (capa superior con fondo blanco) ========
+  \begin{pgfonlayer}{fg}
+    \fill (E0)  circle (2pt);
+    \fill (Ecp) circle (2pt);
+    \fill (Elr) circle (2pt);
+    \node[above left, fill=white, inner sep=1pt]  at (E0)  {$E_0$};
+    \node[above right,fill=white, inner sep=1pt]  at (Ecp) {$E_{CP}$};
+    \node[above right,fill=white, inner sep=1pt]  at (Elr) {$E_{LR}$};
+
+    \node[below, fill=white, inner sep=1pt] at (Y0)  {$Y_0$};
+    \node[below, fill=white, inner sep=1pt] at (Y1)  {$Y_1$};
+    \node[below, fill=white, inner sep=1pt] at (Yst) {$Y^*$};
+
+    \node[left,  fill=white, inner sep=10pt] at (P0)  {$P_0$};
+    \node[left,  fill=white, inner sep=1pt] at (P1)  {$P_1$};
+    \node[left,  fill=white, inner sep=1pt] at (Plr) {$P_{LR}$};
+  \end{pgfonlayer}
+
+  % ======== Dinámica (flecha P_t creciente) ========
+  \draw[->,thick]
+    ($(Ecp)+(0.18,0.06)$)
+      .. controls ($(Ecp)+(0.9,0.6)$) ..
+    ($(Elr)+(-0.12,0.6)$)
+    node[above,fill=white,inner sep=1pt] {$P_t \nearrow$};
+
+  % ======== Leyenda de direcciones abajo ========
+  \node at (4,-0.52) {\footnotesize \textit{Direcciones:} $\rightarrow$ eje $Y$ \quad $\uparrow$ eje $P$};
+
+\end{tikzpicture}
+\caption{Choque $M\downarrow$: $AD_0 \to AD_1$. CP: $Y_1>Y^*$ y $P_1>P_0$. MP/LR: $Y\to Y^*$ y $P\to P_{LR}$.}
+\end{figure}
+
+
+% ========================= 2024 - P3 =========================
+\subsection*{(Certamen 1, 2024) \quad Pregunta 3 (1,5 puntos)}
+\textbf{Enunciado.} \(Y=15K^{0,5}L^{0,5},\; K=2500,\; L=400\). Además:
+\[
+C = 250 + 0{,}6Y_D,\quad T = 0{,}1Y,\quad TR=1000,\quad G=1600,\quad XN=400.
+\]
+
+\textbf{Pauta / Solución.}
+\[
+Y = 15\sqrt{2500}\sqrt{400} = 15\cdot 50\cdot 20 = \boxed{15000}.
+\]
+\[
+T = 0{,}1Y = \boxed{1500}, \qquad Y_D = Y - T + TR = 15000 -1500 +1000 = \boxed{14500}.
+\]
+\[
+C = 250 + 0{,}6\cdot 14500 = 250 + 8700 = \boxed{8950}.
+\]
+Identidad \(Y=C+I+G+XN\) \(\Rightarrow\)
+\[
+I = Y - C - G - XN = 15000 - 8950 - 1600 - 400 = \boxed{4050}.
+\]
+Ahorros:
+\[
+S_{\text{priv}} = Y_D - C = 14500 - 8950 = \boxed{5550}.
+\]
+\[
+S_g = T - TR - G = 1500 - 1000 - 1600 = \boxed{-1100}\;(\text{déficit}).
+\]
+\[
+S_n = S_{\text{priv}} + S_g = 5550 -1100 = \boxed{4450} = I + XN = 4050 + 400.
+\]
+\newpage
+\vspace*{0.1cm}
+
+% ========================= 2024 - P4 =========================
+\subsection*{(Certamen 1, 2024) \quad Pregunta 4 (1,5 puntos)}
+\textbf{Enunciado.} Aumento de \(\pi^e\) (\(+0{,}4\) pp) por descongelamiento de tarifas eléctricas. OA--DA con \textbf{expectativas racionales}, sin política y con \emph{consumo agregado constante} (hogares sustituyen).
+
+\textbf{Pauta / Solución.}
+\begin{itemize}
+\item \textbf{DA:} Se mantiene (consumo total constante, \(G\) e \(I\) sin cambios).
+\item \textbf{OA de corto plazo:} Con expectativas \emph{racionales}, el alza anticipada de precios/tarifas se incorpora en salarios y precios fijados, \(\Rightarrow\) \textbf{OA} se desplaza \emph{hacia arriba} \emph{de inmediato}.
+\item \textbf{Resultado.} La economía \(\boxed{\text{salta a un nivel de precios mayor}}\) \(\big(P\!\uparrow\big)\) con \(\boxed{Y=Y^*}\) (sin brecha), por lo que \(\boxed{\text{desempleo}}\) se mantiene en su \(\boxed{\text{tasa natural}}\).
+\end{itemize}
+
+\textbf{Choque de expectativas racionales: } alza anticipada de tarifas eléctricas \(\Rightarrow \pi^e\uparrow\).
+
+\textbf{Resultado.} Con expectativas \emph{racionales} y sin política, la \textbf{OA} de corto plazo sube \emph{de inmediato}; \(DA\) estable. Se salta a \(P\) más alto con \(Y=Y^*\) (desempleo en la tasa natural).
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[>=Latex,scale=1.0]
+  % axes
+  \draw[->] (0,0) -- (8,0) node[below right] {$Y$};
+  \draw[->] (0,0) -- (0,5) node[above left] {$P$};
+  % LRAS
+  \draw[very thick] (4,0.3) -- (4,4.8) node[pos=0.98, right] {$LRAS: Y^*$};
+  % AD fixed
+  \draw[thick,domain=0.7:7.5,samples=200]
+        plot(\x,{4.2 - 0.35*\x});
+  \node at (6.4,2.0) {$AD$};
+  % SRAS up shift
+  \draw[thick,domain=0.6:7.5]
+        plot(\x,{0.9 + 0.25*\x});
+  \node at (2.0,1.6) {$OA_0$};
+  \draw[thick,domain=0.6:7.5,dashed]
+        plot(\x,{1.4 + 0.25*\x});
+  \node at (2.4,2.1) {$OA_1(\pi^e\uparrow)$};
+  % intersections
+  \fill (4,2.8) circle (2pt) node[below left] {$E_0$};
+  \fill (4,3.3) circle (2pt) node[above right] {$E_1$};
+  % arrow showing jump
+  \draw[->,thick] (4,2.85) -- (4,3.25);
+\end{tikzpicture}
+\caption{Expectativas racionales, desplazamiento vertical de $OA$; $Y$ se mantiene en $Y^*$ y $P$ sube.}
+\end{figure}
+
+
+
+% ========================= 2023 - P1 =========================
+\subsection*{(Certamen 1, 2023) \quad Pregunta 1 (1,5 puntos)}
+\textbf{Enunciado.} Impacto de mediano plazo en OA--DA de:
+
+\textbf{Pauta / Solución.}
+\begin{enumerate}[label=\alph*)]
+\item \textbf{Jornada 45$\to$40.} Menor oferta efectiva de trabajo y/o mayores costos unitarios \(\Rightarrow\) \textbf{LRAS} (y OA de mediano plazo) \(\leftarrow\) (se reduce \(Y^*\)). Con DA dada: \(\boxed{Y \to Y^{*}_{\text{nuevo}}<Y^{*}_{\text{antiguo}}}\) y \(\boxed{P\uparrow}\).
+
+\newpage
+\vspace*{0.2cm}
+\textbf{En terminos graficos:}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[>=Latex,scale=1.0]
+  \draw[->] (0,0) -- (8,0) node[below right] {$Y$};
+  \draw[->] (0,0) -- (0,5) node[above left] {$P$};
+  % LRAS shift
+  \draw[very thick] (4.6,0.3) -- (4.6,4.8) node[pos=0.98, right] {$LRAS_0$};
+  \draw[very thick,dashed] (3.6,0.3) -- (3.6,4.8) node[pos=0.98, left] {$LRAS_1$};
+  % AD
+  \draw[thick,domain=0.8:7.5]
+        plot(\x,{4.2 - 0.35*\x});
+  \node at (6.4,2.0) {$AD$};
+  % SRAS
+  \draw[thick,domain=0.6:7.5]
+        plot(\x,{0.8 + 0.25*\x});
+  \node at (2.0,1.5) {$OA$};
+  % intersections
+  \fill (4.6,2.6) circle (2pt) node[above right] {$E_0$};
+  \fill (3.6,3.0) circle (2pt) node[above left] {$E_1$};
+  \draw[->,thick] (4.6,2.6) .. controls (4.3,2.9) .. (3.7,3.0);
+\end{tikzpicture}
+\caption{Jornada más corta: $LRAS$ se mueve a la izquierda; en MP $Y^*$ menor y $P$ mayor.}
+\end{figure}
+
+
+\item \textbf{Optimismo.} DA \(\rightarrow\) (más consumo/inversión). En el corto plazo \(Y>Y^*\); el ajuste de precios lleva la economía de vuelta a \(\boxed{Y=Y^*}\) con \(\boxed{P}\) más alto. (Si además el optimismo eleva la inversión tendencial y el capital, LRAS podría desplazarse \(\rightarrow\), pero sin ese canal: \(Y\) igual, \(P\uparrow\).)
+
+\end{enumerate}
+\textbf{En terminos graficos:}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[>=Latex,scale=1.0]
+  \draw[->] (0,0) -- (8,0) node[below right] {$Y$};
+  \draw[->] (0,0) -- (0,5) node[above left] {$P$};
+  % LRAS
+  \draw[very thick] (4,0.3) -- (4,4.8) node[pos=0.98, right] {$LRAS: Y^*$};
+  % AD shift
+  \draw[thick,domain=0.8:7.5]
+        plot(\x,{4.2 - 0.35*\x});
+  \node at (6.3,2.0) {$AD_0$};
+  \draw[thick,domain=1.2:7.8,dashed]
+        plot(\x,{4.6 - 0.35*\x});
+  \node at (7.1,2.35) {$AD_1$};
+  % SRAS
+  \draw[thick,domain=0.6:7.5]
+        plot(\x,{0.8 + 0.25*\x});
+  \node at (2.0,1.5) {$OA$};
+  % intersections + arrows
+  \fill (4,2.8) circle (2pt) node[above left] {$E_0$};
+  \fill (4.57,3.0) circle (2pt) node[above right] {$E_{CP}$};
+  \draw[->,thick] (4.57,3.0) .. controls (4.5,3.4) .. (4,3.6) node[above] {$P\uparrow$};
+\end{tikzpicture}
+\caption{Optimismo (AD$\uparrow$): CP $Y>Y^*$; ajuste de $P$ devuelve $Y$ a $Y^*$ con $P$ mayor.}
+\end{figure}
+
+
+
+% ========================= 2023 - P2 =========================
+\subsection*{(Certamen 1, 2023) \quad Pregunta 2 (1,5 puntos)}
+\textbf{Enunciado.} Fuerte contracción de DA. Dinámica \(t=0 \to \infty\). Sin política.
+
+\textbf{Pauta / Solución.}
+\begin{itemize}
+\item \textbf{t=0:} DA \(\leftarrow\). \(Y_0<Y^*\), presión \(\downarrow\) sobre precios.
+
+\newpage
+\vspace*{0.1cm}
+\item \textbf{Ajuste OA:} Con \(Y<Y^*\), \(P_{t+1}<P_t\) por \(P_{t+1}=P_t[1+\lambda(Y-Y^*)]\). La caída de \(P\) eleva saldos reales, lo que \emph{reactiva} DA.
+\item \textbf{Largo plazo:} \(\boxed{Y \to Y^*}\) y \(\boxed{P}\) \textbf{más bajo} que al inicio. Velocidad regulada por \(\lambda\) y rigideces.
+
+\item \textbf{¿Rápido?} Usualmente \(\lambda\) es pequeño (rigideces nominales), \(\Rightarrow\) \emph{ajuste lento}.
+\end{itemize}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[>=Latex,scale=1.0]
+  \draw[->] (0,0) -- (8,0) node[below right] {$Y$};
+  \draw[->] (0,0) -- (0,5) node[above left] {$P$};
+  % LRAS
+  \draw[very thick] (4,0.3) -- (4,4.8) node[pos=0.98, right] {$LRAS: Y^*$};
+  % AD left shock
+  \draw[thick,domain=0.8:7.0]
+        plot(\x,{4.2 - 0.35*\x});
+  \node at (6.0,2.0) {$AD_0$};
+  \draw[thick,domain=0.6:6.5,dashed]
+        plot(\x,{3.4 - 0.35*\x});
+  \node at (4.9,1.6) {$AD_1$};
+  % SRAS two points along downward adjustment
+  \draw[thick,domain=0.6:7.5]
+        plot(\x,{1.3 + 0.25*\x}) node[above right] {};
+  \node at (2.3,2.0) {$OA_t$};
+  % intersections and arrows
+  \fill (4,2.8) circle (2pt) node[above right] {$E_0$};
+  \fill (3.0,2.35) circle (2pt) node[above left] {$E_{CP}$};
+  \draw[->,thick] (3.0,2.35) .. controls (3.4,2.0) .. (4,1.8) node[below right] {$P\downarrow$};
+\end{tikzpicture}
+\caption{DA$\downarrow$ fuerte: CP $Y<Y^*$. Con $P_{t+1}=P_t[1+\lambda(Y-Y^*)]$, $P\downarrow$ y $Y\to Y^*$.}
+\end{figure}
+
+\textbf{Comentarios.} Ajuste usualmente lento si \(\lambda\) es pequeño (rigideces nominales).
+
+% ========================= 2023 - P3 =========================
+\subsection*{(Certamen 1, 2023) \quad Pregunta 3 (1,5 puntos)}
+\textbf{Enunciado (resumen).} Tres bienes: Alimentos \((P=25,Q=100)\), Vestuario \((40,50)\), Energía \((10,150)\). Mitad de alimentos se exporta a US\$1{,}25 (tipo de cambio \(20\) CLP/US\$). Vestuario: consumo interno. Energía: \(1/3\) a alimentos (insumo), \(1/3\) a vestuario (insumo), \(1/3\) hogares. Importa 10 de vestuario a US\$1{,}5.
+
+\textbf{Pauta / Solución.}
+
+\textit{Valores a precios internos (CLP):}
+\[
+\text{Alimentos: } 25\cdot 100 = 2500;\quad
+\text{Vestuario: } 40\cdot 50 = 2000;\quad
+\text{Energía: } 10\cdot 150 = 1500.
+\]
+\[
+\text{VBP} = 2500 + 2000 + 1500 = \boxed{6000}.
+\]
+
+\textit{Intermedios de Energía:} \(50\) a Alimentos (\(=500\)), \(50\) a Vestuario (\(=500\)) \(\Rightarrow\) \(\text{IC}=1000\).
+
+\[
+\text{PIB (VA)} = \text{VBP} - \text{IC} = 6000 - 1000 = \boxed{5000}.
+\]
+
+\textit{Comercio exterior (CLP):}
+\[
+X = 50 \times US\$1{,}25 \times 20 = \boxed{1250}, \quad
+M = 10 \times US\$1{,}5 \times 20 = \boxed{300},
+\]
+\[
+XN = X - M = \boxed{950}.
+\]
+
+\newpage
+\vspace*{0.1cm}
+\textit{Consumo de hogares (incluye importado):}
+\[
+C = \underbrace{50\times 25}_{\text{Alim. }=1250} + \underbrace{50\times 40}_{\text{Vest. }=2000} + \underbrace{50\times 10}_{\text{Energ. }=500} + \underbrace{300}_{\text{M}} = \boxed{4050}.
+\]
+
+\textit{Chequeo por gasto:} \(PIB = C + I + G + (X-M) = 4050 + 0 + 0 + 950 = \boxed{5000}.\)
+
+
+
+% ========================= 2023 - P4 =========================
+\subsection*{(Certamen 1, 2023) \quad Pregunta 4 (1,5 puntos)}
+\textbf{Enunciado (datos).}
+\begin{center}
+\begin{tabular}{c c c c c c c c c c c}
+\toprule
+\textbf{Año} & $P_A$ & $Q_A$ & $P_B$ & $Q_B$ & $P_C$ & $Q_C$ & $P_D$ & $Q_D$ & $P_E$ & $Q_E$ \\
+\midrule
+2020 & \$50 & 90  & \$8  & 200 & \$120 & 30 & \$8  & 300 & \$5  & 100 \\
+2021 & \$50 & 100 & \$8  & 250 & \$110 & 20 & \$10 & 200 & \$10 & 100 \\
+2022 & \$80 & 120 & \$9  & 280 & \$120 & 10 & \$12 & 250 & \$15 & 90  \\
+2023 & \$60 & 110 & \$10 & 280 & \$130 & 20 & \$15 & 240 & \$20 & 90  \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\textbf{Pauta / Solución.}
+\begin{enumerate}[label=\alph*)]
+\item \textbf{PIB nominal 2022.}
+\[
+\begin{aligned}
+PIB_{2022}^{\text{nom}} &= 80\cdot120 + 9\cdot280 + 120\cdot 10 + 12\cdot 250 + 15\cdot 90 \\
+&= 9600 + 2520 + 1200 + 3000 + 1350 = \boxed{17670}.
+\end{aligned}
+\]
+
+\textbf{PIB real 2023 (base 2020).}
+\[
+\begin{aligned}
+PIB_{2023}^{\text{real},\,2020} &= 50\cdot 110 + 8\cdot 280 + 120\cdot 20 + 8\cdot 240 + 5\cdot 90 \\
+&= 5500 + 2240 + 2400 + 1920 + 450 = \boxed{12510}.
+\end{aligned}
+\]
+
+\textbf{Crecimiento real 2021$\to$2022 (base 2020).}
+\[
+\begin{aligned}
+PIB_{2021}^{\text{real},\,2020} &= 50\cdot 100 + 8\cdot 250 + 120\cdot 20 + 8\cdot 200 + 5\cdot 100 \\
+&= 5000 + 2000 + 2400 + 1600 + 500 = 11500, \\
+PIB_{2022}^{\text{real},\,2020} &= 50\cdot 120 + 8\cdot 280 + 120\cdot 10 + 8\cdot 250 + 5\cdot 90 \\
+&= 6000 + 2240 + 1200 + 2000 + 450 = 11890.
+\end{aligned}
+\]
+\[
+g_{21\to22} = \frac{11890 - 11500}{11500} = \boxed{0{,}0339 \;\approx\; 3{,}39\%}.
+\]
+\end{enumerate}
+
+
+% ========================= Cierre =========================
+\begin{center}
+\rule{0.9\linewidth}{0.6pt}\\
+\textit{Observación 1:} Cuando el enunciado solicite gráficos OA--DA, se sugiere incluir: (i) desplazamientos iniciales (DA/OA), (ii) flechas de dinámica temporal y (iii) rotulación explícita de $Y$, $Y^*$ y $P$ en cada etapa.\\
+\textit{Observacion 2:} Los certamenes 2025 y 2024 fueron resueltos unica y exclusivamente por el Ayudante Ignacio Garrido U. En caso de, errores o malas interpretaciones, tomar resguardos e informar a dicho autor. Muchas gracias.
+\rule{0.9\linewidth}{0.6pt}
+\end{center}
+
+
+
+\newpage
+\vspace*{0.1cm}
+
+
+\begin{center}
+\textit{Observación:} Estos ejercicios y sus respectivas pautas corresponde a documentos del profesor Cristian Mardones PhD. En caso de, dudas y/o consultas resolver con él personalmente.
+\end{center}
+% ========================= 2022 - P1 =========================
+\subsection*{(Certamen 1, 2022) \quad Pregunta 1 (1,5 puntos)}
+
+\textbf{Datos.} Curva de Phillips con expectativas:
+\[
+\pi_t=\pi_t^{e}-0{,}5\,(u_t-0{,}06)
+\]
+Ley de Okun:
+\[
+\frac{Y_t-Y_t^*}{Y_t^*}=0{,}09-1{,}5\,u_t
+\]
+Se desea llevar la inflación a \(3\%\) este año; el año anterior fue \(5\%\), por lo que
+\(\pi_t^{e}=\pi_{t-1}=5\%\) (expectativas adaptativas).
+
+\begin{enumerate}[label=\alph*)]
+\item \textbf{Tasa natural de desempleo.}\\
+En inflación constante (\(\pi_t=\pi_t^{e}\)):
+\[
+\pi_t-\pi_t^{e}= -0{,}5\,(u^n-0{,}06)=0 \;\Rightarrow\; u^n=\boxed{0{,}06=6\%}.
+\]
+
+\item \textbf{Aumento necesario del desempleo (p.p.).}\\
+Objetivo \(\pi_t=3\%\) con \(\pi_t^{e}=5\%\):
+\[
+0{,}03=0{,}05-0{,}5\,(u_t-0{,}06)
+\;\Rightarrow\;
+-0{,}02=-0{,}5u_t+0{,}03
+\;\Rightarrow\;
+-0{,}05=-0{,}5u_t
+\;\Rightarrow\;
+u_t=\boxed{0{,}10=10\%}.
+\]
+El desempleo debe subir en \(\boxed{10\%-6\%=4\text{ p.p.}}\).
+
+\item \textbf{Variación del PIB respecto del potencial al lograr \(3\%\).}\\
+Con \(u_t=10\%\) en Okun:
+\[
+\frac{Y_t-Y_t^*}{Y_t^*}=0{,}09-1{,}5(0{,}10)=0{,}09-0{,}15=\boxed{-0{,}06}
+\]
+\(\Rightarrow\) el PIB quedaría \(\boxed{6\%\ \text{por debajo del potencial}}.\)
+\end{enumerate}
+% ========================= 2022 - P2 =========================
+\subsection*{(Certamen 1, 2022) \quad Pregunta 2 (1,5 puntos)}
+
+\textbf{Enunciado.}  
+Si los agentes económicos tienen expectativas racionales y confían en que el Banco Central está comprometido con reducir la inflación, el costo de reducirla es mucho menor que cuando los agentes son escépticos.  
+
+\begin{enumerate}[label=\alph*)]
+\item Argumente si la afirmación es verdadera o falsa.  
+
+\textbf{Pauta / Solución:}  
+La afirmación es \textbf{verdadera}.  
+La curva de Phillips con expectativas racionales indica que la inflación actual depende de la inflación esperada. Si los agentes confían en que el Banco Central cumplirá con la meta de inflación, ajustan sus expectativas de inmediato y no es necesario un aumento significativo del desempleo para bajar la inflación.  
+En cambio, si los agentes son escépticos, la inflación esperada se mantiene alta, y el Banco Central debe generar una brecha de producto negativa mayor (más desempleo) para reducir la inflación efectiva. Por lo tanto, el costo de desinflar es mucho más alto bajo desconfianza.
+
+
+\newpage
+\vspace*{0.1cm}
+
+\item Si usted fuera presidente del Banco Central, ¿cómo podría incrementar la confianza de los agentes económicos en su gestión?  
+
+\textbf{Pauta / Solución:}  
+Debería reforzar la \textbf{credibilidad} institucional cumpliendo de manera sistemática las metas de inflación anunciadas, comunicando de forma clara y transparente la estrategia de política monetaria, y mostrando consistencia en sus decisiones.  
+La reputación se construye con la \textbf{coherencia entre discurso y acción}, de modo que los agentes formen expectativas ancladas en la meta del Banco Central.
+\end{enumerate}
+% ========================= 2022 - P3 =========================
+\subsection*{(Certamen 1, 2022) \quad Pregunta 3 (1,5 puntos)}
+
+\textbf{Datos.} Bienes y precios (A y B: consumo de hogares; C: gobierno; D: exportaciones; E y F: \emph{insumos intermedios}, no van al PIB).
+\[
+\begin{array}{c|cc|cc|cc|cc|cc|cc}
+\toprule
+ & P_A & Q_A & P_B & Q_B & P_C & Q_C & P_D & Q_D & P_E & Q_E & P_F & Q_F\\
+\midrule
+2020 & 500 & 100 & 10 & 2000 & 100 & 80 & 10 & 600 & 100 & 700 & 20 & 1000\\
+2021 & 540 & 120 & 9 & 1800 & 120 & 90 & 15 & 500 & 80 & 900 & 30 & 1100\\
+\bottomrule
+\end{array}
+\]
+
+\textbf{a) PIB nominal por año y tasa de crecimiento del PIB real (año base 2020).}
+
+\underline{PIB nominal (solo A, B, C, D)}:
+\[
+\begin{aligned}
+PIB_{2020}^{\text{nom}} &= 500\cdot100 + 10\cdot2000 + 100\cdot80 + 10\cdot600 \\
+&= 50{,}000 + 20{,}000 + 8{,}000 + 6{,}000 = \boxed{84{,}000}.\\[4pt]
+PIB_{2021}^{\text{nom}} &= 540\cdot120 + 9\cdot1800 + 120\cdot90 + 15\cdot500 \\
+&= 64{,}800 + 16{,}200 + 10{,}800 + 7{,}500 = \boxed{99{,}300}.
+\end{aligned}
+\]
+
+\underline{PIB real (base 2020)}:
+\[
+\begin{aligned}
+PIB_{2020}^{\text{real},\,2020} &= \boxed{84{,}000}.\\[2pt]
+PIB_{2021}^{\text{real},\,2020} &= 500\cdot120 + 10\cdot1800 + 100\cdot90 + 10\cdot500 \\
+&= 60{,}000 + 18{,}000 + 9{,}000 + 5{,}000 = \boxed{92{,}000}.
+\end{aligned}
+\]
+
+\underline{Crecimiento real 2020$\to$2021 (base 2020)}:
+\[
+g=\frac{92{,}000 - 84{,}000}{84{,}000} = \boxed{9{,}52\%}.
+\]
+
+\vspace{0.3cm}
+
+\textbf{b) Deflactor del PIB e IPC, e inflación por ambos indicadores.}
+
+\underline{Deflactor del PIB}:
+\[
+\text{Defl. }2020=\frac{84{,}000}{84{,}000}= \boxed{1{,}0000},\qquad
+\text{Defl. }2021=\frac{99{,}300}{92{,}000}= \boxed{1{,}0793}.
+\]
+Inflación por deflactor \(2020\to2021\): \(\boxed{7{,}93\%}\).
+
+\newpage
+\vspace*{0.1cm}
+\underline{IPC} (canasta fija de \textbf{hogares} con cantidades base 2020: \(Q_A=100,\;Q_B=2000\)):
+\[
+\begin{aligned}
+\text{Costo}_{2020} &= 500\cdot100 + 10\cdot2000 = 70{,}000,\\
+\text{Costo}_{2021} &= 540\cdot100 + 9\cdot2000   = 72{,}000,\\
+IPC_{2020} &= 1,\qquad IPC_{2021}=\frac{72{,}000}{70{,}000}=\boxed{1{,}0286}.
+\end{aligned}
+\]
+Inflación por IPC \(2020\to2021\): \(\boxed{2{,}86\%}\).
+
+\textbf{Comentario.} El \emph{deflactor del PIB} cubre \emph{toda} la producción final interna (C y D incluidos; E y F excluidos por ser insumos), mientras que el \emph{IPC} sólo considera el \textbf{consumo de los hogares} (A y B) con canasta fija. Por eso la inflación medida por el deflactor (7,9\%) difiere de la del IPC (2,9\%).
+
+
+% ========================= 2022 - P4 =========================
+\subsection*{(Certamen 1, 2022) \quad Pregunta 4 (1,5 puntos)}
+
+\textbf{Contexto.} Shock energético (alza fuerte del gas) \(\Rightarrow\) \textbf{shock de costos} que desplaza la OA (SRAS) \textbf{hacia arriba/izquierda}. Analice con OA–DA.
+
+\begin{enumerate}[label=\alph*)]
+\item \textbf{Sin política de estabilización: corto, mediano y largo plazo.}
+
+\textbf{Corto plazo (CP).} Con \(DA\) dada, el shock eleva costos y desplaza \(OA_0\to OA_1\):
+\(\boxed{Y_{CP}<Y^*}\) y \(\boxed{P_{CP}>P_0}\) (estanflación).
+
+\textbf{Mediano plazo (MP).} Si el shock es \emph{transitorio}, \(OA\) va regresando hacia \(OA_0\) y la economía vuelve a \(\boxed{Y=Y^*}\) con un \(\boxed{P}\) más alto que el inicial.  
+Si el shock es \emph{persistente/estructural}, \(OA\) permanece arriba por más tiempo y el desvío \(Y<Y^*\) se sostiene hasta que se reacomodan salarios/precios o cae la demanda.
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[>=Latex, x=1cm, y=1cm, scale=1.0]
+  \pgfdeclarelayer{bg}\pgfdeclarelayer{fg}\pgfsetlayers{bg,main,fg}
+  % Parámetros
+  \def\a{4.2} \def\b{0.35} % AD0: P = a - b Y
+  \def\c{0.8} \def\d{0.25} % OA0: P = c + d Y
+  \def\cshock{1.25}        % OA1 (shock de costos): P = cshock + d Y
+  \def\ystar{4}            % LRAS
+  % Marco
+  \clip (-0.2,-0.6) rectangle (8.2,5.3);
+  \draw[->] (0,0) -- (8,0) node[below right] {$Y$};
+  \draw[->] (0,0) -- (0,5) node[above left] {$P$};
+  % Caminos
+  \path[name path=LRAS]    (\ystar,0) -- (\ystar,5);
+  \path[name path=ADzero]  (0,\a)     -- (8,{\a - \b*8});
+  \path[name path=OAzero]  (0,\c)     -- (8,{\c + \d*8});
+  \path[name path=OAshock] (0,\cshock)-- (8,{\cshock + \d*8});
+  % Intersecciones
+  \path [name intersections={of=ADzero and OAzero,  by=E0}];
+  \path [name intersections={of=ADzero and OAshock, by=Ecp}];
+  \path [name intersections={of=ADzero and LRAS,    by=Elr}];
+  % Curvas
+  \draw[very thick] (\ystar,0.2)--(\ystar,5) node[pos=0.98,right] {$LRAS:\,Y^*$};
+  \draw[thick]       (0,\a) -- (8,{\a - \b*8}) node[anchor=west] at (6.6,{\a-\b*6.6}) {$DA$};
+  \draw[thick]       (0,\c) -- (8,{\c + \d*8}) node[anchor=west,fill=white,inner sep=1pt] at (2.1,{\c+\d*2.1}) {$OA_0$};
+  \draw[thick,dashed](0,\cshock) -- (8,{\cshock + \d*8}) node[anchor=west,fill=white,inner sep=1pt] at (2.1,{\cshock+\d*2.1}) {$OA_1$};
+  % Puntos
+  \fill (E0)  circle (2pt); \node[above left, fill=white, inner sep=1pt]  at (E0)  {$E_0$};
+  \fill (Ecp) circle (2pt); \node[above right,fill=white, inner sep=1pt]  at (Ecp) {$E_{CP}$};
+  % Flechas
+  \draw[->,thick] ($(Ecp)+(-0.25,-0.15)$) -- ($(Ecp)+(-0.9,-0.45)$) node[below left] {\scriptsize $Y\downarrow$};
+  \draw[->,thick] ($(Ecp)+(-0.10,0.05)$)  -- ($(Ecp)+(0.60,0.55)$)  node[above right] {\scriptsize $P\uparrow$};
+  % Leyenda direcciones
+  \node at (4,-0.45) {\footnotesize \textit{Direcciones:} $\rightarrow$ eje $Y$ \; $\uparrow$ eje $P$};
+\end{tikzpicture}
+\caption{Shock de costos: $OA_0 \to OA_1$ con $DA$ dada. CP: $Y<Y^*$, $P$ sube.}
+\end{figure}
+
+\newpage
+\vspace*{0.1cm}
+
+\item \textbf{Transferencias/subsidios a familias (sin focalización).}
+
+El subsidio alivia el costo energético de los hogares \(\Rightarrow\) \(\boxed{DA_0\to DA_1}\) (derecha).  
+\(\Rightarrow\) mayor \(Y\) (reduce desempleo), pero \(\boxed{P}\) aumenta aún más porque el shock de costos \emph{sigue vigente}. Resultado: desinflación más costosa a futuro si se desanclan expectativas.
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[>=Latex, x=1cm, y=1cm, scale=1.0]
+  \pgfdeclarelayer{bg}\pgfdeclarelayer{fg}\pgfsetlayers{bg,main,fg}
+  % Parámetros
+  \def\a{4.2} \def\b{0.35}
+  \def\ap{4.7}             % AD1 más a la derecha (subsidio)
+  \def\cshock{1.25} \def\d{0.25}
+  \def\ystar{4}
+  % Marco
+  \clip (-0.2,-0.6) rectangle (8.2,5.3);
+  \draw[->] (0,0) -- (8,0) node[below right] {$Y$};
+  \draw[->] (0,0) -- (0,5) node[above left] {$P$};
+  % Caminos
+  \path[name path=LRAS]   (\ystar,0) -- (\ystar,5);
+  \path[name path=ADzero] (0,\a)     -- (8,{\a - \b*8});
+  \path[name path=ADone]  (0,\ap)    -- (8,{\ap - \b*8});
+  \path[name path=OA1]    (0,\cshock)-- (8,{\cshock + \d*8});
+  % Intersecciones
+  \path [name intersections={of=ADzero and OA1, by=Ecp}];
+  \path [name intersections={of=ADone  and OA1, by=Enew}];
+  % Curvas
+  \draw[very thick] (\ystar,0.2)--(\ystar,5) node[pos=0.98,right] {$LRAS:\,Y^*$};
+  \draw[thick]     (0,\a)  -- (8,{\a  - \b*8})  node[anchor=west] at (6.5,{\a - \b*6.5}) {$DA_0$};
+  \draw[thick,dashed] (0,\ap) -- (8,{\ap - \b*8}) node[anchor=west] at (7.0,{\ap - \b*7.0 +0.1}) {$DA_1$};
+  \draw[thick]     (0,\cshock) -- (8,{\cshock + \d*8}) node[anchor=west,fill=white,inner sep=1pt] at (2.1,{\cshock+\d*2.1}) {$OA_1$};
+  % Puntos
+  \fill (Ecp)  circle (2pt); \node[above left, fill=white, inner sep=1pt]  at (Ecp)  {$E_{CP}$};
+  \fill (Enew) circle (2pt); \node[above right,fill=white, inner sep=1pt]  at (Enew) {$E'$};
+  % Flechas
+  \draw[->,thick] ($(Ecp)+(0.15,0.05)$) -- ($(Enew)+(-0.15,-0.05)$) node[midway,above] {\scriptsize $DA\uparrow$};
+  % Leyenda
+  \node at (4,-0.45) {\footnotesize \textit{Direcciones:} $\rightarrow$ eje $Y$ \; $\uparrow$ eje $P$};
+\end{tikzpicture}
+\caption{Subsidios: $DA_0\to DA_1$ con $OA_1$ vigente. $Y$ sube, $P$ también.}
+\end{figure}
+
+\textbf{Comentario de política fiscal.} Mejor \emph{focalizar} y \emph{transitoria}, para mitigar el impacto social sin sobre-estimular la demanda agregada.
+
+\vspace{0.2cm}
+
+\item \textbf{Política esperada del Banco Central (BC).}
+
+Para evitar desanclar expectativas y una espiral de precios: \(\boxed{\text{política monetaria contractiva}}\) (guiar expectativas, subir TPM, retirar impulso monetario). En OA–DA: \(\boxed{DA\leftarrow}\) para contener \(P\), a costa de una brecha transitoria mayor en \(Y\).
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[>=Latex, x=1cm, y=1cm, scale=1.0]
+  \pgfdeclarelayer{bg}\pgfdeclarelayer{fg}\pgfsetlayers{bg,main,fg}
+  % Parámetros
+  \def\ap{4.7} \def\b{0.35}
+  \def\acon{4.3}         % DAc (contracción)
+  \def\cshock{1.25} \def\d{0.25}
+  \def\ystar{4}
+  % Marco
+  \clip (-0.2,-0.6) rectangle (8.2,5.3);
+  \draw[->] (0,0) -- (8,0) node[below right] {$Y$};
+  \draw[->] (0,0) -- (0,5) node[above left] {$P$};
+  % Caminos
+  \path[name path=LRAS] (\ystar,0) -- (\ystar,5);
+  \path[name path=DA1]  (0,\ap)    -- (8,{\ap - \b*8});
+  \path[name path=DAc]  (0,\acon)  -- (8,{\acon - \b*8});
+  \path[name path=OA1]  (0,\cshock)-- (8,{\cshock + \d*8});
+  % Intersecciones
+  \path [name intersections={of=DA1 and OA1, by=Eexp}];  % antes del BC (con subsidios)
+  \path [name intersections={of=DAc and OA1, by=Ebc}];   % tras contracción
+  % Curvas
+  \draw[very thick] (\ystar,0.2)--(\ystar,5) node[pos=0.98,right] {$LRAS:\,Y^*$};
+  \draw[thick]       (0,\ap)   -- (8,{\ap   - \b*8}) node[anchor=west] at (7.0,{\ap   - \b*7.0 +0.1}) {$DA_1$};
+  \draw[thick,dashed](0,\acon) -- (8,{\acon - \b*8}) node[anchor=west] at (6.2,{\acon - \b*6.2}) {$DA_c$};
+  \draw[thick]       (0,\cshock)--(8,{\cshock+\d*8}) node[anchor=west,fill=white,inner sep=1pt] at (2.1,{\cshock+\d*2.1}) {$OA_1$};
+  % Puntos
+  \fill (Eexp) circle (2pt); \node[above right,fill=white,inner sep=1pt] at (Eexp) {$E^{\text{pre-BC}}$};
+  \fill (Ebc)  circle (2pt); \node[above left, fill=white,inner sep=1pt] at (Ebc)  {$E^{\text{post-BC}}$};
+  % Flecha
+  \draw[->,thick] ($(Eexp)+(-0.20,-0.08)$) -- ($(Ebc)+(0.20,0.08)$) node[midway,below] {\scriptsize $DA\leftarrow$ (TPM\(\uparrow\))};
+  % Leyenda
+  \node at (4,-0.45) {\footnotesize \textit{Direcciones:} $\rightarrow$ eje $Y$ \; $\uparrow$ eje $P$};
+\end{tikzpicture}
+\caption{BC contractivo: desplaza $DA$ a la izquierda para contener $P$ (con costo en $Y$).}
+\end{figure}
+\end{enumerate}
+
+\newpage
+\vspace*{0.1cm}
+
+% ========================= 2021 - P1 =========================
+\subsection*{(Certamen 1, 2021) \quad Pregunta 1 (1,5 puntos)}
+
+\textbf{Contexto resumido.} Inflación anual sube a 5{,}3\% con presiones tanto de \emph{demanda} (retiros/transferencias, estímulo previo) como de \emph{costos} (energía, tipo de cambio); expectativas por sobre 6\%. El BC adelanta el retiro del estímulo.
+
+\begin{enumerate}[label=\alph*)]
+
+\item \textbf{Explique con OA–DA con expectativas por qué sube la inflación. Muestre además el equilibrio de mediano/largo plazo si el BC no actúa.}
+
+\textbf{Pauta / idea económica.}
+\begin{itemize}
+\item \emph{Demanda:} \(DA_0\to DA_1\) (derecha) por mayor \(C\) y \(I\).
+\item \emph{Costos y expectativas:} \(OA_0\to OA_1\) (arriba/izq.) por energía/TC y porque \(\pi^e\uparrow\) se incorpora a salarios/precios.
+\item \textbf{Corto plazo:} estanflación “mixta”: \(P\uparrow\) y \(Y\) puede quedar \(\gtrless Y^*\) según magnitudes (con ambas fuerzas, típicamente \(P\) sube bastante).
+\item \textbf{Mediano plazo (sin BC):} los precios siguen ajustando y \(Y\to Y^*\); \(\boxed{P}\) queda \emph{más alto} que al inicio.
+\end{itemize}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[>=Latex, x=1cm, y=1cm, scale=1.0]
+  \pgfdeclarelayer{bg}\pgfdeclarelayer{fg}\pgfsetlayers{bg,main,fg}
+  % Parámetros
+  \def\a{4.2} \def\b{0.35}     % AD0
+  \def\ap{4.6}                 % AD1 (derecha)
+  \def\c{0.8} \def\d{0.25}     % OA0
+  \def\csh{1.2}                % OA1 (costos + expectativas)
+  \def\ystar{4}                % LRAS
+  % Marco
+  \clip (-0.2,-0.6) rectangle (8.2,5.3);
+  \draw[->] (0,0) -- (8,0) node[below right] {$Y$};
+  \draw[->] (0,0) -- (0,5) node[above left] {$P$};
+  % Caminos
+  \path[name path=LRAS]   (\ystar,0) -- (\ystar,5);
+  \path[name path=AD0]    (0,\a)  -- (8,{\a  - \b*8});
+  \path[name path=AD1]    (0,\ap) -- (8,{\ap - \b*8});
+  \path[name path=OA0]    (0,\c)  -- (8,{\c  + \d*8});
+  \path[name path=OA1]    (0,\csh)-- (8,{\csh+ \d*8});
+  % Intersecciones
+  \path [name intersections={of=AD0 and OA0, by=E0}];
+  \path [name intersections={of=AD1 and OA1, by=Ecp}];
+  \path [name intersections={of=AD1 and LRAS,by=Elr}];
+  % Curvas
+  \draw[very thick] (\ystar,0.2)--(\ystar,5) node[pos=0.98,right] {$LRAS:\,Y^*$};
+  \draw[thick]       (0,\a)  -- (8,{\a  - \b*8}) node[anchor=west] at (6.5,{\a - \b*6.5}) {$DA_0$};
+  \draw[thick,dashed](0,\ap) -- (8,{\ap - \b*8}) node[anchor=west] at (7.0,{\ap - \b*7.0 +0.1}) {$DA_1$};
+  \draw[thick]       (0,\c)  -- (8,{\c  + \d*8}) node[anchor=west,fill=white,inner sep=1pt] at (2.0,{\c + \d*2.0}) {$OA_0$};
+  \draw[thick,dashed](0,\csh)-- (8,{\csh+ \d*8}) node[anchor=west,fill=white,inner sep=1pt] at (2.0,{\csh+ \d*2.0}) {$OA_1$};
+  % Puntos
+  \fill (E0)  circle (2pt); \node[above left, fill=white, inner sep=1pt] at (E0)  {$E_0$};
+  \fill (Ecp) circle (2pt); \node[above right,fill=white, inner sep=1pt] at (Ecp) {$E_{CP}$};
+  % Flechas de choques
+  \draw[->,thick] ($(E0)+(0.6,0.5)$) -- ++(0.9,0.6) node[above] {\scriptsize $DA\uparrow$};
+  \draw[->,thick] ($(E0)+(0.0,0.7)$) -- ++(0.3,0.8) node[right] {\scriptsize $OA\uparrow$};
+  % Leyenda
+  \node at (4,-0.45) {\footnotesize \textit{Direcciones:} $\rightarrow$ eje $Y$ \; $\uparrow$ eje $P$};
+\end{tikzpicture}
+\caption{Demanda y costos/expectativas al alza: $DA_0\!\to\!DA_1$ y $OA_0\!\to\!OA_1$. $P$ sube; en MP $Y\to Y^*$.}
+\end{figure}
+
+\textbf{Conclusión (sin BC):} \(\boxed{Y\to Y^*}\) y \(\boxed{P}\) queda \emph{más alto} que al inicio; la magnitud depende del tamaño de los shocks y del grado en que \(\pi^e\) se ancle o no.
+
+\vspace{0.4cm}
+
+\item \textbf{Ahora suponga que el BC contrae la DA y, además, logra reducir las expectativas de inflación. Muestre el cambio en el resultado.}
+
+\textbf{Pauta / idea económica.}
+\begin{itemize}
+\item \emph{Monetaria contractiva:} \(DA_1\to DA_2\) (izquierda) vía TPM\(\uparrow\), crédito más caro.
+\item \emph{Expectativas bajan:} \(OA_1\to OA_2\) (abajo) al reanclar \(\pi^e\) en la meta.
+
+\newpage
+\vspace*{0.1cm}
+\item \textbf{Resultado:} se contiene \(P\) (incluso cae desde el pico \(P^{\*}\)), y \(Y\) retorna a \(Y^*\) más rápidamente.
+\end{itemize}
+
+\begin{figure}[h!]
+\centering
+\begin{tikzpicture}[>=Latex, x=1cm, y=1cm, scale=1.0]
+  \pgfdeclarelayer{bg}\pgfdeclarelayer{fg}\pgfsetlayers{bg,main,fg}
+  % Parámetros (partimos del escenario anterior)
+  \def\ap{4.6}  \def\b{0.35}  % DA1
+  \def\acon{4.3}             % DA2 (izquierda)
+  \def\csh{1.2} \def\d{0.25} % OA1
+  \def\cnew{1.0}             % OA2 (abajo)
+  \def\ystar{4}
+  % Marco
+  \clip (-0.2,-0.6) rectangle (8.2,5.3);
+  \draw[->] (0,0) -- (8,0) node[below right] {$Y$};
+  \draw[->] (0,0) -- (0,5) node[above left] {$P$};
+  % Caminos
+  \path[name path=LRAS] (\ystar,0) -- (\ystar,5);
+  \path[name path=DA1]  (0,\ap)    -- (8,{\ap - \b*8});
+  \path[name path=DA2]  (0,\acon)  -- (8,{\acon - \b*8});
+  \path[name path=OA1]  (0,\csh)   -- (8,{\csh + \d*8});
+  \path[name path=OA2]  (0,\cnew)  -- (8,{\cnew+ \d*8});
+  % Intersecciones
+  \path [name intersections={of=DA1 and OA1, by=Epre}];
+  \path [name intersections={of=DA2 and OA2, by=Epos}];
+  % Curvas
+  \draw[very thick] (\ystar,0.2)--(\ystar,5) node[pos=0.98,right] {$LRAS:\,Y^*$};
+  \draw[thick]       (0,\ap)   -- (8,{\ap   - \b*8}) node[anchor=west] at (7.0,{\ap   - \b*7.0 +0.1}) {$DA_1$};
+  \draw[thick,dashed](0,\acon) -- (8,{\acon - \b*8}) node[anchor=west] at (6.2,{\acon - \b*6.2}) {$DA_2$};
+  \draw[thick]       (0,\csh)  -- (8,{\csh  + \d*8}) node[anchor=west,fill=white,inner sep=1pt] at (2.0,{\csh + \d*2.0}) {$OA_1$};
+  \draw[thick,dashed](0,\cnew) -- (8,{\cnew + \d*8}) node[anchor=west,fill=white,inner sep=1pt] at (2.0,{\cnew+ \d*2.0}) {$OA_2$};
+  % Puntos
+  \fill (Epre) circle (2pt); \node[above right,fill=white,inner sep=1pt] at (Epre) {$E^{\text{pre-BC}}$};
+  \fill (Epos) circle (2pt); \node[above left, fill=white,inner sep=1pt] at (Epos) {$E^{\text{post-BC}}$};
+  % Flechas
+  \draw[->,thick] ($(Epre)+(-0.20,-0.08)$) -- ($(Epos)+(0.20,0.08)$)
+       node[midway,below] {\scriptsize $DA\leftarrow$, $OA\downarrow$};
+  % Leyenda
+  \node at (4,-0.45) {\footnotesize \textit{Direcciones:} $\rightarrow$ eje $Y$ \; $\uparrow$ eje $P$};
+\end{tikzpicture}
+\caption{BC contractivo + expectativas a la baja: $DA_1\!\to\!DA_2$ y $OA_1\!\to\!OA_2$. Se contiene $P$ y $Y\to Y^*$.}
+\end{figure}
+\end{enumerate}
+
+% ========================= PREGUNTA 2 =========================
+\subsection*{(Certamen 1, 2021) \quad Pregunta 2 (1,5 puntos)}
+
+\textbf{Datos.} Población en edad de trabajar: \(15{,}92\) millones. Fuerza de trabajo (ocupados + desocupados): \(9{,}11\) millones. Desocupados: \(0{,}77\) millones. Empleo informal: \(1{,}32\) millones (subconjunto de los ocupados). Inactivos disponibles: \(0{,}91\) millones (no buscan, pero aceptarían empleo).
+
+\begin{enumerate}[label=\alph*)]
+
+\item \textbf{¿Cuál es el número de ocupados?}
+
+Por definición, \(\text{Ocupados} = \text{Fuerza de trabajo} - \text{Desocupados}\).
+\[
+\text{Ocupados} = 9{,}11 - 0{,}77 = \boxed{8{,}34\ \text{millones}}
+\]
+
+\item \textbf{¿Cuál es la tasa de participación laboral (TPL)?}
+
+\(\displaystyle \text{TPL} = \frac{\text{Fuerza de trabajo}}{\text{Población en edad de trabajar}}\times 100\).
+\[
+\text{TPL} = \frac{9{,}11}{15{,}92}\times 100 = \boxed{57{,}2\%}
+\]
+
+\item \textbf{¿Cuál es la tasa de desempleo (TD)?}
+
+\(\displaystyle \text{TD} = \frac{\text{Desocupados}}{\text{Fuerza de trabajo}}\times 100\).
+\[
+\text{TD} = \frac{0{,}77}{9{,}11}\times 100 = \boxed{8{,}4\%}
+\]
+
+\end{enumerate}
+
+\textit{Nota.} Los \emph{inactivos disponibles} (\(0{,}91\) millones) \textbf{no} se incluyen en la fuerza de trabajo bajo la definición estándar; si se pidiera una “tasa de desempleo ampliada”, se suman al numerador y al denominador.
+
+
+\newpage
+\vspace*{0.1cm}
+% --- Pregunta 3: réplica imagen 3 (tablas y texto) ---
+
+\subsection*{(Certamen 1, 2021) \quad Pregunta 3 (1,5 puntos)}
+
+\textbf{a) PIB nominal y por qué no mide crecimiento real}
+
+El PIB nominal se obtiene al sumar el valor (precio $\times$ cantidad) de los bienes \textbf{finales} (A, B y C; el bien D es insumo).
+
+\begin{center}
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Año} & \textbf{$\;PIB^{nom}$} & \textbf{Crec.\ PIB} \\
+\midrule
+2016 & 1{,}800 & -- \\
+2017 & 2{,}487 & 38.2\% \\
+2018 & 2{,}868 & 15.3\% \\
+2019 & 3{,}094 & 7.9\% \\
+2020 & 4{,}436 & 43.4\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\textit{Comentario:} no es útil para medir el \emph{crecimiento real} porque mezcla aumentos de precios con variaciones de cantidades.
+
+\vspace{0.6em}
+
+\textbf{b) PIB real con dos bases y comparación}
+
+Para evitar el problema del cambio de año base, se reporta el PIB real con base 2016 y con base 2020. (Siempre se \emph{excluye} el bien D por ser intermedio.)
+
+\paragraph{PIB real (base 2016).} $PIB^{real,2016}_t=\sum_{i\in\{A,B,C\}} P_{i,2016}\,Q_{i,t}$
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Año} & \textbf{$PIB^{real,2016}$} & \textbf{Crec.\ PIB} \\
+\midrule
+2016 & 1{,}800 & -- \\
+2017 & 1{,}914 & 6.4\% \\
+2018 & 1{,}944 & 1.5\% \\
+2019 & 2{,}016 & 3.7\% \\
+2020 & 2{,}104 & 4.4\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{PIB real (base 2020).} $PIB^{real,2020}_t=\sum_{i\in\{A,B,C\}} P_{i,2020}\,Q_{i,t}$
+
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Año} & \textbf{$PIB^{real,2020}$} & \textbf{Crec.\ PIB} \\
+\midrule
+2016 & 3{,}900 & -- \\
+2017 & 4{,}178 & 7.1\% \\
+2018 & 4{,}260 & 2.0\% \\
+2019 & 4{,}266 & 0.1\% \\
+2020 & 4{,}436 & 4.0\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\textit{Observación metodológica:} con distintas bases, las tasas reales cambian. Una alternativa recomendada es el \emph{índice encadenado} (volumen a precios del año anterior), que mitiga el sesgo de base al ir actualizando precios cada año.
+
+\newpage
+\vspace*{0.1cm}
+% ========================= PREGUNTA 4 =========================
+\subsection*{(Certamen 1, 2021) \quad Pregunta 4 (1,5 puntos)}
+
+\textbf{Contexto.} Dos países idénticos. En 2020 ambos anuncian mayor gasto público \(G\).  
+País 1: aumento \textbf{permanente}. \quad País 2: aumento \textbf{solo 2020–2025}.  
+Analizar trayectorias 2020, 2025, 2030 y 2035 con OA–DA de largo plazo y explicar canales.
+
+\begin{enumerate}[label=\alph*)]
+
+\item \textbf{Análisis gráfico y canales.}
+
+\textbf{Canales comunes (corto plazo).} \(G\uparrow \Rightarrow DA\uparrow\) (derecha): sube \(Y\) y \(P\).  
+\textbf{Canales de mediano/largo plazo.}
+\begin{itemize}
+\item \emph{Precios/salarios}: el ajuste de precios devuelve \(Y\to Y^*\); \(P\) queda más alto.
+\item \emph{Financiamiento y \textit{crowding out}}: si el aumento de \(G\) es \textbf{permanente}, mayores impuestos o deuda sostienen tipos de interés más altos y reducen \(I\) y el stock de capital \(\Rightarrow\) $LRAS$ \((Y^*)\) se desplaza a la izquierda con el tiempo.
+\item Si el aumento de \(G\) es \textbf{transitorio}, el efecto sobre el capital tendencial es menor \(\Rightarrow\) \(Y^*\) se mantiene prácticamente constante (o cae poco y vuelve).
+\end{itemize}
+
+
+\item \textbf{¿Quién tiene mayor ingreso y consumo en 2035? ¿Quién termina con más inflación? ¿Por qué?}
+
+\textbf{Ingreso/consumo 2035.} El \textbf{Segundo País} disfruta de mayor \(Y\) y, por ende, mayor consumo en 2035: su \(Y^*\) no cayó (no hay crowding-out permanente).  
+\textbf{Inflación 2035.} El \textbf{Primer País} termina con \(\boxed{\text{mayor nivel de precios}}\) por el efecto de $DA$ sostenida y caída de $Y^*$.
+
+% --- Figura SOLO para la b): Segundo País ---
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{4Ayudantia/p4b_2021.PNG}
+  \caption{Grafica de ambos paises}
+
+  \label{fig:p4b-segundo}
+\end{figure}
+
+\end{enumerate}
+
+
+\end{document}

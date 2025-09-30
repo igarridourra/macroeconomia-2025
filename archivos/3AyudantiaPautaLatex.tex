@@ -1,0 +1,230 @@
+\documentclass[11pt,addpoints]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[lmargin=2cm,rmargin=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=cyan}
+\parindent=0cm
+\setlist{itemsep=0.6em}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{FACULTAD DE INGENIERÍA\\DEPTO DE INGENIERÍA INDUSTRIAL \\ MACROECONOMÍA (580323)}
+\fancyhead[R]{\includegraphics[scale=0.13]{escudoudec.jpg}}
+\fancyfoot{\thepage}
+\fancyfoot[R]{Semestre 2025-2}
+\fancyfoot[L]{CMP/IGU}
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\begin{document}
+\vspace*{0.05cm}
+
+\begin{center}
+{\Large \bfseries Ayudantía 3 (PAUTA) - Macroeconomía \\[0.5cm]}
+\end{center}
+\textbf{Profesor:} Cristian Mardones, Ph.D. \quad \textbf{Ayudante:} Ignacio Garrido U.
+\bigskip
+
+A continuación se presenta la \textbf{PAUTA del Listado 3} con resolución paso a paso. En los ejercicios se usan cifras y supuestos consistentes con el contexto macro chileno 2025 (TPM 4{,}75\% sep/2025; desempleo en torno a 8{,}7\%; IPC anual cercano a 4\%). Los datos numéricos internos a los problemas son \textbf{inventados} para fines pedagógicos (no provienen de la noticia).
+
+\begin{enumerate}
+
+% ===================== 1 INFLACIÓN =====================
+\item \textbf{Inflación (IPC agosto 2025 = 0,0\% m/m; 4,0\% a/a).}
+\begin{enumerate}[label=(\alph*)]
+\item \textbf{Por qué el 12 meses puede quedar en 4,0\% con 0,0\% mensual.} \\
+La inflación interanual compara el nivel del índice con el \emph{mismo mes del año previo}. Un mes con 0,0\% cambia muy poco el promedio móvil de 12 observaciones. Además, el 12m depende de \emph{qué mes sale} de la ventana: si el mes que sale (agosto del año previo) tuvo una variación similar o menor, el 12m puede \emph{casi no moverse}. Formalmente, si $I_t$ es el índice:
+\[
+\pi_{12m}(t)=\frac{I_t-I_{t-12}}{I_{t-12}}\approx 4{,}0\%.
+\]
+Con $I_t=I_{t-1}$ (0,0\% m/m), el numerador no cambia respecto al mes anterior; por eso el 12m puede seguir en 4,0\%.
+
+\item \textbf{Proyección simple con tres meses futuros.} \\
+Suponga: sep $0{,}3\%$, oct $0{,}2\%$, nov $0{,}1\%$ $\Rightarrow$ suma $0{,}6\%$. Si en 2024 (sep–nov) sumaron $1{,}0\%$, entonces al llegar a noviembre 2025 el 12m \emph{reemplaza} $+1{,}0\%$ por $+0{,}6\%$. Todo lo demás constante, la inflación 12m \textbf{baja} respecto de agosto. (Efecto base: los meses “altos” que salen son más grandes que los “bajos” que entran).
+\end{enumerate}
+
+% ===================== 2 NÚCLEO VS TOTAL =====================
+\item \textbf{Inflación núcleo vs. total.}
+\begin{enumerate}[label=(\alph*)]
+\item \textbf{Por qué mirar el núcleo.} \\
+La subyacente excluye ítems volátiles (alimentos/energía) y refleja mejor la \emph{tendencia} inflacionaria y la inercia de servicios. Si el núcleo cae \emph{más lento} que el total, hay \emph{persistencia}: bajar la tasa demasiado pronto podría desanclar expectativas. Por eso el BCCh le da mayor peso.
+\item \textbf{Boceto.} \\
+Dibujar dos series 2025: “Total” (más volátil, con caída más visible) y “Núcleo” (por arriba, cayendo lento). Interpretación: rigidez de precios de servicios/salarios, y efectos de segunda vuelta que tardan en disiparse.
+\end{enumerate}
+
+% ===================== 3 DESEMPLEO CÁLCULO =====================
+\item \textbf{Desempleo: cálculo simple (Biobío).} \\
+Datos: Población en edad de trabajar $=1{,}200{,}000$; Fuerza laboral $=850{,}000$; Ocupados $=780{,}000$; Desocupados $=70{,}000$.
+\begin{enumerate}[label=(\alph*)]
+\item \textbf{Tasa de participación:} $\displaystyle \text{TP}=\frac{\text{Fuerza laboral}}{\text{PET}}=\frac{850{,}000}{1{,}200{,}000}=70{,}83\%$.
+\item \textbf{Tasa de desempleo:} $\displaystyle u=\frac{\text{Desocupados}}{\text{Fuerza laboral}}=\frac{70{,}000}{850{,}000}=8{,}24\%$.
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!
+\item \textbf{Coherencia con 8,7\% nacional.} \\
+El 8,24\% regional es cercano a 8,7\% nacional: plausible. Diferencias se explican por composición sectorial/territorial, participación, y errores muestrales.
+\end{enumerate}
+
+% ===================== 4 HOLGURAS =====================
+\item \textbf{Holguras laborales.} \\
+Supuesto: subempleados (insuficiencia de horas) $=6\%$ de ocupados $\Rightarrow 0{,}06\times 780{,}000=46{,}800$.
+\begin{enumerate}[label=(\alph*)]
+\item \textbf{Tasa de subutilización (U):} incluir desocupados $+$ subempleados sobre fuerza laboral:
+\[
+U=\frac{70{,}000+46{,}800}{850{,}000}=13{,}74\%.
+\]
+\item \textbf{Por qué es más informativa.} \\
+Capta holguras “ocultas”: gente con empleo pero \emph{quiere más horas}. Ayuda a entender por qué la inflación no responde con fuerza a cambios en $u$ (Phillips más plana).
+\end{enumerate}
+
+% ===================== 5 PIB PER CÁPITA =====================
+\item \textbf{PIB per cápita (US\$).} \\
+Datos: 2019 US\$ 15{,}300; 2024 US\$ 16{,}710.
+\begin{enumerate}[label=(\alph*)]
+\item \textbf{Crecimiento 2019–2024 (US\$):} $\displaystyle \frac{16{,}710-15{,}300}{15{,}300}=9{,}21\%$.
+\item \textbf{Por qué “más dólares” $\neq$ “más bienestar real”.} \\
+El indicador en US\$ depende del tipo de cambio y precios externos. Puede subir por apreciación del peso sin mejora real. Además, no refleja distribución, precios no transables, ni calidad de vida. Para bienestar real, usar PIB real per cápita, deflactado y, ojalá, PPP.
+\end{enumerate}
+
+% ===================== 6 TASA DE INTERÉS =====================
+\item \textbf{Tasa de política monetaria (regla).} \\
+Regla: $i_t=r^\*+\pi_t+0{,}5(\pi_t-\pi^\*)+0{,}5(y_t-y^\*)$. \\
+Datos: $r^\*=1{,}5\%$, $\pi_t=4{,}0\%$, $\pi^\*=3{,}0\%$, $y_t-y^\*=-0{,}5\%$.
+\begin{enumerate}[label=(\alph*)]
+\item \textbf{Cálculo:}
+\[
+i_t=1{,}5+4{,}0+0{,}5(1{,}0)+0{,}5(-0{,}5)=1{,}5+4{,}0+0{,}5-0{,}25=5{,}75\%.
+\]
+\item \textbf{Comparación con TPM 4,75\% (sep-2025).} \\
+La TPM efectiva es \emph{1 pp menor} que la regla $\Rightarrow$ postura \emph{menos contractiva} que la sugerida por esa especificación. El Consejo puede ponderar riesgos asimétricos, rezagos, crédito, y señales de núcleo.
+\end{enumerate}
+
+% ===================== 7 OA-DA DEMANDA =====================
+\item \textbf{OA--DA: choque de demanda (TPM alta).}
+\begin{enumerate}[label=(\alph*)]
+\item \textbf{Gráfico:} DA se desplaza a la \textbf{izquierda} (menor gasto $C+I+G+NX$ por crédito caro y peso más fuerte). \\
+\item \textbf{Resultado:} En corto plazo, $Y$ cae y $P$ disminuye/crece menos. A mediano plazo, con expectativas ancladas y normalización a tasa neutral, $Y\to Y^\*$ y $P$ se estabiliza cerca de la meta.
+\end{enumerate}
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!
+% ===================== 8 OA-DA OFERTA =====================
+\item \textbf{OA--DA: choque de oferta (salarios).} \\
+Supuesto: remuneraciones nominales $+6{,}4\%$ a/a con productividad estancada.
+\begin{enumerate}[label=(\alph*)]
+\item \textbf{Efecto:} costo unitario $\uparrow$ $\Rightarrow$ OA-CP \textbf{arriba/izquierda}. \\
+\item \textbf{Gráfico y equilibrio:} Para una misma DA, el nuevo cruce implica \textbf{menor $Y$ y mayor $P$} (estanflación leve). La credibilidad del banco central ayuda a que las expectativas no se desanclen.
+\end{enumerate}
+
+% ===================== 9 PHILLIPS =====================
+\item \textbf{Curva de Phillips con expectativas.} \\
+$\pi_t=\pi_t^e-\gamma(u_t-u_n)+\nu_t$, con $\pi_t^e=3{,}5\%$, $u_t=8{,}7\%$, $u_n=8{,}0\%$, $\gamma=0{,}5$, $\nu_t=0{,}3\%$.
+\begin{enumerate}[label=(\alph*)]
+\item \textbf{Cálculo:}
+\[
+\pi_t=3{,}5-0{,}5(8{,}7-8{,}0)+0{,}3=3{,}5-0{,}35+0{,}3=3{,}45\%.
+\]
+\item \textbf{Interpretación de $\gamma$ bajo.} \\
+Curva \emph{plana}: grandes variaciones en $u$ generan cambios pequeños en $\pi$. Puede deberse a holguras ocultas, ancla de expectativas, mayor competencia y rigideces nominales.
+\end{enumerate}
+
+% ===================== 10 WS-PS =====================
+\item \textbf{Relación salario--desempleo (WS--PS).} \\
+Salario mínimo $+8\%$ y productividad $+2\%$.
+\begin{enumerate}[label=(\alph*)]
+\item \textbf{WS:} La curva de fijación salarial (WS) se \textbf{desplaza hacia arriba}: para cada $u$, los trabajadores apuntan a un salario real mayor (recuperación de poder de compra). \\
+\item \textbf{WS--PS y desempleo de equilibrio:} Con PS (precio–salario real de equilibrio) relativamente estable, el cruce WS--PS se mueve a un punto con \textbf{mayor desempleo de equilibrio} (si salarios reales suben por sobre productividad y no hay margen en márgenes/competencia).
+\end{enumerate}
+
+% ===================== 11 SHOCKS DE OFERTA =====================
+\item \textbf{Shocks de oferta en Chile.}
+\begin{enumerate}[label=(\alph*)]
+\item \textbf{Por qué el alza de energía 2022 fue shock de oferta.} \\
+Aumentos exógenos en costos de insumos energéticos encarecen la producción en \emph{todos} los sectores $\Rightarrow$ OA-CP arriba/izquierda: \textbf{más inflación y menos PIB} en corto plazo.
+\item \textbf{Comparación con 2025 (salarios altos).} \\
+En 2025 la inflación total baja, pero el \emph{núcleo} y salarios siguen altos: presión de \textbf{costos internos} (salarios, tarifas) mantiene una componente de OA. Diferente a un boom de demanda (DA a la derecha).
+\end{enumerate}
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!
+% ===================== 12 NOTICIA =====================
+\item \textbf{Discusión aplicada: noticia BCCh (09/09/2025, TPM 4{,}75\%).}\\
+\emph{Nota:} La discusión es cualitativa; no modifica los ejercicios anteriores.
+\begin{enumerate}[label=(\alph*)]
+\item \textbf{Por qué no bajar más la TPM.} Persistencia del \textbf{núcleo}, riesgo de desanclaje de expectativas, rezagos de política y señales mixtas del mercado laboral.
+\item \textbf{TPM alta en OA--DA y empleo.} DA $\downarrow$ (crédito caro), menor $Y$ corto plazo, menor presión inflacionaria; empleo se ajusta con rezagos.
+\item \textbf{Tasas altas y lenta creación de empleo.} Inversión/consumo durables postergados, costo de capital y capital de trabajo más caros; empresas contratan menos.
+\item \textbf{Salarios altos e inflación/competitividad.} Costos unitarios $\uparrow$; si productividad no compensa, \textbf{inflación de costos} y pérdida de competitividad externa.
+\item \textbf{Condiciones para retomar recortes.} Núcleo en trayectoria descendente sostenida, expectativas ancladas en 3\%, salarios moderándose o productividad al alza, tipo de cambio/externo sin shocks.
+\end{enumerate}
+
+\end{enumerate}
+
+
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!
+
+
+\begin{frame}{Pauta de Respuestas -- Detallada}
+\begin{enumerate}[label=(\alph*),leftmargin=*]
+
+\item \textbf{Política monetaria y decisiones del Banco Central} \\
+El BCCh decidió mantener la TPM en 4,75\% en lugar de seguir bajándola porque la inflación subyacente sigue siendo más alta de lo esperado.  
+Aunque la inflación total muestra tendencia a la baja, lo que preocupa es la persistencia del \textbf{núcleo}, que refleja precios de servicios y bienes menos volátiles (salud, educación, arriendos, etc.).  
+Esto implica que los riesgos inflacionarios no se han disipado y que bajar demasiado rápido la TPM podría desanclar expectativas.  
+En otras palabras, el Consejo privilegió la \textbf{credibilidad} de su meta de inflación (3\%) por sobre una expansión temprana de la demanda.
+
+\item \textbf{Tasas de interés e impacto en la economía real} \\
+Una TPM alta encarece el crédito de consumo e hipotecario, reduce el dinamismo de la inversión empresarial y fortalece el tipo de cambio real (menor demanda externa).  
+En el modelo \textbf{OA--DA}, esto se traduce en un desplazamiento de la Demanda Agregada (DA) hacia la izquierda: \emph{menor PIB en el corto plazo y menos presión sobre precios}.  
+El empleo se resiente porque empresas y hogares enfrentan mayores costos financieros, lo que enfría contratación y gasto.  
+Así, una tasa restrictiva busca “sacrificar” algo de crecimiento presente para asegurar estabilidad de precios futura.
+
+\item \textbf{Desempleo y política monetaria} \\
+El desempleo en 8,7\% refleja que la economía todavía opera con \textbf{brecha negativa de producto}.  
+La lenta creación de empleo puede estar ligada al rezago de la política monetaria: las alzas de tasas entre 2022–2024 siguen transmitiéndose al mercado laboral en 2025.  
+En términos de la \textbf{Curva de Phillips}, estamos en un escenario en que el desempleo elevado debería moderar la inflación, pero como el núcleo se mantiene alto, parece que la relación desempleo–inflación está más débil (curva más plana).  
+Esto obliga al BCCh a mantener la tasa alta más tiempo, aun cuando el desempleo esté por encima de la tasa natural ($u_n$).
+
+\item \textbf{Inflación subyacente y salarios} \\
+Los salarios nominales han crecido con fuerza (en torno al 6–7\% interanual), lo que supera el crecimiento de la productividad.  
+Esto implica que el \textbf{costo laboral unitario} aumenta, presionando a las empresas a subir precios para mantener márgenes.  
+Este fenómeno se conoce como \emph{inflación de costos} o \emph{shock de oferta}.  
+Aunque la inflación total ha bajado gracias a menores precios de energía y alimentos, la subyacente sigue elevada porque los salarios y servicios actúan como piso de persistencia.  
+Además, salarios más altos sin productividad reducen competitividad internacional, encareciendo exportaciones chilenas.
+
+
+\item \textbf{Equilibrio macroeconómico y próximos pasos} \\
+El Banco Central enfrenta un dilema clásico: si mantiene la tasa muy alta, controla inflación pero agrava el desempleo; si la baja muy rápido, acelera el crecimiento pero arriesga un rebrote inflacionario.  
+En el modelo OA--DA, el objetivo es retornar a un punto de equilibrio donde la DA no esté ni deprimida ni recalentada, y la OA de largo plazo determine el PIB potencial.  
+Para que el BCCh retome recortes de TPM sin comprometer la convergencia inflacionaria, deberían cumplirse:  
+\begin{itemize}
+  \item Inflación núcleo cayendo sostenidamente hacia 3\%.  
+  \item Expectativas inflacionarias de hogares y empresas firmemente ancladas.  
+  \item Moderación en el crecimiento de salarios o aumentos acompañados de productividad.  
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!
+
+  \item Contexto externo estable (precio del cobre, dólar, energía) que no genere nuevos shocks.  
+\end{itemize}
+En resumen, la política monetaria debe equilibrar \textbf{estabilidad de precios en el largo plazo} con \textbf{actividad y empleo en el corto plazo}.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Conexiones con la teoría macroeconómica}
+\begin{itemize}
+  \item \textbf{Política monetaria e inflación:} Ejemplo real de uso de la tasa de interés para controlar demanda y alinear inflación a la meta.  
+  \item \textbf{Desempleo y mercado laboral:} Desempleo alto pese a inflación elevada muestra que la curva de Phillips en Chile es más plana.  
+  \item \textbf{Oferta y Demanda Agregada:} TPM restrictiva contrae DA $\Rightarrow$ menor PIB de corto plazo, pero contribuye a la desinflación.  
+  \item \textbf{Shocks de oferta:} Salarios al alza actúan como shock de costos, desplazando OA de corto plazo hacia arriba y generando estanflación potencial.  
+\end{itemize}
+\end{frame}
+% --- Fin de sección NOTICIA ---
+
+\end{document}
