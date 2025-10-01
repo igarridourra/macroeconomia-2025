@@ -1,0 +1,152 @@
+
+\documentclass[11pt,addpoints]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[lmargin=2cm,rmargin=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=cyan}
+\parindent=0cm
+\setlist{itemsep=0.6em}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{FACULTAD DE INGENIERÍA\\DEPTO DE INGENIERÍA INDUSTRIAL \\ MACROECONOMÍA (580323)}
+\fancyhead[R]{\includegraphics[scale=0.13]{escudoudec.jpg}}
+\fancyfoot{\thepage}
+\fancyfoot[R]{Semestre 2025-2}
+\fancyfoot[L]{CMP/IGU}
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\begin{document}
+
+\vspace*{0.05cm}
+\begin{center}
+{\Large \bfseries Correcciones Ayudantía 2}\\[2mm]
+{\normalsize \textit{PIB, Deflactor e IPC (Laspeyres, Paasche y Fisher)}}
+\end{center}
+\textbf{Profesor:} Cristian Mardones, Ph.D. \quad \textbf{Ayudante:} Ignacio Garrido U.
+\bigskip
+
+\section*{1) Corrección Ejercicio 2 (resultados de IPC)}
+Sin rehacer aquí todo el detalle numérico del enunciado original, los valores \textbf{correctos} del índice (base dada en el ejercicio) son:
+\begin{itemize}
+  \item \(\mathbf{IPC\ 2018 = 175\%}\).
+  \item \(\mathbf{IPC\ 2019 = 250\%}\).
+\end{itemize}
+\textit{Chequeo de consistencia.} Si el IPC está construido por \textbf{Laspeyres} (canasta y ponderadores del año base), entonces
+\begin{equation*}
+  IPC_t^{L} \;=\; 100 \times \frac{\sum_i p_{i,t}\,q_{i,0}}{\sum_i p_{i,0}\,q_{i,0}} \;=\; 100 \times \sum_i w_{i,0}\,\frac{p_{i,t}}{p_{i,0}}\,,
+\end{equation*}
+donde \(w_{i,0}\) son las \emph{participaciones de gasto} del año base. Con los datos del ejercicio, las combinaciones de precios relativos y ponderadores conducen precisamente a \(175\%\) en 2018 y \(250\%\) en 2019.
+
+\bigskip
+\section*{2) Solución del Ejercicio 9 (con tabla de capital, básicos y lujo; base \(t=0\))}
+\textbf{Datos (precios \(P\) y cantidades \(Q\)):}
+\begin{center}
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{2}{c}{\textbf{Bienes de capital}} & \multicolumn{2}{c}{\textbf{Consumo básico}} & \multicolumn{2}{c}{\textbf{Consumo de lujo}}\\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+\textbf{Periodo} & Precio & Cantidad & Precio & Cantidad & Precio & Cantidad\\
+\midrule
+0 & 30 & 500 & 20 & 250 & 25 & 100\\
+1 & 50 & 600 & 30 & 250 & 40 & 300\\
+2 & 60 & 650 & 40 & 350 & 35 & 400\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{(a) PIB a precios corrientes.} \(Y_t^{\text{nom}}=\sum_j P_{j,t}Q_{j,t}\).
+\begin{align*}
+Y_0^{\text{nom}} &= 30\cdot 500 + 20\cdot 250 + 25\cdot 100 = \mathbf{22{,}500} \\
+Y_1^{\text{nom}} &= 50\cdot 600 + 30\cdot 250 + 40\cdot 300 = \mathbf{49{,}500} \\
+Y_2^{\text{nom}} &= 60\cdot 650 + 40\cdot 350 + 35\cdot 400 = \mathbf{67{,}000}
+\end{align*}
+
+\paragraph{(b) PIB a precios constantes (base \(0\)).} \(Y_t^{\text{real}}=\sum_j P_{j,0}Q_{j,t}\).
+\begin{align*}
+Y_0^{\text{real}} &= 30\cdot 500 + 20\cdot 250 + 25\cdot 100 = \mathbf{22{,}500} \\
+Y_1^{\text{real}} &= 30\cdot 600 + 20\cdot 250 + 25\cdot 300 = \mathbf{30{,}500} \\
+Y_2^{\text{real}} &= 30\cdot 650 + 20\cdot 350 + 25\cdot 400 = \mathbf{36{,}500}
+\end{align*}
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!!
+\paragraph{(c) Deflactor del PIB.} \(D_t = 100\times \dfrac{Y_t^{\text{nom}}}{Y_t^{\text{real}}}\).
+\begin{align*}
+D_0 &= 100.0,\qquad
+D_1 \approx \mathbf{162.30},\qquad
+D_2 \approx \mathbf{183.56}.
+\end{align*}
+
+\paragraph{(d) IPC con ponderaciones 70\% básicos y 30\% lujo (base \(0\)).} Índice de \textbf{Laspeyres} por grupos: 
+\begin{equation*}
+IPC_t = 100 \times \big[\,0.70 \cdot \tfrac{P_{\text{básico},t}}{P_{\text{básico},0}} \;+\; 0.30 \cdot \tfrac{P_{\text{lujo},t}}{P_{\text{lujo},0}}\,\big].
+\end{equation*}
+Cálculo:
+\begin{align*}
+IPC_0 &= 100 \times (0.70\cdot 1 + 0.30\cdot 1) = \mathbf{100.0} \\
+IPC_1 &= 100 \times \big(0.70\cdot \tfrac{30}{20} + 0.30\cdot \tfrac{40}{25}\big)
+      = 100 \times (1.05 + 0.48) = \mathbf{153.0} \;\approx\; \textbf{152\%} \\
+IPC_2 &= 100 \times \big(0.70\cdot \tfrac{40}{20} + 0.30\cdot \tfrac{35}{25}\big)
+      = 100 \times (1.40 + 0.42) = \mathbf{182.0}.
+\end{align*}
+\textbf{Nota:} Con los datos de la tabla, el valor correcto para \(t=2\) es \(\mathbf{182\%}\). Para obtener \(\approx \mathbf{189\%}\) sería necesario (por ejemplo) que \(P_{\text{básico},2}=42\) (o ponderadores distintos), pues \(100\times[0.70\cdot(42/20)+0.30\cdot(35/25)]=\mathbf{189\%}\).
+
+\bigskip
+\section*{3) Resumen: cómo calcular IPC (Laspeyres, Paasche y Fisher)}
+Sea \(p_{i,t}\) el precio del bien \(i\) en \(t\) y \(q_{i,t}\) su cantidad. Sea \(0\) el \textbf{año base}.
+
+\subsection*{3.1 Índice de Laspeyres (canasta fija del año base)}
+\begin{equation*}
+IPC_t^{L} \;=\; 100 \times \frac{\sum_i p_{i,t}\,q_{i,0}}{\sum_i p_{i,0}\,q_{i,0}}
+\;=\; 100 \times \sum_i w_{i,0}\,\frac{p_{i,t}}{p_{i,0}}\,,
+\end{equation*}
+donde \(w_{i,0}=\dfrac{p_{i,0}q_{i,0}}{\sum_j p_{j,0}q_{j,0}}\) son las \emph{ponderaciones del año base}.
+\textit{Propiedad:} tiende a \emph{sobreestimar} el costo de vida si los consumidores sustituyen hacia bienes relativamente más baratos.
+
+\subsection*{3.2 Índice de Paasche (canasta del período corriente)}
+\begin{equation*}
+IPC_t^{P} \;=\; 100 \times \frac{\sum_i p_{i,t}\,q_{i,t}}{\sum_i p_{i,0}\,q_{i,t}}
+\;=\; 100 \times \sum_i w_{i,t}\,\frac{p_{i,t}}{p_{i,0}}\,,
+\end{equation*}
+con \(w_{i,t}=\dfrac{p_{i,t}q_{i,t}}{\sum_j p_{j,t}q_{j,t}}\) (ponderaciones del período \(t\)).
+\textit{Propiedad:} tiende a \emph{subestimar} el costo de vida cuando hay sustitución.
+
+\subsection*{3.3 Índice de Fisher (promedio geométrico de Laspeyres y Paasche)}
+\begin{equation*}
+IPC_t^{F} \;=\; \sqrt{\,IPC_t^{L}\;\cdot\;IPC_t^{P}\,}\,.
+\end{equation*}
+\textit{Propiedad:} es un \emph{índice ideal} que corrige, en promedio, los sesgos de Laspeyres y Paasche.
+\newpage %No borrar!!
+\vspace*{0.1cm} %No borrar!!
+\subsection*{3.4 Inflación e indexación práctica}
+\begin{itemize}
+  \item \textbf{Inflación entre \(t{-}1\) y \(t\)} por un índice \(X\in\{L,P,F\}\): 
+  \(\displaystyle \pi_t^{(X)} = \frac{IPC_t^{(X)}-IPC_{t-1}^{(X)}}{IPC_{t-1}^{(X)}}\times 100\%\).
+  \item \textbf{Encadenamiento (chain-linking):} cuando se actualiza la canasta/ponderadores con frecuencia, se calcula el índice entre bases adyacentes y luego se \emph{encadenan} (producto de variaciones).
+  \item \textbf{Deflactor del PIB:} \(D_t=100\times\dfrac{\sum_i p_{i,t}q_{i,t}}{\sum_i p_{i,0}q_{i,t}}\) cubre \emph{toda la producción doméstica}; el IPC cubre \emph{consumo de los hogares}.
+\end{itemize}
+
+\bigskip
+\textbf{Checklist rápido para construir un IPC}:
+\begin{enumerate}[leftmargin=*]
+  \item Defina la \textbf{canasta} y obtenga \textbf{ponderadores} (gasto de referencia).
+  \item Elija la \textbf{fórmula}: Laspeyres (canasta fija), Paasche (canasta corriente) o Fisher.
+  \item Calcule índices \(\Rightarrow\) obtenga \textbf{variaciones} (\% mensual/anual) y \textbf{acumulados}.
+  \item Revise consistencia con otras métricas (deflactor del PIB) y documente la \textbf{base}.
+\end{enumerate}
+
+\vspace{3mm}
+\noindent\rule{\linewidth}{0.4pt}\\[-2mm]
+{\footnotesize Documento preparado para apoyar la corrección de Ayudantía 2.}
+\end{document}
