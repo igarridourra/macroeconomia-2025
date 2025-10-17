@@ -1,0 +1,142 @@
+\documentclass[11pt,addpoints]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[lmargin=2cm,rmargin=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb} % <-- por fórmulas
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=cyan}
+\parindent=0cm
+\setlist{itemsep=0.6em}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{FACULTAD DE INGENIERÍA\\DEPTO DE INGENIERÍA INDUSTRIAL \\ MACROECONOMÍA (580323)}
+\fancyhead[R]{\includegraphics[scale=0.13]{escudoudec.jpg}}
+\fancyfoot{\thepage}
+\fancyfoot[R]{Semestre 2025-2}
+\fancyfoot[L]{CMP/IGU}
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\begin{document}
+\vspace*{0.01cm}
+
+\begin{center}
+{\Large \bfseries Pauta Ayudantía 5 - Macroeconomía \\[0.5cm]}
+\textbf{Profesor:} Cristian Mardones, Ph.D. \quad \textbf{Ayudante:} Ignacio Garrido U.
+\end{center}
+
+
+
+\section*{\textbf{Soluciones}}
+
+\textbf{E1. (Certamen 1, 2021)} \quad Datos (en millones): PET (Personas en edad para trabajar) $=15.92$; FL $=9.11$; Desempleados $D=0.77$; Empleo informal $=1.32$; Inactivos disponibles $=0.91$ (no se incluyen en FL).
+\begin{enumerate}[label=\alph*)]
+\item Ocupados: $O=FL-D=9.11-0.77=8.34$ millones. \\
+No confundir ni incluir el numero de personas que tiene trabajo informal, en teoria deberían estar incluidos en ocupados.
+\item Tasa de participación: $TP=FL/PET=9.11/15.92=0.572\Rightarrow \mathbf{57.2\%}$.
+\item Tasa de desempleo: $TD=D/FL=0.77/9.11=0.0845\Rightarrow \mathbf{8.45\%}$.
+\end{enumerate}
+
+\bigskip
+\textbf{E2. Mercado laboral (EE.UU.)} \quad PET $=190$, $E=120$, $D=10$, Desanimados $=15$, No quieren trabajar $=45$.
+\begin{enumerate}[label=\alph*)]
+\item Población activa (FL): $E+D=120+10=130$.
+\item Tasa de actividad: $TA=130/190=68.4\%$.
+\item Tasa oficial de desempleo: $TD=10/130=7.69\%$.
+\item Acá tenemos dos casos (nos inclinaremos por el segundo):\\
+\textbf{Caso 1:} Si desanimados cuentan como desempleados: $D'=10+15=25$ y $FL'=E+D'=120+25=145$ \ (si se los integra a la fuerza laboral). Tasa: $TD'=25/145=17.24\%$. \\
+\textbf{Caso 2:} Si se mantiene $FL$ oficial en 130 y solo sube el numerador, resulta $TD''=25/130=19.23\%$. Indicar el criterio usado.
+\end{enumerate}
+
+
+\textbf{E3. Modelo ingreso-gasto con $t$ proporcional y $TR$}
+\[
+C=60+0.8Y_D,\quad t=0.2,\quad I=70,\quad G=230,\quad TR=110,\quad Y_D=Y(1-t)+TR
+\]
+\begin{enumerate}[label=\alph*)]
+\item Equilibrio:
+\[
+C=60+0.8(0.8Y+110)=148+0.64Y,\quad DA=C+I+G=448+0.64Y
+\]
+\[
+Y=448+0.64Y\Rightarrow 0.36Y=448\Rightarrow \boxed{Y=1244.44}
+\]
+\item Multiplicador: \(\displaystyle k=\frac{1}{1-c(1-t)}=\frac{1}{1-0.8(0.8)}=\boxed{2.78}\).
+\item Balance fiscal:
+\[
+T=tY=0.2(1244.44)=248.89,\quad BF=T-G-TR=248.89-230-110=\boxed{-91.11}\ (\text{déficit})
+\]
+
+\newpage
+\vspace*{0.1cm}
+\item Con $t=0.3$:
+\[
+C=60+0.8(0.7Y+110)=148+0.56Y,\quad DA=448+0.56Y
+\]
+\[
+Y=448+0.56Y\Rightarrow 0.44Y=448\Rightarrow \boxed{Y=1018.18}
+\]
+\[
+T=0.3(1018.18)=305.45,\quad BF=305.45-230-110=\boxed{-34.55}
+\]
+\textit{Conclusión:} mayor $t$ reduce $Y$ pero mejora $BF$.
+\end{enumerate}
+
+\bigskip
+\textbf{E4. Modelo con $T$ fijo}
+\[
+C=100+0.6Y_D,\ I=50,\ G=250,\ T=100,\quad Y_D=Y-T
+\]
+\begin{enumerate}[label=\alph*)]
+\item $Y=C+I+G\Rightarrow Y=100+0.6(Y-100)+50+250 \Rightarrow 0.4Y=340 \Rightarrow \boxed{Y=850}$.
+\item $Y_D=850-100=\boxed{750}$.
+\item $C=100+0.6(750)=\boxed{550}$.
+\item $S=Y_D-C=750-550=\boxed{200}$.
+\item $S_g=T-G=100-250=\boxed{-150}$.
+\item $k=\dfrac{1}{1-c}=\dfrac{1}{0.4}=\boxed{2.5}$. \\
+\textit{Chequeo:} $S+S_g=200-150=50=I$ ✓
+\end{enumerate}
+
+\bigskip
+\textbf{Extra 1. País X}
+\[
+C=2000+0.7Y_D,\ I=500,\ G=2500,\ T=3000,\quad Y_D=Y-T
+\]
+\begin{enumerate}[label=\alph*)]
+\item $k=\dfrac{1}{1-c}=\dfrac{1}{0.3}=\boxed{3.33}$.
+\item $Y=(2000+0.7(Y-3000))+500+2500 \Rightarrow 0.3Y=2900 \Rightarrow \boxed{Y=9666.7}$.
+\item $Y_D=9666.7-3000=\boxed{6666.7}$.
+
+\item $C=2000+0.7(6666.7)=\boxed{6666.7}$.
+\item $S=Y_D-C=0$.
+\item $\Delta Y=k\Delta G=3.33\times 500=\boxed{1666.7}$ \ $\Rightarrow\ Y'=11333.4$.
+\item Para $\Delta Y=1000$: $\Delta G=1000/3.33=\boxed{300}$.
+\item Impuestos de suma fija: $\Delta Y=-k\,c\,\Delta T \Rightarrow \Delta T=-\dfrac{\Delta Y}{k\,c}=-\dfrac{100}{3.33\times 0.7}=\boxed{-42.9}$.
+\end{enumerate}
+
+\newpage
+\vspace*{0.1cm}
+\textbf{Extra 2. Con $t$ proporcional y $TR$}
+\[
+C=50+0.8Y_D,\ I=70,\ G=200,\ TR=100,\ t=0.20,\quad Y_D=(1-t)Y+TR
+\]
+\begin{enumerate}[label=\alph*)]
+
+\item $C=50+0.8(0.8Y+100)=130+0.64Y$; $DA=400+0.64Y$; \\
+$Y=400+0.64Y \Rightarrow 0.36Y=400 \Rightarrow \boxed{Y=1111.1}$; \quad $k=\dfrac{1}{1-0.8(0.8)}=\boxed{2.78}$.
+\item $T=0.2(1111.1)=222.2$; \ $SP=T-G-TR=222.2-200-100=\boxed{-77.8}$ (déficit).
+\item Con $t=0.25$: $C=130+0.6Y$; $DA=400+0.6Y$; $0.4Y=400 \Rightarrow \boxed{Y=1000}$; \\
+$k=\dfrac{1}{1-0.8(0.75)}=\boxed{2.22}$; \ $SP=250-200-100=\boxed{-50}$.
+\item Variación del SP: mejora de $27.8$. Con $c=0.9$, el multiplicador es mayor y $Y$ cae más ante alza de $t$, por lo que el \emph{mejoramiento} del SP tiende a ser \textbf{mayor} (recauda más y el gasto no cambia), aunque puede matizarse por la caída de base imponible.
+\end{enumerate}
+
+
+\end{document}

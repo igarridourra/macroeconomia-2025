@@ -1,0 +1,140 @@
+\documentclass[11pt,addpoints]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[lmargin=2cm,rmargin=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb} % <-- por fórmulas
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=cyan}
+\parindent=0cm
+\setlist{itemsep=0.6em}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{FACULTAD DE INGENIERÍA\\DEPTO DE INGENIERÍA INDUSTRIAL \\ MACROECONOMÍA (580323)}
+\fancyhead[R]{\includegraphics[scale=0.13]{escudoudec.jpg}}
+\fancyfoot{\thepage}
+\fancyfoot[R]{Semestre 2025-2}
+\fancyfoot[L]{CMP/IGU}
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\newcommand{\blankbox}[1]{\vspace{#1}\par}
+
+\begin{document}
+\vspace*{0.01cm}
+
+\begin{center}
+{\Large \bfseries Ayudantía 5 - Macroeconomía \\[0.5cm]}
+\textbf{Profesor:} Cristian Mardones, Ph.D. \quad \textbf{Ayudante:} Ignacio Garrido U.
+\end{center}
+
+\section*{\textbf{Tematica de ésta semana: Desempleo, NAIRU, histéresis y Modelo de Renta-Gasto}}
+\begin{itemize}
+    \item \textbf{Desempleo:} Situación en que parte de la fuerza laboral no encuentra trabajo. Se distingue entre desempleo friccional (búsqueda o transición), estructural (cambios en la estructura productiva) y cíclico (causado por caídas en la demanda agregada). La tasa de desempleo se calcula como el porcentaje de desocupados dentro de la fuerza laboral.
+    
+    \item \textbf{NAIRU (Non-Accelerating Inflation Rate of Unemployment):} Representa la tasa de desempleo consistente con inflación estable. Si el desempleo cae por debajo de esta tasa, los salarios y precios tienden a aumentar; si está por encima, la inflación se desacelera. Conecta el mercado laboral con la curva de Phillips.
+    
+    \item \textbf{Histéresis:} Describe cómo un shock temporal (por ejemplo, una recesión) puede generar efectos persistentes sobre el desempleo, al deteriorar habilidades o desincentivar la búsqueda laboral, desplazando la NAIRU hacia arriba incluso tras la recuperación del PIB.
+    
+    \item \textbf{Modelo de Renta–Gasto:} Explica la determinación del ingreso de equilibrio mediante el gasto agregado \(Y = C + I + G + (X - M)\). El equilibrio ocurre donde la producción iguala la demanda efectiva. A partir de este modelo se deriva el \textbf{multiplicador keynesiano}, que muestra cómo variaciones en el gasto autónomo afectan el PIB.
+\end{itemize}
+
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+
+\item \textbf{(Certamen 1, 2021):} La ultima encuesta de empleo de un país muestra que existen 15.92 millones de personas en edad de trabajar, de las cuales 9.11 millones están trabajando o están desempleadas. Se sabe que 1.32 millones de personas tienen empleo informal, y además, 0.77 millones no tienen trabajo, aunque lo están buscando activamente. También, se sabe que 0.91 millones de personas no han buscado empleo en el último mes, pero estarían dispuestas a trabajar si les ofrecieran uno en las próximas dos semanas. Calcule:
+\begin{enumerate}[label=\alph*)]
+\item ¿Cuál es el numero de ocupados?
+\item ¿Cuál es la tasa de participación laboral?
+\item ¿Cuál es la tasa de desempleo?
+\end{enumerate}
+
+
+\item Suponga que en Estados Unidos hay en un determinado mes 190 millones de personas en
+edad activa, de las cuales solo 120 millones tienen empleo. Del resto, 10 millones están
+buscando trabajo, 15 millones han renunciado a buscarlo y 45 millones no quieren trabajar.
+\begin{enumerate}[label=\alph*)]
+\item ¿Cuál es la población activa?
+\item ¿Cuál es la tasa de actividad?
+\item ¿Cuál es la tasa oficial de desempleo?
+
+\newpage
+\vspace*{0.1cm}
+\item Si todos los trabajadores desanimados se consideran desempleados, ¿cuál sería la tasa de
+desempleo?
+\end{enumerate}
+
+\item Suponga una economía caracterizada por las siguientes ecuaciones:
+\[
+C = 60 + 0.8\,Y_D,\qquad t = 0.2,\qquad I = 70,\qquad G = 230,\qquad TR = 110
+\]
+\begin{enumerate}[label=\alph*)]
+\item Encuentre el nivel de ingreso de equilibrio.
+\item El multiplicador del gasto.
+\item El balance fiscal.
+\item Si $t$ aumenta a 0.3, calcule el nuevo valor del balance fiscal.\\
+\textit{Extra:} Grafique ambos casos considerando los ejes $(Y,DA)$.
+\end{enumerate}
+
+
+\item Suponga que una economía se caracteriza por las siguientes ecuaciones de conducta:
+\[
+C = 100 + 0.6\,Y_D,\qquad I = 50,\qquad G = 250,\qquad T = 100
+\]
+Determine:
+\begin{enumerate}[label=\alph*)]
+\item El PIB de equilibrio ($Y$).
+\item El ingreso disponible ($Y_D$).
+\item El gasto de consumo ($C$).
+\item El ahorro privado.
+\item El ahorro del gobierno.
+\item El multiplicador.
+\end{enumerate}
+
+\item \textbf{(Certamen 2, 2022):}
+Use el modelo IS-LM para graficar cuál es el impacto de disminuir la tasa de impuesto a la renta en el caso clasico. Luego, determine como cambiaría el PIB, tasa de interes, consumo, inversion y balance fiscal.
+\end{enumerate}
+
+\newpage
+\vspace*{0.1cm}
+\section*{\textbf{Ejercicios extras (No obligatorios)}}
+
+\begin{enumerate}[label=\textbf{\arabic*.},start=1]
+\item Sea la economía:
+\[
+C = 2000 + 0.7\,Y_D,\qquad I = 500,\qquad G = 2500,\qquad T = 3000
+\]
+\begin{enumerate}[label=\alph*)]
+\item Multiplicador.
+\item PIB de equilibrio.
+\item Ingreso disponible ($Y_D$).
+\item Consumo ($C$).
+\item Ahorro privado ($S$).
+\item Si $G$ se incrementa en 500, efecto sobre $Y$.
+\item ¿Cuánto debe aumentar $G$ para subir $Y$ en 1000?
+\item ¿Cuánto deben disminuir los impuestos ($T$) para aumentar $Y$ en 100?
+\end{enumerate}
+
+\item Sea la economía:
+\[
+C = 50 + 0.8\,Y_D,\quad \bar I = 70,\quad \bar G = 200,\quad \overline{TR} = 100,\quad t_1 = 0.20
+\]
+\begin{enumerate}[label=\alph*)]
+\item Multiplicador y renta de equilibrio.
+\item Superávit presupuestario (SP).
+\item Si $t$ sube a 0.25: nueva renta y nuevo multiplicador.
+\item Variación del SP. ¿Sería mayor o menor si $c=0.9$ en lugar de $0.8$?
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+\end{document}

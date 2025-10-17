@@ -1,0 +1,243 @@
+\documentclass[aspectratio=169,10pt]{beamer}
+
+% --- Paquetes base ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+% --- Colores UdeC ---
+\definecolor{udecblue}{HTML}{0A66C2}
+\definecolor{udeclight}{HTML}{0B5AAA}
+\definecolor{udecdark}{HTML}{0A3868}
+
+% --- Tema Beamer ---
+\usetheme{Madrid}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{frametitle}{fg=white,bg=udecblue}
+\setbeamercolor{title}{fg=white,bg=udecblue}
+\setbeamercolor{structure}{fg=udecblue}
+\setbeamercolor{footline}{bg=white,fg=udecdark}
+\setbeamercolor{itemize item}{fg=udecblue}
+\setbeamercolor{itemize subitem}{fg=udeclight}
+
+% --- Pie con número de página ---
+\setbeamertemplate{footline}{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.8\paperwidth,ht=2.5ex,dp=1ex,left]{footline}%
+    \hspace*{1ex}\textcolor{udecdark}{\footnotesize Macroeconomía (580323) — Semestre 2025-2 \; | \; CMP/IGU}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.5ex,dp=1ex,right]{footline}%
+    \textcolor{udecdark}{\footnotesize \insertframenumber/\inserttotalframenumber}\hspace*{1ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+% --- Datos portada ---
+\title{\textbf{Ayudantía 5 — Macroeconomía}}
+\subtitle{Resumen de fórmulas \& ejercicios (con espacio de trabajo)}
+\author{Profesor: Cristian Mardones, Ph.D. \quad | \quad Ayudante: Ignacio Garrido U.}
+\institute{Facultad de Ingeniería — Depto. de Ingeniería Industrial}
+\date{2025-2}
+\titlegraphic{\vspace{-0.5cm}\hfill\includegraphics[height=1.2cm]{escudoudec.jpg}}
+
+% --- Atajos ---
+\newcommand{\espacio}{\vfill\vfill}
+\newcommand{\Yd}{Y_{\!D}}
+
+\begin{document}
+
+% ===================== Portada =====================
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% ===================== Resumen 1: Laboral =====================
+\begin{frame}{Resumen — Mercado laboral: definiciones y fórmulas}
+\textbf{Población en Edad de Trabajar (PET)}: personas $\ge$ 15 años. \\
+\textbf{Fuerza Laboral (FL)} $=$ Ocupados $(O)$ $+$ Desocupados $(D)$.
+
+\medskip
+\begin{columns}[T,onlytextwidth]
+\column{0.55\textwidth}
+\begin{itemize}
+  \item \textbf{Tasa de participación}:
+  \[
+  TP = \frac{FL}{PET}
+  \]
+  \item \textbf{Tasa de desempleo}:
+  \[
+  TD = \frac{D}{FL}
+  \]
+  \item \textbf{Criterio de desempleado (ENE/INE):} no trabajó la semana pasada, buscó empleo en últimas 4 semanas y está disponible 2 semanas.
+\end{itemize}
+
+\column{0.45\textwidth}
+\textbf{Tipos de desempleo}
+\begin{itemize}
+  \item \textit{Natural (friccional/estructural)}: persiste incluso en largo plazo.
+  \item \textit{Cíclico}: fluctuaciones alrededor del natural (ciclo económico).
+\end{itemize}
+\textbf{Ley de Okun} (idea): $\uparrow$ desempleo $\Rightarrow \downarrow$ PIB (pérdida de producto).
+\end{columns}
+\end{frame}
+
+% ===================== Resumen 2: Ingreso-Gasto =====================
+\begin{frame}{Resumen — Modelo ingreso–gasto (economía cerrada)}
+\begin{columns}[T,onlytextwidth]
+\column{0.55\textwidth}
+\textbf{Identidades básicas}
+\[
+Y = C + I + G,\qquad \Yd = Y - T + TR
+\]
+\[
+C = C_0 + c\,\Yd,\quad 0<c<1
+\]
+
+\textbf{Impuesto proporcional:}\; $T = tY$ \quad (si es fijo, $T=\bar T$)
+
+\column{0.45\textwidth}
+\textbf{Multiplicadores}
+\[
+k = \frac{1}{1-c}\quad (\text{sin }t)
+\]
+\[
+k = \frac{1}{1 - c(1-t)}\quad (\text{con }t)
+\]
+\textbf{Balance fiscal}
+\[
+BF = T - G - TR
+\]
+\end{columns}
+\end{frame}
+
+% ===================== Resumen 3: Dinero / Inflación =====================
+\begin{frame}{Resumen — Dinero e inflación (ideas clave)}
+\begin{itemize}
+  \item \textbf{Funciones del dinero:} medio de pago, unidad de cuenta, depósito de valor, liquidez.
+  \item \textbf{Creación de dinero:} sistema de reserva fraccional $\Rightarrow$ multiplicador monetario $=1/R$.
+  \item \textbf{Inflación} (costos): redistribución no anticipada, “costos de menú” y “suela de zapato”.
+  \item \textbf{Indexación (UF en Chile):} reduce riesgo inflacionario en contratos de largo plazo.
+\end{itemize}
+\end{frame}
+
+% ==========================================================
+% ===============    EJERCICIOS + ESPACIO    ===============
+% ==========================================================
+
+% -------- Ejercicio 1 --------
+\begin{frame}{Ejercicio 1 — (Certamen 2021) Tasas laborales}
+\small
+La última encuesta de empleo muestra: PET = 15{,}92 millones; FL = 9{,}11 millones; empleo informal = 1{,}32 millones; desempleados $D$ = 0{,}77 millones; inactivos disponibles = 0{,}91 millones. Calcule:
+\begin{enumerate}\itemsep4pt
+  \item Número de ocupados $(O)$.
+  \item Tasa de participación laboral $(TP)$.
+  \item Tasa de desempleo $(TD)$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Espacio de trabajo — Ejercicio 1}
+\espacio
+\end{frame}
+
+% -------- Ejercicio 2 --------
+\begin{frame}{Ejercicio 2 — Mercado laboral (EE. UU.)}
+\small
+Mes dado: PET = 190; empleados $E=120$; del resto: $D=10$; desanimados $=15$; no quieren trabajar $=45$.
+\begin{enumerate}\itemsep4pt
+  \item Población activa (FL).
+  \item Tasa de actividad.
+  \item Tasa oficial de desempleo.
+  \item Si desanimados cuentan como desempleados, ¿nueva tasa de desempleo?
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Espacio de trabajo — Ejercicio 2}
+\espacio
+\end{frame}
+
+% -------- Ejercicio 3 --------
+\begin{frame}{Ejercicio 3 — Ingreso–gasto con $t$ proporcional y $TR$}
+\small
+\[
+C = 60 + 0.8\,\Yd,\quad t = 0.2,\quad I = 70,\quad G = 230,\quad TR = 110
+\]
+\begin{enumerate}\itemsep4pt
+  \item Ingreso de equilibrio $Y$.
+  \item Multiplicador del gasto.
+  \item Balance fiscal $BF$.
+  \item Si $t$ aumenta a $0.3$, nuevo $BF$. \\
+  \textit{Extra:} graficar $DA(Y)$ (ejes $(Y,DA)$) para ambos $t$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Espacio de trabajo — Ejercicio 3}
+\espacio
+\end{frame}
+
+% -------- Ejercicio 4 --------
+\begin{frame}{Ejercicio 4 — Ingreso–gasto con $T$ fijo}
+\small
+\[
+C = 100 + 0.6\,\Yd,\quad I = 50,\quad G = 250,\quad T = 100
+\]
+\begin{enumerate}\itemsep4pt
+  \item PIB de equilibrio $(Y)$.
+  \item Ingreso disponible $(\Yd)$.
+  \item Consumo $(C)$.
+  \item Ahorro privado.
+  \item Ahorro del gobierno.
+  \item Multiplicador.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Espacio de trabajo — Ejercicio 4}
+\espacio
+\end{frame}
+
+% -------- Ejercicio 5 --------
+\begin{frame}{Ejercicio 5 — Certamen 2022}
+Use el modelo IS-LM para graficar cuál es el impacto de disminuir la tasa de impuesto a la renta en el caso clasico. Luego, determine como cambiaría el PIB, tasa de interes, consumo, inversion y balance fiscal.
+\end{frame}
+
+\begin{frame}{Espacio de trabajo — Ejercicio 5}
+\espacio
+\end{frame}
+% -------- Ejercicio 6 --------
+\begin{frame}{Ejercicios Extras (dos subcasos)}
+\small
+\textbf{(6.1) País X}
+\[
+C = 2000 + 0.7\,\Yd,\quad I=500,\quad G=2500,\quad T=3000
+\]
+\begin{itemize}\itemsep2pt
+  \item Multiplicador; $Y$; $\Yd$; $C$; $S$.
+  \item Si $\Delta G = 500$, efecto en $Y$.
+  \item ¿Cuánto subir $G$ para aumentar $Y$ en $1000$?
+  \item ¿Cuánto bajar $T$ para subir $Y$ en $100$?
+\end{itemize}
+
+\medskip
+\textbf{(6.2) Con $t$ y $TR$}
+\[
+C = 50 + 0.8\,\Yd,\ \bar I=70,\ \bar G=200,\ TR=100,\ t=0.20
+\]
+\begin{itemize}\itemsep2pt
+  \item Multiplicador y $Y$.
+  \item Superávit presupuestario (SP).
+  \item Si $t=0.25$: nuevo $Y$ y multiplicador.
+  \item Variación de SP; comentar rol de $c=0.9$ vs. $0.8$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Espacio de trabajo — Ejercicio 5}
+\espacio
+\end{frame}
+
+
+
+\end{document}

@@ -37,7 +37,7 @@
     .btn{appearance:none; border:none; cursor:pointer; text-decoration:none; color:#fff; background:var(--brand); padding:8px 12px; border-radius:10px; font-weight:600; display:inline-flex; gap:8px; align-items:center; border:1px solid #0a65c24d}
     .btn:hover{background:var(--brand-600)}
     .btn.alt{background:#111827; border-color:#111827}
-    .btn.ghost{background:#fff; color:var(--brand); border:1px solid #dbeafe}
+    .btn.ghost{background:#fff; color:#0b5aaa; border:1px solid #dbeafe}
     .btn.ghost:hover{background:#f5f9ff}
     .yt-row{display:flex; gap:12px; align-items:flex-start; padding:12px; background:#f9fbff; border:1px solid #e7effb; border-radius:12px}
     .yt-logo{width:28px; height:20px; flex:0 0 auto}
@@ -48,6 +48,17 @@
     footer{margin-top:28px; color:var(--muted); font-size:13px; border-top:1px solid #eef2f7; background:#fff}
     .tip{font-size:13px; color:var(--muted); margin-top:10px}
     .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:.9em; padding:.1em .4em; border:1px solid #e5e7eb; border-bottom-width:2px; border-radius:6px; background:#fff}
+
+    /* Títulos de sección para certámenes */
+    .section-title{
+      margin-top:40px; margin-bottom:10px;
+      padding:10px 16px; border-radius:10px;
+      font-size:18px; font-weight:600;
+    }
+    .azul{background:#eef6ff; border-left:6px solid #0b5aaa; color:#0b5aaa;}
+    .verde{background:#f3f8f4; border-left:6px solid #10b981; color:#065f46;}
+    .amarillo{background:#fff7ed; border-left:6px solid #f59e0b; color:#92400e;}
+
     @media (max-width:480px){.hero{justify-content:center; text-align:center}.info{justify-content:center}}
   </style>
 </head>
@@ -85,14 +96,64 @@
         <a href="#tab-materiales" class="active" role="tab" aria-selected="true">📂 Materiales</a>
         <a href="#tab-videos" role="tab" aria-selected="false">▶️ Videos YouTube (Prof. Cristian Mardones, Ph.D.)</a>
         <a href="#tab-videospablo" role="tab" aria-selected="false">▶️ Videos YouTube (Ayudante Pablo Meza)</a>
-
       </nav>
 
-      <!-- MATERIALES -->
+      <!-- ========== TAB: MATERIALES ========== -->
       <section id="tab-materiales" class="tab-panel active" role="tabpanel">
-        <p class="lead">
-          <strong>Ayudantía 1 (05/09/2025)</strong>
-        </p>
+
+        <!-- ORDEN SOLICITADO: CERTÁMENES 2025 -> CERTAMEN 2 -> CERTAMEN 1 -->
+
+        <!-- 1) SECCIÓN CERTÁMENES 2025 -->
+        <h2 class="section-title amarillo">🧾 CERTÁMENES 2025 — Enunciado y Pautas</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>C1 2025 — Enunciado</h3>
+            <p>Documento disponible en PDF y fuente LaTeX.</p>
+            <div class="btns">
+              <a class="btn" href="archivos/C1_2025.pdf" download>PDF</a>
+              <a class="btn ghost" href="archivos/C1_2025.tex" download>LaTeX</a>
+            </div>
+          </article>
+        </div><!-- /grid C1 2025 -->
+
+        <!-- 2) SECCIÓN CERTAMEN 2 -->
+        <h2 class="section-title verde">📗 CERTAMEN 2 — Material posterior</h2>
+
+        <p class="lead"><strong>Ayudantía 5 (17/10/2025)</strong></p>
+        <div class="grid">
+          <article class="card">
+            <h3>Ayudantía 5 — Listado</h3>
+            <p>Enunciado disponible en PDF y fuente LaTeX.</p>
+            <div class="btns">
+              <a class="btn" href="archivos/5AyudantiaListado.pdf" download>PDF</a>
+              <a class="btn ghost" href="archivos/5AyudantiaListado.tex" download>LaTeX</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Ayudantía 5 — Presentación</h3>
+            <p>Diapositivas usadas en clase (PDF). Fuente LaTeX incluida.</p>
+            <div class="btns">
+              <a class="btn" href="archivos/5AyudantiaPPT.pdf" download>PDF</a>
+              <a class="btn ghost" href="archivos/5AyudantiaPPT.tex" download>LaTeX</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Ayudantía 5 — Pauta</h3>
+            <p>Pauta disponible en PDF y fuente LaTeX.</p>
+            <div class="btns">
+              <a class="btn" href="archivos/5AyudantiaPauta.pdf" download>PDF</a>
+              <a class="btn ghost" href="archivos/5AyudantiaPauta.tex" download>LaTeX</a>
+              <!-- Aún no disponible -->
+            </div>
+          </article>
+        </div><!-- /grid A5 -->
+
+        <!-- 3) SECCIÓN CERTAMEN 1 -->
+        <h2 class="section-title azul">📘 CERTAMEN 1 — Material previo y relacionado</h2>
+
+        <p class="lead"><strong>Ayudantía 1 (05/09/2025)</strong></p>
         <div class="grid">
           <article class="card">
             <h3>Ayudantía 1 — Listado</h3>
@@ -120,11 +181,9 @@
               <a class="btn ghost" href="archivos/1Ayudantia1Pauta.tex" download>LaTeX</a>
             </div>
           </article>
-        </div> <!-- cierre grid ayudantía 1 -->
+        </div><!-- /grid A1 -->
 
-        <p class="lead">
-          <strong>Ayudantía 2 (12/09/2025)</strong>
-        </p>
+        <p class="lead"><strong>Ayudantía 2 (12/09/2025)</strong></p>
         <div class="grid">
           <article class="card">
             <h3>Ayudantía 2 — Listado</h3>
@@ -137,8 +196,11 @@
 
           <article class="yt-row card">
             <svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
-            <div><h3 class="yt-title">Ayudantía 2</h3><p class="yt-meta">YouTube • Ayudante Ignacio Garrido U.</p>
-              <div class="yt-actions"><a class="btn" href="https://youtu.be/POo2aZpeicE" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+            <div>
+              <h3 class="yt-title">Ayudantía 2</h3>
+              <p class="yt-meta">YouTube • Ayudante Ignacio Garrido U.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/POo2aZpeicE" target="_blank" rel="noopener">Ver en YouTube</a></div>
+            </div>
           </article>
 
           <article class="card">
@@ -152,17 +214,15 @@
 
           <article class="card">
             <h3>Correcciones Ayudantía 2</h3>
-            <p>Correcciones Ayudantia 2 disponible en PDF y fuente LaTeX.</p>
+            <p>Correcciones Ayudantía 2 disponible en PDF y fuente LaTeX.</p>
             <div class="btns">
               <a class="btn" href="archivos/Correccion2Ayudantia.pdf" download>PDF</a>
               <a class="btn ghost" href="archivos/Correccion2Ayudantia.tex" download>LaTeX</a>
             </div>
           </article>
-        </div> <!-- cierre grid ayudantía 2 -->
+        </div><!-- /grid A2 -->
 
-        <p class="lead">
-          <strong>Ayudantía 3 (26/09/2025)</strong>
-        </p>
+        <p class="lead"><strong>Ayudantía 3 (26/09/2025)</strong></p>
         <div class="grid">
           <article class="card">
             <h3>Ayudantía 3 — Listado</h3>
@@ -175,8 +235,11 @@
 
           <article class="yt-row card">
             <svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
-            <div><h3 class="yt-title">Ayudantía 3</h3><p class="yt-meta">YouTube • Ayudante Ignacio Garrido U.</p>
-              <div class="yt-actions"><a class="btn" href="https://youtu.be/2mm3TK9cAy0" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+            <div>
+              <h3 class="yt-title">Ayudantía 3</h3>
+              <p class="yt-meta">YouTube • Ayudante Ignacio Garrido U.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/2mm3TK9cAy0" target="_blank" rel="noopener">Ver en YouTube</a></div>
+            </div>
           </article>
 
           <article class="card">
@@ -187,11 +250,9 @@
               <a class="btn ghost" href="archivos/3AyudantiaPautaLatex.tex" download>LaTeX</a>
             </div>
           </article>
-        </div> <!-- cierre grid ayudantía 3 -->
+        </div><!-- /grid A3 -->
 
-        <p class="lead">
-          <strong>Ayudantía 4 (EXTRA PRE CERTAMEN 1)</strong>
-        </p>
+        <p class="lead"><strong>Ayudantía 4 (EXTRA PRE CERTAMEN 1)</strong></p>
         <div class="grid">
           <article class="card">
             <h3>Ayudantía 4 — Listado</h3>
@@ -204,8 +265,11 @@
 
           <article class="yt-row card">
             <svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
-            <div><h3 class="yt-title">Ayudantía 4</h3><p class="yt-meta">YouTube • Ayudante Ignacio Garrido U.</p>
-              <div class="yt-actions"><a class="btn" href="https://youtu.be/xvFZjo5PgG0?list=RDxvFZjo5PgG0" target="_blank" rel="noopener">Ver en YouTube</a></div></div>
+            <div>
+              <h3 class="yt-title">Ayudantía 4</h3>
+              <p class="yt-meta">YouTube • Ayudante Ignacio Garrido U.</p>
+              <div class="yt-actions"><a class="btn" href="https://youtu.be/xvFZjo5PgG0?list=RDxvFZjo5PgG0" target="_blank" rel="noopener">Ver en YouTube</a></div>
+            </div>
           </article>
 
           <article class="card">
@@ -215,14 +279,14 @@
               <a class="btn" href="archivos/4AyudantiaPauta.pdf" download>PDF</a>
               <a class="btn ghost" href="archivos/4AyudantiaPautaLatex.tex" download>LaTeX</a>
             </div>
-          </article>  
-        </div> <!-- cierre grid ayudantía 4 -->
-        <!-- Si luego agregas pautas o más ayudantías, duplica bloques y cambia rutas -->
+          </article>
+        </div><!-- /grid A4 -->
 
         <p class="tip">Para publicar cambios en GitHub Pages: <span class="kbd">git add .</span> → <span class="kbd">git commit -m "actualiza materiales"</span> → <span class="kbd">git push</span>.</p>
       </section>
+      <!-- ========== /TAB: MATERIALES ========== -->
 
-      <!-- VIDEOS -->
+      <!-- ========== TAB: VIDEOS PROF ========== -->
       <section id="tab-videos" class="tab-panel" role="tabpanel">
         <p class="lead">
           En esta pestaña encontrarás las clases del profesor <strong>Cristian Mardones, Ph.D.</strong>.
@@ -230,7 +294,6 @@
         </p>
 
         <div class="grid" aria-label="Clases 1 a 14">
-          <!-- Logo YouTube en SVG + botón -->
           <article class="yt-row card">
             <svg class="yt-logo" viewBox="0 0 24 24" aria-hidden="true"><rect x="1" y="4" width="22" height="16" rx="4" fill="#ff0000"></rect><polygon points="10,8 16,12 10,16" fill="#ffffff"></polygon></svg>
             <div><h3 class="yt-title">Clase 1 (Macroeconomía)</h3><p class="yt-meta">YouTube • Profesor Cristian Mardones, Ph.D.</p>
@@ -318,14 +381,15 @@
           </article>
         </div>
       </section>
-    </div>
-    <!-- VIDEOS -->
+      <!-- ========== /TAB: VIDEOS PROF ========== -->
+
+      <!-- ========== TAB: VIDEOS PABLO ========== -->
       <section id="tab-videospablo" class="tab-panel" role="tabpanel">
         <p class="lead">
-          En esta pestaña encontrarás las Ayudantias de <strong>Pablo Meza (ex alumno DII)</strong> , un crack en el aula y sobre todo en Economia. Cada enlace abre YouTube en una pestaña nueva.
+          En esta pestaña encontrarás las Ayudantías de <strong>Pablo Meza (ex alumno DII)</strong>.
+          Cada enlace abre YouTube en una pestaña nueva.
         </p>
 
-        <!-- NUEVA SECCIÓN: Ayudantías antiguas (Pablo Meza) -->
         <h3 style="margin-top:18px">Ayudantías antiguas — Pablo Meza</h3>
         <div class="grid" aria-label="Ayudantías Pablo Meza">
           <article class="yt-row card">
@@ -393,9 +457,11 @@
               <div class="yt-actions"><a class="btn" href="https://youtu.be/uv1bjeYXSLs?list=PLX_2szLpT_TxKlnt_r1XSWb3htxWMs8T8" target="_blank" rel="noopener">Ver en YouTube</a></div>
             </div>
           </article>
-        </div>        
+        </div>
       </section>
-    </div>
+      <!-- ========== /TAB: VIDEOS PABLO ========== -->
+
+    </div><!-- /tabs -->
 
     <section class="tip" aria-label="Notas operativas">
       <strong>Nota:</strong> Si alguna semana hay tope de horario, publicaré aquí el material asincrónico (PDF, pauta y video) con instrucciones claras.
