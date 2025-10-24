@@ -1,0 +1,199 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+% ===== Colores institucionales UdeC =====
+\definecolor{UdeCblue}{RGB}{0,51,153}
+\definecolor{UdeCgold}{RGB}{255,204,0}
+\setbeamercolor{structure}{fg=UdeCblue}
+\setbeamercolor{frametitle}{bg=UdeCblue!10, fg=UdeCblue}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{itemize items}[circle]
+
+% ===== Título =====
+\title[\textbf{Ayudantía 6 – IS–LM y DA}]{\textbf{Ayudantía 6 – Modelo IS–LM y Demanda Agregada}}
+\author{\textbf{Profesor:} Cristian Mardones, Ph.D.\\[2pt]\textbf{Ayudante:} Ignacio Garrido Urra}
+\institute{Facultad de Ingeniería\\Departamento de Ingeniería Industrial – Universidad de Concepción}
+\date{Semestre 2025–2}
+
+% ===== Comando para espacio de desarrollo =====
+\newcommand{\espaciodesarrollo}{
+\vspace{0.6cm}
+\begin{beamercolorbox}[wd=\textwidth,rounded=true,shadow=false,sep=8pt,center]{block body alerted}
+\vspace{1.8cm}
+\textit{(Espacio para desarrollo del ejercicio)}
+\vspace{1.8cm}
+\end{beamercolorbox}
+}
+
+\begin{document}
+
+% ===== Portada =====
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+
+\begin{frame}{Repaso Teórico: Curva IS}
+\begin{block}{Equilibrio del mercado de bienes}
+\[
+Y = C(Y - T) + I(i) + G
+\]
+\[
+C = C_0 + c(Y - T) \quad \Rightarrow \quad i = \frac{1}{b}\,[A - (1 - c(1-t))Y]
+\]
+\end{block}
+\begin{itemize}
+  \item Pendiente negativa: \(i \downarrow \Rightarrow I \uparrow \Rightarrow Y \uparrow\).
+  \item Desplazamientos:
+    \begin{itemize}
+      \item \(G \uparrow\) o \(T \downarrow \Rightarrow\) IS se desplaza a la derecha.
+      \item \(c \uparrow\) aumenta la sensibilidad de \(Y\) a cambios en gasto autónomo.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Repaso Teórico: Curva LM}
+\begin{block}{Equilibrio del mercado monetario}
+\[
+\frac{M}{P} = L(Y,i) = kY - hi
+\Rightarrow i = \frac{k}{h}Y - \frac{1}{h}\frac{M}{P}
+\]
+\end{block}
+\begin{itemize}
+  \item Pendiente positiva: \(Y \uparrow \Rightarrow i \uparrow\).
+  \item Si \(M/P \uparrow \Rightarrow\) LM se desplaza hacia la derecha (menores tasas).
+  \item Si \(P \uparrow \Rightarrow (M/P) \downarrow \Rightarrow\) LM se desplaza a la izquierda.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{De IS–LM a Demanda Agregada (DA)}
+\begin{itemize}
+  \item A cada nivel de precios \(P\), se determina el equilibrio IS–LM.
+  \item Al aumentar \(P\), la oferta monetaria real \((M/P)\) cae → LM se desplaza a la izquierda → \(Y\) cae.
+  \item Resultado: relación inversa entre \(P\) y \(Y\) → pendiente negativa de la curva DA.
+\end{itemize}
+\end{frame}
+
+% ===== Ejercicios =====
+
+\begin{frame}{Ejercicio 1: Curvas IS, LM y DA}
+Obtenga las expresiones matemáticas de la curva IS y de la curva LM, y derive la curva DA.
+\espaciodesarrollo
+\end{frame}
+
+\begin{frame}{Ejercicio 1}
+    
+\end{frame}
+
+\begin{frame}{Ejercicio 2: Problema 3 – Certamen 2013}
+\[
+C = 60 + 0.8Y_D, \quad t = 0.2, \quad I = 70, \quad G = 230, \quad TR = 110
+\]
+\begin{itemize}
+  \item Calcule el nivel de ingreso de equilibrio.
+  \item Determine el multiplicador del gasto.
+  \item Calcule el balance fiscal.
+  \item Analice el cambio si \(t = 0.3\).
+\end{itemize}
+\espaciodesarrollo
+\end{frame}
+\begin{frame}{Ejercicio 2}
+    
+\end{frame}
+
+
+\begin{frame}{Ejercicio 3: Problema 3 – Certamen 2014}
+Discuta la siguiente afirmación:
+\begin{quote}
+\textit{El alza del impuesto a la renta disminuiría el PIB (\(\Delta Y / \Delta t < 0\)).}
+\end{quote}
+\textbf{Considere:} efecto sobre \(Y_D\), consumo, pendiente y desplazamiento de IS.
+\espaciodesarrollo
+\end{frame}
+
+\begin{frame}{Ejercicio 3}
+    
+\end{frame}
+
+\begin{frame}{Ejercicio 4: Equilibrio IS–LM}
+\[
+C = 140 + 0.3Y_D,\quad I = 1000 - 100i,\quad G = 800,\quad TR = 250
+\]
+\[
+t = 0.2,\quad L = 0.25Y - 250i,\quad \tfrac{M}{P}=300
+\]
+\begin{enumerate}[label=\alph*)]
+  \item Ecuación de IS y LM.  
+  \item Tasa de interés e \(Y\) de equilibrio.  
+  \item Impacto de \(G \uparrow\).  
+  \item Impacto de \(P \uparrow\).  
+\end{enumerate}
+\espaciodesarrollo
+\end{frame}
+\begin{frame}{Ejercicio 4}
+    
+\end{frame}
+
+\begin{frame}{Ejercicio 5: IS–LM con impuesto a la inversión}
+\[
+C = 1 + 0.8(1 - t)Y, \quad I = 2 - 0.4i, \quad G = 1, \quad t = 0.2
+\]
+\[
+\frac{M}{P}=6, \quad L = 0.75Y - 1.5i
+\]
+\begin{enumerate}[label=\alph*)]
+\item Encuentre \(Y\) e \(i\) de equilibrio.  
+\item Si \(I_0\) cae 10\%, ¿cuánto debe subir \(G\)?  
+\item Si \(I = 2 - 0.4(1+\phi)i\), con \(\phi=0.25\), obtenga el nuevo equilibrio.  
+\item ¿Cómo debe variar \(M/P\) para volver a \(Y_a\)?  
+\end{enumerate}
+\espaciodesarrollo
+\end{frame}
+
+\begin{frame}{Ejercicio 5}
+    
+\end{frame}
+
+% ===== Ejercicios extra =====
+\begin{frame}{Ejercicio Extra 1}
+Analice y grafique el efecto en el mercado del dinero de un aumento en la sensibilidad de la demanda de dinero al ingreso.  
+Explique luego cómo se modifica el equilibrio IS–LM.
+\espaciodesarrollo
+\end{frame}
+
+\begin{frame}{Ejercicio Extra 2}
+\[
+C = 420 + 0.7Y_D,\ t = 0.2,\ TR = 500,\ I = 4200 - 300i,\ G = 800,\ X_N = 400,
+\]
+\[
+L = 10Y - 5000i,\quad \frac{M}{P} = 2000.
+\]
+\begin{itemize}
+  \item Determine \(i\) y \(Y\) de equilibrio.  
+  \item Evalúe el cambio en el déficit fiscal si las transferencias se duplican.  
+\end{itemize}
+\espaciodesarrollo
+\end{frame}
+
+% ===== Cierre =====
+\begin{frame}{Síntesis}
+\begin{itemize}
+  \item El equilibrio IS–LM combina el mercado de bienes y el monetario.
+  \item Las políticas fiscales y monetarias actúan desplazando las curvas.
+  \item De este equilibrio surge la pendiente negativa de la DA.
+  \item Comprender los desplazamientos permite anticipar efectos de políticas macroeconómicas.
+\end{itemize}
+\end{frame}
+
+\end{document}
