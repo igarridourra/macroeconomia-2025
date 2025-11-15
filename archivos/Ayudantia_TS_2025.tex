@@ -1,0 +1,483 @@
+% SuperClase_Econometria_InflacionChile_COMPLETO.tex
+\documentclass[aspectratio=169,10pt]{beamer}
+
+% ----------- Idioma y fuentes -----------
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{inconsolata}
+\usepackage{lmodern}
+
+% ----------- Colores UdeC -----------
+\usepackage[table]{xcolor}
+\definecolor{UdeCBlue}{HTML}{003366}
+\definecolor{UdeCYellow}{HTML}{FDB813}
+\definecolor{LightGray}{HTML}{F5F5F5}
+\definecolor{CodeBG}{HTML}{F2F4F7}
+\definecolor{CodeFrame}{HTML}{D0D5DD}
+
+% ----------- Tema Beamer -----------
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\setbeamercolor{title}{fg=UdeCBlue}
+\setbeamercolor{frametitle}{fg=UdeCBlue,bg=UdeCBlue!6}
+\setbeamercolor{structure}{fg=UdeCBlue}
+\setbeamercolor{block title}{fg=UdeCBlue,bg=UdeCBlue!10}
+\setbeamercolor{block body}{fg=black,bg=UdeCBlue!2}
+\setbeamercolor{alerted text}{fg=UdeCYellow!80!black}
+
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{enumerate items}[circle]
+\setbeamertemplate{navigation symbols}{}
+
+% ----------- Encabezado / pie -----------
+\setbeamercolor{section in head/foot}{fg=white,bg=UdeCBlue}
+\setbeamercolor{author in head/foot}{fg=white,bg=UdeCBlue!80}
+\setbeamercolor{title in head/foot}{fg=white,bg=UdeCBlue}
+\setbeamercolor{date in head/foot}{fg=white,bg=UdeCBlue!80}
+
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.5ex,dp=1ex,left]{author in head/foot}%
+      \hspace*{1.5ex}\insertshortauthor
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.44\paperwidth,ht=2.5ex,dp=1ex,center]{title in head/foot}%
+      \textbf{MACROECONOMÍA (580323)}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.23\paperwidth,ht=2.5ex,dp=1ex,right]{date in head/foot}%
+      \insertframenumber{} / \inserttotalframenumber\hspace*{1.5ex}
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+
+\setbeamertemplate{headline}{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1.8ex,dp=0.8ex,left]{section in head/foot}
+    \hspace*{1.2ex}\insertsectionhead
+  \end{beamercolorbox}
+}
+
+% ----------- Hyperref -----------
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=UdeCBlue, urlcolor=UdeCBlue}
+
+% ----------- Código -----------
+\usepackage{listings}
+\usepackage{listingsutf8}
+\lstdefinelanguage{Python}{
+  keywords={from, import, as, if, elif, else, for, while, in, try, except, finally, with, return, def, class, pass, break, continue, lambda, True, False, None, and, or, not},
+  sensitive=true,
+  comment=[l]\#,
+  morecomment=[s]{\"\"\"}{\"\"\"},
+  morestring=[b]',
+  morestring=[b]"
+}
+\lstset{
+  language=Python,
+  inputencoding=utf8,
+  basicstyle=\ttfamily\footnotesize,
+  backgroundcolor=\color{CodeBG},
+  frame=single,
+  rulecolor=\color{CodeFrame},
+  frameround=tttt,
+  keywordstyle=\color{UdeCBlue}\bfseries,
+  commentstyle=\color{gray!70}\itshape,
+  stringstyle=\color{UdeCYellow!70!black},
+  showstringspaces=false,
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  numbersep=6pt,
+  columns=fullflexible,
+  keepspaces=true,
+  aboveskip=0.8em,
+  belowskip=0.8em
+}
+
+% ----------- Datos de portada -----------
+\title[Super Clase Econometría]{Super Clase de Econometría Aplicada\\ Predicción de Inflación en Chile}
+\author[]{Departamento de Ingeniería Industrial\\ \textbf{Macroeconomía (580323)}}
+\institute[]{Universidad de Concepción}
+\date{\today}
+
+% --------------------------------------- DOCUMENTO ---------------------------------------
+\begin{document}
+
+% ========================== PORTADA ==========================
+\begin{frame}[plain]
+
+  % ----- TÍTULO COMPLETO (oficial + tu título personal) -----
+  \begin{center}
+    {\Large \bfseries Ayudantía para Trabajo Semestral}\\[0.3em]
+    {\large Predicción de Inflación en Chile}\\[1.2em]
+
+    {\Large \color{UdeCBlue}\textbf{Introducción a la Econometría}}\\[0.4em]
+    {\small Por Ignacio Garrido U.}\\[2em]
+  \end{center}
+
+  % ----- LÍNEA Y OBJETIVO -----
+  \vfill
+  \begin{center}
+    \color{UdeCBlue}\rule{0.65\linewidth}{1pt}\\[0.4em]
+    \small 
+    \textbf{Objetivo}: Construir, interpretar y validar un modelo para predecir inflación mensual (IPC) 
+    con foco en \alert{teoría}, \alert{datos} y \alert{validación fuera de muestra}.
+  \end{center}
+
+\end{frame}
+
+
+
+% =====================================================================
+% ========================== SECCIÓN 0: INTRODUCCIÓN ==================
+% =====================================================================
+
+\section{Introducción general}
+
+\begin{frame}{¿Qué es Econometría?}
+  \begin{itemize}
+    \item Integración de \textbf{Economía + Estadística + Matemáticas + Programación}.
+    \item Responde preguntas empíricas:
+      \begin{itemize}
+        \item ¿Cómo se relacionan las variables?
+        \item ¿Podemos predecir eventos económicos?
+      \end{itemize}
+    \item La tecnología (Python, R, Stata) permite:
+      \begin{itemize}
+        \item Modelos complejos,
+        \item Bases de datos masivas,
+        \item Automatizar validaciones.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Econometría en macro y microeconomía}
+  \begin{itemize}
+    \item \textbf{Micro}: hogares, empresas, consumo, deuda.
+    \item \textbf{Macro}: inflación, empleo, PIB, tipo de cambio.
+    \item Dos fines:
+      \begin{itemize}
+        \item \textbf{Explicar} relaciones.
+        \item \textbf{Predecir} futuro.
+      \end{itemize}
+    \item Pilar clave: teoría + datos + validación.
+  \end{itemize}
+\end{frame}
+
+% =====================================================================
+% ======================= SECCIÓN 1B: LITERATURA ======================
+% =====================================================================
+
+\section{Lectura y búsqueda de literatura}
+
+\begin{frame}{Dónde buscar literatura confiable}
+  \begin{itemize}
+    \item Evitar blogs o documentos sin revisión.
+    \item Portales recomendados:
+      \begin{itemize}
+        \item \textbf{Web of Science (WOS)}
+        \item \textbf{SCOPUS}
+        \item \textbf{SciELO}
+        \item \textbf{IDEAS/RePEc}
+      \end{itemize}
+    \item Google Scholar sirve, pero requiere criterio.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Cómo leer un paper correctamente}
+  \begin{itemize}
+    \item No basta con mencionarlo.
+    \item Lectura debe ser \textbf{cronológica y conectada}.
+    \item Orden recomendado:
+      \begin{enumerate}
+        \item Problema económico.
+        \item Teoría que lo respalda.
+        \item Datos: fuente, frecuencia.
+        \item Modelo aplicado.
+        \item Resultados.
+        \item Limitaciones.
+      \end{enumerate}
+  \end{itemize}
+\end{frame}
+
+% =====================================================================
+% ========================== SECCIÓN 2: DATOS =========================
+% =====================================================================
+
+\section{Datos: fuentes y preparación}
+
+\begin{frame}{Fuentes de datos recomendadas}
+  \begin{itemize}
+    \item \textbf{Banco Central de Chile}: TPM, dólar.
+    \item \textbf{INE}: IPC mensual.
+    \item \textbf{SII}: series tributarias.
+    \item \textbf{CMF}: crédito, bancos.
+    \item Páginas útiles:
+      \begin{itemize}
+        \item Datosmacro.com (no oficial).
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Frecuencia y consistencia}
+  \begin{itemize}
+    \item El IPC es \textbf{mensual}.
+    \item Variables explicativas deben:
+      \begin{itemize}
+        \item Estar alineadas a la misma frecuencia.
+        \item No tener fechas faltantes.
+      \end{itemize}
+    \item Unificar unidades y escalas antes de modelar.
+  \end{itemize}
+\end{frame}
+
+% =====================================================================
+% ========================== SECCIÓN 3: DATASET =======================
+% =====================================================================
+
+\section{Construcción del dataset}
+
+\begin{frame}{Variable dependiente y explicativas}
+  \begin{block}{Dependiente}
+    IPC mensual (\% m/m).
+  \end{block}
+  \begin{block}{Explicativas}
+    \begin{itemize}
+      \item TPM rezagada,
+      \item USD/CLP rezagado,
+      \item Cobre,
+      \item Rezagos del IPC,
+      \item Expectativas económicas.
+    \end{itemize}
+  \end{block}
+  \begin{itemize}
+    \item Clave: misma frecuencia y misma cantidad de datos.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Formato de datos}
+\begin{itemize}
+  \item CSV (recomendado): liviano y universal.
+  \item XLSX: más pesado, depende de Excel.
+  \item Arrays/listas: eficientes pero menos descriptivos.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Carga y creación de rezagos}
+\begin{lstlisting}
+df = pd.read_csv("dataset_inflacion.csv", parse_dates=["fecha"])
+df = df.sort_values("fecha").reset_index(drop=True)
+
+for col in ["ipc_mom","tpm","usdclp"]:
+    df[f"{col}_lag1"] = df[col].shift(1)
+    df[f"{col}_lag2"] = df[col].shift(2)
+
+df = df.dropna().reset_index(drop=True)
+df.head()
+\end{lstlisting}
+\end{frame}
+
+% =====================================================================
+% ========================== SECCIÓN 4: MODELOS =======================
+% =====================================================================
+
+\section{Modelos y lectura de resultados}
+
+\begin{frame}[fragile]{Estimación OLS (modelo base)}
+\begin{lstlisting}
+X = df[["ipc_mom_lag1","tpm_lag1","usdclp_lag1"]]
+X = sm.add_constant(X)
+y = df["ipc_mom"]
+
+ols = sm.OLS(y, X).fit(cov_type="HC1")
+print(ols.summary())
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}{Interpretación del resumen}
+  \begin{itemize}
+    \item \textbf{R²}: proporción explicada.
+    \item \textbf{R² ajustado}: corrige sobreparametrización.
+    \item \textbf{Prueba F}: significancia global.
+    \item \textbf{Coeficientes}: dirección y magnitud.
+    \item \textbf{p-valores}: evidencia estadística.
+    \item \textbf{Errores robustos HC1}: corrigen heterocedasticidad.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Ejemplo de resultados}
+
+\centering
+\small
+\begin{tabular}{lccc}
+\hline
+ & Coeficiente & Error Std. & p-valor \\
+\hline
+\textbf{Constante}       & 0.152 & 0.041 & 0.001 \\
+\textbf{IPC$_{t-1}$}     & 0.473 & 0.052 & 0.000 \\
+\textbf{TPM$_{t-1}$}     & 0.018 & 0.007 & 0.014 \\
+\textbf{USD/CLP$_{t-1}$} & 0.00042 & 0.00019 & 0.028 \\
+\hline
+\textbf{R$^2$} & \multicolumn{3}{c}{0.52} \\
+\textbf{R$^2$ ajustado} & \multicolumn{3}{c}{0.51} \\
+\textbf{F-statistic} & \multicolumn{3}{c}{34.21 (p = 0.000)} \\
+\textbf{N} & \multicolumn{3}{c}{108} \\
+\hline
+\end{tabular}
+
+\vspace{0.4cm}
+\small Modelo estimado con errores estándar robustos (HC1).
+
+\end{frame}
+
+
+% =====================================================================
+% ========================== SECCIÓN 5: ROBUSTEZ ======================
+% =====================================================================
+
+\section{Diagnóstico y robustez}
+
+\begin{frame}[fragile]{Normalidad y autocorrelación: ¿qué mide cada prueba?}
+
+\begin{itemize}
+  \item \textbf{Jarque–Bera (JB)}
+    \begin{itemize}
+      \item Evalúa si los residuos tienen \textbf{asimetría} y \textbf{curtosis} compatibles con una distribución normal.
+      \item \textbf{H0}: los residuos son normales.
+      \item \textbf{Interpretación}: p-valor bajo $\Rightarrow$ evidencia contra normalidad.
+    \end{itemize}
+
+  \item \textbf{Anderson–Darling (AD)}
+    \begin{itemize}
+      \item Prueba de normalidad enfocada especialmente en las \textbf{colas} de la distribución.
+      \item \textbf{H0}: residuos normales.
+      \item Estadístico alto $\Rightarrow$ residuos no normales.
+    \end{itemize}
+
+  \item \textbf{Durbin–Watson (DW)}
+    \begin{itemize}
+      \item Detecta \textbf{autocorrelación de primer orden} en los residuos.
+      \item Valores típicos:
+        \begin{itemize}
+          \item 2 $\Rightarrow$ sin autocorrelación
+          \item $< 2$ $\Rightarrow$ autocorrelación positiva
+          \item $> 2$ $\Rightarrow$ autocorrelación negativa
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Normalidad y autocorrelación: ¿qué mide cada prueba?}
+
+
+\begin{lstlisting}
+resid = ols.resid
+print("JB:", jarque_bera(resid))
+print("AD:", normal_ad(resid))
+print("DW:", durbin_watson(resid))
+\end{lstlisting}
+
+\end{frame}
+\begin{frame}[fragile]{Heterocedasticidad, VIF y RESET: significado e interpretación}
+
+\begin{itemize}
+
+  \item \textbf{Breusch–Pagan (BP)}
+    \begin{itemize}
+      \item Detecta si la varianza de los residuos es \textbf{no constante} (heterocedasticidad).
+      \item \textbf{H0}: homocedasticidad.
+      \item p-valor bajo $\Rightarrow$ heterocedasticidad presente.
+      \item Solución frecuente: usar errores robustos (HC0, HC1).
+    \end{itemize}
+
+  \item \textbf{VIF (Variance Inflation Factor)}
+    \begin{itemize}
+      \item Mide \textbf{multicolinealidad} entre regresores.
+      \item Valores típicos:
+        \begin{itemize}
+          \item VIF = 1 $\Rightarrow$ sin colinealidad.
+          \item 5–10 $\Rightarrow$ colinealidad moderada.
+          \item $> 10$ $\Rightarrow$ colinealidad severa.
+        \end{itemize}
+      \item Colinealidad elevada $\Rightarrow$ coeficientes inestables y errores grandes.
+    \end{itemize}
+
+  \item \textbf{RESET de Ramsey} (si decides mencionarlo)
+    \begin{itemize}
+      \item Evalúa \textbf{mala especificación funcional}.
+      \item Detecta si faltan términos no lineales o variables omitidas.
+    \end{itemize}
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Heterocedasticidad, VIF y RESET: significado e interpretación}
+
+
+\begin{lstlisting}
+Xtr = sm.add_constant(df[["ipc_mom_lag1","tpm_lag1","usdclp_lag1"]])
+mod = sm.OLS(df["ipc_mom"], Xtr).fit()
+
+print("BP:", het_breuschpagan(mod.resid, Xtr))
+
+[(c, variance_inflation_factor(Xtr.values,i))
+ for i,c in enumerate(Xtr.columns)]
+\end{lstlisting}
+
+\end{frame}
+% =====================================================================
+% ========================== SECCIÓN 6: VALIDACIÓN ====================
+% =====================================================================
+
+\section{Validación fuera de muestra}
+
+\begin{frame}{Predicción del último período}
+  \begin{itemize}
+    \item Entrenar con toda la base menos el último mes.
+    \item Predecir el último mes conocido.
+    \item Si predicción $\approx$ real $\Rightarrow$ modelo estable.
+    \item Si no $\Rightarrow$ revisar variables, rezagos o forma funcional.
+  \end{itemize}
+\end{frame}
+
+% =====================================================================
+% ========================== SECCIÓN 7: CONSEJOS ======================
+% =====================================================================
+
+\section{Recomendaciones finales}
+
+\begin{frame}{Uso responsable de IA}
+  \begin{itemize}
+    \item Útil para:
+      \begin{itemize}
+        \item Explicar errores de código,
+        \item Revisar sintaxis,
+        \item Entender conceptos.
+      \end{itemize}
+    \item No confiable en:
+      \begin{itemize}
+        \item Referencias y papers (puede inventarlos),
+        \item Datos oficiales,
+        \item Cálculos econométricos avanzados.
+      \end{itemize}
+    \item Úsenla como apoyo, no como verdad absoluta.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Cierre}
+  \begin{itemize}
+    \item Mejoren, comparen, validen.
+    \item Pregunten con tiempo si tienen dudas.
+    \item Este trabajo los inicia en el mundo real de los datos.
+  \end{itemize}
+  \vfill
+  \begin{center}
+    {\Large \textbf{\color{UdeCBlue}y... Bienvenidos al mundo de los datos}}
+  \end{center}
+\end{frame}
+
+% ------------------ FIN DEL DOCUMENTO ------------------
+\end{document}
