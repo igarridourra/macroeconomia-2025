@@ -1,0 +1,137 @@
+\documentclass[11pt,addpoints]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[lmargin=2cm,rmargin=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb} % <-- por fórmulas
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=cyan}
+\parindent=0cm
+\setlist{itemsep=0.6em}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{FACULTAD DE INGENIERÍA\\DEPTO DE INGENIERÍA INDUSTRIAL \\ MACROECONOMÍA (580323)}
+\fancyhead[R]{\includegraphics[scale=0.13]{escudoudec.jpg}}
+\fancyfoot{\thepage}
+\fancyfoot[R]{Semestre 2025-2}
+\fancyfoot[L]{CMP/IGU}
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\begin{document}
+
+\vspace*{0.1cm}
+\begin{center}
+\textbf{\LARGE Ayudantía 7 – Macroeconomía}\\[0.3cm]
+\textbf{Profesor:} Cristian Mardones, Ph.D.\\
+\textbf{Ayudante:} Ignacio Garrido Urra
+\end{center}
+
+
+\begin{enumerate}
+
+% =========================== 1
+\item \textbf{(Pregunta 4 del Certamen 2022)}\\[0.1cm]
+Calcule los valores de equilibrio para el PIB, exportaciones netas, tipo de cambio nominal, consumo y balance fiscal, asumiendo la siguiente economía con tipo de cambio flexible y perfecta movilidad de capitales (variables internacionales con *):
+
+\textbf{Mercado de bienes:}
+\[
+\begin{aligned}
+C &= 1000 + 0.8Y_d,  &Y_d = Y - T,  \\
+T &= 0.2Y, &I = 800 - 100i,\\
+G &= 600,  &X = 55 + 2\frac{eP^*}{P} + 0.05Y^*,\\
+M &= 1100 - 4\frac{eP^*}{P} + 0.2Y, &P^* = 1,\\
+Y^* &= 10000.
+\end{aligned}
+\]
+
+\textbf{Mercado de dinero:}
+\[
+L_d = 0.4Y - 1000i, \qquad M^S = 5000, \qquad P = 1.
+\]
+\textbf{Tasa de interés internacional:} 
+\[
+i^* = 0.10
+\] 
+
+\vspace{0.3cm}
+
+% =========================== 2
+\item \textbf{(Pregunta 2 del Certamen 2021)}\\[0.1cm]
+A partir de las siguientes ecuaciones del modelo IS–LM, formule y obtenga mediante estática comparativa el efecto sobre el PIB y la tasa de interés provocado por un alza en la tasa impositiva:
+\[
+IS: \quad Y = [C + cTR + c(1 - t)Y] + (I - b i) + G,
+\]
+\[
+LM: \quad \frac{M}{P} = kY - h i.
+\]
+
+\vspace{0.3cm}
+
+% =========================== 3
+\item \textbf{(Pregunta 4 del Certamen 2023)}\\[0.1cm]
+Demuestre matemáticamente cómo varía el nivel de producción final y la tasa de interés ante un aumento en la tasa impositiva, considerando las siguientes ecuaciones del modelo IS–LM:
+\[
+C̅ + c(1 - t)Y + \bar{I} - b i + \bar{G} + \overline{XN},
+\qquad
+\frac{\bar{M}}{\bar{P}} = kY - h i.
+\]
+
+
+
+% =========================== 4
+\item \textbf{(Pregunta 1 del Certamen 2021)}
+\begin{enumerate}[label=\alph*)]
+\item Compare intuitiva y gráficamente la magnitud del impacto que generaría un incremento en el gasto público sobre el PIB, considerando el modelo de determinación de la renta (aspa keynesiana), modelo IS–LM y modelo OA–DA (en el corto, mediano y largo plazo).
+
+\newpage
+\vspace*{0.1cm}
+\item A partir de esta comparación entre modelos, determine qué factores son claves para que un mayor gasto público efectivamente eleve el PIB.
+\end{enumerate}
+
+\vspace{0.5cm}
+\textbf{Ejercicios extras}
+
+% =========================== Extra 1
+\item Explique las diferencias entre la inflación perfectamente anticipada e inflación imperfectamente anticipada.
+
+% =========================== Extra 2
+\item Suponga la siguiente economía con tipo de cambio flexible y perfecta movilidad de capitales:
+
+\textbf{Mercado de bienes}
+\[
+\begin{aligned}
+C &= 300 + 0.75Y_d, &Y_d = Y - T, \\
+T &= 0.3Y, &I = 700 - 100i, \\
+G &= 500, &X = 50 + 2\frac{eP^*}{P} + 0.05Y^*, \\
+M &= 500 - 4\frac{eP^*}{P} + 0.1Y, &P^* = 1, \quad Y^* = 10000.
+\end{aligned}
+\]
+
+\textbf{Mercado de dinero:}
+\[
+L_d = 0.4Y - 100i, \quad M^S = 2000, \quad P = 1.
+\]
+\textbf{Tasa de interés internacional:} 
+\[
+i^* = 8\%.
+\]
+
+\begin{enumerate}[label=\alph*)]
+\item Calcule los valores de \(Y,\, i,\, C,\, e,\, X,\, M\) y el balance fiscal. 
+\item Recalcule asumiendo que la tasa de interés internacional baja a 4\%.
+\end{enumerate}
+
+% =========================== Extra 3
+\item Mencione y explique dos teorías que justifiquen la existencia de salarios o precios rígidos en la economía.
+\end{enumerate}
+
+
+\end{document}
