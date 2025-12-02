@@ -1,0 +1,777 @@
+\documentclass[11pt,addpoints]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[lmargin=2cm,rmargin=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=cyan}
+\parindent=0cm
+\setlist{itemsep=0.6em}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{FACULTAD DE INGENIERÍA\\DEPTO DE INGENIERÍA INDUSTRIAL \\ MACROECONOMÍA (580323)}
+\fancyhead[R]{\includegraphics[scale=0.13]{escudoudec.jpg}}
+\fancyfoot{\thepage}
+\fancyfoot[R]{Semestre 2025-2}
+\fancyfoot[L]{CMP/IGU}
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\begin{document}
+
+\vspace*{0.1cm}
+\begin{center}
+\textbf{\LARGE Ayudantía 7 – Pauta}\\[0.3cm]
+\textbf{Profesor:} Cristian Mardones, Ph.D.\\
+\textbf{Ayudante:} Ignacio Garrido Urra
+\end{center}
+
+\begin{enumerate}
+
+% =========================== 1
+\item \textbf{(Pregunta 4 del Certamen 2022)}\\[0.1cm]
+Calcule los valores de equilibrio para el PIB, exportaciones netas, tipo de cambio nominal, consumo y balance fiscal, asumiendo la siguiente economía con tipo de cambio flexible y perfecta movilidad de capitales (variables internacionales con *):
+
+\textbf{Mercado de bienes:}
+\[
+\begin{aligned}
+C &= 1000 + 0.8Y_d,  &Y_d = Y - T,  \\
+T &= 0.2Y, &I = 800 - 100i,\\
+G &= 600,  &X = 55 + 2\frac{eP^*}{P} + 0.05Y^*,\\
+M &= 1100 - 4\frac{eP^*}{P} + 0.2Y, &P^* = 1,\\
+Y^* &= 10000.
+\end{aligned}
+\]
+
+\textbf{Mercado de dinero:}
+\[
+L_d = 0.4Y - 1000i, \qquad M^S = 5000, \qquad P = 1.
+\]
+\textbf{Tasa de interés internacional:} 
+\[
+i^* = 0{,}10
+\] 
+
+\textbf{Solución:}
+
+\begin{itemize}
+\item \textbf{Condición de perfecta movilidad de capitales y tipo de cambio flexible:}
+\[
+i = i^* = 0{,}10.
+\]
+
+\item \textbf{Equilibrio en el mercado de dinero (LM):}
+\[
+L_d = M^S \quad\Rightarrow\quad 0.4Y - 1000i = 5000.
+\]
+Sustituyendo $i = 0{,}10$:
+\[
+0.4Y - 1000(0{,}10) = 5000 \Rightarrow 0.4Y - 100 = 5000
+\Rightarrow 0.4Y = 5100 \Rightarrow Y = \frac{5100}{0.4} = 12750.
+\]
+
+\item \textbf{Impuestos, ingreso disponible y consumo:}
+\[
+T = 0.2Y = 0.2(12750) = 2550,
+\]
+\[
+Y_d = Y - T = 12750 - 2550 = 10200,
+\]
+\[
+C = 1000 + 0.8Y_d = 1000 + 0.8(10200) = 1000 + 8160 = 9160.
+\]
+
+\item \textbf{Inversión:}
+\[
+I = 800 - 100i = 800 - 100(0{,}10) = 800 - 10 = 790.
+\]
+
+\newpage
+\vspace*{0.5cm}
+\item \textbf{Exportaciones e importaciones en función de $e$:} como $P=P^*=1$ e $Y^*=10000$,
+\[
+X = 55 + 2e + 0.05Y^* = 55 + 2e + 0.05(10000) = 55 + 2e + 500 = 555 + 2e,
+\]
+\[
+M = 1100 - 4e + 0.2Y = 1100 - 4e + 0.2(12750) = 1100 - 4e + 2550 = 3650 - 4e.
+\]
+Por tanto, las exportaciones netas:
+\[
+XN = X - M = (555 + 2e) - (3650 - 4e) = -3095 + 6e.
+\]
+
+\item \textbf{Equilibrio en el mercado de bienes (IS):}
+\[
+Y = C + I + G + XN.
+\]
+Sustituimos $Y=12750$ y las expresiones encontradas:
+\[
+12750 = 9160 + 790 + 600 + (-3095 + 6e).
+\]
+Primero sumamos términos constantes:
+\[
+9160 + 790 + 600 - 3095 = 7455.
+\]
+Entonces:
+\[
+12750 = 7455 + 6e \Rightarrow 6e = 12750 - 7455 = 5295
+\Rightarrow e = \frac{5295}{6} = 882.5.
+\]
+
+\item \textbf{Cálculo de $X$, $M$ y $XN$ con el tipo de cambio de equilibrio:}
+\[
+X = 555 + 2e = 555 + 2(882.5) = 555 + 1765 = 2320,
+\]
+\[
+M = 3650 - 4e = 3650 - 4(882.5) = 3650 - 3530 = 120,
+\]
+\[
+XN = X - M = 2320 - 120 = 2200.
+\]
+
+\item \textbf{Balance fiscal:}
+\[
+\text{Balance fiscal} = T - G = 2550 - 600 = 1950,
+\]
+es decir, existe un superávit fiscal de 1950.
+\end{itemize}
+
+\medskip
+\textbf{Resumen:}
+\[
+Y^* = 12750,\quad i^* = 0{,}10,\quad e^* = 882.5,\quad C^* = 9160,\quad XN^* = 2200,\quad \text{BF} = 1950.
+\]
+
+\vspace{0.3cm}
+
+% =========================== 2
+\item \textbf{(Pregunta 2 del Certamen 2021)}\\[0.1cm]
+A partir de las siguientes ecuaciones del modelo IS–LM, formule y obtenga mediante estática comparativa el efecto sobre el PIB y la tasa de interés provocado por un alza en la tasa impositiva:
+\[
+IS: \quad Y = [C + cTR + c(1 - t)Y] + (I - b i) + G,
+\]
+\[
+LM: \quad \frac{M}{P} = kY - h i.
+\]
+
+\newpage
+\vspace*{0.5cm}
+
+\textbf{Solución (vía matrices y regla de Cramer):}
+
+\textbf{1. Reescritura de IS y LM como sistema lineal}
+
+Agrupamos todos los términos autónomos de la IS en
+\[
+A \equiv C + cTR + I + G.
+\]
+Entonces:
+\[
+Y = A + c(1-t)Y - b i.
+\]
+Llevamos todo lo que tiene $Y$ e $i$ al lado izquierdo:
+\[
+Y - c(1-t)Y + b i = A
+\;\Rightarrow\;
+\big[1 - c(1-t)\big]Y + b i = A.
+\]
+
+La LM la dejamos en forma lineal:
+\[
+\frac{M}{P} = kY - h i
+\;\Rightarrow\;
+-kY + h i = -\frac{M}{P}.
+\]
+
+Por lo tanto, el sistema en $Y$ e $i$ queda:
+\[
+\begin{cases}
+\big[1 - c(1-t)\big]Y + b i = A,\\[2pt]
+-kY + h i = -\dfrac{M}{P}.
+\end{cases}
+\]
+
+En forma matricial:
+\[
+\underbrace{\begin{pmatrix}
+1 - c(1-t) & b \\
+-k & h
+\end{pmatrix}}_{A(t)}
+\begin{pmatrix} Y \\[2pt] i \end{pmatrix}
+=
+\begin{pmatrix} A \\[2pt] -\dfrac{M}{P} \end{pmatrix}.
+\]
+
+\textbf{2. Determinante del sistema}
+
+Llamemos $\Delta(t)$ al determinante de la matriz de coeficientes:
+\[
+\Delta(t) = 
+\begin{vmatrix}
+1 - c(1-t) & b \\
+-k & h
+\end{vmatrix}
+= \big[1 - c(1-t)\big]h + kb.
+\]
+
+Observa que
+\[
+1 - c(1-t) = 1 - c + ct,
+\]
+por lo que
+\[
+\Delta(t) = h[1 - c + ct] + kb.
+\]
+
+\textbf{3. Solución con la regla de Cramer}
+
+Determinante para $Y$:
+\[
+\Delta_Y(t) =
+\begin{vmatrix}
+A & b \\
+-\dfrac{M}{P} & h
+\end{vmatrix}
+= Ah + b\,\frac{M}{P}.
+\]
+Notar que $\Delta_Y(t)$ \emph{no depende de $t$}.
+
+Entonces:
+\[
+Y^*(t) = \frac{\Delta_Y(t)}{\Delta(t)}
+= \frac{Ah + b\,\dfrac{M}{P}}{h[1 - c + ct] + kb}.
+\]
+
+\newpage
+\vspace*{0.5cm}
+Determinante para $i$:
+\[
+\Delta_i(t) =
+\begin{vmatrix}
+1 - c(1-t) & A \\
+-k & -\dfrac{M}{P}
+\end{vmatrix}
+= -\big[1 - c(1-t)\big]\frac{M}{P} + kA,
+\]
+y
+\[
+i^*(t) = \frac{\Delta_i(t)}{\Delta(t)}.
+\]
+
+\textbf{4. Efecto de un aumento en $t$ sobre $Y$}
+
+Como
+\[
+\Delta(t) = h[1 - c + ct] + kb,
+\]
+se tiene:
+\[
+\frac{d\Delta}{dt} = hc > 0.
+\]
+Además, el numerador de $Y^*(t)$ es constante respecto a $t$.
+
+Derivando $Y^*(t)$:
+\[
+\frac{\partial Y^*}{\partial t}
+= \frac{0 \cdot \Delta(t) - \Delta_Y(t)\,\dfrac{d\Delta}{dt}}{\big[\Delta(t)\big]^2}
+= -\,\frac{\Delta_Y(t)\,hc}{\big[\Delta(t)\big]^2} < 0,
+\]
+pues $\Delta_Y(t) > 0$, $h>0$, $c>0$ y $\Delta(t)>0$ para equilibrio estable.
+
+\textbf{Conclusión:} un aumento en la tasa impositiva ($t\uparrow$) reduce el nivel de producto de equilibrio $Y^*$.
+
+\textbf{5. Efecto de un aumento en $t$ sobre $i$}
+
+La tasa de interés de equilibrio es:
+\[
+i^*(t) = \frac{\Delta_i(t)}{\Delta(t)},
+\quad
+\Delta_i(t) = -\big[1 - c(1-t)\big]\frac{M}{P} + kA.
+\]
+
+Aquí:
+\[
+\frac{d\Delta_i}{dt} = -\frac{M}{P}\,\frac{d}{dt}[1 - c(1-t)]
+= -\frac{M}{P}\,(c) < 0.
+\]
+
+Luego:
+\[
+\frac{\partial i^*}{\partial t}
+= \frac{\Delta(t)\,\dfrac{d\Delta_i}{dt} - \Delta_i(t)\,\dfrac{d\Delta}{dt}}{\big[\Delta(t)\big]^2}.
+\]
+
+Sin entrar en todo el álgebra, en el caso estándar de parámetros positivos y equilibrio estable, domina el efecto de que el sistema se comporta como una IS que se desplaza a la izquierda, lo que reduce tanto $Y$ como $i$:
+\[
+\frac{\partial i^*}{\partial t} < 0.
+\]
+
+\textbf{Interpretación gráfica:} un alza en $t$ desplaza la IS hacia la izquierda; LM no se mueve. El nuevo equilibrio tiene menor $Y$ y menor $i$.
+
+\vspace{0.3cm}
+
+
+\newpage
+\vspace*{0.5cm}
+% =========================== 3
+\item \textbf{(Pregunta 4 del Certamen 2023)}\\[0.1cm]
+Demuestre matemáticamente cómo varía el nivel de producción final y la tasa de interés ante un aumento en la tasa impositiva, considerando las siguientes ecuaciones del modelo IS–LM:
+\[
+\overline{C} + c(1 - t)Y + \bar{I} - b i + \bar{G} + \overline{XN},
+\qquad
+\frac{\bar{M}}{\bar{P}} = kY - h i.
+\]
+
+\textbf{Solución (vía matrices, análoga al ejercicio anterior):}
+
+\textbf{1. Sistema lineal en forma estándar}
+
+Escribimos IS y LM como:
+
+\[
+Y = \overline{C} + c(1-t)Y + \bar{I} - b i + \bar{G} + \overline{XN}.
+\]
+
+Definimos la parte autónoma
+\[
+\bar{A} \equiv \overline{C} + \bar{I} + \bar{G} + \overline{XN}.
+\]
+
+Entonces:
+\[
+Y = \bar{A} + c(1-t)Y - b i
+\;\Rightarrow\;
+\big[1 - c(1-t)\big]Y + b i = \bar{A}.
+\]
+
+LM:
+\[
+\frac{\bar{M}}{\bar{P}} = kY - h i
+\;\Rightarrow\;
+-kY + h i = -\frac{\bar{M}}{\bar{P}}.
+\]
+
+Sistema:
+\[
+\begin{cases}
+\big[1 - c(1-t)\big]Y + b i = \bar{A},\\[2pt]
+-kY + h i = -\dfrac{\bar{M}}{\bar{P}}.
+\end{cases}
+\]
+
+En forma matricial:
+\[
+\underbrace{\begin{pmatrix}
+1 - c(1-t) & b\\
+-k & h
+\end{pmatrix}}_{A(t)}
+\begin{pmatrix} Y \\[2pt] i \end{pmatrix}
+=
+\begin{pmatrix} \bar{A} \\[2pt] -\dfrac{\bar{M}}{\bar{P}} \end{pmatrix}.
+\]
+
+\textbf{2. Determinantes y solución con Cramer}
+
+Determinante principal:
+\[
+\Delta(t) =
+\begin{vmatrix}
+1 - c(1-t) & b \\
+-k & h
+\end{vmatrix}
+= \big[1 - c(1-t)\big]h + kb
+= h[1 - c + ct] + kb.
+\]
+
+Determinante para $Y$:
+\[
+\Delta_Y(t) =
+\begin{vmatrix}
+\bar{A} & b \\
+-\dfrac{\bar{M}}{\bar{P}} & h
+\end{vmatrix}
+= \bar{A}h + b\,\frac{\bar{M}}{\bar{P}},
+\]
+que nuevamente no depende de $t$.
+
+Por Cramer:
+\[
+Y^*(t) = \frac{\Delta_Y(t)}{\Delta(t)}
+= \frac{\bar{A}h + b\,\dfrac{\bar{M}}{\bar{P}}}{h[1 - c + ct] + kb}.
+\]
+
+\newpage
+\vspace*{0.5cm}
+Como en el ejercicio anterior:
+\[
+\frac{d\Delta}{dt} = hc > 0,
+\]
+y el numerador de $Y^*(t)$ es constante, por lo que:
+\[
+\frac{\partial Y^*}{\partial t} < 0.
+\]
+
+Para la tasa de interés:
+\[
+\Delta_i(t) =
+\begin{vmatrix}
+1 - c(1-t) & \bar{A} \\
+-k & -\dfrac{\bar{M}}{\bar{P}}
+\end{vmatrix}
+= -\big[1 - c(1-t)\big]\frac{\bar{M}}{\bar{P}} + k\bar{A},
+\]
+\[
+i^*(t) = \frac{\Delta_i(t)}{\Delta(t)}.
+\]
+
+El término $1 - c(1-t)$ aumenta con $t$, por lo que, bajo supuestos estándar de parámetros positivos, el aumento de $t$ desplaza IS hacia la izquierda y reduce tanto $Y$ como $i$:
+\[
+\frac{\partial i^*}{\partial t} < 0.
+\]
+
+\textbf{Conclusión:} al aumentar la tasa impositiva $t$, el sistema IS–LM con variables autónomas $\bar{C},\bar{I},\bar{G},\overline{XN}$ y $\bar{M}/\bar{P}$ presenta un menor nivel de producción de equilibrio $Y^*$ y una menor tasa de interés de equilibrio $i^*$, lo que se ve claramente al escribir el sistema en forma matricial y usar la regla de Cramer.
+
+\vspace{0.4cm}
+
+% =========================== 4
+\item \textbf{(Pregunta 1 del Certamen 2021)}
+
+\begin{enumerate}[label=\alph*)]
+\item Compare intuitiva y gráficamente la magnitud del impacto que generaría un incremento en el gasto público sobre el PIB, considerando el modelo de determinación de la renta (aspa keynesiana), modelo IS–LM y modelo OA–DA (en el corto, mediano y largo plazo).
+
+\textbf{Pauta:}
+
+\begin{itemize}
+\item \textbf{Aspa keynesiana (modelo simple de renta):}
+  \begin{itemize}
+    \item Precios fijos, oferta perfectamente elástica al nivel de precios dado.
+    \item Un aumento de $G$ desplaza hacia arriba la curva de gasto agregado.
+    \item El PIB aumenta amplificado por el \emph{multiplicador keynesiano}:
+    \[
+    \Delta Y = \frac{1}{1 - c(1-t)}\,\Delta G.
+    \]
+    \item No hay desplazamientos por tasa de interés, por lo que el impacto sobre $Y$ es relativamente grande.
+  \end{itemize}
+
+\item \textbf{Modelo IS–LM:}
+  \begin{itemize}
+    \item Un aumento en $G$ desplaza la curva IS hacia la derecha.
+    \item En el punto de equilibrio, aumentan simultáneamente $Y$ e $i$.
+    \item El alza de $i$ genera \emph{crowding-out} de la inversión privada, reduciendo el efecto total sobre $Y$ respecto al aspa keynesiana.
+
+
+\newpage
+\vspace*{0.5cm}
+
+    \item Gráficamente: IS se desplaza a la derecha, LM permanece fija, y se pasa de $(Y_0,i_0)$ a $(Y_1,i_1)$ con $Y_1>Y_0$ pero menos que en el modelo sin mercado de dinero.
+  \end{itemize}
+
+\item \textbf{Modelo OA–DA (corto, mediano y largo plazo):}
+  \begin{itemize}
+    \item En el \textbf{corto plazo} (OA keynesiana, horizontal o muy plana):
+      \begin{itemize}
+        \item Un aumento de $G$ desplaza la DA hacia la derecha.
+        \item El nivel de producción $Y$ aumenta considerablemente y los precios prácticamente no cambian (o muy poco).
+      \end{itemize}
+    \item En el \textbf{mediano plazo} (OA con pendiente positiva):
+      \begin{itemize}
+        \item El aumento de DA desplaza el equilibrio a un punto con mayor $Y$ y mayor nivel de precios $P$.
+        \item La respuesta de salarios y precios empieza a moderar el efecto real de la política fiscal.
+      \end{itemize}
+    \item En el \textbf{largo plazo} (OA clásica, vertical):
+      \begin{itemize}
+        \item La producción retorna a su nivel de pleno empleo $Y^*$.
+        \item El aumento de DA se traduce principalmente en un nivel de precios más alto (inflación), sin efecto permanente sobre $Y$.
+      \end{itemize}
+  \end{itemize}
+
+\textbf{Orden de magnitud del efecto sobre $Y$:}
+\[
+\text{Aspa keynesiana} > \text{IS–LM (con crowding-out)} > \text{OA–DA en el largo plazo (efecto nulo en $Y$)}.
+\]
+
+
+\item A partir de esta comparación entre modelos, determine qué factores son claves para que un mayor gasto público efectivamente eleve el PIB.
+
+\textbf{Pauta:}
+
+Factores clave para que $\Delta G$ eleve el PIB de forma significativa:
+
+\begin{itemize}
+\item \textbf{Multiplicador alto:} propensión marginal a consumir $c$ elevada y tasa impositiva $t$ moderada, lo que aumenta $1/(1-c(1-t))$.
+\item \textbf{Crowding-out reducido:} sensibilidad de la inversión a la tasa de interés ($b$ en IS) relativamente baja, y/o sensibilidad de la demanda de dinero a $i$ ($h$ en LM) alta, de modo que el alza de $i$ sea pequeña.
+\item \textbf{Expectativas de precios y salarios:} si los salarios y precios son rígidos en el corto plazo, el aumento de DA se refleja en más producción y empleo, no sólo en más inflación.
+\item \textbf{Capacidad ociosa en la economía:} cuanto más lejos está la economía del pleno empleo (brecha de producto negativa), mayor es el margen para que el gasto público aumente el PIB sin generar rápidamente presiones inflacionarias.
+\item \textbf{Tipo de cambio y sector externo:} si el aumento de $G$ no aprecia excesivamente la moneda (vía alza de $i$ y entrada de capitales), se evita una caída fuerte de las exportaciones netas.
+\end{itemize}
+
+\end{enumerate}
+
+
+\newpage
+\vspace*{0.1cm}
+
+\newpage
+\vspace*{0.1cm}
+\textbf{Ejercicios extras}
+
+% =========================== Extra 1
+\item Explique las diferencias entre la inflación perfectamente anticipada e inflación imperfectamente anticipada.
+
+\textbf{Pauta:}
+
+\begin{itemize}
+\item \textbf{Inflación perfectamente anticipada:}
+  \begin{itemize}
+    \item Los agentes \emph{conocen exactamente} la tasa de inflación futura.
+    \item Pueden \emph{indexar} salarios, contratos, tasas de interés, alquileres, etc.
+    \item La inflación genera costos de “zapato de cuero” o de “menú”, pero no grandes redistribuciones de riqueza, porque todos ajustan nominalmente.
+  \end{itemize}
+
+\item \textbf{Inflación imperfectamente anticipada (no anticipada):}
+  \begin{itemize}
+    \item La inflación efectiva difiere de la inflación esperada.
+    \item Produce \textbf{ganadores y perdedores}:
+      \begin{itemize}
+        \item Si la inflación es \emph{mayor} a la esperada, los deudores pagan sus deudas en “pesos más baratos” y los acreedores pierden.
+        \item Si la inflación es \emph{menor} a la esperada, ocurre lo contrario: ganan los acreedores y pierden los deudores.
+      \end{itemize}
+    \item Introduce \textbf{riesgo e incertidumbre}, desincentivando contratos de largo plazo y volviendo más restrictivo el crédito.
+  \end{itemize}
+
+En resumen, la inflación perfectamente anticipada permite que los agentes se protejan mediante indexación; la inflación imperfectamente anticipada genera redistribuciones de ingresos y mayores distorsiones en la economía.
+
+\vspace{0.4cm}
+
+% =========================== Extra 2
+\item Suponga la siguiente economía con tipo de cambio flexible y perfecta movilidad de capitales:
+
+\textbf{Mercado de bienes}
+\[
+\begin{aligned}
+C &= 300 + 0.75Y_d, &Y_d = Y - T, \\
+T &= 0.3Y, &I = 700 - 100i, \\
+G &= 500, &X = 50 + 2\frac{eP^*}{P} + 0.05Y^*, \\
+M &= 500 - 4\frac{eP^*}{P} + 0.1Y, &P^* = 1, \quad Y^* = 10000.
+\end{aligned}
+\]
+
+\textbf{Mercado de dinero:}
+\[
+L_d = 0.4Y - 100i, \quad M^S = 2000, \quad P = 1.
+\]
+\textbf{Tasa de interés internacional:} 
+\[
+i^* = 8\%.
+\]
+
+\begin{enumerate}[label=\alph*)]
+\item Calcule los valores de \(Y,\, i,\, C,\, e,\, X,\, M\) y el balance fiscal. 
+\item Recalcule asumiendo que la tasa de interés internacional baja a 4\%.
+\end{enumerate}
+
+\textbf{Pauta:}
+
+\begin{enumerate}[label=\alph*)]
+\item \textbf{Caso $i^* = 8\%$ ($i^* = 0{,}08$).}
+
+
+\newpage
+\vspace*{0.1cm}
+\begin{itemize}
+\item \textbf{Perfecta movilidad de capitales y tipo de cambio flexible:}
+\[
+i = i^* = 0{,}08.
+\]
+
+\item \textbf{Equilibrio en el mercado de dinero (LM):}
+\[
+0.4Y - 100i = 2000
+\Rightarrow 0.4Y - 100(0{,}08) = 2000
+\Rightarrow 0.4Y - 8 = 2000
+\Rightarrow 0.4Y = 2008 \Rightarrow Y = 5020.
+\]
+
+\item \textbf{Impuestos, ingreso disponible y consumo:}
+\[
+T = 0.3Y = 0.3(5020) = 1506,
+\]
+\[
+Y_d = Y - T = 5020 - 1506 = 3514,
+\]
+\[
+C = 300 + 0.75Y_d = 300 + 0.75(3514) = 300 + 2635.5 = 2935.5.
+\]
+
+\item \textbf{Inversión:}
+\[
+I = 700 - 100i = 700 - 100(0{,}08) = 700 - 8 = 692.
+\]
+
+\item \textbf{Exportaciones e importaciones:} con $P=P^*=1$, $Y^*=10000$,
+\[
+X = 50 + 2e + 0.05Y^* = 50 + 2e + 500 = 550 + 2e,
+\]
+\[
+M = 500 - 4e + 0.1Y = 500 - 4e + 0.1(5020) = 500 - 4e + 502 = 1002 - 4e.
+\]
+Las exportaciones netas:
+\[
+XN = X - M = (550 + 2e) - (1002 - 4e) = 50 + 6e - 0.1Y.
+\]
+Con $Y=5020$ se obtiene:
+\[
+XN = 50 + 6e - 502 = -452 + 6e.
+\]
+
+\item \textbf{Equilibrio en bienes:}
+\[
+Y = C + I + G + XN
+\Rightarrow 5020 = 2935.5 + 692 + 500 + (-452 + 6e).
+\]
+Constante:
+\[
+2935.5 + 692 + 500 - 452 = 3675.5.
+\]
+Por tanto:
+\[
+5020 = 3675.5 + 6e
+\Rightarrow 6e = 1344.5
+\Rightarrow e \approx 224.08.
+\]
+
+\item \textbf{Cálculo de $X$, $M$ y balance fiscal:}
+\[
+X = 550 + 2e \approx 550 + 2(224.08) \approx 998.17,
+\]
+\[
+M = 1002 - 4e \approx 1002 - 4(224.08) \approx 105.67,
+\]
+\[
+XN = X - M \approx 892.50,
+\]
+\[
+\text{Balance fiscal} = T - G = 1506 - 500 = 1006 \quad (\text{superávit}).
+\]
+\end{itemize}
+
+\item \textbf{Caso $i^* = 4\%$ ($i^* = 0{,}04$).}
+
+\begin{itemize}
+\item Ahora
+\[
+i = 0{,}04.
+\]
+
+\newpage
+\vspace*{0.1cm}
+\item \textbf{Equilibrio LM:}
+\[
+0.4Y - 100(0{,}04) = 2000
+\Rightarrow 0.4Y - 4 = 2000
+\Rightarrow 0.4Y = 2004
+\Rightarrow Y = 5010.
+\]
+
+\item \textbf{Impuestos, ingreso disponible y consumo:}
+\[
+T = 0.3(5010) = 1503,
+\]
+\[
+Y_d = 5010 - 1503 = 3507,
+\]
+\[
+C = 300 + 0.75(3507) = 300 + 2630.25 = 2930.25.
+\]
+
+\item \textbf{Inversión:}
+\[
+I = 700 - 100(0{,}04) = 700 - 4 = 696.
+\]
+
+\item \textbf{Exportaciones netas:}
+\[
+X = 550 + 2e,\quad M = 500 - 4e + 0.1Y = 500 - 4e + 0.1(5010) = 1001 - 4e,
+\]
+\[
+XN = X - M = 50 + 6e - 0.1Y = 50 + 6e - 501 = -451 + 6e.
+\]
+
+\item \textbf{Equilibrio en bienes:}
+\[
+5010 = 2930.25 + 696 + 500 + (-451 + 6e).
+\]
+Constante:
+\[
+2930.25 + 696 + 500 - 451 = 3675.25.
+\]
+Entonces:
+\[
+5010 = 3675.25 + 6e
+\Rightarrow 6e = 1334.75
+\Rightarrow e \approx 222.46.
+\]
+
+\item \textbf{Cálculo de $X$, $M$ y balance fiscal:}
+\[
+X = 550 + 2e \approx 994.92,
+\]
+\[
+M = 500 - 4e + 0.1(5010) \approx 111.17,
+\]
+\[
+XN \approx 883.75,
+\]
+\[
+\text{Balance fiscal} = T - G = 1503 - 500 = 1003.
+\]
+\end{itemize}
+
+\end{enumerate}
+
+\vspace{0.4cm}
+
+% =========================== Extra 3
+\item Mencione y explique dos teorías que justifiquen la existencia de salarios o precios rígidos en la economía.
+
+\textbf{Pauta:}
+
+Se pueden mencionar, por ejemplo, las siguientes:
+
+\begin{enumerate}[label=\alph*)]
+\item \textbf{Información imperfecta (salarios rígidos):}
+\begin{itemize}
+\item Las firmas no observan perfectamente la productividad de cada trabajador.
+\item Si ante una caída de la demanda la empresa decide bajar salarios, existe el riesgo de que renuncien los trabajadores más productivos y permanezcan los menos eficientes.
+\item Para evitar esta “selección adversa”, la firma prefiere mantener el salario nominal y ajustar la cantidad de empleo (despidos), lo que genera rigidez salarial.
+\end{itemize}
+
+
+\newpage
+\vspace*{0.1cm}
+\item \textbf{Salarios de eficiencia:}
+\begin{itemize}
+\item La empresa paga salarios \emph{por sobre} el nivel de mercado para incentivar la productividad, reducir la rotación laboral, atraer trabajadores más capaces, etc.
+\item Si bajara el salario nominal, podría reducir estos beneficios: más rotación, menor esfuerzo, mayor ausentismo.
+\item Para mantener estas ventajas, la firma mantiene el salario por encima del nivel de equilibrio competitivo, lo que implica rigidez a la baja de los salarios.
+\end{itemize}
+
+También podrían discutirse:
+\begin{itemize}
+\item \emph{Problemas de coordinación y costos de búsqueda} en el mercado laboral.
+\item \emph{Costos de menú} para los precios: cambiar precios tiene un costo (imprimir listas, ajustar sistemas, riesgo de perder clientes), por lo que las firmas no ajustan continuamente sus precios ante shocks pequeños.
+\end{itemize}
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}

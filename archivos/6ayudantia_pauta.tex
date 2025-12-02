@@ -1,0 +1,434 @@
+\documentclass[11pt,addpoints]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{float}
+
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[lmargin=2cm,rmargin=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb,mathtools}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=cyan}
+\parindent=0cm
+\setlist{itemsep=0.6em}
+\allowdisplaybreaks
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{FACULTAD DE INGENIERÍA\\DEPTO DE INGENIERÍA INDUSTRIAL \\ MACROECONOMÍA (580323)}
+\fancyhead[R]{\includegraphics[scale=0.13]{escudoudec.jpg}}
+\fancyfoot{\thepage}
+\fancyfoot[R]{Semestre 2025-2}
+\fancyfoot[L]{CMP/IGU}
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\begin{document}
+\vspace*{0.01cm}
+
+\begin{center}
+{\Large \bfseries PAUTA -- Ayudantía 6: Modelo IS--LM y Demanda Agregada \\[0.5cm]}
+\textbf{Profesor:} Cristian Mardones, Ph.D. \quad \textbf{Ayudante:} Ignacio Garrido U.
+\end{center}
+
+\section*{\textbf{Temática de esta semana: Modelo de Renta y Gasto.}}
+\textbf{Resumen.} Se revisa el equilibrio conjunto de bienes y dinero (IS--LM), derivación de la DA al variar \(P\), y efectos de política fiscal y monetaria sobre \(Y\) e \(i\).
+
+\begin{enumerate}
+
+% ======================= 1
+\item \textbf{Obtención de las curvas IS, LM y DA.}\\
+
+\textbf{Curva IS (equilibrio en el mercado de bienes).}\\
+La curva IS representa el \textbf{equilibrio en el mercado de bienes}, dado por:
+\[
+Y = C(Y - T) + I(i) + G,
+\]
+donde:
+\begin{itemize}
+  \item \(Y\): ingreso o PIB,
+  \item \(C\): consumo,
+  \item \(I\): inversión,
+  \item \(G\): gasto público,
+  \item \(T\): impuestos netos.
+\end{itemize}
+
+\textbf{Paso 1.} Sustituimos las funciones de comportamiento:
+\[
+C = C_0 + c(Y - T), \qquad T = tY - TR, \qquad I = I_0 - b i.
+\]
+
+Reemplazamos en la identidad del mercado de bienes:
+\[
+Y = C_0 + c\underbrace{(Y - tY + TR)}_{Y_D} + I_0 - b i + G.
+\]
+
+
+\textbf{Paso 2.} Agrupamos términos en \(Y\):
+\[
+Y = C_0 + c(1-t)Y + cTR + I_0 - b i + G.
+\]
+\[
+Y - c(1-t)Y = C_0 + cTR + I_0 + G - b i.
+\]
+\[
+(1 - c(1-t))Y = A - b i, \qquad \text{donde } A \equiv C_0 + cTR + I_0 + G.
+\]
+
+\textbf{Paso 3.} Despejamos \(i\):
+\[
+i = \frac{A}{b} - \frac{1 - c(1-t)}{b}Y.
+\]
+
+\textbf{Interpretación:} la IS tiene \textbf{pendiente negativa}, ya que un mayor nivel de producto \(Y\) implica mayor ingreso, más ahorro y menor inversión para mantener el equilibrio del mercado de bienes.
+
+\newpage
+\vspace*{0.1cm}
+\textbf{Curva LM (equilibrio en el mercado monetario).}\\
+El equilibrio en el mercado de dinero está dado por:
+\[
+\frac{M}{P} = L(Y,i),
+\]
+donde:
+\begin{itemize}
+  \item \(M\): oferta nominal de dinero,
+  \item \(P\): nivel de precios,
+  \item \(L(Y,i)\): demanda de dinero.
+\end{itemize}
+
+Suponiendo una forma lineal de la demanda de dinero:
+\[
+L(Y,i) = kY - h i,
+\]
+se obtiene:
+\[
+\frac{M}{P} = kY - h i \quad \Rightarrow \quad i = \frac{k}{h}Y - \frac{1}{h}\frac{M}{P}.
+\]
+
+\textbf{Interpretación:} la LM tiene \textbf{pendiente positiva}, ya que a mayor ingreso \(Y\), se demanda más dinero y para mantener el equilibrio monetario debe subir la tasa de interés \(i\).
+
+\vspace{0.5cm}
+\textbf{Curva DA (demanda agregada).}\\
+La curva DA se obtiene combinando las curvas IS y LM.  
+Para cada nivel de precios \(P\), se determina el equilibrio conjunto \((Y,i)\).
+
+\textbf{Lógica:}
+\begin{itemize}
+  \item La IS no depende directamente de \(P\).
+  \item La LM sí depende de \(P\) a través del término \(\tfrac{M}{P}\), que representa la oferta \emph{real} de dinero.
+  \item Si aumenta el nivel de precios \(P\):
+  \[
+  \tfrac{M}{P} \downarrow \quad \Rightarrow \quad \text{la LM se desplaza hacia la izquierda.}
+  \]
+  \item Este desplazamiento implica una tasa de interés más alta \(i \uparrow\), menor inversión \(I \downarrow\) y, por tanto, una caída del producto \(Y \downarrow\).
+\end{itemize}
+
+\textbf{Conclusión:} la DA tiene \textbf{pendiente negativa} en el plano \((P,Y)\):
+\[
+P \uparrow \Rightarrow \tfrac{M}{P} \downarrow \Rightarrow i \uparrow \Rightarrow I \downarrow \Rightarrow Y \downarrow.
+\]
+
+\vspace{0.4cm}
+\textbf{Resumen comparativo:}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Curva} & \textbf{Ecuación} & \textbf{Pendiente} & \textbf{Intuición económica} \\
+\midrule
+IS & \(i = \tfrac{A}{b} - \tfrac{1-c(1-t)}{b}Y\) & Negativa & ↑Y → ↑i (equilibrio de bienes) \\
+LM & \(i = \tfrac{k}{h}Y - \tfrac{1}{h}\tfrac{M}{P}\) & Positiva & ↑Y → ↑i (equilibrio de dinero) \\
+DA & --- (de IS--LM) --- & Negativa & ↑P → ↓(M/P) → ↓Y \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\newpage
+\vspace*{0.1cm}
+A continuacion, podemos ver graficamente lo que conversamos antes a traves de dos figuras:
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.48\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{6Ayudantia/DA.jpg}
+  \caption{Grafico DA (Y,p)}
+\end{minipage}\hfill
+\begin{minipage}{0.48\textwidth}
+  \centering
+  \includegraphics[width=0.75\linewidth]{6Ayudantia/IS-LM.png}
+  \caption{Grafico IS-LM}
+\end{minipage}
+\end{figure}
+
+
+% ======================= 2
+\item \textbf{Problema 3 -- Certamen 2013}\\[0.1cm]
+Datos: \(C=60+0{,}8Y_D\), \(t=0{,}2\), \(I=70\), \(G=230\), \(TR=110\).\\
+\textbf{Equilibrio:}
+\[
+Y = C + I + G = 60 + 0.8(Y - 0.2Y + 110) + 70 + 230
+= 60 + 0.64Y + 88 + 300,
+\]
+\[
+Y - 0.64Y = 448 \Rightarrow Y^* = 1244{,}4.
+\]
+\textbf{Multiplicador:} \(k = \dfrac{1}{1-c(1-t)} = \dfrac{1}{1-0.8\cdot 0.8} = 2.777\ldots\).
+\[
+BF = T - G - TR = 0.2\cdot 1244.4 - 230 - 110 = 248.88 - 340 = -91.12\ (\text{déficit}).
+\]
+Si \(t=0.3\): \(k'=\dfrac{1}{1-0.8\cdot 0.7}=2.2727\), \(Y' \approx 2.2727\cdot 448=1017.8\).
+\[
+BF' = 0.3\cdot 1017.8 - 230 - 110 = 305.34 - 340 = -34.66.
+\]
+\emph{Conclusión:} mayor \(t\) reduce \(Y\) y mejora el balance fiscal (déficit menor en valor absoluto).
+
+% ======================= 3
+\item \textbf{Problema 3 – Certamen 2014}\\[0.1cm]
+Actualmente se discute en el país la reforma tributaria y educacional, por lo cual algunos analistas sostienen que, incluso con un modelo macroeconómico sencillo, es posible identificar que el alza del impuesto a la renta disminuiría el PIB \((\Delta Y / \Delta t)\).\\[0.2cm]
+A continuación, se analiza este planteamiento utilizando el modelo IS–LM.
+
+\vspace{0.3cm}
+\textbf{Modelo base:}\\
+El equilibrio en el mercado de bienes y dinero está dado por:
+\[
+Y = C(Y - T) + I(i) + G, \qquad \frac{M}{P} = kY - h i,
+\]
+\newpage
+\vspace*{0.1cm}
+con:
+\[
+C = C_0 + c(Y - T), \qquad T = tY - TR, \qquad I = I_0 - b i.
+\]
+
+\vspace{0.3cm}
+\textbf{Efecto del impuesto en el mercado de bienes (curva IS):}\\
+Sustituyendo en la ecuación de equilibrio:
+\[
+Y = C_0 + c(Y - tY + TR) + I_0 - b i + G,
+\]
+y agrupando términos en \(Y\):
+\[
+(1 - c(1 - t))Y = C_0 + cTR + I_0 + G - b i.
+\]
+Definimos \(A \equiv C_0 + cTR + I_0 + G\), y se obtiene:
+\[
+Y = \frac{1}{1 - c(1 - t)}(A - b i).
+\]
+
+El término \((1 - c(1 - t)) = (1 - c + c t)\) aumenta cuando \(t\) sube, lo que reduce el multiplicador del gasto:
+\[
+\frac{\partial Y}{\partial t} < 0.
+\]
+Por tanto, un aumento del impuesto a la renta \((t \uparrow)\) reduce el ingreso disponible \((Y - T)\), disminuye el consumo y desplaza la IS hacia la izquierda.
+
+\vspace{0.3cm}
+\textbf{Efecto conjunto en el equilibrio IS–LM:}\\
+Al moverse la IS hacia la izquierda, y manteniendo constante la oferta monetaria \((M/P)\):
+\begin{itemize}
+  \item El \textbf{producto de equilibrio \(Y\)} disminuye.
+  \item La \textbf{tasa de interés \(i\)} también baja, ya que menor ingreso implica menor demanda de dinero.
+\end{itemize}
+
+Por tanto, en el modelo IS–LM estándar se cumple que:
+\[
+t \uparrow \ \Rightarrow \ Y \downarrow, \quad i \downarrow.
+\]
+
+\vspace{0.3cm}
+\textbf{Consideraciones y matices:}
+\begin{itemize}
+  \item Si el aumento de impuestos se destina a financiar un mayor gasto público \((G \uparrow)\), los efectos pueden compensarse: 
+  \[
+  \text{efecto } (t\uparrow, G\uparrow) \Rightarrow \text{resultado ambiguo en } Y.
+  \]
+  \item Si el Banco Central expande la oferta monetaria \((M \uparrow)\), la LM se mueve a la derecha y puede amortiguar el impacto contractivo.
+  \item En el largo plazo (modelo OA–DA), una reforma educacional puede elevar la productividad y desplazar la OA hacia la derecha, aumentando el producto potencial.
+\end{itemize}
+\newpage
+\vspace*{0.1cm}
+\textbf{Conclusión:}\\
+En el corto plazo, bajo los supuestos del modelo IS–LM (con \(M\), \(P\), \(G\) y \(TR\) fijos), un aumento en el impuesto a la renta reduce el consumo, la demanda agregada y el producto de equilibrio:
+\[
+\frac{\partial Y}{\partial t} < 0.
+\]
+Por tanto, el análisis de que “subir el impuesto a la renta reduce el PIB” es correcto en el contexto de corto plazo.\\[0.2cm]
+Sin embargo, si la recaudación se utiliza para aumentar el gasto público o mejorar la productividad a través de la educación, el efecto negativo puede neutralizarse o incluso revertirse en el largo plazo.
+
+
+% ======================= 4
+\item \textbf{IS--LM con dinero e inversión sensible a \(i\)}\\
+Datos:
+\[
+C=140+0.3Y_D,\ t=0.2,\ I=1000-100i,\ G=800,\ TR=250,\ L=0.25Y-250i,\ \frac{M}{P}=300.
+\]
+\textbf{IS:}
+\[
+Y = 140 + 0.3(Y-0.2Y+250) + (1000-100i) + 800
+= 140 + 0.24Y + 75 + 1800 - 100i,
+\]
+\[
+0.76Y = 2015 - 100i \Rightarrow i = 20.15 - 0.0076\,Y.
+\]
+\textbf{LM:}
+\[
+300 = 0.25Y - 250i \Rightarrow i = 0.001\,Y - 1.2.
+\]
+\textbf{Equilibrio:}
+\[
+20.15 - 0.0076Y = 0.001Y - 1.2 \Rightarrow 21.35 = 0.0086Y
+\Rightarrow Y^* \approx 2482.56,\quad i^* \approx 1.28.
+\]
+\textbf{Comparativos:} \(G\uparrow \Rightarrow\) IS\(\to\) derecha \(\Rightarrow Y\uparrow,i\uparrow\). Subir \(P\Rightarrow (M/P)\downarrow\) \(\Rightarrow\) LM\(\to\) izquierda \(\Rightarrow i\uparrow, Y\downarrow\).
+
+% ======================= 5
+\item \textbf{IS--LM con impuesto a la inversión}\\
+Datos:
+\[
+C = 1 + 0.8(1 - t)Y, \quad I = 2 - 0.4i, \quad G = 1, \quad t = 0.2, \quad \frac{M}{P} = 6, \quad L = 0.75Y - 1.5i.
+\]
+
+\textbf{IS:}\quad 
+\(Y = 1 + 0.8(0.8Y) + 2 - 0.4i + 1 
+\Rightarrow 0.36Y = 4 - 0.4i 
+\Rightarrow i = 10 - 0.9Y.\)
+
+\textbf{LM:}\quad 
+\(6 = 0.75Y - 1.5i 
+\Rightarrow i = 0.5Y - 4.\)
+
+\textbf{Equilibrio:}\quad 
+\(10 - 0.9Y = 0.5Y - 4 
+\Rightarrow Y^* = 10,\ i^* = 1.\)
+
+\vspace{0.2cm}
+\emph{Caída de \(I_0\) en 10\%:} 
+\(I_0 = 1.8 \Rightarrow i = 9.5 - 0.9Y.\)
+\[
+9.5 - 0.9Y = 0.5Y - 4 
+\Rightarrow Y_1 = 9.64 \;(\text{cae } \approx 3.6\%).
+\]
+Para volver a \(Y = 10\), se requiere \(\Delta G \approx 0.14\) (vía multiplicador fiscal).
+
+\vspace{0.2cm}
+\emph{Impuesto proporcional a \(i\):} 
+\(I = 2 - 0.4(1 + \phi)i\) con \(\phi = 0.25 \Rightarrow I = 2 - 0.5i.\)
+\[
+Y = 4 + 0.64Y - 0.5i 
+\Rightarrow i = 8 - 0.72Y.
+\]
+\newpage
+\vspace*{0.1cm}
+Con LM: \(8 - 0.72Y = 0.5Y - 4 
+\Rightarrow Y' = 9.6,\ i' = 0.8.\)
+\emph{Interpretación:} la mayor sensibilidad de la inversión frente a \(i\) aplana la IS, reduciendo tanto \(Y\) como \(i\).
+
+\vspace{0.2cm}
+\emph{Para regresar a \(Y = 10\) con política monetaria:} 
+Con la nueva IS \(i = 8 - 0.72Y\), para \(Y = 10\) se obtiene \(i = 0.8.\)  
+En la LM, la oferta real de dinero necesaria será:
+\[
+\left(\tfrac{M}{P}\right)' = 0.75(10) - 1.5(0.8) = 7.5 - 1.2 = 6.3.
+\]
+Por tanto, se requiere un aumento de saldos reales de aproximadamente \(\mathbf{5\%}\) (de 6 a 6.3) para compatibilizar \(Y = 10\) con la nueva IS más plana.
+
+\textit{Conclusión:} el ajuste se logra por el lado monetario (LM → derecha); la política monetaria expansiva compensa el efecto contractivo del impuesto sobre la inversión.
+
+
+
+% ======================= Extras
+\section*{Ejercicios Extras (comentados)}
+\begin{enumerate}[label=\arabic*.]
+\item \textbf{Aumento de la sensibilidad de la demanda de dinero al ingreso}\\
+Demanda real de dinero: $L(Y,i)=kY-h\,i$, equilibrio monetario: $\tfrac{M}{P}=kY-h\,i$.
+Despejando $i$:
+\[
+i \;=\; \frac{k}{h}Y \;-\; \frac{1}{h}\frac{M}{P}.
+\]
+\textbf{Efectos de $\uparrow k$:} 
+(i) la pendiente $\frac{k}{h}$ \emph{aumenta} $\Rightarrow$ LM más empinada; 
+(ii) el intercepto en $i$ no cambia ($-\tfrac{1}{h}\tfrac{M}{P}$); 
+(iii) el intercepto en $Y$ disminuye ($Y=\tfrac{M/P}{k}$). 
+Geométricamente, LM rota en sentido horario.
+
+Sea $\text{IS}: \ Y=\alpha-\beta i$, con $\beta>0$. 
+Resolviendo el sistema:
+\[
+Y \;=\; \frac{\alpha + \tfrac{\beta}{h}\tfrac{M}{P}}{1+\tfrac{\beta k}{h}},
+\qquad
+i \;=\; \frac{k}{h}Y - \frac{1}{h}\frac{M}{P}.
+\]
+\textbf{Comparativa estática:} $\tfrac{\partial Y}{\partial k}<0$ (sube $k$ $\Rightarrow$ cae $Y$) y típicamente $\tfrac{\partial i}{\partial k}>0$ (sube $i$).
+\textbf{Shocks de IS:} con LM más empinada, $\Delta Y$ es menor y $\Delta i$ es mayor ante un mismo desplazamiento de IS.
+\textbf{Política monetaria:} un mismo $\Delta(M/P)$ tiene menor efecto en $Y$ y mayor efecto en $i$ cuanto más empinada sea LM.
+
+
+
+
+\item \textbf{Equilibrio y efecto de duplicar transferencias}\\
+Datos:
+\[
+\begin{aligned}
+&C = 420 + 0.7Y_D,\quad t=0.2,\quad TR=500,\\
+&I = 4200 - 300i,\quad G=800,\quad X_N=400,\\
+&L = 10Y - 5000i,\quad \tfrac{M}{P}=2000,\quad Y_D=(1-t)Y+TR.
+\end{aligned}
+\]
+
+\textbf{1) IS (bienes):} 
+\[
+C = 420 + 0.7(0.8Y + 500) = 770 + 0.56Y,\quad
+Y = C + I + G + X_N = 6170 + 0.56Y - 300i,
+\]
+\[
+0.44Y = 6170 - 300i \;\Rightarrow\; \boxed{Y = 14022.727 - 681.818\, i}.
+\]
+
+\textbf{2) LM (dinero):} 
+\[
+2000 = 10Y - 5000i \;\Rightarrow\; \boxed{i = 0.002\,Y - 0.4}.
+\]
+\newpage
+\vspace*{0.1cm}
+\textbf{3) Equilibrio:}
+\[
+Y = 14022.727 - 681.818(0.002Y - 0.4) 
+\Rightarrow Y^* \approx 6048.078,\quad
+i^* \approx 11.696.
+\]
+
+\textbf{4) Déficit fiscal inicial:}\quad
+$D_0 = G + TR - tY^* \approx 800 + 500 - 0.2\cdot 6048.078 \approx 90.384$.
+
+\textbf{5) Duplicar TR ($TR'=1000$):}
+\[
+\Delta C_0 = 0.7\cdot 500 = 350 \Rightarrow 
+\text{IS: } 0.44Y = 6520 - 300i \;\Rightarrow\; 
+\boxed{Y = 14818.182 - 681.818\, i}.
+\]
+Equilibrio con LM:
+\[
+Y' \approx 6384.616,\qquad i' \approx 12.369.
+\]
+
+\textbf{6) Nuevo déficit y variación:}
+\[
+D_1 = 800 + 1000 - 0.2\cdot 6384.616 \approx 523.077,\quad
+\Delta D = D_1 - D_0 \approx \boxed{432.692}.
+\]
+
+\textit{Interpretación:} Al duplicar $TR$, aumenta la demanda (vía $C$), suben $Y$ e $i$, y el déficit fiscal crece en $\approx 432.7$. 
+
+
+\end{enumerate}
+
+\end{enumerate}
+
+\end{document}
