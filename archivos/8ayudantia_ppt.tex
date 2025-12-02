@@ -1,0 +1,552 @@
+\documentclass[aspectratio=169]{beamer}
+
+% Tema nuevo
+\usetheme{CambridgeUS}
+\usecolortheme{default}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{navigation symbols}{}
+
+% Paleta UdeC
+\definecolor{udecblue}{RGB}{0,60,150}
+
+% Colores generales
+\setbeamercolor{structure}{fg=udecblue}
+
+% Titular general (portada y similares)
+\setbeamercolor{titlelike}{fg=white,bg=udecblue}
+
+% Títulos de cada diapositiva
+\setbeamercolor{frametitle}{fg=white,bg=udecblue}
+
+% Bloques
+\setbeamercolor{block title}{bg=udecblue!10,fg=udecblue}
+\setbeamercolor{block body}{bg=white,fg=black}
+
+% Datos
+\title[Ayudantía 8 -- preCertamen 2]{Ayudantía 8 -- preCertamen 2 \\ \small Pauta Certamen 2}
+\author[Ignacio Garrido U.]{Profesor: Cristian Mardones, Ph.D. \\ Ayudante: Ignacio Garrido U.}
+\institute[UdeC]{Facultad de Ingeniería \\ Depto. de Ingeniería Industrial \\ Macroeconomía (580323)}
+\date[2025-2]{Semestre 2025-2}
+
+\begin{document}
+
+% Portada
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% Qué hemos visto
+\begin{frame}{¿Qué hemos visto?}
+  \begin{itemize}
+    \item Ayudantía 5: Modelo IS--LM en economía cerrada.
+    \item Ayudantía 6: Política fiscal y monetaria, caso clásico y trampa de liquidez.
+    \item Ayudantía 7: Modelos de economía abierta y Mundell--Fleming.
+    \item Ayudantía 8: Repaso general preCertamen 2 (IS--LM, Mundell--Fleming, OA--DA, estática comparativa).
+  \end{itemize}
+\end{frame}
+
+% =========================
+% CERTAMEN 2, 2024
+% =========================
+
+\section{Certamen 2, 2024}
+
+% P1 Enunciado
+\begin{frame}{Certamen 2 2024 -- Pregunta 1}{Enunciado}
+\small
+Analice gráficamente la magnitud del impacto que generaría un incremento en el consumo autónomo sobre el PIB, considerando:
+\begin{enumerate}
+  \item El modelo IS--LM en el caso clásico.
+  \item El modelo Mundell--Fleming con tipo de cambio flexible.
+  \item El modelo de OA--DA en el largo plazo.
+\end{enumerate}
+\medskip
+A partir de su análisis señale qué modelo exhibe el mayor impacto en el PIB.
+\end{frame}
+
+% P1 Blanco
+\begin{frame}{Certamen 2 2024 -- Pregunta 1}
+  \vfill
+  \centering
+  \vfill
+\end{frame}
+
+% P1 Pauta
+\begin{frame}{Certamen 2 2024 -- Pregunta 1}{Pauta conceptual}
+\small
+\textbf{1. IS--LM (caso clásico)}
+\begin{itemize}
+  \item $Y$ determinado por el producto de pleno empleo $Y^{PE}$ (OA de LP vertical).
+  \item Aumento de consumo autónomo $\Rightarrow$ IS se desplaza a la derecha.
+  \item LM fija $\Rightarrow$ ajuste solo en $i$.
+  \[
+  \Delta Y = 0, \quad \Delta i > 0.
+  \]
+\end{itemize}
+
+\textbf{2. Mundell--Fleming, Tipo de cambio flexible}
+\begin{itemize}
+  \item Movilidad perfecta de capitales $\Rightarrow i = i^*$.
+  \item $\uparrow C_0 \Rightarrow$ IS se desplaza a la derecha $\Rightarrow i \uparrow$ en primera instancia.
+  \item Entrada de capitales $\Rightarrow$ apreciación ($e \downarrow$) $\Rightarrow XN \downarrow$ $\Rightarrow$ IS vuelve.
+  \[
+  \Delta Y = 0, \quad \Delta i = 0.
+  \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Certamen 2 2024 -- Pregunta 1}{Pauta conceptual (cont.)}
+\small
+\textbf{3. OA--DA en el largo plazo}
+\begin{itemize}
+  \item Aumento de $C_0$ desplaza DA a la derecha.
+  \item \textbf{Corto plazo:} $Y \uparrow$, $P \uparrow$ con OA creciente.
+  \item \textbf{Largo plazo:} OA de LP vertical en $Y^{PE}$; el ajuste final es:
+  \[
+  \Delta Y_{LP} = 0,\quad \Delta P_{LP} > 0.
+  \]
+\end{itemize}
+
+\textbf{Conclusión (nunca está demás):}
+\begin{itemize}
+  \item En LP, en los tres marcos $\Delta Y = 0$.
+  \item Considerando el \textbf{corto plazo}, el modelo OA--DA con OA creciente muestra el mayor impacto inicial en el PIB.
+\end{itemize}
+\end{frame}
+
+% P2 Enunciado
+\begin{frame}{Certamen 2 2024 -- Pregunta 2}{Enunciado}
+\small
+A partir de las siguientes ecuaciones del modelo IS--LM, formule la diferencial total y obtenga, a través de estática comparativa, el efecto sobre el PIB y tasa de interés provocada por un alza en las transferencias ($TR$):
+\[
+IS:\quad Y = [C + cTR + c(1 - t)Y] + (I - bi) + G
+\]
+\[
+LM:\quad \frac{M}{P} = kY - hi
+\]
+\end{frame}
+
+% P2 Blanco
+\begin{frame}{Certamen 2 2024 -- Pregunta 2}
+  \vfill
+  \centering
+  \vfill
+\end{frame}
+
+% P2 Pauta
+\begin{frame}{Certamen 2 2024 -- Pregunta 2}{Pauta con diferenciales}
+\small
+\textbf{1. Reordenar IS}
+\[
+Y = C + cTR + c(1-t)Y + I - bi + G
+\]
+\[
+Y - c(1-t)Y = C + cTR + I + G - bi
+\]
+\[
+\theta Y = A + cTR - bi,\quad \theta = 1 - c(1-t).
+\]
+
+\textbf{2. Diferenciales}
+\[
+\theta\, dY = c\,dTR - b\,di
+\]
+\[
+0 = k\,dY - h\,di \Rightarrow di = \frac{k}{h}dY.
+\]
+
+Sustituyendo:
+\[
+\theta dY = c\,dTR - b\left(\frac{k}{h}dY\right)
+\Rightarrow dY\left(\theta + \frac{bk}{h}\right) = c\,dTR.
+\]
+\[
+\boxed{dY = \dfrac{c}{\theta + \frac{bk}{h}}\,dTR > 0.}
+\]
+\end{frame}
+
+\begin{frame}{Certamen 2 2024 -- Pregunta 2}{Pauta con diferenciales (cont.)}
+\small
+De LM:
+\[
+di = \frac{k}{h}dY = \frac{k}{h}\,\dfrac{c}{\theta + \frac{bk}{h}}\,dTR.
+\]
+\[
+\boxed{di > 0 \text{ ante } dTR > 0.}
+\]
+
+\textbf{Interpretación:}
+\begin{itemize}
+  \item $\uparrow TR \Rightarrow$ mayor ingreso disponible $\Rightarrow$ IS se desplaza a la derecha.
+  \item En el nuevo equilibrio: $Y \uparrow$ e $i \uparrow$.
+  \item Tamaño del efecto depende de $c$, $t$, $b$ y de la pendiente de LM ($k,h$).
+\end{itemize}
+\end{frame}
+
+% P3 Enunciado
+\begin{frame}{Certamen 2 2024 -- Pregunta 3}{Enunciado}
+\small
+Suponga una economía cerrada:
+\[
+C = 200 + 0{,}6Y_D,\quad t = 0{,}2,\quad TR = 50,\quad I = 800 - 1000i,
+\]
+\[
+G = 500,\quad L = 2Y - 8000i,\quad \frac{M^S}{P} = 1600.
+\]
+\begin{itemize}
+  \item[a)] Encuentre $C$, $Y$, $i$, $I$ y el balance fiscal en el escenario base.
+  \item[b)] Determine el nuevo equilibrio si $G$ se eleva a $800$.
+\end{itemize}
+\end{frame}
+
+% P3 Blanco
+\begin{frame}{Certamen 2 2024 -- Pregunta 3}
+  \vfill
+  \centering
+  \vfill
+\end{frame}
+
+% P3 Pauta base
+\begin{frame}{Certamen 2 2024 -- Pregunta 3}{Pauta -- Escenario base $G=500$}
+\small
+\textbf{1. Ingreso disponible y consumo}
+\[
+T = 0{,}2Y,\quad Y_D = Y - T + TR = 0{,}8Y + 50.
+\]
+\[
+C = 200 + 0{,}6Y_D = 230 + 0{,}48Y.
+\]
+
+\textbf{2. IS:}
+\[
+Y = C + I + G = (230 + 0{,}48Y) + (800 - 1000i) + 500
+\Rightarrow 0{,}52Y = 1530 - 1000i.
+\]
+
+\textbf{3. LM:}
+\[
+1600 = 2Y - 8000i \Rightarrow i = \frac{2Y - 1600}{8000}.
+\]
+
+Sustituyendo y resolviendo:
+\[
+Y \approx 2246{,}8,\quad i \approx 0{,}36.
+\]
+\end{frame}
+
+\begin{frame}{Certamen 2 2024 -- Pregunta 3}{Pauta -- Escenario base $G=500$ (cont.)}
+\small
+\textbf{4. Variables de interés}
+\[
+Y_D \approx 0{,}8(2246{,}8) + 50,\quad
+C \approx 1308{,}4,
+\]
+\[
+I = 800 - 1000i \approx 438{,}3,
+\]
+\[
+T = 0{,}2Y \approx 449{,}4,\quad
+BF = T - G - TR \approx -100{,}6.
+\]
+
+\textbf{Conclusión:}
+\begin{itemize}
+  \item PIB moderado, tasa de interés positiva.
+  \item Déficit fiscal cercano a 100.
+\end{itemize}
+\end{frame}
+
+% P3 Pauta G=800
+\begin{frame}{Certamen 2 2024 -- Pregunta 3}{Pauta -- Escenario $G=800$}
+\small
+\textbf{1. Nueva IS con $G=800$}
+\[
+Y = (230 + 0{,}48Y) + (800 - 1000i) + 800
+\Rightarrow 0{,}52Y = 1830 - 1000i.
+\]
+
+LM se mantiene:
+\[
+i = \frac{2Y - 1600}{8000}.
+\]
+
+Resolviendo:
+\[
+Y \approx 2636{,}4,\quad i \approx 0{,}46.
+\]
+
+\textbf{2. Variables de interés}
+\[
+C \uparrow,\quad I \downarrow \text{ (crowding out)},\quad BF \text{ más deficitario}.
+\]
+
+\textbf{Mensaje:} La expansión fiscal aumenta $Y$ y $i$, reduce inversión privada y deteriora el balance fiscal.
+\end{itemize}
+\end{frame}
+
+% P4 Enunciado
+\begin{frame}{Certamen 2 2024 -- Pregunta 4}{Enunciado}
+\small
+Tipo de cambio flexible y perfecta movilidad de capitales.
+
+\textbf{Bienes:}
+\[
+C = 800 + 0{,}75Y_D,\quad T = 0{,}2Y,\quad TR = 600,
+\]
+\[
+I = 600 - 500i,\quad G = 800,
+\]
+\[
+X = 300 + 3e\frac{P^f}{P} + 0{,}01Y^f,\quad
+M = 250 - 40e\frac{P^f}{P} + 0{,}15Y,
+\]
+\[
+P^f = 1,\quad Y^f = 100000.
+\]
+
+\textbf{Dinero:}
+\[
+L^d = Y - 15000i,\quad M^s = 3000,\quad P = 1,\quad i^f = 0{,}3.
+\]
+
+Calcule $Y,C,X,M,I,BF,e$ y luego el nuevo equilibrio si $M^s = 3500$.
+\end{frame}
+
+% P4 Blanco
+\begin{frame}{Certamen 2 2024 -- Pregunta 4}
+  \vfill
+  \centering
+  \vfill
+\end{frame}
+
+% P4 Pauta inicial
+\begin{frame}{Certamen 2 2024 -- Pregunta 4}{Pauta -- Caso $M^s=3000$}
+\small
+\textbf{1. Paridad de tasas}
+\[
+i = i^f = 0{,}3.
+\]
+
+\textbf{2. Mercado de dinero}
+\[
+3000 = Y - 15000(0{,}3) \Rightarrow Y = 7500.
+\]
+
+\textbf{3. Componentes internos}
+\[
+T = 0{,}2Y = 1500,\quad
+Y_D = 7500 - 1500 + 600 = 6600.
+\]
+\[
+C = 800 + 0{,}75(6600) = 5750,
+\quad
+I = 600 - 500(0{,}3) = 450.
+\]
+\end{frame}
+
+\begin{frame}{Certamen 2 2024 -- Pregunta 4}{Pauta -- Caso $M^s=3000$ (cont.)}
+\small
+\textbf{4. Sector externo}
+\[
+X = 300 + 3e + 0{,}01(100000) = 1300 + 3e,
+\]
+\[
+M = 250 - 40e + 0{,}15(7500) = 1375 - 40e,
+\]
+\[
+XN = X - M = -75 + 43e.
+\]
+
+\textbf{5. Equilibrio de bienes}
+\[
+Y = C + I + G + XN
+\Rightarrow 7500 = 5750 + 450 + 800 + (-75 + 43e).
+\]
+\[
+43e = 575 \Rightarrow e \approx 13{,}37.
+\]
+
+\textbf{A partir de ahí:} se calculan $X,M,XN$ y $BF$ numéricamente como en la pauta escrita.
+\end{frame}
+
+% P4 Pauta Ms=3500
+\begin{frame}{Certamen 2 2024 -- Pregunta 4}{Pauta -- Caso $M^s=3500$}
+\small
+\textbf{1. Nuevo equilibrio monetario}
+\[
+3500 = Y - 15000(0{,}3) \Rightarrow Y = 8000.
+\]
+
+\textbf{2. Ajustes internos}
+\[
+T = 0{,}2Y = 1600,\quad
+Y_D = 8000 - 1600 + 600 = 7000,
+\]
+\[
+C = 800 + 0{,}75(7000) = 6050,\quad
+I = 600 - 500(0{,}3) = 450.
+\]
+
+\textbf{3. Sector externo (esquema)}
+\[
+X = 1300 + 3e,\quad
+M = 250 - 40e + 0{,}15(8000),
+\]
+\[
+XN = X - M,\quad
+Y = C + I + G + XN.
+\]
+
+\textbf{Mensaje clave:} $\uparrow M^s$ con TC flexible:
+\begin{itemize}
+  \item No cambia $i$ (sigue en $i^*$).
+  \item Aumenta $Y$ y provoca depreciación ($e \uparrow$).
+  \item Mejora $XN$ y la recaudación fiscal.
+\end{itemize}
+\end{frame}
+
+% =========================
+% CERTAMEN 2, 2023
+% =========================
+
+\section{Certamen 2, 2023}
+
+% 2023 P1 Enunciado
+\begin{frame}{Certamen 2 2023 -- Pregunta 1}{Enunciado}
+\small
+Suponga una economía:
+\[
+C = 600 + 0{,}7(Y - T + TR),\quad
+I = 350 - 15i,\quad
+G = 300,\quad
+XN = 100,
+\]
+\[
+TR = 100,\quad
+T = 0{,}2Y,\quad
+L^D = 0{,}5Y - 10i,\quad
+\frac{M}{P} = 1500.
+\]
+
+\begin{enumerate}[label=\alph*)]
+  \item Encuentre el nivel de producción final y la tasa de interés en el equilibrio de corto plazo.
+  \item ¿Cómo cambian estos valores si la inversión autónoma baja de 350 a 300?
+\end{enumerate}
+\end{frame}
+
+% 2023 P1 Blanco
+\begin{frame}{Certamen 2 2023 -- Pregunta 1}
+  \vfill
+  \centering
+  \vfill
+\end{frame}
+
+% 2023 P1 Pauta
+\begin{frame}{Certamen 2 2023 -- Pregunta 1}{Pauta resumida}
+\small
+\textbf{(a) Equilibrio inicial}
+\[
+Y_D = 0{,}8Y + 100,\quad
+C = 670 + 0{,}56Y.
+\]
+\[
+Y = C + I + G + XN
+\Rightarrow
+Y = 1420 + 0{,}56Y - 15i
+\Rightarrow 0{,}44Y = 1420 - 15i.
+\]
+LM:
+\[
+1500 = 0{,}5Y - 10i.
+\]
+
+Resolviendo el sistema:
+\[
+Y \approx 3084,\quad i \approx 4{,}20.
+\]
+
+\textbf{(b) Menor inversión autónoma $I = 300 - 15i$}
+\[
+0{,}44Y = 1370 - 15i,
+\quad
+1500 = 0{,}5Y - 10i.
+\]
+\[
+Y \approx 3042,\quad i \approx 2{,}10.
+\]
+
+\textbf{Comentario:} pequeña caída de $Y$, fuerte caída de $i$.
+\end{frame}
+
+% 2023 P2 Enunciado
+\begin{frame}{Certamen 2 2023 -- Pregunta 2}{Enunciado}
+\small
+Considere:
+\begin{itemize}
+  \item Modelo de determinación de la renta (aspa keynesiana).
+  \item Modelo IS--LM.
+  \item Modelo DA--OA.
+\end{itemize}
+
+\begin{enumerate}[label=\alph*)]
+  \item Compare el impacto de un aumento de $G$ sobre $Y$ en el aspa vs IS--LM.
+  \item Compare el impacto de un aumento de $G$ sobre $Y$ en IS--LM vs DA--OA.
+  \item Justifique adecuadamente sus respuestas (puede usar gráficos). Excluya casos con curvas perfectamente horizontales o verticales.
+\end{enumerate}
+\end{frame}
+
+% 2023 P2 Blanco
+\begin{frame}{Certamen 2 2023 -- Pregunta 2}
+  \vfill
+  \centering
+  \vfill
+\end{frame}
+
+% 2023 P2 Pauta
+\begin{frame}{Certamen 2 2023 -- Pregunta 2}{Pauta conceptual}
+\small
+\textbf{(a) Aspa vs IS--LM}
+\begin{itemize}
+  \item Aspa: tasa de interés fija, sin mercado de activos.
+  \[
+  \Delta Y = \frac{1}{1 - c(1-t)}\Delta G.
+  \]
+  \item IS--LM: $\uparrow G \Rightarrow$ IS derecha, pero $\uparrow i \Rightarrow \downarrow I$ (crowding out).
+\end{itemize}
+\[
+|\Delta Y|_{\text{Aspa}} > |\Delta Y|_{\text{IS--LM}}.
+\]
+
+\textbf{(b) IS--LM vs DA--OA}
+\begin{itemize}
+  \item IS--LM: precios fijos, freno solo por tasas de interés.
+  \item DA--OA: $\uparrow G \Rightarrow$ DA derecha, suben $Y$ y $P$; $\uparrow P$ reduce $M/P$ y desplaza LM hacia arriba.
+\end{itemize}
+\[
+|\Delta Y|_{\text{IS--LM}} > |\Delta Y|_{\text{DA--OA}}.
+\]
+\end{frame}
+
+\begin{frame}{Certamen 2 2023 -- Pregunta 2}{Pauta conceptual (síntesis)}
+\small
+\textbf{Orden de mayor a menor impacto de $\Delta G$ sobre $Y$}:
+\[
+|\Delta Y|_{\text{Aspa}} > |\Delta Y|_{\text{IS--LM}} > |\Delta Y|_{\text{DA--OA}}.
+\]
+
+\begin{itemize}
+  \item Aspa: no hay mercados de activos ni ajuste de precios.
+  \item IS--LM: se introduce el crowding out vía tasa de interés.
+  \item DA--OA: se agrega además el ajuste de precios y saldos reales.
+\end{itemize}
+\end{frame}
+
+\end{document}

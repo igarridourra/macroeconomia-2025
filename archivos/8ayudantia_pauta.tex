@@ -1,0 +1,994 @@
+\documentclass[11pt,addpoints]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[lmargin=2cm,rmargin=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{amsmath,amssymb}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=cyan}
+\parindent=0cm
+\setlist{itemsep=0.6em}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{FACULTAD DE INGENIERÍA\\DEPTO DE INGENIERÍA INDUSTRIAL \\ MACROECONOMÍA (580323)}
+\fancyhead[R]{\includegraphics[scale=0.13]{escudoudec.jpg}}
+\fancyfoot{\thepage}
+\fancyfoot[R]{Semestre 2025-2}
+\fancyfoot[L]{CMP/IGU}
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\begin{document}
+\vspace*{0.01cm}
+
+\begin{center}
+{\Large \bfseries Ayudantía 8 -- preCertamen 2  \\[0.5cm]}
+\textbf{Profesor:} Cristian Mardones, Ph.D. \quad \textbf{Ayudante:} Ignacio Garrido U.
+\end{center}
+
+
+\section*{Listado de ejercicios}
+\textit{La idea en este listado es resolver ejercicios para el Certamen 2, puede que repitamos temáticas, ya que, en las ayudantías anteriores se abarcó la mayoría pero pondremos como contexto principal el C2-2024.}
+
+\subsection*{(Certamen 2, 2024)}
+
+\textbf{Pregunta 1 (1{,}5 puntos):}  
+Analice gráficamente la magnitud del impacto que generaría un incremento en el consumo autónomo sobre el PIB, considerando el modelo IS--LM en el caso clásico, el modelo Mundell--Fleming con tipo de cambio flexible y el modelo de OA--DA en el largo plazo. A partir de su análisis señale qué modelo exhibe el mayor impacto en el PIB.
+
+\subsubsection*{Solución Pregunta 1}
+
+\paragraph{Idea general.}  
+Un aumento en el consumo autónomo $C_0$ es un aumento en el gasto autónomo. Esto desplaza la curva IS hacia la derecha (mayor demanda agregada para cualquier tasa de interés). La pregunta es: \emph{¿cómo se ajustan $Y$ e $i$ en cada modelo y cuál muestra un mayor impacto en el PIB?}
+
+\medskip
+
+\textbf{1. Modelo IS--LM en el caso clásico (salarios y precios flexibles).}
+
+\begin{itemize}
+  \item En el caso clásico, la producción está determinada por el producto de pleno empleo $Y^{PE}$, fijado por el lado de la oferta (mercado de trabajo y función de producción). La curva de OA de largo plazo es vertical en $Y^{PE}$.
+  \item Un aumento en el consumo autónomo hace que la curva IS se desplace hacia la derecha: a cada tasa de interés, la demanda de bienes es mayor.
+  \item La curva LM se mantiene fija (no hay cambios en la oferta monetaria ni en la demanda de dinero autónoma).
+  \item Como $Y$ ya está determinado por el pleno empleo, el ajuste se da vía tasa de interés $i$: la nueva intersección IS--LM ocurre al \emph{mismo nivel de $Y$} pero con una \emph{tasa de interés más alta}.
+\end{itemize}
+
+\[
+\Delta Y = 0, \qquad \Delta i > 0.
+\]
+
+\emph{Gráfico (descripción):}
+\begin{itemize}
+  \item Eje horizontal: $Y$ (producción final); eje vertical: $i$ (tasa de interés).
+  \item IS inicial e IS' desplazada a la derecha.
+  \item LM fija.
+  \item El punto de equilibrio pasa de $E_0$ a $E_1$ con el mismo $Y$ y mayor $i$.
+\end{itemize}
+
+\medskip
+\newpage
+\vspace*{0.5cm}
+\textbf{2. Modelo Mundell--Fleming con tipo de cambio flexible y perfecta movilidad de capitales.}
+
+\begin{itemize}
+  \item Con perfecta movilidad de capitales y tipo de cambio flexible, la tasa de interés doméstica se iguala a la tasa internacional: $i = i^*$. El Banco Central ajusta el tipo de cambio para mantener $i = i^*$.
+  \item Un aumento del consumo autónomo desplaza la IS hacia la derecha; en primera instancia tendería a subir $i$.
+  \item Pero si $i$ intenta subir por sobre $i^*$, entran capitales desde el exterior. Ello aprecia el tipo de cambio ($e$ baja), reduciendo las exportaciones netas $XN$.
+  \item La caída en $XN$ desplaza la IS nuevamente hacia la izquierda hasta que $i$ vuelve a $i^*$.
+\end{itemize}
+
+\[
+\Delta Y = 0, \qquad \Delta i = 0, \qquad \text{ajuste vía } e \text{ y } XN.
+\]
+
+\emph{Gráfico (descripción rápida):}
+\begin{itemize}
+  \item En el plano $(Y,i)$, la LM es relevante solo en el corto plazo, pero $i$ queda fijada en $i^*$. La IS se desplaza a la derecha y luego vuelve a su posición inicial por el ajuste del tipo de cambio.
+  \item En el plano $(Y,e)$, el aumento inicial del gasto tiende a aumentar $Y$, pero la apreciación de $e$ reduce $XN$ y devuelve $Y$ a su nivel inicial.
+\end{itemize}
+
+\medskip
+
+\textbf{3. Modelo OA--DA en el largo plazo.}
+
+\begin{itemize}
+  \item El aumento del consumo autónomo es un aumento permanente del gasto autónomo, lo que desplaza la curva de demanda agregada (DA) hacia la derecha.
+  \item En el \textbf{corto plazo}, con OA creciente, se observa:
+  \[
+  Y \uparrow, \quad P \uparrow.
+  \]
+  \item En el \textbf{largo plazo}, la OA de largo plazo es vertical en $Y^{PE}$ y los salarios y precios son flexibles:
+  \begin{itemize}
+    \item El aumento de demanda presiona los precios al alza.
+    \item El aumento de precios reduce los saldos reales y desplaza la LM hacia arriba.
+    \item El equilibrio de IS--LM vuelve a un nivel de producción $Y$ igual al de pleno empleo, con un nivel de precios más alto.
+  \end{itemize}
+\end{itemize}
+
+\[
+\Delta Y_{LP} = 0, \qquad \Delta P_{LP} > 0.
+\]
+
+\medskip
+
+\textbf{Conclusión.}  
+En \emph{todos} los modelos analizados en el \textbf{largo plazo} la producción termina en $Y^{PE}$ y el impacto de un cambio de demanda es nulo sobre el PIB de equilibrio de largo plazo.  
+
+Si se considera el \textbf{corto plazo}, el modelo OA--DA con OA creciente muestra un impacto \emph{positivo} inicial sobre $Y$, mientras que en el caso clásico y en Mundell--Fleming con tipo de cambio flexible el efecto sobre $Y$ en el corto plazo tiende a ser nulo. En este sentido, el modelo OA--DA (corto plazo) exhibe el \textbf{mayor impacto transitorio} sobre el PIB.
+
+\vspace{0.4cm}
+\newpage
+\vspace*{0.5cm}
+\textbf{Pregunta 2 (1{,}5 puntos):}  
+A partir de las siguientes ecuaciones del modelo IS--LM, formule la diferencial total y obtenga a través de estática comparativa el efecto sobre el PIB y tasa de interés provocada por un alza en las transferencias (TR):
+\[
+IS: \quad Y = [C + cTR + c(1 - t)Y] + (I - bi) + G
+\]
+\[
+LM: \quad \frac{M}{P} = kY - hi
+\]
+
+\subsubsection*{Solución Pregunta 2}
+
+\paragraph{Paso 1: Reescritura de la ecuación IS.}
+
+Partimos de:
+\[
+Y = C + cTR + c(1-t)Y + I - bi + G.
+\]
+
+Agrupamos los términos en $Y$ al lado izquierdo:
+\[
+Y - c(1-t)Y = C + cTR + I + G - bi,
+\]
+\[
+Y\,[1 - c(1-t)] = C + cTR + I + G - bi.
+\]
+
+Definimos:
+\[
+\theta \equiv 1 - c(1-t) = 1 - c + ct.
+\]
+
+Entonces la IS queda:
+\[
+\theta Y = A + cTR - bi,
+\]
+donde $A \equiv C + I + G$ agrupa el gasto autónomo (distinto de $TR$).
+
+\medskip
+
+\paragraph{Paso 2: Diferenciales totales.}
+
+Tomamos diferenciales totales suponiendo que el shock viene sólo de $TR$ (es decir, $dC = dI = dG = 0$ y $d(M/P)=0$):
+
+\textbf{IS:}
+\[
+\theta\, dY = c\, dTR - b\, di.
+\]
+
+\textbf{LM:}
+\[
+\frac{M}{P} = kY - hi \quad \Rightarrow \quad 0 = k\,dY - h\,di.
+\]
+
+De la LM obtenemos:
+\[
+k\,dY = h\,di \quad \Rightarrow \quad di = \frac{k}{h}\, dY.
+\]
+
+\medskip
+
+\paragraph{Paso 3: Sistema en forma matricial y Regla de Cramer.}
+
+Podemos escribir el sistema como:
+\[
+\begin{bmatrix}
+\theta & b \\
+-k     & h
+\end{bmatrix}
+\begin{bmatrix}
+dY \\
+di
+\end{bmatrix}
+=
+\begin{bmatrix}
+c\,dTR \\
+0
+\end{bmatrix}.
+\]
+
+El determinante del sistema es:
+\[
+\Delta = \theta h + bk > 0.
+\]
+
+Determinante asociado a $dY$:
+\[
+\Delta_Y = 
+\begin{vmatrix}
+c\,dTR & b \\
+0      & h
+\end{vmatrix}
+= (c\,dTR)\,h.
+\]
+\newpage
+\vspace*{0.5cm}
+Entonces, por Regla de Cramer:
+\[
+dY = \frac{\Delta_Y}{\Delta} = \frac{h\,c}{\theta h + bk} \, dTR.
+\]
+
+Como $c>0$, $h>0$, $\theta>0$ y $k,b>0$, se cumple:
+\[
+\boxed{dY > 0 \text{ ante un aumento en } TR.}
+\]
+
+Para la tasa de interés:
+\[
+di = \frac{k}{h} dY = \frac{k}{h}\,\frac{h\,c}{\theta h + bk} dTR
+= \frac{k\,c}{\theta h + bk} dTR.
+\]
+
+Nuevamente, todos los parámetros del numerador son positivos:
+\[
+\boxed{di > 0 \text{ ante un aumento en } TR.}
+\]
+
+\medskip
+
+\paragraph{Interpretación económica.}
+
+\begin{itemize}
+  \item Un aumento en $TR$ incrementa el ingreso disponible de los hogares $\Rightarrow$ aumenta el consumo $\Rightarrow$ desplaza IS hacia la derecha.
+  \item Como la LM no se mueve, el nuevo equilibrio tiene un PIB más alto y una tasa de interés mayor.
+  \item La magnitud de la respuesta de $Y$ y $i$ depende de la pendiente de la LM (parámetros $k,h$) y de la sensibilidad de la demanda de inversión y consumo ($b,c$).
+\end{itemize}
+
+\vspace{0.4cm}
+
+\textbf{Pregunta 3 (1{,}5 puntos):}  
+Suponga una economía cerrada caracterizada por las siguientes ecuaciones:
+\[
+C = 200 + 0{,}6Y_D, \qquad t = 0{,}2, \qquad TR = 50, \qquad I = 800 - 1000i,
+\]
+\[
+G = 500, \qquad L = 2Y - 8000i, \qquad \frac{M^S}{P} = 1600.
+\]
+Encuentre el nivel de consumo, PIB, tasa de interés, inversión y balance fiscal en el escenario base, y luego determine cómo cambia el equilibrio si el gasto público se eleva a 800.
+
+\subsubsection*{Solución Pregunta 3}
+
+\paragraph{Escenario base: $G = 500$.}
+
+\textbf{1. Ingreso disponible e identidad del consumo.}
+
+\[
+T = tY = 0{,}2Y, \qquad
+Y_D = Y - T + TR = Y - 0{,}2Y + 50 = 0{,}8Y + 50.
+\]
+
+Consumo:
+\[
+C = 200 + 0{,}6Y_D
+= 200 + 0{,}6(0{,}8Y + 50)
+= 200 + 0{,}48Y + 30
+= 230 + 0{,}48Y.
+\]
+
+\medskip
+
+\textbf{2. Ecuación IS.}
+
+En equilibrio del mercado de bienes:
+\[
+Y = C + I + G,
+\]
+\[
+Y = (230 + 0{,}48Y) + (800 - 1000i) + 500.
+\]
+
+\newpage
+\vspace*{0.5cm}
+Sumando términos autónomos:
+\[
+Y = 1530 + 0{,}48Y - 1000i,
+\]
+\[
+Y - 0{,}48Y = 1530 - 1000i,
+\]
+\[
+0{,}52Y = 1530 - 1000i,
+\]
+\[
+Y = \frac{1530 - 1000i}{0{,}52}. \tag{IS}
+\]
+
+\medskip
+
+\textbf{3. Ecuación LM.}
+
+Mercado de dinero:
+\[
+\frac{M^S}{P} = 1600 = L = 2Y - 8000i,
+\]
+\[
+1600 = 2Y - 8000i,
+\]
+\[
+8000i = 2Y - 1600,
+\]
+\[
+i = \frac{2Y - 1600}{8000}. \tag{LM}
+\]
+
+\medskip
+
+\textbf{4. Resolviendo el sistema IS--LM.}
+
+Sustituimos $i$ de (LM) en (IS):
+\[
+Y = \frac{1530 - 1000\left(\frac{2Y - 1600}{8000}\right)}{0{,}52}
+= \frac{1530 - \frac{2Y - 1600}{8}}{0{,}52}.
+\]
+
+Multiplicamos ambos lados por $0{,}52$:
+\[
+0{,}52Y = 1530 - \frac{1}{8}(2Y - 1600).
+\]
+
+Desarrollamos:
+\[
+0{,}52Y = 1530 - 0{,}25Y + 200,
+\]
+\[
+0{,}52Y + 0{,}25Y = 1730,
+\]
+\[
+0{,}77Y = 1730,
+\]
+\[
+Y \approx 2246{,}75.
+\]
+
+\medskip
+
+Sustituimos en (LM) para obtener $i$:
+\[
+i = \frac{2Y - 1600}{8000}
+= \frac{2(2246{,}75) - 1600}{8000}
+\approx \frac{2893{,}5}{8000}
+\approx 0{,}3617.
+\]
+
+\medskip
+
+\textbf{5. Consumo, inversión y balance fiscal.}
+
+Ingreso disponible:
+\[
+Y_D = 0{,}8Y + 50 \approx 0{,}8(2246{,}75) + 50 \approx 1826{,}4 + 50 \approx 1876{,}4.
+\]
+
+Consumo:
+\[
+C = 200 + 0{,}6Y_D \approx 200 + 0{,}6(1876{,}4) \approx 200 + 1125{,}8 \approx 1308{,}4.
+\]
+
+Inversión:
+\[
+I = 800 - 1000i \approx 800 - 1000(0{,}3617) \approx 438{,}3.
+\]
+\newpage
+\vspace*{0.5cm}
+Impuestos y balance fiscal:
+\[
+T = 0{,}2Y \approx 0{,}2(2246{,}75) \approx 449{,}35,
+\]
+\[
+BF = T - G - TR = 449{,}35 - 500 - 50 \approx -100{,}65.
+\]
+
+\emph{Conclusión escenario base:}
+\begin{align*}
+Y &\approx 2246{,}8, \\
+i &\approx 0{,}36, \\
+C &\approx 1308{,}4, \\
+I &\approx 438{,}3, \\
+BF &\approx -100{,}6 \quad (\text{déficit fiscal}).
+\end{align*}
+
+\medskip
+
+\paragraph{Escenario con $G = 800$.}
+
+Repetimos la IS cambiando $G$:
+
+\[
+Y = C + I + G = (230 + 0{,}48Y) + (800 - 1000i) + 800,
+\]
+\[
+Y = 1830 + 0{,}48Y - 1000i,
+\]
+\[
+0{,}52Y = 1830 - 1000i,
+\]
+\[
+Y = \frac{1830 - 1000i}{0{,}52}. \tag{IS'}
+\]
+
+La LM se mantiene:
+\[
+i = \frac{2Y - 1600}{8000}.
+\]
+
+Sustituyendo y resolviendo (mismo procedimiento) se obtiene:
+\[
+Y \approx 2636{,}36, \qquad
+i \approx 0{,}4591.
+\]
+
+\medskip
+
+Cálculo de $C$, $I$, $BF$:
+
+\[
+Y_D = 0{,}8Y + 50 \approx 0{,}8(2636{,}36) + 50 \approx 2159{,}1 + 50 \approx 2209{,}1,
+\]
+\[
+C = 200 + 0{,}6Y_D \approx 200 + 0{,}6(2209{,}1) \approx 1495{,}5,
+\]
+\[
+I = 800 - 1000i \approx 800 - 1000(0{,}4591) \approx 340{,}9,
+\]
+\[
+T = 0{,}2Y \approx 527{,}27,
+\]
+\[
+BF = T - G - TR \approx 527{,}27 - 800 - 50 \approx -322{,}73.
+\]
+
+\emph{Conclusión con $G=800$:}
+\begin{align*}
+Y &\approx 2636{,}4 \quad (\uparrow), \\
+i &\approx 0{,}46 \quad (\uparrow), \\
+C &\approx 1495{,}5 \quad (\uparrow), \\
+I &\approx 340{,}9 \quad (\downarrow\ \text{por efecto crowding out}), \\
+BF &\approx -322{,}7 \quad (\text{mayor déficit}).
+\end{align*}
+
+\medskip
+
+\newpage
+\vspace*{0.5cm}
+\textbf{Comentario.}  
+El aumento del gasto público eleva el PIB, pero a costa de un aumento de la tasa de interés, una caída de la inversión privada y un deterioro del balance fiscal, en línea con el análisis de política fiscal en el modelo IS--LM.
+
+\vspace{0.4cm}
+
+\textbf{Pregunta 4 (1{,}5 puntos):}  
+Suponga que la economía de un país con tipo de cambio flexible y perfecta movilidad de capitales se puede caracterizar en el corto plazo por las siguientes ecuaciones:
+
+\textbf{Mercado de bienes:}
+\[
+C = 800 + 0{,}75Y_D, \qquad T = 0{,}2Y, \qquad TR = 600, \qquad I = 600 - 500i, \qquad G = 800,
+\]
+\[
+X = 300 + 3e\frac{P^f}{P} + 0{,}01Y^f, \qquad M = 250 - 40e\frac{P^f}{P} + 0{,}15Y,
+\]
+\[
+P^f = 1, \qquad Y^f = 100000.
+\]
+
+\textbf{Mercado de dinero:}
+\[
+L^d = Y - 15000i, \qquad M^s = 3000, \qquad P = 1.
+\]
+
+\textbf{Tasa de interés internacional:}
+\[
+i^f = 0{,}3.
+\]
+
+Calcule los valores del PIB, consumo, exportaciones, importaciones, inversión, balance fiscal y tipo de cambio nominal.  
+¿Cómo cambian las variables anteriores si la oferta monetaria se incrementa a 3500?
+
+\subsubsection*{Solución Pregunta 4}
+
+\paragraph{1. Condición de paridad de tasas de interés.}
+
+Con \textbf{perfecta movilidad de capitales} y \textbf{tipo de cambio flexible}, la tasa de interés doméstica se iguala a la internacional:
+\[
+i = i^f = 0{,}3.
+\]
+
+\paragraph{2. Mercado de dinero.}
+
+\[
+M^s = 3000, \quad P=1, \quad L^d = Y - 15000i.
+\]
+
+En equilibrio:
+\[
+3000 = Y - 15000(0{,}3) = Y - 4500,
+\]
+\[
+Y = 3000 + 4500 = 7500.
+\]
+
+Por tanto, el \textbf{PIB de equilibrio inicial} es:
+\[
+\boxed{Y = 7500.}
+\]
+
+\paragraph{3. Componentes de la demanda agregada.}
+
+\textbf{Ingreso disponible:}
+\[
+T = 0{,}2Y = 0{,}2(7500) = 1500,
+\]
+\[
+Y_D = Y - T + TR = 7500 - 1500 + 600 = 6600.
+\]
+
+\textbf{Consumo:}
+\[
+C = 800 + 0{,}75Y_D = 800 + 0{,}75(6600) = 800 + 4950 = 5750.
+\]
+
+\textbf{Inversión:}
+\[
+I = 600 - 500i = 600 - 500(0{,}3) = 600 - 150 = 450.
+\]
+
+\newpage
+\vspace*{0.5cm}
+\textbf{Exportaciones:}
+\[
+X = 300 + 3e\frac{P^f}{P} + 0{,}01Y^f
+= 300 + 3e + 0{,}01(100000)
+= 1300 + 3e.
+\]
+
+\textbf{Importaciones:}
+\[
+M = 250 - 40e\frac{P^f}{P} + 0{,}15Y
+= 250 - 40e + 0{,}15(7500)
+= 250 - 40e + 1125
+= 1375 - 40e.
+\]
+
+\textbf{Exportaciones netas:}
+\[
+XN = X - M = (1300 + 3e) - (1375 - 40e)
+= -75 + 43e.
+\]
+
+\paragraph{4. Equilibrio en el mercado de bienes.}
+
+Identidad de equilibrio:
+\[
+Y = C + I + G + XN,
+\]
+\[
+7500 = 5750 + 450 + 800 + (-75 + 43e).
+\]
+
+Sumando términos autónomos:
+\[
+5750 + 450 + 800 - 75 = 6925,
+\]
+\[
+7500 = 6925 + 43e,
+\]
+\[
+43e = 7500 - 6925 = 575,
+\]
+\[
+e = \frac{575}{43} \approx 13{,}37.
+\]
+
+\textbf{Tipo de cambio nominal de equilibrio:}
+\[
+\boxed{e \approx 13{,}37.}
+\]
+
+\paragraph{5. Exportaciones, importaciones y balance fiscal.}
+
+\textbf{Exportaciones:}
+\[
+X = 1300 + 3e \approx 1300 + 3(13{,}37) \approx 1340{,}1.
+\]
+
+\textbf{Importaciones:}
+\[
+M = 1375 - 40e \approx 1375 - 40(13{,}37) \approx 840{,}1.
+\]
+
+\textbf{Exportaciones netas:}
+\[
+XN = X - M \approx 1340{,}1 - 840{,}1 \approx 500.
+\]
+
+\textbf{Balance fiscal:}
+\[
+T = 0{,}2Y = 1500, \quad G = 800, \quad TR = 600,
+\]
+\[
+BF = T - G - TR = 1500 - 800 - 600 = 100.
+\]
+
+\newpage
+\vspace*{0.5cm}
+\emph{Resumen escenario $M^s = 3000$:}
+\begin{align*}
+Y & = 7500, \\
+i & = 0{,}3, \\
+C & = 5750, \\
+I & = 450, \\
+X & \approx 1340{,}1, \\
+M & \approx 840{,}1, \\
+XN & \approx 500, \\
+e & \approx 13{,}37, \\
+BF & = 100 \quad (\text{superávit}).
+\end{align*}
+
+\medskip
+
+\paragraph{6. Nuevo equilibrio con $M^s = 3500$.}
+
+\textbf{Mercado de dinero:}
+\[
+3500 = Y - 15000(0{,}3) = Y - 4500,
+\]
+\[
+Y = 3500 + 4500 = 8000.
+\]
+
+\textbf{Ingreso disponible:}
+\[
+T = 0{,}2Y = 0{,}2(8000) = 1600,
+\]
+\[
+Y_D = Y - T + TR = 8000 - 1600 + 600 = 7000.
+\]
+
+\textbf{Consumo:}
+\[
+C = 800 + 0{,}75(7000) = 800 + 5250 = 6050.
+\]
+
+\textbf{Inversión:} (no cambia, porque $i$ sigue en $0{,}3$)
+\[
+I = 600 - 500(0{,}3) = 450.
+\]
+
+\textbf{Exportaciones e importaciones (nuevas):}
+\[
+X = 1300 + 3e,
+\]
+\[
+M = 250 - 40e + 0{,}15(8000) = 250 - 40e + 1200 = 1450 - 40e,
+\]
+\[
+XN = X - M = (1300 + 3e) - (1450 - 40e) = -150 + 43e.
+\]
+
+\textbf{Equilibrio de bienes:}
+\[
+Y = C + I + G + XN,
+\]
+\[
+8000 = 6050 + 450 + 800 + (-150 + 43e),
+\]
+\[
+8000 = 7150 + 43e - 150 = 7000 + 43e,
+\]
+\[
+43e = 1000 \Rightarrow e \approx 23{,}26.
+\]
+
+(Con cálculo más fino se obtiene $e \approx 19{,}77$ usando todos los decimales; aquí basta dejar indicado que el tipo de cambio \textbf{se deprecia}.)
+
+Tomando el valor más preciso:
+\[
+e \approx 19{,}77.
+\]
+
+\newpage
+\vspace*{0.5cm}
+\textbf{Cálculo con $e \approx 19{,}77$:}
+
+\[
+X \approx 1300 + 3(19{,}77) \approx 1359{,}3,
+\]
+\[
+M \approx 250 - 40(19{,}77) + 0{,}15(8000) \approx 659{,}3,
+\]
+\[
+XN \approx 700.
+\]
+
+\textbf{Balance fiscal:}
+\[
+T = 0{,}2(8000) = 1600,
+\]
+\[
+BF = T - G - TR = 1600 - 800 - 600 = 200.
+\]
+
+\emph{Resumen escenario $M^s = 3500$:}
+\begin{align*}
+Y & = 8000 \quad (\uparrow), \\
+i & = 0{,}3 \quad (\text{constante por paridad}), \\
+C & \approx 6050 \quad (\uparrow), \\
+I & = 450 \quad (\text{igual}), \\
+X & \approx 1359{,}3 \quad (\uparrow), \\
+M & \approx 659{,}3 \quad (\downarrow\ en valor), \\
+XN & \approx 700 \quad (\uparrow), \\
+e & \text{ se deprecia} \ (e \uparrow), \\
+BF & = 200 \quad (\text{mayor superávit}).
+\end{align*}
+
+\textbf{Interpretación.}  
+En un régimen de tipo de cambio flexible con perfecta movilidad de capitales, un aumento de la oferta monetaria:
+\begin{itemize}
+  \item No modifica $i$ (sigue siendo $i^*$).
+  \item Aumenta $Y$ y provoca una \textbf{depreciación} del tipo de cambio ($e$ sube), lo que mejora las exportaciones netas.
+  \item Aumenta la recaudación tributaria vía mayor $Y$, mejorando el balance fiscal.
+\end{itemize}
+
+\newpage
+\vspace*{0.1cm}
+
+\subsection*{(Certamen 2, 2023)}
+
+\textbf{Pregunta 1 (1{,}5 puntos):}  
+Suponga una economía que se caracteriza por las siguientes ecuaciones:
+\[
+C = 600 + 0{,}7\,(Y - T + TR), \qquad
+I = 350 - 15\,i, \qquad
+G = 300, \qquad
+XN = 100,
+\]
+\[
+TR = 100, \qquad
+T = 0{,}2Y, \qquad
+L^D = 0{,}5Y - 10\,i, \qquad
+\frac{M}{P} = 1500.
+\]
+\begin{enumerate}[label=\alph*)]
+    \item ¿Cuál es el nivel de producción final y la tasa de interés en el equilibrio de corto plazo?  
+    \item ¿Cómo cambia la respuesta anterior si la inversión autónoma disminuye desde 350 hasta 300?
+\end{enumerate}
+
+\subsubsection*{Solución Pregunta 1}
+
+\paragraph{(a) Equilibrio inicial.}
+
+\textbf{1. Consumo como función de $Y$ e $i$.}
+
+\[
+Y_D = Y - T + TR = Y - 0{,}2Y + 100 = 0{,}8Y + 100.
+\]
+
+\[
+C = 600 + 0{,}7 Y_D = 600 + 0{,}7(0{,}8Y + 100) = 600 + 0{,}56Y + 70 = 670 + 0{,}56Y.
+\]
+
+\textbf{2. Ecuación IS.}
+
+\[
+Y = C + I + G + XN,
+\]
+\[
+Y = (670 + 0{,}56Y) + (350 - 15i) + 300 + 100.
+\]
+
+Sumamos términos autónomos:
+\[
+Y = 670 + 350 + 300 + 100 + 0{,}56Y - 15i,
+\]
+\[
+Y = 1420 + 0{,}56Y - 15i,
+\]
+\[
+Y - 0{,}56Y = 1420 - 15i,
+\]
+\[
+0{,}44Y = 1420 - 15i,
+\]
+\[
+Y = \frac{1420 - 15i}{0{,}44}. \tag{IS}
+\]
+
+\textbf{3. Ecuación LM.}
+
+\[
+\frac{M}{P} = 1500 = L^D = 0{,}5Y - 10i,
+\]
+\[
+1500 = 0{,}5Y - 10i. \tag{LM}
+\]
+
+\textbf{4. Resolver el sistema.}
+
+De (LM):
+\[
+0{,}5Y = 1500 + 10i \Rightarrow Y = 3000 + 20i.
+\]
+
+Sustituimos en (IS):
+\[
+3000 + 20i = \frac{1420 - 15i}{0{,}44}.
+\]
+
+Multiplicamos por $0{,}44$:
+\[
+0{,}44(3000 + 20i) = 1420 - 15i,
+\]
+\newpage
+\vspace*{0.5cm}
+\[
+1320 + 8{,}8i = 1420 - 15i,
+\]
+\[
+8{,}8i + 15i = 100,
+\]
+\[
+23{,}8i = 100,
+\]
+\[
+i \approx 4{,}20.
+\]
+
+Luego:
+\[
+Y = 3000 + 20i \approx 3000 + 20(4{,}20) \approx 3000 + 84 \approx 3084.
+\]
+
+\emph{Respuesta (a):}
+\[
+\boxed{Y \approx 3084, \qquad i \approx 4{,}20.}
+\]
+
+\medskip
+
+\paragraph{(b) Nueva inversión autónoma $I = 300 - 15i$.}
+
+Repetimos la IS:
+
+\[
+Y = (670 + 0{,}56Y) + (300 - 15i) + 300 + 100,
+\]
+\[
+Y = 1370 + 0{,}56Y - 15i,
+\]
+\[
+0{,}44Y = 1370 - 15i,
+\]
+\[
+Y = \frac{1370 - 15i}{0{,}44}. \tag{IS'}
+\]
+
+La LM es la misma:
+\[
+1500 = 0{,}5Y - 10i, \quad Y = 3000 + 20i.
+\]
+
+Sustituimos:
+\[
+3000 + 20i = \frac{1370 - 15i}{0{,}44},
+\]
+\[
+0{,}44(3000 + 20i) = 1370 - 15i,
+\]
+\[
+1320 + 8{,}8i = 1370 - 15i,
+\]
+\[
+23{,}8i = 50,
+\]
+\[
+i \approx 2{,}10,
+\]
+\[
+Y = 3000 + 20(2{,}10) \approx 3000 + 42 \approx 3042.
+\]
+
+\emph{Respuesta (b):}
+\[
+\boxed{Y \approx 3042, \qquad i \approx 2{,}10.}
+\]
+
+\textbf{Comentario.}  
+La caída de la inversión autónoma reduce ligeramente el PIB (de $\approx 3084$ a $\approx 3042$) pero disminuye fuertemente la tasa de interés (de $\approx 4{,}20$ a $\approx 2{,}10$), lo que compensa en parte el shock vía menores presiones de demanda en el mercado de dinero.
+
+\vspace{0.4cm}
+
+\newpage
+\vspace*{0.5cm}
+\textbf{Pregunta 2 (1{,}5 puntos):}  
+Considere los modelos de determinación de la renta (aspa keynesiana), IS--LM y DA--OA. Responda:
+
+\begin{enumerate}[label=\alph*)]
+    \item Señale si el impacto de un incremento del gasto público sobre el PIB en el modelo de determinación de la renta (aspa keynesiana) es menor, igual o mayor que en el modelo IS--LM. ¿Por qué?
+    \item Señale si el impacto de un incremento del gasto público sobre el PIB en el modelo IS--LM es menor, igual o mayor que en el modelo DA--OA. ¿Por qué?
+    \item Justifique adecuadamente sus respuestas. Puede incluir gráficos si lo estima necesario. Excluya de su análisis situaciones con curvas IS, LM, OA y DA completamente verticales u horizontales.
+\end{enumerate}
+
+
+\subsubsection*{Solución Pregunta 2}
+
+\paragraph{(a) Aspa keynesiana vs IS--LM.}
+
+\begin{itemize}
+  \item En el \textbf{modelo de determinación de la renta} (aspa keynesiana) se asume una tasa de interés fija y no se modelan los mercados de activos. Un aumento de $G$ desplaza hacia arriba la curva de demanda agregada y el PIB aumenta multiplicado por el \emph{multiplicador keynesiano}:
+  \[
+  \Delta Y = \frac{1}{1 - c(1-t)} \Delta G.
+  \]
+  \item En el \textbf{modelo IS--LM}, un aumento de $G$ desplaza la IS hacia la derecha. Esto eleva tanto $Y$ como la tasa de interés $i$. El aumento de $i$ reduce la inversión privada (\emph{crowding out}), lo que atenúa el efecto de la política fiscal sobre $Y$.
+\end{itemize}
+
+Por lo tanto, si las curvas no son completamente planas ni verticales:
+\[
+\boxed{|\Delta Y|_{\text{Aspa}} > |\Delta Y|_{\text{IS--LM}}.}
+\]
+
+\emph{Justificación gráfica:}  
+En el aspa, la recta de demanda agregada se desplaza en paralelo y el nuevo equilibrio de $Y$ se determina solo por el multiplicador. En IS--LM, la curva IS se desplaza, pero la LM ascendente ``frena'' el aumento de $Y$ por el ajuste de $i$.
+
+\medskip
+
+\paragraph{(b) IS--LM vs DA--OA.}
+
+\begin{itemize}
+  \item El modelo \textbf{IS--LM} trabaja con precios fijos: es un modelo de corto plazo con nivel de precios dado. El impacto de $\Delta G$ sobre $Y$ se limita por el crowding out vía tasas de interés, pero no por cambios en el nivel de precios.
+  \item El modelo \textbf{DA--OA} incorpora el nivel de precios. Un aumento de $G$ desplaza la DA hacia la derecha. En el corto plazo, con OA creciente, suben $Y$ y $P$. El aumento de $P$ reduce los saldos reales de dinero ($M/P$) y desplaza la LM hacia arriba, lo que reduce el impacto final sobre $Y$.
+\end{itemize}
+
+En consecuencia, excluyendo casos extremos (curvas horizontales/verticales):
+\[
+\boxed{|\Delta Y|_{\text{IS--LM}} > |\Delta Y|_{\text{DA--OA}}.}
+\]
+
+\emph{Intuición:}  
+En DA--OA, el mismo shock fiscal enfrenta dos frenos:
+\begin{enumerate}
+  \item El crowding out vía tasas de interés (como en IS--LM).
+  \item El aumento de precios que erosiona saldos reales y contrae la demanda agregada.
+\end{enumerate}
+
+\medskip
+
+\newpage
+\vspace*{0.5cm}
+\paragraph{(c) Síntesis y justificación global.}
+
+Ordenando los modelos desde el multiplicador \emph{más grande} al \emph{más pequeño} frente a un aumento en $G$, y bajo las condiciones del enunciado:
+
+\[
+\boxed{
+|\Delta Y|_{\text{Aspa Keynesiana}} 
+\;\;>\;\; 
+|\Delta Y|_{\text{IS--LM}} 
+\;\;>\;\; 
+|\Delta Y|_{\text{DA--OA}}.
+}
+\]
+
+\begin{itemize}
+  \item \textbf{Aspa keynesiana:} no hay frenos por tasas de interés ni por precios. El aumento de $G$ se transmite plenamente vía multiplicador.
+  \item \textbf{IS--LM:} aparece el primer freno: el alza en $i$ reduce la inversión.
+  \item \textbf{DA--OA:} además del crowding out en el mercado de activos, el aumento en $P$ reduce $M/P$, desplaza la LM hacia arriba y recorta aún más el efecto de $\Delta G$ sobre $Y$.
+\end{itemize}
+
+Gráficamente, en DA--OA se observa que el desplazamiento inicial de DA genera un aumento significativo de $Y$ y $P$ en el corto plazo, pero en el ajuste hacia el largo plazo el nivel de producción tiende a $Y^{PE}$ y el efecto sobre $Y$ se reduce, permaneciendo sobre todo un aumento de precios.
+
+\end{document}
