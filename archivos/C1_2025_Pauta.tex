@@ -1,0 +1,303 @@
+\documentclass[11pt,addpoints]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[lmargin=2cm,rmargin=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=cyan}
+\parindent=0cm
+\setlist{itemsep=0.6em}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{FACULTAD DE INGENIERÍA\\DEPTO DE INGENIERÍA INDUSTRIAL \\ MACROECONOMÍA (580323)}
+\fancyhead[R]{\includegraphics[scale=0.13]{escudoudec.jpg}}
+\fancyfoot{\thepage}
+\fancyfoot[R]{Semestre 2025-2}
+\fancyfoot[L]{CMP/IGU}
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\begin{document}
+\vspace*{0.1cm}
+
+\begin{center}
+{\Large \bfseries Pauta Certamen N°1 – Macroeconomía \\[0.25cm]}
+\textbf{2° Semestre 2025}\\[0.3cm]
+\textbf{Profesor:} Dr. Cristian Mardones \textbf{Ayudante:} Ignacio Garrido U. (Autor Pauta)\\[0.2cm]
+\textbf{Fecha:} Viernes, 3 de octubre de 2025
+\end{center}
+
+\vspace{0.4cm}
+
+% ========================= PREGUNTA 1 =========================
+\textbf{PREGUNTA 1 (1,5 puntos)}\\
+\textbf{Solución:}\\
+La economía parte en equilibrio de corto plazo, con producción efectiva igual al producto potencial $Y^*$ y un nivel de precios $P_0$.
+
+\medskip
+\textbf{1) Aumento del gasto público y OA de corto plazo que gira (expectativas adaptativas).}
+
+\begin{itemize}
+  \item Un aumento del gasto público desplaza la DA hacia la derecha desde $\text{DA}_0$ a $\text{DA}_1$.
+  \item En el corto plazo, con precios rígidos o ajustes lentos, la OA de corto plazo (OA\_CP) es relativamente plana. El nuevo equilibrio se da en la intersección $\text{OA}_{CP}^0$–$\text{DA}_1$, donde:
+  \[
+    Y_1 > Y^*, \qquad P_1 > P_0.
+  \]
+  Hay una brecha de producto positiva y caída del desempleo.
+
+  \item Con el tiempo, el exceso de demanda y la menor tasa de desempleo generan presiones salariales al alza. Los costos aumentan y las firmas traspasan estos costos a precios:
+  \begin{itemize}
+    \item La OA de corto plazo va girando hacia arriba (o desplazándose hacia la izquierda) desde $\text{OA}_{CP}^0$ a $\text{OA}_{CP}^1$, $\text{OA}_{CP}^2$, etc.
+    \item La economía se desplaza a lo largo de la nueva DA ($\text{DA}_1$) hasta recuperar el producto potencial $Y^*$ en el largo plazo, pero con un nivel de precios más alto $P_{LP} > P_0$.
+  \end{itemize}
+\end{itemize}
+
+\textbf{Gráfico sugerido:}  
+Panel OA–DA con $P$ en el eje vertical y $Y$ en el horizontal. Dibujar $\text{DA}_0$, $\text{DA}_1$, $\text{OA}_{CP}^0$ y luego la secuencia de OA de corto plazo que va girando hacia arriba hasta cortar $\text{DA}_1$ en $Y^*$.
+
+\medskip
+\textbf{Conclusión (caso expectativas adaptativas):}
+\begin{itemize}
+  \item \textbf{Corto plazo:} el estímulo fiscal aumenta $Y$ y $P$.
+  \item \textbf{Mediano/largo plazo:} $Y$ vuelve a $Y^*$, pero el nivel de precios es permanentemente más alto. La política fiscal es efectiva transitoriamente sobre la producción.
+\end{itemize}
+
+\bigskip
+\textbf{2) OA con expectativas racionales (ajuste inmediato).}
+
+Ahora se asume que los agentes forman expectativas racionales y ajustan inmediatamente sus expectativas de inflación.
+
+\begin{itemize}
+  \item El anuncio de un mayor gasto público se interpreta como mayor demanda y mayor inflación futura.
+  \newpage
+  \vspace*{0.5cm}
+  \item Trabajadores y firmas anticipan esto y ajustan hoy precios y salarios nominales:
+  \begin{itemize}
+    \item La OA de corto plazo se desplaza (o gira) inmediatamente hacia arriba de modo que la economía pase casi directamente a un nuevo equilibrio con:
+    \[
+      Y \approx Y^*, \qquad P_1^{ER} > P_0.
+    \]
+  \end{itemize}
+  \item Gráficamente, la DA se desplaza hacia la derecha, pero simultáneamente la OA\_CP también se mueve hacia arriba, de manera que el nuevo punto de equilibrio se ubica muy cerca del producto potencial.
+\end{itemize}
+
+\textbf{Conclusión (caso expectativas racionales):}
+\begin{itemize}
+  \item El estímulo fiscal tiene poca o nula efectividad real sobre $Y$ incluso en el corto plazo.
+  \item El principal efecto es un aumento del nivel de precios (inflación), debido al ajuste inmediato de precios y salarios.
+\end{itemize}
+
+\textbf{Comparación:}
+\begin{itemize}
+  \item Con ajustes lentos / expectativas adaptativas, la política fiscal es efectiva transitoriamente sobre la producción.
+  \item Con expectativas racionales, la política fiscal pierde efectividad real y actúa principalmente sobre precios.
+\end{itemize}
+
+
+% ========================= PREGUNTA 2 =========================
+\textbf{PREGUNTA 2 (1,5 puntos)}\\
+\textbf{Solución:}\\
+
+Ecuaciones:
+\[
+\pi_t = \pi_{t-1} - 0{,}4(u_t - 0{,}08),
+\qquad
+\frac{Y_t - Y_t^*}{Y_t^*} = 0{,}03 - 0{,}5u_t.
+\]
+
+\begin{enumerate}[label=\alph*)]
+  \item \textbf{Tasa de desempleo natural.}\\[0.1cm]
+  La tasa de desempleo natural es aquella para la cual la inflación no cambia:
+  \[
+  \pi_t = \pi_{t-1}.
+  \]
+  En la ecuación de Phillips:
+  \[
+  \pi_t = \pi_{t-1} - 0{,}4(u_t - 0{,}08).
+  \]
+  Para inflación constante:
+  \[
+  0 = -0{,}4(u_t - 0{,}08)
+  \quad\Rightarrow\quad
+  u_t - 0{,}08 = 0
+  \quad\Rightarrow\quad
+  u_t = 0{,}08.
+  \]
+  Por lo tanto, la tasa de desempleo natural es:
+  \[
+  u^n = 8\%.
+  \]
+\newpage
+\vspace*{0.5cm}
+
+  \item \textbf{Tasa de desempleo requerida para reducir la inflación a 3,5\%.}\\[0.1cm]
+  Datos: $\pi_{t-1} = 4\% = 0{,}04$ y objetivo $\pi_t = 3{,}5\% = 0{,}035$.
+
+  Usamos:
+  \[
+  \pi_t = \pi_{t-1} - 0{,}4(u_t - 0{,}08).
+  \]
+  Sustituimos:
+  \[
+  0{,}035 = 0{,}04 - 0{,}4(u_t - 0{,}08).
+  \]
+  Restamos $0{,}04$ en ambos lados:
+  \[
+  -0{,}005 = -0{,}4(u_t - 0{,}08).
+  \]
+  Multiplicando por $-1$:
+  \[
+  0{,}005 = 0{,}4(u_t - 0{,}08)
+  \quad\Rightarrow\quad
+  u_t - 0{,}08 = \frac{0{,}005}{0{,}4} = 0{,}0125.
+  \]
+  Entonces:
+  \[
+  u_t = 0{,}08 + 0{,}0125 = 0{,}0925 = 9{,}25\%.
+  \]
+  Es decir, para reducir la inflación de 4\% a 3,5\% el Banco Central debe tolerar un aumento del desempleo hasta aproximadamente 9,25\%.
+
+  \item \textbf{¿La economía entra en recesión?}\\[0.1cm]
+  Usamos la ley de Okun:
+  \[
+  \frac{Y_t - Y_t^*}{Y_t^*} = 0{,}03 - 0{,}5u_t.
+  \]
+  Sustituimos $u_t = 0{,}0925$:
+  \[
+  \frac{Y_t - Y_t^*}{Y_t^*}
+  = 0{,}03 - 0{,}5(0{,}0925)
+  = 0{,}03 - 0{,}04625
+  = -0{,}01625.
+  \]
+  Esto equivale a un desvío negativo de producto de aproximadamente $-1{,}625\%$ respecto al producto potencial. Como $\dfrac{Y_t - Y_t^*}{Y_t^*} < 0$, la economía se encuentra con producto por debajo de su nivel potencial, lo que corresponde a una recesión (brecha de producto negativa).
+\end{enumerate}
+
+
+
+% ========================= PREGUNTA 3 =========================
+\textbf{PREGUNTA 3 (1,5 puntos)}\\
+\textbf{Solución:}\\
+
+Función de producción:
+\[
+Y_t = A_t K_t^{0{,}6} L_t^{0{,}4}.
+\]
+
+\textbf{1) Derivación de la tasa de crecimiento de la PTF.}
+
+Tomamos logaritmos:
+\[
+\ln Y_t = \ln A_t + 0{,}6 \ln K_t + 0{,}4 \ln L_t.
+\]
+
+Derivando con respecto al tiempo (o aproximando tasas de crecimiento):
+\[
+\frac{\dot Y_t}{Y_t}
+= \frac{\dot A_t}{A_t} + 0{,}6\frac{\dot K_t}{K_t} + 0{,}4\frac{\dot L_t}{L_t}.
+\]
+
+\newpage
+\vspace*{0.5cm}
+Denotando tasas de crecimiento por $g_Y, g_A, g_K, g_L$:
+\[
+g_Y = g_A + 0{,}6g_K + 0{,}4g_L.
+\]
+
+Despejamos la tasa de crecimiento de la productividad total de factores (PTF):
+\[
+\boxed{g_A = g_Y - 0{,}6g_K - 0{,}4g_L}.
+\]
+
+\medskip
+\textbf{2) Cálculo de $g_A$ por período.}
+
+Usamos:
+\[
+g_A = g_Y - 0{,}6g_K - 0{,}4g_L.
+\]
+
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Período} & $g_Y$ & $g_K$ & $g_L$ & $g_A$ \\ \midrule
+2001–2005 & 3{,}50 & 2{,}00 & 1{,}00 & $3{,}50 - 0{,}6(2{,}00) - 0{,}4(1{,}00)$ \\
+&&&& $= 3{,}50 - 1{,}20 - 0{,}40 = 1{,}90$ \\[0.1cm]
+2006–2010 & 2{,}80 & 1{,}80 & 0{,}80 & $2{,}80 - 0{,}6(1{,}80) - 0{,}4(0{,}80)$ \\
+&&&& $= 2{,}80 - 1{,}08 - 0{,}32 = 1{,}40$ \\[0.1cm]
+2011–2015 & 2{,}50 & 2{,}00 & 0{,}60 & $2{,}50 - 0{,}6(2{,}00) - 0{,}4(0{,}60)$ \\
+&&&& $= 2{,}50 - 1{,}20 - 0{,}24 = 1{,}06$ \\[0.1cm]
+2016–2020 & 2{,}40 & 2{,}20 & 0{,}50 & $2{,}40 - 0{,}6(2{,}20) - 0{,}4(0{,}50)$\\
+&&&& $= 2{,}40 - 1{,}32 - 0{,}20 = 0{,}88$ \\[0.1cm]
+2021–2025 & 2{,}20 & 2{,}00 & 1{,}00 & $2{,}20 - 0{,}6(2{,}00) - 0{,}4(1{,}00)$\\
+&&&& $= 2{,}20 - 1{,}20 - 0{,}40 = 0{,}60$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Observamos una tendencia decreciente en el crecimiento de la PTF: desde aproximadamente 1,9\% en 2001–2005 hasta 0,6\% en 2021–2025, lo que indica que cada vez más el crecimiento del PIB depende del aumento de factores y menos de ganancias de eficiencia.
+
+\vspace{0.5cm}
+% ========================= PREGUNTA 4 =========================
+\textbf{PREGUNTA 4 (1,5 puntos)}\\
+\textbf{Solución:}\\
+\begin{enumerate}[label=\alph*)]
+  \item \textbf{Curva afectada inicialmente y explicación.}\\[0.1cm]
+  El informe indica un aumento de los costos laborales. Esto implica:
+  \begin{itemize}
+    \item Aumento del costo marginal de las empresas.
+    \item Para cada nivel de producción, las firmas requieren un precio más alto para cubrir sus mayores costos.
+  \end{itemize}
+
+  En el modelo OA–DA, esto corresponde a un shock de oferta, que desplaza la:
+  \[
+  \text{OA de corto plazo hacia arriba/izquierda}.
+  \]
+  Por lo tanto, la curva inicialmente afectada es la Oferta Agregada (no la demanda), debido al encarecimiento de los costos de producción.
+
+\newpage
+\vspace*{0.5cm}
+
+  \item \textbf{Efectos en precios y producción en el mediano plazo.}\\[0.1cm]
+  Sin otras políticas:
+  \begin{itemize}
+    \item La OA de corto plazo se desplaza hacia la izquierda de $\text{OA}_{CP}^0$ a $\text{OA}_{CP}^1$.
+    \item Para una DA dada, el nuevo equilibrio se caracteriza por:
+    \[
+      P_1 > P_0, \qquad Y_1 < Y_0.
+    \]
+    Es decir, mayor nivel de precios (inflación de costos) y menor producción, con mayor desempleo.
+  \end{itemize}
+
+  En el mediano plazo, si no hay políticas que contrarresten el shock:
+  \begin{itemize}
+    \item Los salarios reales pueden ajustarse parcialmente (por ejemplo, mediante revisión de contratos, indexación incompleta, etc.).
+    \item Dependiendo de si el aumento de costos es \emph{permanente} o transitorio, la OA\_CP podría seguir ajustándose hasta converger a una nueva OA compatible con el producto potencial de largo plazo.
+  \end{itemize}
+
+  En un escenario donde el shock es persistente (costos laborales estructuralmente más altos), el resultado de mediano plazo es un nivel de precios más alto y un producto de equilibrio menor en comparación con la situación previa.
+
+  \item \textbf{Evolución en el largo plazo si salarios reales no bajan y hay desaliento laboral.}\\[0.1cm]
+  Si:
+  \begin{itemize}
+    \item Los salarios reales no se reducen lo suficiente para que las empresas aumenten la contratación, y
+    \item Parte de la población se desalienta y sale de la fuerza de trabajo,
+  \end{itemize}
+  entonces:
+  \begin{itemize}
+    \item La oferta de trabajo efectiva disminuye y la tasa de desempleo medida puede bajar por salida de personas, no por más empleo.
+    \item Se reduce el producto potencial de la economía $Y^*$.
+    \item En el modelo OA–DA esto se representa como un desplazamiento de la OA de largo plazo hacia la izquierda, reflejando una economía estructuralmente menos capaz de producir.
+  \end{itemize}
+
+  En síntesis, en el largo plazo la economía podría quedar atrapada en un escenario de menor producto potencial y menor empleo, con un nivel de precios más alto, si no se corrigen las rigideces que impiden el ajuste de salarios reales y la reinserción laboral de las personas desalentas.
+\end{enumerate}
+
+\end{document}

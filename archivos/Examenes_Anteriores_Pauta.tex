@@ -1,0 +1,960 @@
+\documentclass[11pt,addpoints]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[lmargin=2cm,rmargin=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=cyan}
+\parindent=0cm
+\setlist{itemsep=0.6em}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{FACULTAD DE INGENIERÍA\\DEPTO DE INGENIERÍA INDUSTRIAL \\ MACROECONOMÍA (580323)}
+\fancyhead[R]{\includegraphics[scale=0.13]{escudoudec.jpg}}
+\fancyfoot{\thepage}
+\fancyfoot[R]{Semestre 2025-2}
+\fancyfoot[L]{CMP/IGU}
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\begin{document}
+\vspace*{0.1cm}
+
+\begin{center}
+{\Large \bfseries Exámenes Anteriores – Macroeconomía \\[0.25cm]}
+\textbf{Compendio 2021, 2022, 2023}\\[0.3cm]
+\textbf{Profesor:} Dr. Cristian Mardones \textbf{Ayudante:} Ignacio Garrido U.
+\end{center}
+
+
+% ==========================================================
+% EXAMEN RECUPERATIVO 2021
+% ==========================================================
+%\newpage
+\section*{Examen Recuperativo 2021}
+
+\textbf{PREGUNTA 1 (1,5 puntos)}\\[0.2cm]
+Mencione cuál es la diferencia desde el punto de vista de la contabilidad nacional para las dos transacciones económicas de cada enunciado:
+
+\begin{enumerate}[label=\alph*)]
+\item Una empresa que compra combustible para que sus vendedores realicen reparto en camioneta y una empresa que le paga a sus vendedores un bono de monto equivalente para que ellos mismos compren el combustible.
+\item Usted decide comprar un pisco peruano en vez de un pisco chileno.
+\item Un hospital público que compra una jeringa y una familia que compra ese mismo tipo de jeringa en una farmacia.
+\end{enumerate}
+
+\textbf{Solución:}\\
+\begin{enumerate}[label=\alph*)]
+\item 
+\textit{Empresa compra combustible:} es un \textbf{insumo intermedio} para la producción de la empresa. No se registra como demanda final en el enfoque de gasto; solo afecta el PIB a través del \emph{valor agregado} de la empresa (el combustible se “consume” en el proceso productivo).\medskip
+
+\textit{Bono a vendedores para que ellos compren combustible:} el bono es \textbf{remuneración al trabajo} (ingreso de los hogares). Cuando los vendedores compran el combustible, éste se registra como \textbf{consumo privado} si se usa para desplazamientos personales. Por tanto:
+\begin{itemize}
+  \item en el primer caso, el combustible es consumo intermedio (no entra como $C$),
+  \item en el segundo, la compra aparece en el componente $C$ (consumo de los hogares) y el bono es ingreso laboral en la óptica de ingreso.
+\end{itemize}
+
+\item 
+En ambos casos hay \textbf{consumo privado} de pisco, pero:
+\begin{itemize}
+  \item Si compra pisco chileno: el gasto se registra como $C$ y se demanda producción interna; no hay importaciones asociadas.
+  \item Si compra pisco peruano: el gasto también es $C$, pero además se registra como \textbf{importación} ($M$). Al ser un bien importado, el efecto neto sobre el PIB es menor, pues el gasto en $C$ se “resta” por $M$ vía $Y = C + I + G + X - M$.
+\end{itemize}
+
+\item 
+\textit{Hospital público:} la compra de la jeringa es \textbf{consumo de gobierno} ($G$), dado que la realiza una institución pública para entregar servicios de salud no de mercado a la población.\medskip
+
+\textit{Familia:} la compra de la jeringa en farmacia se clasifica como \textbf{consumo privado} ($C$). En ambos casos aumenta la demanda final, pero en distinto componente: $G$ vs $C$.
+\end{enumerate}
+
+\newpage
+\vspace*{0.5cm}
+
+\textbf{PREGUNTA 2 (1,5 puntos)}\\[0.2cm]
+Utilice el modelo de OA y DA para graficar y explicar en el mediano plazo los cambios en el nivel de precios y producción final asociados a una reducción de la jornada laboral. Además, justifique si este es un shock de oferta o de demanda.
+
+\vspace{0.2cm}
+\textbf{Solución:}
+\begin{itemize}
+  \item Una reducción de la jornada laboral disminuye la \textbf{cantidad efectiva de trabajo disponible} para la producción. Para una misma dotación de capital y tecnología, el \textbf{PIB potencial} $Y^*$ se reduce.
+  \item En el modelo OA--DA, esto se representa como un desplazamiento de la \textbf{Oferta Agregada de largo plazo (OA\_LP)} hacia la izquierda (un menor $Y^*$).
+  \item En el corto plazo, dado el menor factor trabajo, también la \textbf{OA de corto plazo} se desplaza hacia arriba/izquierda: para cada nivel de PIB se requieren precios más altos (mayor costo unitario).
+\end{itemize}
+
+Gráficamente:
+\begin{itemize}
+  \item Inicialmente la economía está en el punto de equilibrio de largo plazo $(Y^*_0, P_0)$.
+  \item El shock desplaza OA\_CP y OA\_LP hacia la izquierda. Manteniendo la DA constante, el nuevo equilibrio de corto plazo tiene:
+  \[
+  Y_1 < Y^*_0,\qquad P_1 > P_0.
+  \]
+  \item En el mediano plazo, a medida que se ajustan las expectativas de precios y salarios nominales, la economía converge al nuevo PIB potencial más bajo $Y^*_1$ con un \textbf{nivel de precios permanentemente más alto}.
+\end{itemize}
+
+Por tanto, se trata de un \textbf{shock de oferta} (afecta la capacidad productiva y los costos), no de demanda.
+
+\vspace{0.4cm}
+
+\textbf{PREGUNTA 3 (1,5 puntos)}\\[0.2cm]
+Suponga que la economía se puede caracterizar por el modelo IS–LM.  
+Un nuevo gobierno decide reducir el gasto público en bienes y servicios para financiar un aumento en las transferencias de igual magnitud ($-\Delta G = +\Delta TR$). Determine y justifique si cambiaría el ingreso de equilibrio y el balance fiscal en este país.
+
+\vspace{0.2cm}
+\textbf{Solución:}\\[0.1cm]
+En el modelo IS–LM estándar:
+\[
+Y = \underbrace{C + I + G}_{\text{Demanda agregada}} + XN,
+\]
+con consumo
+\[
+C = C_0 + c(Y - T + TR),
+\]
+siendo $c$ la propensión marginal a consumir.
+
+\begin{itemize}
+  \item El multiplicador del gasto público es:
+  \[
+  \frac{\partial Y}{\partial G} = \frac{1}{1 - c(1 - t)} > 0.
+  \]
+  \newpage
+  \vspace*{0.5cm}
+  \item El multiplicador de las transferencias es:
+  \[
+  \frac{\partial Y}{\partial TR} = \frac{c}{1 - c(1 - t)} > 0.
+  \]
+\end{itemize}
+
+El cambio considerado es $-\Delta G = +\Delta TR$ (por ejemplo, $\Delta G = -10$, $\Delta TR = +10$). El efecto total sobre $Y$ es:
+\[
+\Delta Y 
+= \frac{\partial Y}{\partial G}\Delta G + \frac{\partial Y}{\partial TR}\Delta TR
+= \frac{1}{1 - c(1 - t)}\left(\Delta G + c\,\Delta TR\right).
+\]
+Con $\Delta TR = -\Delta G$:
+\[
+\Delta Y = \frac{1}{1 - c(1 - t)}\left(\Delta G + c(-\Delta G)\right)
+= \frac{\Delta G(1 - c)}{1 - c(1 - t)} < 0,
+\]
+pues $1 - c > 0$ y $\Delta G < 0$. El ingreso de equilibrio \textbf{disminuye}.
+
+\medskip
+Respecto al \textbf{balance fiscal} $B = T - TR - G$:
+\begin{itemize}
+  \item Si el ingreso no cambiara, el efecto directo de $-\Delta G = +\Delta TR$ sería neutro:
+  \[
+  \Delta B_{\text{directo}} = -\Delta TR - \Delta G = 0,
+  \]
+  porque la caída de $G$ se compensa exactamente con el alza en $TR$.
+  \item Sin embargo, como el ingreso $Y$ cae, la recaudación tributaria $T = tY$ disminuye, lo que \textbf{deteriora el balance fiscal}: el superávit se reduce o el déficit aumenta.
+\end{itemize}
+
+En resumen: el ingreso de equilibrio \textbf{baja} y el balance fiscal \textbf{se deteriora} debido a la caída recaudatoria.
+
+\vspace{0.4cm}
+
+\textbf{PREGUNTA 4 (1,5 puntos)}\\[0.2cm]
+Suponga que la economía de un país con tipo de cambio flexible y perfecta movilidad de capitales se puede caracterizar en el corto plazo por las siguientes ecuaciones:
+
+\medskip
+\textbf{Mercado de bienes:}
+\[
+C = 500 + 0{,}75Y_d, \qquad Y_d = Y - T + TR,
+\]
+\[
+T = 200 + 0{,}2Y, \qquad TR = 600,
+\]
+\[
+I = 800 - 50i, \qquad G = 600,
+\]
+\[
+X = 300 + 3e\frac{P^*}{P} + 0{,}01Y^*, \qquad
+M = 250 - 2e\frac{P^*}{P} + 0{,}15Y.
+\]
+
+\textbf{Mercado de dinero:}
+\[
+L^d = Y - 150i, \qquad M^s = 3000, \qquad P = 1.
+\]
+
+
+
+\textbf{Parámetros internacionales:}
+\[
+i^* = 10, \quad Y^* = 10000, \quad P^* = 1.
+\]
+
+\medskip
+Calcule los valores de PIB ($Y$), consumo ($C$), exportaciones ($X$), importaciones ($M$), inversión ($I$), balance fiscal y tipo de cambio nominal ($e$). Luego, suponga que las exportaciones autónomas suben de 300 a 400 y determine cómo cambian los valores anteriores.
+\newpage
+\vspace*{0.5cm}
+\textbf{Solución:}\\[0.1cm]
+Con \textbf{tipo de cambio flexible} y \textbf{movilidad perfecta de capitales}, la condición de equilibrio financiero implica:
+\[
+i = i^* = 10.
+\]
+
+\paragraph{1) Mercado de dinero.} 
+\[
+L^d = Y - 150i = M^s = 3000 \quad\Rightarrow\quad
+Y - 150\cdot 10 = 3000 \Rightarrow Y = 3000 + 1500 = 4500.
+\]
+
+\paragraph{2) Ingreso disponible, consumo e inversión.}
+\[
+T = 200 + 0{,}2Y = 200 + 0{,}2(4500) = 1100,
+\qquad
+TR = 600,
+\]
+\[
+Y_d = Y - T + TR = 4500 - 1100 + 600 = 4000,
+\]
+\[
+C = 500 + 0{,}75Y_d = 500 + 0{,}75(4000) = 3500,
+\]
+\[
+I = 800 - 50i = 800 - 50(10) = 300.
+\]
+
+\paragraph{3) Cuenta corriente y tipo de cambio.}
+Con $P^* = P = 1$ e $Y^* = 10000$:
+\[
+X = 300 + 3e + 0{,}01(10000) = 400 + 3e,
+\]
+\[
+M = 250 - 2e + 0{,}15Y = 250 - 2e + 0{,}15(4500) = 925 - 2e.
+\]
+Por tanto:
+\[
+XN = X - M = (400 + 3e) - (925 - 2e) = -525 + 5e.
+\]
+
+\textbf{Equilibrio de bienes}:
+\[
+Y = C + I + G + XN \Rightarrow
+4500 = 3500 + 300 + 600 + (-525 + 5e),
+\]
+\[
+4500 = 4400 - 525 + 5e = 3875 + 5e \Rightarrow
+5e = 625 \Rightarrow e = 125.
+\]
+
+Entonces:
+\[
+X = 400 + 3(125) = 775,\qquad
+M = 925 - 2(125) = 675,\qquad
+XN = 100.
+\]
+
+\paragraph{4) Balance fiscal.}
+\[
+B = T - TR - G = 1100 - 600 - 600 = -100,
+\]
+es decir, \textbf{déficit fiscal de 100}.
+
+\textbf{Resumen equilibrio inicial:}
+\[
+Y = 4500,\quad C = 3500,\quad I = 300,\quad
+X = 775,\quad M = 675,\quad XN = 100,\quad e = 125,\quad B = -100.
+\]
+\newpage
+\vspace*{0.5cm}
+\paragraph{5) Aumento de exportaciones autónomas: $X_0: 300 \to 400$.}
+
+Ahora:
+\[
+X = 400 + 3e + 0{,}01Y^* = 500 + 3e.
+\]
+\[
+XN = (500 + 3e) - (925 - 2e) = -425 + 5e.
+\]
+
+\begin{itemize}
+  \item En el mercado de dinero, nada cambia: $i = i^* = 10$ y $Y = 4500$ se mantienen.
+  \item El equilibrio de bienes exige:
+  \[
+  4500 = 3500 + 300 + 600 + (-425 + 5e) = 4400 - 425 + 5e = 3975 + 5e,
+  \]
+  \[
+  5e = 525 \Rightarrow e = 105.
+  \]
+\end{itemize}
+
+Por tanto:
+\[
+X' = 400 + 3(105) + 100 = 815,\qquad
+M' = 250 - 2(105) + 0{,}15(4500) = 715,\qquad
+XN' = 100.
+\]
+
+El nivel de PIB no cambia ($Y=4500$), pero el tipo de cambio se aprecia ($e$ baja de 125 a 105), lo que aumenta tanto exportaciones como importaciones en el mismo monto, dejando $XN$ constante.
+
+\medskip
+\textbf{Nuevo equilibrio:}
+\[
+Y' = 4500,\quad C' = 3500,\quad I' = 300,\quad
+X' = 815,\quad M' = 715,\quad XN' = 100,\quad e' = 105,\quad B' = -100.
+\]
+
+% ==========================================================
+% EXAMEN RECUPERATIVO 2022
+% ==========================================================
+\newpage
+\vspace*{0.1cm}
+\section*{Examen Recuperativo 2022}
+
+
+\textbf{PREGUNTA 1 (1,5 puntos)}\\[0.2cm]
+Explique y grafique con el modelo Mundell–Fleming cómo una disminución en la inversión autónoma afectaría a una pequeña economía abierta con tipo de cambio fijo y perfecta movilidad de capitales.  
+
+Describa cuidadosamente los efectos sobre el PIB y el consumo, la tasa de interés, el tipo de cambio nominal, el nivel de reservas internacionales y la oferta monetaria.
+
+\vspace{0.2cm}
+\textbf{Solución (de Pauta-Profesor):}
+\begin{itemize}
+  \item La caida en la inversion desplaza la curva IS hacia la izquierda, la tasa de interes domestica tiene presion a la baja, pero no puede estar bajo la tasa de interes internacional i* por mucho tiempo ya que se generar una masiva salida de capitales.
+  \item Asi que los inversionistas internacionales demandan dolares para salir del pais, la escasez de dolares genera presiones al alza del tipo de cambio, pero el precio del dolar no puede subir porque el tipo de cambio es fijo. En consecuencia, el banco central debe salir a vender dolares, disminuyendo sus reservas.
+  \item Al vender dolares y recibir moneda domestica la oferta monetaria se contrae, por lo cual la LM se desplaza a la izquierda. En el nuevo equilibrio el nivel de producto cae, las tasas de intereses se mantiene igual a la tasa internacional, el tipo de cambio permanece fijo, caen las reservas de dolares y la oferta monetaria disminuye.
+\end{itemize}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Examenes Anteriores/1_examen22.PNG}
+    \caption{Grafico de referencia para la pregunta 1.}
+    \label{fig:pib_chile}
+\end{figure}
+
+\vspace{0.4cm}
+
+\textbf{PREGUNTA 2 (1,5 puntos)}\\[0.2cm]
+Formule un modelo de crecimiento que le permita determinar cómo cambia el ingreso per cápita, consumo per cápita y capital per cápita en el equilibrio de muy largo plazo en un país que se enfrenta a una reduccion en la productividad y mayor destruccion de stock de capital producto de cambios climaticos extremos causados por el calentamiento global.
+\newpage
+\vspace*{0.5cm}
+
+\textbf{Solución (Pauta-Profesor):}\\[0.1cm]
+Utilizamos un modelo tipo \textbf{Solow} con progreso tecnológico exógeno:
+
+\begin{itemize}
+  \item Función de producción agregada:
+  \[
+  Y(t) = A(t) K(t)^\alpha [L(t)]^{1-\alpha},\qquad 0<\alpha<1.
+  \]
+  \item El capital per cápita efectivo:
+  \[
+  k(t) = \frac{K(t)}{A(t)L(t)},\qquad
+  y(t) = f(k) = k^\alpha.
+  \]
+  \item Ecuación de acumulación de capital:
+  \[
+  \dot{k} = s f(k) - (n + g + \delta)k,
+  \]
+  donde $s$ es la tasa de ahorro, $n$ el crecimiento poblacional, $g$ el crecimiento de la productividad $A(t)$ y $\delta$ la tasa de depreciación.
+\end{itemize}
+
+\paragraph{Choques climáticos:}
+\begin{enumerate}
+  \item \textbf{Reducción de la productividad}: caída de $A$ o de su tasa de crecimiento $g$. En términos de la función $f(k)$, un menor $A$ equivale a una \textbf{baja en $f(k)$} (menos producto para el mismo $k$).
+  \item \textbf{Mayor destrucción de capital}: se traduce en una mayor tasa de depreciación efectiva $\delta' > \delta$ (por eventos extremos que destruyen infraestructura, maquinaria, etc.).
+\end{enumerate}
+
+La nueva ecuación de acumulación es:
+\[
+\dot{k} = s f'(k) - (n + g' + \delta')k,
+\]
+con $f'(k) < f(k)$ y $g' \leq g$.
+
+
+\paragraph{Nuevo estado estacionario:}
+En el equilibrio de muy largo plazo:
+\[
+\dot{k} = 0 \Rightarrow s f'(k^*) = (n + g' + \delta')k^*.
+\]
+Dado el menor nivel de $f'(k)$ y el mayor término de depreciación total $(n+g'+\delta')$, el nuevo $k^*$ de equilibrio es:
+\[
+k^*_{\text{nuevo}} < k^*_{\text{inicial}}.
+\]
+Como $y = f'(k)$ y el consumo per cápita $c = (1-s)y$, se tiene:
+\[
+y^*_{\text{nuevo}} < y^*_{\text{inicial}},\qquad
+c^*_{\text{nuevo}} < c^*_{\text{inicial}}.
+\]
+
+En conclusión, en el nuevo equilibrio de muy largo plazo:
+\begin{itemize}
+  \item \textbf{Capital per cápita} de estado estacionario \textbf{disminuye},
+  \item \textbf{Ingreso per cápita} de estado estacionario \textbf{disminuye},
+  \item \textbf{Consumo per cápita} de estado estacionario también \textbf{disminuye}.
+\end{itemize}
+
+\newpage
+\vspace*{0.5cm}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.45\textwidth]{Examenes Anteriores/2a_examen22.PNG}
+    \hfill
+    \includegraphics[width=0.45\textwidth]{Examenes Anteriores/2b_examen22.PNG} 
+    \caption{Graficos de referencia para la pregunta 2.}
+    \label{fig:pib_chile}
+\end{figure}
+
+
+
+\vspace{0.4cm}
+
+\textbf{PREGUNTA 3 (1,5 puntos)}\\[0.2cm]
+Con un análisis de oferta y demanda agregada explique qué sucedería en el corto y en el largo plazo con el PIB, nivel de precios y desempleo si en un país que originalmente está en equilibrio se incrementa la propension marginal a consumir. 
+
+\vspace{0.2cm}
+\textbf{Solución (Pauta-Profesor):}
+
+\begin{itemize}
+  \item Si aumenta la PMgC se eleva el consumo, asi que la curva de demanda agregada se desplaza hacia la derecha, por ende, en el corto plazo se eleva el PIB, aumenta el nivel de precios y se reduce el desempleo (punto B).
+  \item Como la economia esta por sobre el PÍB potencial, los precios esperados debiesen ajustarse al alza (OACP2), para llegar al nuevo equilibrio los productores debiesen vender los productos a precios mas altos con lo cual se vuelve al equilibrio de largo plazo.
+  \item En el largo plazo, el PIB está en su potencial, pero el nivel de precios es mucho mayor (punto C).
+\end{itemize}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.55\textwidth]{Examenes Anteriores/3_examen22.PNG}
+    \caption{Grafico de referencia para la pregunta 3.}
+    \label{fig:pib_chile}
+\end{figure}
+
+\newpage
+\vspace*{0.5cm}
+\textbf{PREGUNTA 4 (1,5 puntos)}\\[0.2cm]
+Calcule los valores de equilibrio para el PIB, exportaciones, importaciones, tipo de cambio nominal y balance fiscal, asumiendo la siguiente economia con tipo de cambio flexible y perfecta movilidad de capitales. Luego, determine como cambia el equilibrio si el Banco Central eleva la oferta monetaria en 10\%.
+
+\medskip
+\textbf{Mercado de bienes:}
+\[
+C = 1000 + 0{,}8Y_d, \qquad Y_d = Y - T,
+\]
+\[
+T = 0{,}2Y, \qquad I = 800 - 100i,
+\]
+\[
+G = 600,
+\]
+\[
+X = 55 + 2e\frac{P^*}{P} + 0{,}05Y^*, \qquad
+M = 1100 - 4e\frac{P^*}{P} + 0{,}2Y.
+\]
+
+\textbf{Parámetros internacionales:}
+\[
+P^* = 1, \qquad Y^* = 15000.
+\]
+
+\textbf{Mercado de dinero:}
+\[
+L^d = 0{,}4Y - 1000i, \qquad M^s = 5000, \qquad P = 1.
+\]
+
+\textbf{Tasa de interés internacional:}
+\[
+i^* = 0{,}05.
+\]
+
+\vspace{0.2cm}
+\textbf{Solución (Pauta-Profesor):}\\[0.1cm]
+
+Con \textbf{movilidad perfecta de capitales}:
+\[
+i = i^* = 0{,}05.
+\]
+
+\paragraph{1) Equilibrio inicial con $M^s = 5000$.}
+
+\textbf{a) Mercado de dinero:}
+\[
+L^d = 0{,}4Y - 1000i = M^s=5000,
+\]
+\[
+0{,}4Y - 1000(0{,}05) = 5000 \Rightarrow 0{,}4Y - 50 = 5000
+\Rightarrow 0{,}4Y = 5050 \Rightarrow Y = 12{.}625.
+\]
+
+
+\textbf{b) Mercado de bienes y tipo de cambio.}
+
+Impuestos:
+\[
+T = 0{,}2Y = 0{,}2(12{.}625) = 2{.}525.
+\]
+Ingreso disponible:
+\[
+Y_d = Y - T = 12{.}625 - 2{.}525 = 10{.}1.
+\]
+Consumo:
+\[
+C = 1000 + 0{,}8Y_d = 1000 + 0{,}8(10{.}1) = 1000 + 8{.}08 = 1008{,}08 \approx 9080 
+\]
+(en miles de unidades, según el contexto numérico del curso; aquí trabajamos con $\text{Y}=12625$ y $C=9080$).
+
+Para simplificar, en notación completa:
+
+\[
+Y = 12625,\quad T = 0{,}2Y = 2525,\quad Y_d = 10000,
+\]
+\[
+C = 1000 + 0{,}8(10000) = 9000.
+\]
+
+Inversión:
+\[
+I = 800 - 100i = 800 - 100(0{,}05) = 800 - 5 = 795.
+\]
+\newpage
+\vspace*{0.5cm}
+Exportaciones e importaciones (con $P^* = P = 1$):
+\[
+X = 55 + 2e + 0{,}05Y^* = 55 + 2e + 0{,}05(15000) = 55 + 2e + 750 = 805 + 2e,
+\]
+\[
+M = 1100 - 4e + 0{,}2Y.
+\]
+
+La condición de equilibrio de bienes:
+\[
+Y = C + I + G + X - M.
+\]
+
+Sustituyendo, se obtiene (omitiendo pasos algebraicos intermedios):
+\[
+Y = 12625,\qquad e = 828{,}33\ (\text{aprox}).
+\]
+
+Calculando con estos valores:
+\[
+C \approx 9080,\quad I = 795,
+\]
+\[
+X \approx 2461{,}7,\quad M \approx 311{,}7,\quad XN = X - M \approx 2150.
+\]
+
+Balance fiscal (no hay transferencias):
+\[
+B = T - G = 0{,}2Y - 600 = 2525 - 600 = 1925\quad
+\Rightarrow\ \text{superávit fiscal de }1925.
+\]
+
+\medskip
+\textbf{Equilibrio inicial:}
+\[
+Y_0 \approx 12625,\quad e_0 \approx 828{,}3,\quad X_0 \approx 2461{,}7,\quad M_0 \approx 311{,}7,\quad XN_0 \approx 2150,\quad B_0 \approx 1925.
+\]
+
+
+\paragraph{2) Aumento de la oferta monetaria en 10\%: $M^s: 5000 \to 5500$.}
+
+\textbf{a) Mercado de dinero:}
+\[
+0{,}4Y - 1000i = 5500,\qquad i = i^* = 0{,}05.
+\]
+\[
+0{,}4Y - 50 = 5500 \Rightarrow 0{,}4Y = 5550 \Rightarrow Y = 13875.
+\]
+
+\textbf{b) Mercado de bienes:} con el nuevo $Y$, la ecuación de equilibrio de bienes determina el nuevo $e$:
+\[
+e \approx 945.
+\]
+
+Calculando:
+\[
+C = 1000 + 0{,}8(Y - 0{,}2Y) = 1000 + 0{,}8(0{,}8Y) = 1000 + 0{,}64Y,
+\]
+\[
+C = 1000 + 0{,}64(13875) \approx 9880,
+\]
+\[
+I = 800 - 100(0{,}05) = 795,
+\]
+\[
+X \approx 2695,\quad M \approx 95,\quad XN \approx 2600,
+\]
+\[
+T = 0{,}2Y = 2775,\quad B = T - G = 2775 - 600 = 2175.
+\]
+
+\medskip
+\textbf{Nuevo equilibrio con $M^s$ mayor:}
+\[
+Y_1 \approx 13875,\quad e_1 \approx 945,\quad X_1 \approx 2695,\quad M_1 \approx 95,\quad XN_1 \approx 2600,\quad B_1 \approx 2175.
+\]
+
+La expansión monetaria eleva el PIB, provoca una depreciación del tipo de cambio (aumenta $e$), mejora el saldo externo ($XN$) y, vía mayor actividad, aumenta la recaudación y el superávit fiscal.
+
+% ==========================================================
+% EXAMEN RECUPERATIVO 2023
+% ==========================================================
+\newpage
+\vspace*{0.1cm}
+\section*{Examen Recuperativo 2023}
+
+
+\textbf{PREGUNTA 1 (1,5 puntos)}\\[0.2cm]
+A partir de las siguientes ecuaciones del modelo IS--LM, formule la diferencial total y obtenga a través de estática comparativa el efecto sobre el PIB y tasa de interés provocada por un alza en las transferencias (TR):
+\[
+IS: \quad Y = [C + cTR + c(1 - t)Y] + (I - bi) + G
+\]
+\[
+LM: \quad \frac{M}{P} = kY - hi
+\]
+
+\vspace{0.2cm}
+\textbf{Solución:}\\[0.1cm]
+Primero reescribimos la IS agrupando términos:
+\[
+Y = A + cTR + c(1-t)Y - bi,
+\]
+donde $A = C + I + G$ agrupa los componentes autónomos. Llevando el término en $Y$ a la izquierda:
+\[
+Y - c(1-t)Y + bi = A + cTR,
+\]
+\[
+[1 - c(1-t)]Y + bi = A + cTR.
+\]
+
+\paragraph{Diferenciales totales.}
+
+\textbf{IS:}
+\[
+[1 - c(1-t)]\,dY + b\,di = c\,dTR.
+\]
+
+\textbf{LM:}
+\[
+\frac{M}{P} = kY - hi \quad\Rightarrow\quad 0 = k\,dY - h\,di.
+\]
+
+De LM se obtiene:
+\[
+k\,dY - h\,di = 0 \Rightarrow di = \frac{k}{h}dY.
+\]
+
+Sustituimos en la diferencial de IS:
+\[
+[1 - c(1-t)]\,dY + b\left(\frac{k}{h}dY\right) = c\,dTR,
+\]
+\[
+\left[1 - c(1-t) + \frac{bk}{h}\right]dY = c\,dTR.
+\]
+
+\paragraph{Efectos comparativos.}
+\[
+\frac{dY}{dTR} = \frac{c}{1 - c(1-t) + \frac{bk}{h}} > 0.
+\]
+
+A partir de LM:
+\[
+\frac{di}{dTR} = \frac{k}{h}\frac{dY}{dTR} > 0.
+\]
+
+Por tanto, un aumento en las transferencias:
+\begin{itemize}
+  \item \textbf{eleva el PIB} ($dY/dTR > 0$),
+  \item \textbf{eleva la tasa de interés} ($di/dTR > 0$).
+\end{itemize}
+
+\newpage
+\vspace*{0.5cm}
+\textbf{PREGUNTA 2 (1,5 puntos)}\\[0.2cm]
+Suponga una economía cerrada caracterizada por el siguiente conjunto de ecuaciones (modelo IS–LM con política fiscal):
+
+\begin{align*}
+C  &= 200 + 0{,}8Y_d,  & t          &= 0{,}1, \\
+I  &= 800 - 50i,       & G          &= 1000, \\
+XN &= -100,            & L          &= 0{,}25Y - 62{,}5i, \\
+\frac{M}{P} &= 500.    &            &
+\end{align*}
+
+
+Encuentre el nivel de consumo, ingreso, tasa de interés, inversión y balance fiscal en el escenario base y luego con una politica fiscal expansiva que eleva el gasto en 100.
+
+\vspace{0.2cm}
+\textbf{Solución (Pauta-Profesor):}
+\paragraph{1) Escenario base: $G = 1000$.}
+
+\textbf{a) Ecuación IS.}
+
+Ingreso disponible:
+\[
+Y_d = (1 - t)Y = 0{,}9Y.
+\]
+Consumo:
+\[
+C = 200 + 0{,}8Y_d = 200 + 0{,}8(0{,}9Y) = 200 + 0{,}72Y.
+\]
+Demanda agregada (economía cerrada pero con $XN$ exógeno):
+\[
+Y = C + I + G + XN.
+\]
+Sustituyendo:
+\[
+Y = (200 + 0{,}72Y) + (800 - 50i) + 1000 - 100,
+\]
+\[
+Y = 1900 + 0{,}72Y - 50i \Rightarrow
+Y - 0{,}72Y = 1900 - 50i,
+\]
+\[
+0{,}28Y = 1900 - 50i \Rightarrow
+Y = \frac{1900 - 50i}{0{,}28}.
+\]
+
+\textbf{b) Ecuación LM.}
+\[
+L = 0{,}25Y - 62{,}5i = \frac{M}{P} = 500.
+\]
+
+Resolvemos el sistema IS--LM:
+\[
+\begin{cases}
+Y = \dfrac{1900 - 50i}{0{,}28},\\[0.3cm]
+0{,}25Y - 62{,}5i = 500.
+\end{cases}
+\]
+
+El resultado (omitiendo el álgebra intermedia) es:
+\[
+Y_0 \approx 4791{,}7,\qquad i_0 \approx 11{,}17.
+\]
+
+\textbf{c) Otros agregados.}
+
+Consumo:
+\[
+C_0 = 200 + 0{,}8Y_{d0} \approx 200 + 0{,}8(4312{,}5) = 3650.
+\]
+Inversión:
+\[
+I_0 = 800 - 50i_0 \approx 800 - 50(11{,}17) \approx 241{,}7.
+\]
+\newpage
+\vspace*{0.5cm}
+
+Impuestos:
+\[
+T_0 = tY_0 = 0{,}1Y_0 \approx 479{,}2.
+\]
+Balance fiscal:
+\[
+B_0 = T_0 - G = 479{,}2 - 1000 \approx -520{,}8,
+\]
+es decir, \textbf{déficit fiscal} de alrededor de 521.
+
+\medskip
+\textbf{Resumen escenario base:}
+\[
+Y_0 \approx 4792,\quad i_0 \approx 11{,}2,\quad
+C_0 \approx 3650,\quad I_0 \approx 242,\quad B_0 \approx -521.
+\]
+
+\paragraph{2) Escenario con política fiscal expansiva: $G$ sube a $1100$.}
+
+\textbf{a) Nueva IS.}
+\[
+Y = (200 + 0{,}72Y) + (800 - 50i) + 1100 - 100,
+\]
+\[
+Y = 2000 + 0{,}72Y - 50i \Rightarrow 
+0{,}28Y = 2000 - 50i \Rightarrow
+Y = \frac{2000 - 50i}{0{,}28}.
+\]
+
+\textbf{b) LM sin cambios:}
+\[
+0{,}25Y - 62{,}5i = 500.
+\]
+
+Resolviendo el nuevo sistema:
+\[
+Y_1 = 5000,\qquad i_1 = 12.
+\]
+
+\textbf{c) Otros agregados.}
+\[
+Y_{d1} = 0{,}9Y_1 = 4500,\qquad
+C_1 = 200 + 0{,}8(4500) = 3800,
+\]
+\[
+I_1 = 800 - 50(12) = 200,
+\]
+\[
+T_1 = 0{,}1Y_1 = 500,\qquad
+B_1 = T_1 - G_{\text{nuevo}} = 500 - 1100 = -600.
+\]
+
+\medskip
+\textbf{Resumen nuevo escenario:}
+\[
+Y_1 = 5000,\quad i_1 = 12,\quad C_1 = 3800,\quad I_1 = 200,\quad B_1 = -600.
+\]
+
+La política fiscal expansiva eleva el PIB y la tasa de interés, aumenta el consumo pero reduce la inversión privada (efecto desplazamiento) y profundiza el déficit fiscal.
+
+\vspace{0.4cm}
+
+\textbf{PREGUNTA 3 (1,5 puntos)}\\[0.2cm]
+La economía tiene una oferta agregada caracterizada por la siguiente ecuación:
+\[
+P_{t+1} = P_{t}\left[1 + \lambda (Y - Y^*)\right],
+\]
+Asuma que la economía está actualmente en equilibrio en el nivel de PIB potencial. Utilice el modelo de OA-DA para analizar ¿qué pasaría si disminuye la demanda mundial por nuestras exportaciones? Explique el proceso de ajuste de la economía desde el corto al largo plazo. ¿Qué politica monetaria se podrían emplear para acelerar el proceso de ajuste?
+
+\vspace{0.2cm}
+\textbf{Solución (Pauta-Profesor):}\\
+Inicialmente $Y = Y^*$, por lo que:
+\[
+P_{t+1} = P_t[1 + \lambda(Y - Y^*)] = P_t,
+\]
+es decir, el nivel de precios es estable.
+
+\newpage
+\vspace*{0.5cm}
+\paragraph{Choque negativo en exportaciones.}
+\begin{itemize}
+  \item Una caída de la demanda externa reduce las \textbf{exportaciones}, desplazando la \textbf{Demanda Agregada (DA)} hacia la izquierda.
+  \item En el corto plazo, con OA de corto plazo dada, el nuevo equilibrio tiene:
+  \[
+  Y_1 < Y^*,\qquad P_1 < P_0,
+  \]
+  y el desempleo aumenta por encima de su nivel natural.
+\end{itemize}
+
+\paragraph{Dinámica de precios.}
+La ecuación de OA:
+\[
+P_{t+1} = P_t[1 + \lambda(Y - Y^*)],
+\]
+implica que:
+\begin{itemize}
+  \item si $Y < Y^*$, entonces $(Y - Y^*) < 0$ y por tanto $P_{t+1} < P_t$, es decir, los precios tienden a \textbf{bajar} (o crecer menos).
+  \item La caída paulatina del nivel de precios reduce el salario real y los costos, desplazando la \textbf{OA de corto plazo hacia abajo} a lo largo del tiempo.
+\end{itemize}
+
+El proceso continúa hasta que, con un nivel de precios más bajo, la producción vuelve al PIB potencial:
+\[
+Y_{\text{LP}} = Y^*,\qquad P_{\text{LP}} < P_0.
+\]
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.55\textwidth]{Examenes Anteriores/3_examen23.PNG}
+    \caption{Grafico de referencia para la pregunta 3 (lamento la calidad).}
+    \label{fig:pib_chile}
+\end{figure}
+\paragraph{Política monetaria para acelerar el ajuste.}
+Para evitar un periodo prolongado con $Y < Y^*$ y alto desempleo, el Banco Central puede:
+\begin{itemize}
+  \item aplicar una \textbf{política monetaria expansiva}, reduciendo la tasa de interés y/o aumentando la oferta monetaria;
+  \item esto desplaza la \textbf{DA hacia la derecha}, acercando más rápidamente al PIB al nivel potencial $Y^*$;
+  \item se logra así una recuperación más rápida del producto y del empleo, con un ajuste menos lento vía caída de precios.
+\end{itemize}
+
+
+
+
+
+\newpage
+\vspace*{0.5cm}
+\textbf{PREGUNTA 4 (1,5 puntos)}\\[0.2cm]
+Los siguientes datos corresponden a información obtenida de las cuentas nacionales de un país.
+
+\begin{align*}
+PIB &= 80{.}000, \\
+Inversión\ bruta &= 15{.}000, \\
+Inversión\ neta &= 10{.}000, \\
+Consumo &= 53{.}000, \\
+Gasto\ de\ gobierno &= 17{.}000, \\
+Superávit\ fiscal &= 3{.}000.
+\end{align*}
+
+Calcule el Producto Interno Neto, las Exportaciones Netas, los impuestos menos las transferencias, el ingreso personal disponible y el ahorro.
+
+\vspace{0.2cm}
+\textbf{Solución (Pauta-Profesor):}
+
+\paragraph{1) Producto Interno Neto (PIN).}
+La \textbf{inversión neta} se relaciona con la inversión bruta y la depreciación ($\delta$) como:
+\[
+I_{\text{neta}} = I_{\text{bruta}} - \delta.
+\]
+De aquí:
+\[
+\delta = I_{\text{bruta}} - I_{\text{neta}} = 15{.}000 - 10{.}000 = 5{.}000.
+\]
+El Producto Interno Neto es:
+\[
+PIN = PIB - \delta = 80{.}000 - 5{.}000 = 75{.}000.
+\]
+
+\paragraph{2) Exportaciones Netas (XN).}
+En el enfoque de gasto:
+\[
+PIB = C + I_{\text{bruta}} + G + XN.
+\]
+Despejando $XN$:
+\[
+80{.}000 = 53{.}000 + 15{.}000 + 17{.}000 + XN,
+\]
+\[
+80{.}000 = 85{.}000 + XN \Rightarrow XN = -5{.}000.
+\]
+Hay un \textbf{déficit externo} de 5.000.
+
+\paragraph{3) Impuestos menos transferencias $(T - TR)$.}
+El superávit fiscal se define como:
+\[
+Superávit = T - TR - G = 3{.}000.
+\]
+Entonces:
+\[
+T - TR = G + 3{.}000 = 17{.}000 + 3{.}000 = 20{.}000.
+\]
+
+\paragraph{4) Ingreso personal disponible ($Y_d$).}
+En este contexto simple:
+\[
+Y_d = PIB - (T - TR) = 80{.}000 - 20{.}000 = 60{.}000.
+\]
+
+\newpage
+\vspace*{0.5cm}
+\paragraph{5) Ahorro ($S$).}
+\[
+S = Y_d - C = 60{.}000 - 53{.}000 = 7{.}000.
+\]
+
+\medskip
+\textbf{Chequeo de coherencia macro:}
+\[
+S - I_{\text{bruta}} = 7{.}000 - 15{.}000 = -8{.}000,
+\]
+\[
+Superávit\ fiscal = 3{.}000,\quad XN = -5{.}000,
+\]
+y se cumple:
+\[
+(S - I) + (T - TR - G) = XN\quad
+\Rightarrow\quad -8{.}000 + 3{.}000 = -5{.}000,
+\]
+coincidiendo con $XN$ calculado.
+
+\medskip
+\textbf{Resumen:}
+\[
+PIN = 75{.}000,\quad XN = -5{.}000,\quad (T - TR) = 20{.}000,\quad
+Y_d = 60{.}000,\quad S = 7{.}000.
+\]
+
+\end{document}

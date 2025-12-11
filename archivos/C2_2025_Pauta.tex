@@ -1,0 +1,611 @@
+\documentclass[11pt,addpoints]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[lmargin=2cm,rmargin=2cm,top=2cm,bottom=2.5cm]{geometry}
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=cyan}
+\parindent=0cm
+\setlist{itemsep=0.6em}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{FACULTAD DE INGENIERÍA\\DEPTO DE INGENIERÍA INDUSTRIAL \\ MACROECONOMÍA (580323)}
+\fancyhead[R]{\includegraphics[scale=0.13]{escudoudec.jpg}}
+\fancyfoot{\thepage}
+\fancyfoot[R]{Semestre 2025-2}
+\fancyfoot[L]{CMP/IGU}
+\renewcommand{\headrulewidth}{0.9pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\begin{document}
+\vspace*{0.1cm}
+
+\begin{center}
+{\Large \bfseries Pauta Certamen N°2 – Macroeconomía \\[0.25cm]}
+\textbf{2° Semestre 2025}\\[0.3cm]
+\textbf{Profesor:} Dr. Cristian Mardones \textbf{Ayudante:} Ignacio Garrido U. (Autor Pauta)\\[0.2cm]
+\textbf{Fecha:} Viernes, 5 de diciembre de 2025
+\end{center}
+
+\vspace{0.4cm}
+
+% ========================= PREGUNTA 1 =========================
+\textbf{PREGUNTA 1 (1,5 puntos)}\\
+\textbf{Solución:}\\
+
+Modelo de Solow para PIB per cápita: sea $k = K/L$ el capital por trabajador y $y = Y/L$ el PIB por trabajador. La dinámica de $k$ está dada por:
+\[
+\Delta k = s f(k) - (n + \delta)k,
+\]
+donde $s$ es la tasa de ahorro, $n$ la tasa de crecimiento de la población y $\delta$ la depreciación.
+
+\medskip
+\textbf{1) Efecto de un aumento en la tasa de natalidad sobre el PIB per cápita de estado estacionario.}
+
+Un aumento de la tasa de natalidad implica un aumento de $n$:
+\begin{itemize}
+  \item Gráficamente, en el diagrama de Solow para $k$:
+  \begin{itemize}
+    \item La curva $sf(k)$ no cambia.
+    \item La recta $(n + \delta)k$ gira hacia arriba (mayor pendiente) porque aumenta $n$.
+  \end{itemize}
+  \item El nuevo punto de intersección entre $sf(k)$ y $(n + \delta)k$ determina un menor capital de estado estacionario $k^{*'} < k^*$.
+  \item Como $y = f(k)$ es creciente en $k$, el PIB per cápita de estado estacionario $y^* = f(k^*)$ también disminuye:
+  \[
+  y^{*'} = f(k^{*'}) < f(k^*) = y^*.
+  \]
+\end{itemize}
+
+\textbf{Conclusión:} el aumento de la tasa de natalidad reduce el PIB per cápita de largo plazo.
+
+\medskip
+\textbf{2) Efecto sobre las tasas de crecimiento de PIB per cápita y PIB agregado en el largo plazo.}
+
+En el modelo de Solow sin progreso tecnológico:
+\begin{itemize}
+  \item En estado estacionario, el PIB per cápita no crece:
+  \[
+  g_{y} = 0.
+  \]
+  Esto es válido antes y después de la política natalista (una vez alcanzado el nuevo estado estacionario).
+
+  \item En cambio, el PIB agregado $Y$ crece a la tasa de crecimiento de la población:
+  \[
+  g_Y = n.
+  \]
+  Como la política aumenta $n$, en el nuevo estado estacionario:
+  \[
+  g_Y' = n' > n.
+  \]
+\end{itemize}
+\newpage
+\vspace*{0.5cm}
+\textbf{Conclusión final:}
+\begin{itemize}
+  \item El PIB per cápita de estado estacionario cae y su tasa de crecimiento de largo plazo sigue siendo 0.
+  \item La tasa de crecimiento del PIB agregado aumenta en el largo plazo, pues el PIB crece a la nueva tasa de crecimiento de la población.
+\end{itemize}
+
+
+% ========================= PREGUNTA 2 =========================
+\textbf{PREGUNTA 2 (1,5 puntos)}\\
+\textbf{Solución:}\\
+
+Ecuaciones:
+\[
+Y = [C + cTR + c_Y (1 - t)Y - c_i i] + [(I - bi) + G + XN],
+\]
+\[
+\frac{M}{P} = kY - hi.
+\]
+
+Definamos el término autónomo:
+\[
+A \equiv C + cTR + I + XN.
+\]
+
+Entonces la IS puede escribirse como:
+\[
+Y = A + c_Y(1 - t)Y - (b + c_i)i + G.
+\]
+
+Llevando el término con $Y$ al lado izquierdo:
+\[
+Y - c_Y(1 - t)Y = A - (b + c_i)i + G,
+\]
+\[
+[1 - c_Y(1 - t)]Y + (b + c_i)i = A + G.
+\]
+
+\textbf{En forma diferencial} (estática comparativa, manteniendo $A$, $M$ y $P$ constantes):
+\[
+[1 - c_Y(1 - t)]\,dY + (b + c_i)\,di = dG \quad\text{(IS')}
+\]
+\[
+0 = k\,dY - h\,di \quad\Rightarrow\quad k\,dY - h\,di = 0 \quad\text{(LM')}
+\]
+
+De (LM'):
+\[
+h\,di = k\,dY \quad\Rightarrow\quad di = \frac{k}{h}dY.
+\]
+
+Sustituimos en (IS'):
+\[
+[1 - c_Y(1 - t)]\,dY + (b + c_i)\left(\frac{k}{h}dY\right) = dG.
+\]
+
+Factorizamos $dY$:
+\[
+\left\{[1 - c_Y(1 - t)] + \frac{k}{h}(b + c_i)\right\} dY = dG.
+\]
+
+Por lo tanto:
+\[
+\frac{dY}{dG} = \frac{1}{[1 - c_Y(1 - t)] + \frac{k}{h}(b + c_i)}.
+\]
+
+\textbf{Comparación con el caso en que el consumo es insensible a la tasa de interés} ($c_i = 0$):
+
+En ese caso:
+\[
+\left(\frac{dY}{dG}\right)_{c_i = 0}
+= \frac{1}{[1 - c_Y(1 - t)] + \frac{k}{h}b}.
+\]
+\newpage
+\vspace*{0.5cm}
+
+Con sensibilidad a la tasa de interés ($c_i > 0$):
+\[
+\left(\frac{dY}{dG}\right)_{c_i > 0}
+= \frac{1}{[1 - c_Y(1 - t)] + \frac{k}{h}(b + c_i)}.
+\]
+
+Como $c_i > 0$, todos los parámetros son positivos y:
+\[
+\frac{k}{h}(b + c_i) > \frac{k}{h}b
+\quad\Rightarrow\quad
+\text{el \textbf{denominador} con $c_i>0$ es mayor},
+\]
+por tanto:
+\[
+\left(\frac{dY}{dG}\right)_{c_i > 0}
+< \left(\frac{dY}{dG}\right)_{c_i = 0}.
+\]
+
+\textbf{Conclusión:}  
+Cuando el consumo también cae con la tasa de interés ($c_i>0$), la demanda agregada es más sensible a los cambios en $i$, por lo que el aumento del gasto público genera un incremento menor en la producción de equilibrio que en la economía donde el consumo no depende de la tasa de interés. Es decir, el multiplicador fiscal es menor.
+
+
+\vspace{0.5cm}
+
+% ========================= PREGUNTA 3 =========================
+\textbf{PREGUNTA 3 (1,5 puntos)}\\
+\textbf{Solución:}\\
+Datos de la economía abierta pequeña, tipo de cambio flexible y perfecta movilidad de capitales.
+\textbf{Bienes:}
+\[
+C = 300 + 0{,}75Y_d, \quad Y_d = Y - T + TR, \quad T = 0{,}3Y, \quad TR = 0,
+\]
+\[
+I = 700 - 100i, \quad G = 500,
+\]
+\[
+X = 50 + 2e\frac{P'}{P} + 0{,}05Y^*, \quad
+M = 500 - 4e\frac{P'}{P} + 0{,}1Y,
+\]
+\[
+P' = 1, \quad Y^* = 10000.
+\]
+
+\textbf{Dinero:}
+\[
+L^d = 0{,}4Y - 100i, \quad M^s = 2000, \quad P = 1.
+\]
+
+\textbf{Tasa de interés internacional:} $i^* = 0{,}08$.
+
+\medskip
+\textbf{Bajo perfecta movilidad de capitales y tipo de cambio flexible}:
+\[
+i = i^* = 0{,}08
+\]
+en equilibrio.
+
+\medskip
+\textbf{1) Caso con $t = 30\%$.}
+
+\textbf{Paso 1: consumo y componentes de demanda.}
+
+Ingreso disponible:
+\[
+Y_d = Y - T + TR = Y - 0{,}3Y = 0{,}7Y.
+\]
+Consumo:
+\[
+C = 300 + 0{,}75(0{,}7Y) = 300 + 0{,}525Y.
+\]
+Inversión:
+\[
+I = 700 - 100(0{,}08) = 700 - 8 = 692.
+\]
+\newpage
+\vspace*{0.5cm}
+Exportaciones:
+\[
+X = 50 + 2e\frac{P'}{P} + 0{,}05Y^*
+= 50 + 2e + 0{,}05(10000)
+= 50 + 2e + 500 = 550 + 2e.
+\]
+
+Importaciones:
+\[
+M = 500 - 4e\frac{P'}{P} + 0{,}1Y
+= 500 - 4e + 0{,}1Y.
+\]
+
+Exportaciones netas:
+\[
+XN = X - M
+= (550 + 2e) - (500 - 4e + 0{,}1Y)
+= 50 + 6e - 0{,}1Y.
+\]
+
+\textbf{Paso 2: equilibrio en el mercado de dinero.}
+\[
+L^d = 0{,}4Y - 100i, \quad M^s = 2000.
+\]
+Imponiendo $i = 0{,}08$:
+\[
+0{,}4Y - 100(0{,}08) = 2000
+\quad\Rightarrow\quad
+0{,}4Y - 8 = 2000
+\quad\Rightarrow\quad
+0{,}4Y = 2008
+\quad\Rightarrow\quad
+Y = \frac{2008}{0{,}4} = 5020.
+\]
+
+\textbf{Paso 3: equilibrio en el mercado de bienes.}
+
+Equilibrio:
+\[
+Y = C + I + G + XN.
+\]
+Sustituyendo:
+\[
+Y = (300 + 0{,}525Y) + 692 + 500 + (50 + 6e - 0{,}1Y).
+\]
+Agrupando términos:
+\[
+Y = 1542 + 0{,}425Y + 6e
+\quad\Rightarrow\quad
+Y - 0{,}425Y = 1542 + 6e
+\quad\Rightarrow\quad
+0{,}575Y = 1542 + 6e.
+\]
+
+Sabemos que $Y = 5020$, entonces:
+\[
+0{,}575(5020) = 1542 + 6e
+\quad\Rightarrow\quad
+2886{,}5 = 1542 + 6e
+\quad\Rightarrow\quad
+6e = 1344{,}5
+\quad\Rightarrow\quad
+e \approx 224{,}08.
+\]
+
+\textbf{Paso 4: cálculo de $C$, $XN$ y balance fiscal.}
+
+Consumo:
+\[
+C = 300 + 0{,}525(5020) \approx 300 + 2635{,}5 = 2935{,}5.
+\]
+
+Exportaciones netas:
+\[
+XN = 50 + 6e - 0{,}1Y
+= 50 + 6(224{,}08) - 0{,}1(5020)
+\approx 50 + 1344{,}5 - 502
+\approx 892{,}5.
+\]
+
+Balance fiscal (superávit público):
+\[
+T = 0{,}3Y = 0{,}3(5020) = 1506,
+\]
+\[
+\text{Balance fiscal} = T - G - TR = 1506 - 500 - 0 = 1006.
+\]
+
+\textbf{Resumen caso $t=30\%$:}
+\[
+Y \approx 5020, \quad
+C \approx 2935{,}5, \quad
+e \approx 224{,}08, \quad
+XN \approx 892{,}5, \quad
+\text{superávit fiscal} \approx 1006.
+\]
+\newpage
+\vspace*{0.5cm}
+\textbf{2) Caso con $t = 20\%$.}
+
+Ahora:
+\[
+T = 0{,}2Y, \quad TR = 0.
+\]
+Ingreso disponible:
+\[
+Y_d = Y - T = Y - 0{,}2Y = 0{,}8Y.
+\]
+Consumo:
+\[
+C = 300 + 0{,}75(0{,}8Y) = 300 + 0{,}6Y.
+\]
+
+La ecuación de dinero \textbf{no cambia} (ni $M^s$, ni $P$, ni $i^*$), por lo que:
+\[
+Y = 5020
+\]
+se mantiene.
+
+Mercado de bienes:
+\[
+Y = C + I + G + XN
+= (300 + 0{,}6Y) + 692 + 500 + (50 + 6e - 0{,}1Y).
+\]
+Agrupando:
+\[
+Y = 1542 + 0{,}5Y + 6e
+\quad\Rightarrow\quad
+Y - 0{,}5Y = 1542 + 6e
+\quad\Rightarrow\quad
+0{,}5Y = 1542 + 6e.
+\]
+
+Con $Y = 5020$:
+\[
+0{,}5(5020) = 1542 + 6e
+\quad\Rightarrow\quad
+2510 = 1542 + 6e
+\quad\Rightarrow\quad
+6e = 968
+\quad\Rightarrow\quad
+e \approx 161{,}33.
+\]
+
+Consumo:
+\[
+C = 300 + 0{,}6(5020) = 300 + 3012 = 3312.
+\]
+
+Exportaciones netas:
+\[
+XN = 50 + 6e - 0{,}1Y
+= 50 + 6(161{,}33) - 0{,}1(5020)
+\approx 50 + 968 - 502 = 516.
+\]
+
+Impuestos:
+\[
+T = 0{,}2(5020) = 1004.
+\]
+
+Balance fiscal:
+\[
+\text{Balance fiscal} = T - G - TR = 1004 - 500 - 0 = 504.
+\]
+
+\textbf{Resumen caso $t=20\%$:}
+\[
+Y \approx 5020, \quad
+C \approx 3312, \quad
+e \approx 161{,}33, \quad
+XN \approx 516, \quad
+\text{superávit fiscal} \approx 504.
+\]
+
+\textbf{Interpretación:}  
+Con menor tasa impositiva:
+\begin{itemize}
+  \item El PIB de equilibrio no cambia (Mundell–Fleming con tipo de cambio flexible y perfecta movilidad de capitales).
+  \item El tipo de cambio se aprecia (baja $e$) y el superávit comercial cae: $XN$ disminuye de $\approx 892{,}5$ a $\approx 516$.
+  \item Aumenta el consumo privado y se reduce el superávit fiscal.
+\end{itemize}
+
+\newpage
+\vspace*{0.5cm}
+% ========================= PREGUNTA 4 =========================
+\textbf{PREGUNTA 4 (1,5 puntos)}\\
+\textbf{Solución:}\\
+
+Ecuaciones:
+\[
+C = 400 + 0{,}7Y_d, \quad Y_d = Y - T, \quad T = 0{,}25Y,
+\]
+\[
+I = 350 - 15i, \quad G = 300,
+\]
+\[
+L^D = 0{,}3Y - 1500i, \quad \frac{M}{P} = 600.
+\]
+
+Primero expresamos consumo en función de $Y$:
+\[
+Y_d = Y - T = Y - 0{,}25Y = 0{,}75Y,
+\]
+\[
+C = 400 + 0{,}7(0{,}75Y) = 400 + 0{,}525Y.
+\]
+
+\textbf{a) Equilibrio inicial.}
+
+IS (Equilibrio en el mercado de bienes):
+\[
+Y = C + I + G = (400 + 0{,}525Y) + (350 - 15i) + 300.
+\]
+
+Agrupando:
+\[
+Y = 1050 + 0{,}525Y - 15i
+\quad\Rightarrow\quad
+Y - 0{,}525Y = 1050 - 15i
+\quad\Rightarrow\quad
+0{,}475Y = 1050 - 15i. \tag{IS}
+\]
+
+LM (Mercado de dinero):
+\[
+L^D = 0{,}3Y - 1500i = \frac{M}{P} = 600,
+\]
+\[
+0{,}3Y - 1500i = 600. \tag{LM}
+\]
+
+Resolviendo el sistema (IS)–(LM):
+
+De (IS):
+\[
+0{,}475Y = 1050 - 15i \quad\Rightarrow\quad 15i = 1050 - 0{,}475Y
+\quad\Rightarrow\quad i = 70 - 0{,}031666\ldots\,Y.
+\]
+
+Sustituimos en (LM):
+\[
+0{,}3Y - 1500\left(70 - 0{,}031666\ldots\,Y\right) = 600.
+\]
+
+Desarrollando:
+\[
+0{,}3Y - 105000 + 47{,}5Y = 600
+\quad\Rightarrow\quad
+47{,}8Y = 105600
+\quad\Rightarrow\quad
+Y \approx 2209{,}21.
+\]
+
+Sustituimos en la expresión de $i$:
+\[
+i \approx 70 - 0{,}031666\ldots \times 2209{,}21 \approx 0{,}04184.
+\]
+
+\textbf{Consumo:}
+\[
+C = 400 + 0{,}525Y \approx 400 + 0{,}525(2209{,}21) \approx 1559{,}83.
+\]
+
+\textbf{Impuestos y balance fiscal:}
+\[
+T = 0{,}25Y \approx 0{,}25(2209{,}21) \approx 552{,}30.
+\]
+\[
+\text{Balance fiscal} = T - G = 552{,}30 - 300 \approx 252{,}30 \quad (\text{superávit}).
+\]
+\newpage
+\vspace*{0.5cm}
+\textbf{Inversión:}
+\[
+I = 350 - 15i \approx 350 - 15(0{,}04184) \approx 349{,}37.
+\]
+
+\textbf{Resumen equilibrio inicial:}
+\[
+Y \approx 2209{,}21, \quad
+i \approx 0{,}04184, \quad
+C \approx 1559{,}83, \quad
+T \approx 552{,}30, \quad
+I \approx 349{,}37, \quad
+\text{superávit fiscal} \approx 252{,}30.
+\]
+
+\bigskip
+\textbf{b) Reducción de la inversión autónoma a 300.}
+
+Ahora:
+\[
+I = 300 - 15i.
+\]
+
+La nueva IS:
+\[
+Y = (400 + 0{,}525Y) + (300 - 15i) + 300
+\quad\Rightarrow\quad
+Y = 1000 + 0{,}525Y - 15i
+\quad\Rightarrow\quad
+0{,}475Y = 1000 - 15i. \tag{IS$'$}
+\]
+
+La LM no cambia:
+\[
+0{,}3Y - 1500i = 600. \tag{LM}
+\]
+
+De (IS$'$):
+\[
+0{,}475Y = 1000 - 15i
+\quad\Rightarrow\quad
+i = \frac{1000 - 0{,}475Y}{15}
+= 66{,}666\ldots - 0{,}031666\ldots\,Y.
+\]
+
+Sustituimos en (LM):
+\[
+0{,}3Y - 1500\left(66{,}666\ldots - 0{,}031666\ldots\,Y\right) = 600.
+\]
+
+Desarrollando:
+\[
+0{,}3Y - 100000 + 47{,}5Y = 600
+\quad\Rightarrow\quad
+47{,}8Y = 100600
+\quad\Rightarrow\quad
+Y \approx 2104{,}60.
+\]
+
+Tasa de interés:
+\[
+i \approx 66{,}666\ldots - 0{,}031666\ldots \times 2104{,}60
+\approx 0{,}02092.
+\]
+
+\textbf{Consumo:}
+\[
+C = 400 + 0{,}525Y \approx 400 + 0{,}525(2104{,}60) \approx 1504{,}92.
+\]
+
+\textbf{Impuestos y balance fiscal:}
+\[
+T = 0{,}25Y \approx 0{,}25(2104{,}60) \approx 526{,}15.
+\]
+\[
+\text{Balance fiscal} = T - G = 526{,}15 - 300 \approx 226{,}15 \quad (\text{superávit}).
+\]
+
+\textbf{Inversión:}
+\[
+I = 300 - 15i \approx 300 - 15(0{,}02092) \approx 299{,}69.
+\]
+
+\textbf{Resumen nuevo equilibrio:}
+\[
+Y \approx 2104{,}60, \quad
+i \approx 0{,}02092, \quad
+C \approx 1504{,}92, \quad
+T \approx 526{,}15, \quad
+I \approx 299{,}69, \quad
+\text{superávit fiscal} \approx 226{,}15.
+\]
+
+\textbf{Comparación:}  
+La caída de la inversión autónoma reduce el PIB, el consumo, la inversión y el superávit fiscal, y además disminuye la tasa de interés de equilibrio.
+
+\end{document}
