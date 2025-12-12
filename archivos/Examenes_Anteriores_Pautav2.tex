@@ -957,4 +957,229 @@ PIN = 75{.}000,\quad XN = -5{.}000,\quad (T - TR) = 20{.}000,\quad
 Y_d = 60{.}000,\quad S = 7{.}000.
 \]
 
+% ==========================================================
+% EXAMEN RECUPERATIVO 2024
+% ==========================================================
+\newpage
+\vspace*{0.1cm}
+\section*{Examen Recuperativo 2024}
+
+\vspace{0.4cm}
+
+\textbf{PREGUNTA 1 (1,5 puntos)}\\[0.2cm]
+Use el modelo Mundell--Fleming con perfecta movilidad de capitales y tipo de cambio flexible para analizar cómo una caída en la inversión autónoma afecta a la economía. Explique y grafique.
+
+\vspace{0.2cm}
+\textbf{Solución (Pauta-Profesor):}
+
+\begin{itemize}
+  \item Trabajamos con una pequeña economía abierta, tipo de cambio flexible y perfecta movilidad de capitales. En este contexto se cumple:
+  \[
+    i = i^* \quad \text{(paridad de tasas de interés)}.
+  \]
+  \item Una caída de la inversión autónoma ($\downarrow I_0$) es un shock real de demanda agregada que desplaza la curva IS hacia la izquierda en el plano $(Y,i)$.
+  \item Inicialmente, al desplazarse la IS, para el tipo de interés internacional $i^*$ el nuevo equilibrio de bienes tendería a un menor nivel de ingreso y a una tasa de interés doméstica por debajo de $i^*$.
+  \item Pero con perfecta movilidad de capitales, si $i < i^*$ se produce una salida de capitales, lo que genera una depreciación del tipo de cambio nominal (sube $e$).
+  \item La depreciación hace que el tipo de cambio real también se deprecie, aumentando las exportaciones netas ($\uparrow XN$). Esto desplaza la IS nuevamente hacia la derecha.
+  \item El proceso continúa hasta que:
+  \[
+    i = i^*, \qquad Y = Y_0,
+  \]
+  es decir, se restaura el nivel inicial de producción, pero con:
+  \[
+    I \text{ más baja}, \quad XN \text{ más alta}, \quad e \text{ más alto (depreciado)}.
+  \]
+\end{itemize}
+
+\textbf{Conclusión:} bajo tipo de cambio flexible y perfecta movilidad de capitales, un shock real de demanda (como una caída en la inversión autónoma) no altera el nivel de producción de equilibrio; el ajuste se da vía el tipo de cambio y la composición de la demanda agregada (menos inversión, más exportaciones netas).
+
+\vspace{0.4cm}
+
+% ---------------- PREGUNTA 2 ----------------
+\textbf{PREGUNTA 2 (1,5 puntos)}\\[0.2cm]
+¿Por qué los países desarrollados han sido reacios a implementar una indexación total de precios en sus economías? ¿Cómo la indexación puede afectar el desempeño de la política monetaria?
+
+\vspace{0.2cm}
+\textbf{Solución (Pauta-Profesor):}
+
+\begin{itemize}
+  \item La indexación consiste en ajustar automáticamente precios, salarios, contratos, impuestos, etc., según la inflación observada (por ejemplo, UF en Chile).
+  \item En teoría reduce los costos de la inflación no anticipada, pues protege el poder de compra de salarios y contratos de deuda.
+\newpage
+\vspace*{0.5cm}
+  \item Sin embargo, los países desarrollados han sido reacios a una indexación total por varias razones principales:
+  \begin{enumerate}
+    \item La indexación hace más difícil que la economía se ajuste a shocks que requieren cambios en precios relativos, como una caída de los salarios reales necesarios para corregir desempleo.
+    \item Vuelve más complejos los contratos (cálculos, cláusulas de ajuste, contabilidad, etc.).
+    \item Debilita las políticas antiinflacionarias: al ajustar automáticamente precios y salarios, la indexación tiende a generar inercia inflacionaria, facilitando espirales salarios–precios y llevando a una inflación más alta y persistente.
+  \end{enumerate}
+  \item Desde el punto de vista de la política monetaria:
+  \begin{itemize}
+    \item Si el Banco Central contrae la demanda agregada para reducir la inflación, la indexación hace que los salarios nominales suban mecánicamente, reduciendo el ajuste real de salarios y precios.
+    \item Esto obliga a mantener políticas monetarias más restrictivas por más tiempo para lograr el mismo objetivo de reducción de inflación.
+  \end{itemize}
+\end{itemize}
+
+En suma, la indexación total puede mejorar la protección frente a la inflación, pero reduce la efectividad de la política monetaria y tiende a elevar la inflación media de la economía.
+
+\vspace{0.4cm}
+
+% ---------------- PREGUNTA 3 ----------------
+\textbf{PREGUNTA 3 (1,5 puntos)}\\[0.2cm]
+En el país de los jóvenes se consumen solo cuatro artículos (ron, coca-cola, educación y playstation). Los precios de estos productos y servicios durante los últimos años se presentan en la tabla siguiente. En el año 2020 una familia representativa consumía 3 unidades de ron, 3 unidades de coca-cola, 2 unidades de educación y 1 unidad de playstation.
+
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+            & Año 2020 & Año 2021 & Año 2022 & Año 2023 \\
+\midrule
+Ron         & \$400  & \$350  & \$450  & \$500  \\
+Coca-cola   & \$1000 & \$1100 & \$1100 & \$1150 \\
+Educación   & \$600  & \$800  & \$1000 & \$1020 \\
+Playstation & \$800  & \$1200 & \$1200 & \$1300 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Calcule el IPC en cada uno de los años (normalizando en base 1 ó 100 en el año 2020). Luego calcule la tasa de inflación en el año 2021, 2022 y 2023.
+
+\vspace{0.2cm}
+\textbf{Solución (Pauta-Profesor):}
+
+\paragraph{1) Costo de la canasta en cada año.}
+
+Canasta fija del año base (2020):
+\[
+q_{\text{ron}} = 3,\quad q_{\text{coca}} = 3,\quad q_{\text{edu}} = 2,\quad q_{\text{play}} = 1.
+\]
+
+Costo en cada año $t$:
+\[
+\text{Costo}_t = \sum_i P_{i,t} q_i.
+\]
+
+\newpage
+\vspace*{0.5cm}
+\begin{center}
+\begin{tabular}{lcccc}
+\toprule
+            & 2020 & 2021 & 2022 & 2023 \\
+\midrule
+Ron ($3$ u.)         & $3\times 400 = 1200$ & $3\times 350 = 1050$ & $3\times 450 = 1350$ & $3\times 500 = 1500$ \\
+Coca-cola ($3$ u.)   & $3\times 1000 = 3000$ & $3\times 1100 = 3300$ & $3\times 1100 = 3300$ & $3\times 1150 = 3450$ \\
+Educación ($2$ u.)   & $2\times 600 = 1200$ & $2\times 800 = 1600$ & $2\times 1000 = 2000$ & $2\times 1020 = 2040$ \\
+Playstation ($1$ u.) & $1\times 800 = 800$  & $1\times 1200 = 1200$ & $1\times 1200 = 1200$ & $1\times 1300 = 1300$ \\
+\midrule
+\textbf{Costo canasta} & \textbf{6200} & \textbf{7150} & \textbf{7850} & \textbf{8290} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{2) Cálculo del IPC.}
+
+Definimos:
+\[
+IPC_t = \frac{\text{Costo}_t}{\text{Costo}_{2020}} \times 100
+      = \frac{\text{Costo}_t}{6200}\times 100.
+\]
+
+Resultados (aprox.):
+\[
+IPC_{2020} = 100, \qquad
+IPC_{2021} \approx 115{,}3, \qquad
+IPC_{2022} \approx 126{,}6, \qquad
+IPC_{2023} \approx 133{,}7.
+\]
+
+\paragraph{3) Tasas de inflación.}
+
+La inflación entre $t-1$ y $t$ es:
+\[
+\pi_t = \frac{IPC_t - IPC_{t-1}}{IPC_{t-1}} \times 100.
+\]
+
+\begin{align*}
+\pi_{2021} &\approx \frac{115{,}3 - 100}{100}\times 100 \approx 15{,}3\%,\\
+\pi_{2022} &\approx \frac{126{,}6 - 115{,}3}{115{,}3}\times 100 \approx 9{,}8\%,\\
+\pi_{2023} &\approx \frac{133{,}7 - 126{,}6}{126{,}6}\times 100 \approx 5{,}6\%.
+\end{align*}
+
+\medskip
+\textbf{Resumen:} el IPC sube de 100 a 133{,}7 entre 2020 y 2023; la inflación anual se desacelera desde cerca de 15,3\% en 2021 a 5,6\% en 2023.
+
+\vspace{0.4cm}
+
+% ---------------- PREGUNTA 4 ----------------
+\textbf{PREGUNTA 4 (1,5 puntos)}\\[0.2cm]
+En el contexto del modelo IS--LM, explique cómo se determina gráficamente la curva LM a partir del equilibrio en el mercado del dinero. Luego, muestre cómo se ve afectado el mercado del dinero y la LM cuando el Banco Central realiza operaciones de mercado abierto vendiendo bonos en el mercado.
+
+\textbf{Solución (Pauta-Profesor):}
+\paragraph{1) Curva LM desde el mercado de dinero.}
+\begin{itemize}
+  \item La \textbf{demanda por saldos reales} de dinero está dada por:
+  \[
+    L = kY - hi,
+  \]
+  donde:
+  \begin{itemize}
+    \item $k>0$: sensibilidad de la demanda de dinero al ingreso,
+    \newpage
+    \vspace*{0.5cm}
+    \item $h>0$: sensibilidad (en valor absoluto) a la tasa de interés.
+  \end{itemize}
+  \item La \textbf{oferta real de dinero} es:
+  \[
+    \frac{M}{P},
+  \]
+  determinada por el Banco Central (para un nivel de precios dado).
+  \item En equilibrio monetario:
+  \[
+    kY - hi = \frac{M}{P}.
+  \]
+  Despejando $i$:
+  \[
+    i = \frac{k}{h}Y - \frac{1}{h}\frac{M}{P}.
+  \]
+\end{itemize}
+
+\textbf{Interpretación gráfica:}
+\begin{itemize}
+  \item Para un $M/P$ dado, la relación entre $Y$ e $i$ es una recta con pendiente positiva en el plano $(Y,i)$: esta es la curva LM.
+  \item Cada punto sobre la LM representa una combinación $(Y,i)$ en la cual la demanda por saldos reales es igual a la oferta real de dinero; es decir, el mercado de dinero está en equilibrio.
+\end{itemize}
+
+\paragraph{2) Venta de bonos por parte del Banco Central.}
+
+\begin{itemize}
+  \item Cuando el Banco Central vende bonos al público:
+  \begin{itemize}
+    \item recibe dinero a cambio de bonos,
+    \item disminuye la cantidad de dinero en circulación $\Rightarrow$ baja $M$,
+    \item por tanto, disminuye la oferta real de dinero $M/P$.
+  \end{itemize}
+  \item En el gráfico de \emph{mercado de dinero} (saldos reales vs tasa de interés):
+  \begin{itemize}
+    \item la oferta real de dinero se desplaza hacia la izquierda,
+    \item a un mismo nivel de ingreso $Y$, el nuevo equilibrio se alcanza con una tasa de interés más alta (para racionar la menor cantidad de dinero).
+  \end{itemize}
+  \item En el plano $(Y,i)$ del modelo IS--LM, una reducción de $M/P$ implica:
+  \[
+    i = \frac{k}{h}Y - \frac{1}{h}\frac{M}{P} \quad \Rightarrow \quad
+    \text{para cada } Y, \text{ el } i \text{ de equilibrio es mayor}.
+  \]
+  Es decir, la curva LM se desplaza hacia la izquierda/arriba (LM $\to$ LM').
+\end{itemize}
+
+\textbf{Efectos sobre el equilibrio IS--LM:}
+\begin{itemize}
+  \item Desde un equilibrio inicial $E_0$ en la intersección de IS y LM, la contracción monetaria desplaza LM a LM'.
+  \item El nuevo equilibrio $E_1$ presenta:
+  \[
+    Y_1 < Y_0, \qquad i_1 > i_0.
+  \]
+  \item Es decir, una venta de bonos por parte del Banco Central (operación de mercado abierto contractiva) lleva a menor producción y mayor tasa de interés en el corto plazo.
+\end{itemize}
+
+\end{document}
+
 \end{document}
